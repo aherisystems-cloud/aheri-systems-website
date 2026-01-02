@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies | Aheri Systems Success Stories</title>
+    <meta name="description" content="See how Aheri Systems has transformed service businesses through AI and automation. Real results from healthcare, events, and service industries.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .case-hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: var(--white);
+            padding: calc(80px + 4rem) 0 4rem;
+            text-align: center;
+        }
+        .case-hero h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        .case-hero p {
+            font-size: 1.25rem;
+            color: var(--primary-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .case-study-full {
+            padding: 4rem 0;
+        }
+        .case-study-full:nth-child(even) {
+            background: var(--gray-50);
+        }
+        .case-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .case-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .meta-label {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            margin-bottom: 0.5rem;
+        }
+        .meta-value {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--navy);
+        }
+        .case-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .case-section {
+            margin-bottom: 3rem;
+        }
+        .case-section h3 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 4px solid var(--primary);
+        }
+        .challenge-box {
+            background: #FEF2F2;
+            border-left: 4px solid #EF4444;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+        }
+        .solution-box {
+            background: #F0F9FF;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+        }
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .result-box {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .result-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .result-label {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+        .tools-used {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .tool-badge {
+            background: var(--gray-100);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--navy);
+        }
+        .testimonial-box {
+            background: var(--gray-50);
+            padding: 2rem;
+            border-radius: 1rem;
+            border-left: 4px solid var(--primary);
+            margin: 2rem 0;
+        }
+        .testimonial-text {
+            font-size: 1.125rem;
+            font-style: italic;
+            color: var(--gray-700);
+            margin-bottom: 1rem;
+        }
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--navy);
+        }
+        @media (max-width: 968px) {
+            .case-hero h1 {
+                font-size: 2rem;
+            }
+            .case-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">AHERI <span class="logo-systems">SYSTEMS</span></span>
+                </a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="case-studies.html" class="active">Case Studies</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn-primary" target="_blank">Book Consultation</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="case-hero">
+        <div class="container">
+            <h1>Real Businesses, <span class="gradient-text">Real Results</span></h1>
+            <p>See how we've helped service businesses transform their operations and scale with AI-powered automation.</p>
+        </div>
+    </section>
+
+    <!-- Case Study 1: VivaLife -->
+    <section id="vivalife" class="case-study-full">
+        <div class="container">
+            <div class="case-header">
+                <div class="case-tag">Healthcare</div>
+                <h2>VivaLife Pediatric Clinic</h2>
+                <p style="font-size: 1.125rem; color: var(--gray-600); max-width: 700px; margin: 1rem auto;">How we transformed a pediatric clinic's patient experience through complete CRM automation</p>
+                <div class="case-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Industry</span>
+                        <span class="meta-value">Healthcare</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Service</span>
+                        <span class="meta-value">CRM & Patient Journey</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">6 weeks</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-content">
+                <div class="case-section">
+                    <h3>The Challenge</h3>
+                    <div class="challenge-box">
+                        <p><strong>Problem:</strong> VivaLife was operating with completely manual patient registration processes. Every new patient required staff to manually input information, create files, schedule appointments, and send reminders. This led to:</p>
+                        <ul style="margin-top: 1rem;">
+                            <li>Long wait times for patients during check-in</li>
+                            <li>Frequent data entry errors and inconsistencies</li>
+                            <li>Missed appointments due to manual reminder systems</li>
+                            <li>Staff spending 60% of their time on administrative tasks</li>
+                            <li>No clear view of patient history or analytics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h3>The Solution</h3>
+                    <div class="solution-box">
+                        <p><strong>We implemented a complete healthcare CRM system with automated patient journey workflows:</strong></p>
+                        <ul style="margin-top: 1rem;">
+                            <li><strong>Digital Patient Registration:</strong> Online forms that auto-populate the CRM</li>
+                            <li><strong>Automated Appointment Booking:</strong> Self-service scheduling integrated with clinic calendar</li>
+                            <li><strong>Smart Reminders:</strong> Automated SMS and email reminders 48 hours and 2 hours before appointments</li>
+                            <li><strong>Patient Portal:</strong> Secure access to medical records and test results</li>
+                            <li><strong>Follow-up Automation:</strong> Post-visit surveys and check-in sequences</li>
+                            <li><strong>Real-time Analytics:</strong> Dashboard showing patient volume, demographics, and appointment trends</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h3>Tools & Technologies</h3>
+                    <div class="tools-used">
+                        <span class="tool-badge">CRM Platform</span>
+                        <span class="tool-badge">Automated Workflows</span>
+                        <span class="tool-badge">SMS Integration</span>
+                        <span class="tool-badge">Email Automation</span>
+                        <span class="tool-badge">Analytics Dashboard</span>
+                        <span class="tool-badge">Patient Portal</span>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h3>The Results</h3>
+                    <div class="results-grid">
+                        <div class="result-box">
+                            <span class="result-number">50%</span>
+                            <span class="result-label">Time Saved on Admin Tasks</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-number">95%</span>
+                            <span class="result-label">Appointment Attendance Rate</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-number">100%</span>
+                            <span class="result-label">Data Accuracy</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-number">24/7</span>
+                            <span class="result-label">Self-Service Booking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-box">
+                    <p class="testimonial-text">"The automation systems Rita implemented have transformed how we operate. We've cut admin time in half and can now focus on patient care. The real-time analytics give us insights we never had before."</p>
+                    <p class="testimonial-author">— VivaLife Pediatric Clinic Team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 2: DiaspoCare -->
+    <section id="diaspocare" class="case-study-full">
+        <div class="container">
+            <div class="case-header">
+                <div class="case-tag">HealthTech</div>
+                <h2>DiaspoCare Healthcare Platform</h2>
+                <p style="font-size: 1.125rem; color: var(--gray-600); max-width: 700px; margin: 1rem auto;">Building a centralized CRM hub for a multi-provider healthcare platform</p>
+                <div class="case-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Industry</span>
+                        <span class="meta-value">HealthTech</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Service</span>
+                        <span class="meta-value">CRM Implementation</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">8 weeks</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-content">
+                <div class="case-section">
+                    <h3>The Challenge</h3>
+                    <div class="challenge-box">
+                        <p><strong>Problem:</strong> DiaspoCare needed to coordinate care across multiple healthcare providers while maintaining a seamless patient experience. They faced:</p>
+                        <ul style="margin-top: 1rem;">
+                            <li>Fragmented patient data across different providers</li>
+                            <li>Manual coordination between specialists and primary care</li>
+                            <li>No unified view of patient journey</li>
+                            <li>Difficulty tracking referrals and follow-ups</li>
+                            <li>Limited analytics on platform performance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h3>The Solution</h3>
+                    <div class="solution-box">
+                        <p><strong>We implemented GoHighLevel as the central CRM automation hub:</strong></p>
+                        <ul style="margin-top: 1rem;">
+                            <li><strong>Unified Patient Database:</strong> Single source of truth for all patient interactions</li>
+                            <li><strong>Multi-Provider Workflows:</strong> Automated referral and coordination processes</li>
+                            <li><strong>Communication Hub:</strong> Integrated messaging across SMS, email, and WhatsApp</li>
+                            <li><strong>Appointment Coordination:</strong> Centralized scheduling across all providers</li>
+                            <li><strong>Patient Journey Tracking:</strong> Complete visibility from first contact to ongoing care</li>
+                            <li><strong>Provider Dashboard:</strong> Real-time view of their patient queue and tasks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h3>Tools & Technologies</h3>
+                    <div class="tools-used">
+                        <span class="tool-badge">GoHighLevel CRM</span>
+                        <span class="tool-badge">Multi-Channel Communication</span>
+                        <span class="tool-badge">Workflow Automation</span>
+                        <span class="tool-badge">Provider Portal</span>
+                        <span class="tool-badge">Analytics & Reporting</span>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h3>The Results</h3>
+                    <div class="results-grid">
+                        <div class="result-box">
+                            <span class="result-number">100%</span>
+                            <span class="result-label">Automated Patient Journey</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-number">70%</span>
+                            <span class="result-label">Faster Referral Processing</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-number">3X</span>
+                            <span class="result-label">Provider Efficiency Increase</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-number">Zero</span>
+                            <span class="result-label">Lost Referrals</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-box">
+                    <p class="testimonial-text">"From manual chaos to fully automated operations. The CRM system has been a game-changer for our platform. We can now coordinate care across providers seamlessly."</p>
+                    <p class="testimonial-author">— DiaspoCare Platform Team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 3: Events Business -->
+    <section id="events" class="case-study-full">
+        <div class="container">
+            <div class="case-header">
+                <div class="case-tag">Events</div>
+                <h2>Events Business Automation</h2>
+                <p style="font-size: 1.125rem; color: var(--gray-600); max-width: 700px; margin: 1rem auto;">End-to-end automation for event management from registration to post-event follow-up</p>
+                <div class="case-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Industry</span>
+                        <span class="meta-value">Events & Conferences</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Service</span>
+                        <span class="meta-value">Full Operations Automation</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">5 weeks</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-content">
+                <div class="case-section">
+                    <h3>The Challenge</h3>
+                    <div class="challenge-box">
+                        <p><strong>Problem:</strong> The events business was managing everything manually—from registration to ticketing to attendee communication. This created:</p>
+                        <ul style="margin-top: 1rem;">
+                            <li>Time-consuming manual registration process</li>
+                            <li>Payment tracking nightmare</li>
+                            <li>Inconsistent attendee communication</li>
+                            <li>No automated reminders or updates</li>
+                            <li>Post-event follow-up required manual effort</li>
+                            <li>Limited data on attendee engagement</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h3>The Solution</h3>
+                    <div class="solution-box">
+                        <p><strong>We built a complete event management automation system:</strong></p>
+                        <ul style="margin-top: 1rem;">
+                            <li><strong>Online Registration System:</strong> Custom forms with conditional logic and instant confirmation</li>
+                            <li><strong>Payment Integration:</strong> Automated payment processing and tracking</li>
+                            <li><strong>CRM & Pipeline:</strong> Automatic attendee segmentation and status tracking</li>
+                            <li><strong>Email Marketing:</strong> Pre-event sequences, day-of reminders, and post-event follow-ups</li>
+                            <li><strong>Newsletter System:</strong> Regular updates and engagement campaigns</li>
+                            <li><strong>Check-in System:</strong> QR code-based automated check-in</li>
+                            <li><strong>Analytics Dashboard:</strong> Real-time registration and engagement metrics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h3>Tools & Technologies</h3>
+                    <div class="tools-used">
+                        <span class="tool-badge">Registration Platform</span>
+                        <span class="tool-badge">Payment Gateway</span>
+                        <span class="tool-badge">CRM System</span>
+                        <span class="tool-badge">Email Marketing</span>
+                        <span class="tool-badge">SMS Automation</span>
+                        <span class="tool-badge">QR Check-in</span>
+                        <span class="tool-badge">Analytics</span>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h3>The Results</h3>
+                    <div class="results-grid">
+                        <div class="result-box">
+                            <span class="result-number">80%</span>
+                            <span class="result-label">Process Automation</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-number">90%</span>
+                            <span class="result-label">Payment Collection Rate</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-number">15hrs</span>
+                            <span class="result-label">Saved Per Event</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-number">2X</span>
+                            <span class="result-label">Email Engagement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-box">
+                    <p class="testimonial-text">"The automation transformed our events business. What used to take days now happens automatically. We can focus on creating great experiences instead of managing spreadsheets."</p>
+                    <p class="testimonial-author">— Events Business Owner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study 4: Unicorn Dental -->
+    <section id="unicorn-dental" class="case-study-full">
+        <div class="container">
+            <div class="case-header">
+                <div class="case-tag">Healthcare</div>
+                <h2>Unicorn Dental Clinic</h2>
+                <p style="font-size: 1.125rem; color: var(--gray-600); max-width: 700px; margin: 1rem auto;">Website optimization and automated appointment booking system</p>
+                <div class="case-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Industry</span>
+                        <span class="meta-value">Dental Healthcare</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Service</span>
+                        <span class="meta-value">Website & Booking Automation</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Timeline</span>
+                        <span class="meta-value">4 weeks</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-content">
+                <div class="case-section">
+                    <h3>The Challenge</h3>
+                    <div class="challenge-box">
+                        <p><strong>Problem:</strong> Unicorn Dental had a basic website with no online booking capability. Patients had to call during business hours, leading to:</p>
+                        <ul style="margin-top: 1rem;">
+                            <li>Missed appointment opportunities after hours</li>
+                            <li>Phone tag with patients</li>
+                            <li>Staff time spent on scheduling calls</li>
+                            <li>No automated follow-up system</li>
+                            <li>Poor website user experience</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h3>The Solution</h3>
+                    <div class="solution-box">
+                        <p><strong>We optimized their website and implemented a complete booking automation system:</strong></p>
+                        <ul style="margin-top: 1rem;">
+                            <li><strong>Website Redesign:</strong> Modern, mobile-responsive design optimized for conversions</li>
+                            <li><strong>Online Booking:</strong> 24/7 self-service appointment scheduling</li>
+                            <li><strong>Automated Reminders:</strong> SMS and email confirmations and reminders</li>
+                            <li><strong>Follow-up System:</strong> Post-appointment feedback and recall reminders</li>
+                            <li><strong>Calendar Integration:</strong> Real-time synchronization with clinic schedule</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h3>Tools & Technologies</h3>
+                    <div class="tools-used">
+                        <span class="tool-badge">Website Design</span>
+                        <span class="tool-badge">Booking System</span>
+                        <span class="tool-badge">SMS Automation</span>
+                        <span class="tool-badge">Email Automation</span>
+                        <span class="tool-badge">Calendar Sync</span>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h3>The Results</h3>
+                    <div class="results-grid">
+                        <div class="result-box">
+                            <span class="result-number">40%</span>
+                            <span class="result-label">Increase in Appointments</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-number">24/7</span>
+                            <span class="result-label">Booking Availability</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-number">85%</span>
+                            <span class="result-label">Appointment Attendance</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-number">10hrs</span>
+                            <span class="result-label">Saved Weekly</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-box">
+                    <p class="testimonial-text">"Professional, efficient, and delivers results. Our appointment booking system now runs seamlessly. Patients love the convenience of online booking."</p>
+                    <p class="testimonial-author">— Unicorn Dental Clinic</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Similar Results?</h2>
+                <p>Let's discuss how we can transform your business with automation.</p>
+                <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary btn-large" target="_blank">Book Free Discovery Call</a>
+                <p class="cta-note">30-minute consultation • Custom strategy • No commitment required</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AHERI <span class="logo-systems">SYSTEMS</span></h3>
+                    <p class="footer-tagline">Automating Growth Through Intelligence</p>
+                    <p>Transforming service businesses with AI-powered automation systems. Based in Kenya, serving clients globally.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#customer-journey">Customer Journey Systems</a></li>
+                        <li><a href="services.html#operations">Operations Automation</a></li>
+                        <li><a href="services.html#ai-implementation">AI Implementation</a></li>
+                        <li><a href="services.html#crm">CRM & Sales Automation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <ul class="contact-info">
+                        <li><a href="mailto:rita@aherisystems.com">rita@aherisystems.com</a></li>
+                        <li><a href="tel:+254716850772">+254 716 850 772</a></li>
+                        <li>Nairobi, Kenya</li>
+                        <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" target="_blank">Book a Call</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aheri Systems. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
