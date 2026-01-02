@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Aheri Systems</title>
+    <meta name="description" content="Learn about Aheri Systems' mission to transform service businesses through AI-powered automation. Meet our founder and discover our proven methodology.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: var(--white);
+            padding: calc(80px + 4rem) 0 4rem;
+            text-align: center;
+        }
+        .about-hero h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        .about-hero p {
+            font-size: 1.25rem;
+            color: var(--primary-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .story-section {
+            padding: 4rem 0;
+        }
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .story-content h2 {
+            margin-bottom: 1.5rem;
+        }
+        .story-image {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+            border-radius: 1rem;
+            padding: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+            min-height: 400px;
+        }
+        .values-section {
+            background: var(--gray-50);
+            padding: 4rem 0;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .value-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1rem;
+            border-left: 4px solid var(--primary);
+        }
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .approach-section {
+            padding: 4rem 0;
+        }
+        .approach-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .approach-step {
+            text-align: center;
+            padding: 2rem;
+        }
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 1.5rem;
+        }
+        .founder-section {
+            background: var(--white);
+            padding: 4rem 0;
+        }
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        .founder-image {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+            border-radius: 1rem;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+        }
+        .founder-bio h3 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        .founder-title {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 968px) {
+            .story-grid, .founder-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+            .story-image {
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">AHERI <span class="logo-systems">SYSTEMS</span></span>
+                </a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn-primary" target="_blank">Book Consultation</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Transforming Businesses Through <span class="gradient-text">Intelligence & Automation</span></h1>
+            <p>We're on a mission to help service businesses scale faster, work smarter, and grow sustainably through AI-powered systems.</p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-content">
+                    <h2>Our <span class="gradient-text">Story</span></h2>
+                    <p>Aheri Systems was born from a simple observation: service businesses are drowning in manual work that technology could eliminate.</p>
+                    <p>After years in digital marketing helping businesses grow online, we noticed a pattern. The businesses that scaled fastest weren't just marketing harder—they had systems. Automated workflows. Customer journeys that ran like clockwork. Operations that didn't depend on someone remembering to do something.</p>
+                    <p>In 2019, we started Aheri Brands Agency, working hands-on with service businesses across healthcare, events, and professional services. We saw firsthand how manual processes held back growth. How talented entrepreneurs spent 60% of their time on admin work instead of serving clients.</p>
+                    <p>That's when everything changed. We shifted our focus from just marketing to building complete growth systems powered by AI and automation. We went from helping businesses get customers to helping them serve those customers 10X better with half the effort.</p>
+                    <p>Today, Aheri Systems works with service businesses globally, implementing AI-powered customer journeys and operations automation that free entrepreneurs to focus on what they do best: delivering exceptional service.</p>
+                </div>
+                <div class="story-image">
+                    🚀
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span class="gradient-text">Mission & Values</span></h2>
+                <p>What drives us every day</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>Mission</h3>
+                    <p>To democratize business automation and AI, making enterprise-level systems accessible to SMBs and entrepreneurs worldwide. Every business deserves to operate like a Fortune 500 company.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔮</div>
+                    <h3>Vision</h3>
+                    <p>A world where entrepreneurs spend zero time on repetitive work. Where every service business has intelligent systems that handle the mundane, freeing humans for creativity, strategy, and relationships.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💡</div>
+                    <h3>Innovation First</h3>
+                    <p>We stay at the cutting edge of AI and automation technology, constantly learning and implementing the latest tools to give our clients unfair advantages.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Partnership Mindset</h3>
+                    <p>Your success is our success. We don't just implement systems—we become your growth partners, invested in your long-term transformation.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">📊</div>
+                    <h3>Results-Driven</h3>
+                    <p>Pretty dashboards don't matter if they don't move the needle. We focus obsessively on metrics that impact revenue and time saved.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <h3>Global Impact</h3>
+                    <p>Based in Kenya, serving the world. We believe great systems transcend borders, and every entrepreneur deserves access to world-class automation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="approach-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span class="gradient-text">Proven Approach</span></h2>
+                <p>How we transform service businesses systematically</p>
+            </div>
+            <div class="approach-steps">
+                <div class="approach-step">
+                    <div class="step-number">1</div>
+                    <h3>Deep Discovery</h3>
+                    <p>We audit your current systems, workflows, and pain points. No cookie-cutter solutions—every recommendation is tailored to your business.</p>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">2</div>
+                    <h3>Strategic Design</h3>
+                    <p>We map out your ideal customer journey and operational workflows, identifying automation opportunities that will have the biggest impact.</p>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">3</div>
+                    <h3>Smart Implementation</h3>
+                    <p>We build and deploy your systems using best-in-class tools (CRMs, AI agents, automation platforms), with minimal disruption to your operations.</p>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">4</div>
+                    <h3>Team Training</h3>
+                    <p>We don't just hand over systems—we ensure your team knows how to use, maintain, and optimize them for continued growth.</p>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">5</div>
+                    <h3>Continuous Optimization</h3>
+                    <p>Systems need care. We monitor performance, gather feedback, and continuously refine to ensure you're always getting better results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder -->
+    <section class="founder-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet the <span class="gradient-text">Founder</span></h2>
+            </div>
+            <div class="founder-grid">
+                <div class="founder-image">
+                    👩‍💼
+                </div>
+                <div class="founder-bio">
+                    <h3>Rita Ndubi</h3>
+                    <p class="founder-title">Founder & Chief Automation Architect</p>
+                    <p>Rita brings over 5 years of digital marketing and systems expertise to every client engagement. After running Aheri Brands Agency and witnessing how manual processes limited business growth, she pivoted to focus entirely on automation and AI implementation.</p>
+                    <p>Her background spans the full spectrum of business operations—from marketing strategy and customer acquisition to CRM implementation and workflow optimization. This 360-degree perspective allows her to see opportunities others miss and build systems that truly transform businesses.</p>
+                    <p>Rita works with a global network of specialists on a project-by-project basis, ensuring every client gets access to world-class expertise without the overhead of a large agency.</p>
+                    <p>When she's not architecting automation systems, Rita is studying the latest AI developments, testing new tools, and finding ways to push the boundaries of what's possible with business automation.</p>
+                    <div style="margin-top: 2rem;">
+                        <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary" target="_blank">Book a Call with Rita</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Business?</h2>
+                <p>Let's discuss how AI and automation can 10X your growth.</p>
+                <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary btn-large" target="_blank">Book Free Discovery Call</a>
+                <p class="cta-note">30-minute consultation • Custom growth plan • No commitment required</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AHERI <span class="logo-systems">SYSTEMS</span></h3>
+                    <p class="footer-tagline">Automating Growth Through Intelligence</p>
+                    <p>Transforming service businesses with AI-powered automation systems. Based in Kenya, serving clients globally.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#customer-journey">Customer Journey Systems</a></li>
+                        <li><a href="services.html#operations">Operations Automation</a></li>
+                        <li><a href="services.html#ai-implementation">AI Implementation</a></li>
+                        <li><a href="services.html#crm">CRM & Sales Automation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <ul class="contact-info">
+                        <li><a href="mailto:rita@aherisystems.com">rita@aherisystems.com</a></li>
+                        <li><a href="tel:+254716850772">+254 716 850 772</a></li>
+                        <li>Nairobi, Kenya</li>
+                        <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" target="_blank">Book a Call</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aheri Systems. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
