@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Aheri Systems - AI & Automation Solutions</title>
+    <meta name="description" content="Comprehensive AI and automation services for service businesses: Customer Journey Systems, Operations Automation, AI Implementation, CRM & Sales Automation, Marketing Automation.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .services-hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: var(--white);
+            padding: calc(80px + 4rem) 0 4rem;
+            text-align: center;
+        }
+        .services-hero h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        .services-hero p {
+            font-size: 1.25rem;
+            color: var(--primary-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .service-detail {
+            padding: 4rem 0;
+        }
+        .service-detail:nth-child(even) {
+            background: var(--gray-50);
+        }
+        .service-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .service-visual {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+            border-radius: 1rem;
+            padding: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+            min-height: 350px;
+        }
+        .service-info h2 {
+            margin-bottom: 1rem;
+        }
+        .service-benefits {
+            list-style: none;
+            margin: 2rem 0;
+        }
+        .service-benefits li {
+            padding-left: 2rem;
+            position: relative;
+            margin-bottom: 1rem;
+            color: var(--gray-700);
+        }
+        .service-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        .pricing-preview {
+            background: var(--gray-50);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 2px solid var(--primary);
+            margin-top: 2rem;
+        }
+        .pricing-preview h4 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 968px) {
+            .service-content {
+                grid-template-columns: 1fr;
+            }
+            .services-hero h1 {
+                font-size: 2rem;
+            }
+            .service-visual {
+                min-height: 250px;
+                font-size: 5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">AHERI <span class="logo-systems">SYSTEMS</span></span>
+                </a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn-primary" target="_blank">Book Consultation</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="services-hero">
+        <div class="container">
+            <h1>Services That <span class="gradient-text">Scale Your Business</span></h1>
+            <p>Comprehensive automation solutions designed specifically for service-based businesses ready to grow.</p>
+        </div>
+    </section>
+
+    <!-- Service 1: Customer Journey Systems -->
+    <section id="customer-journey" class="service-detail">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-info">
+                    <h2>🎯 Customer Journey Systems</h2>
+                    <p class="lead">Transform every touchpoint from first contact to loyal advocate. We design and automate complete customer journeys that convert, retain, and maximize lifetime value.</p>
+                    
+                    <h3>What We Do</h3>
+                    <ul class="service-benefits">
+                        <li><strong>Journey Mapping:</strong> Visualize and optimize every step of your customer's experience</li>
+                        <li><strong>Lead Generation Automation:</strong> Capture and qualify leads 24/7 with intelligent forms and chatbots</li>
+                        <li><strong>Nurture Sequences:</strong> AI-powered email and SMS campaigns that adapt to customer behavior</li>
+                        <li><strong>Conversion Optimization:</strong> A/B testing, landing page optimization, and funnel analytics</li>
+                        <li><strong>Retention Systems:</strong> Automated check-ins, feedback loops, and re-engagement campaigns</li>
+                        <li><strong>Upsell/Cross-sell Automation:</strong> Smart triggers that identify and act on expansion opportunities</li>
+                    </ul>
+
+                    <div class="pricing-preview">
+                        <h4>Ideal For:</h4>
+                        <p>Service businesses with 50+ leads per month looking to increase conversion rates and customer lifetime value.</p>
+                        <a href="contact.html" class="btn btn-primary">Get Custom Quote</a>
+                    </div>
+                </div>
+                <div class="service-visual">
+                    🗺️
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 2: Operations Automation -->
+    <section id="operations" class="service-detail">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-visual">
+                    ⚙️
+                </div>
+                <div class="service-info">
+                    <h2>🔄 Operations Automation</h2>
+                    <p class="lead">Eliminate manual tasks and reclaim 20+ hours per week. We build intelligent workflows that run your business operations on autopilot.</p>
+                    
+                    <h3>What We Do</h3>
+                    <ul class="service-benefits">
+                        <li><strong>Workflow Optimization:</strong> Map, analyze, and automate repetitive business processes</li>
+                        <li><strong>System Integration:</strong> Connect your tools (CRM, calendar, payment, project management) seamlessly</li>
+                        <li><strong>Document Automation:</strong> Auto-generate contracts, invoices, reports, and proposals</li>
+                        <li><strong>Appointment Scheduling:</strong> Self-service booking systems with automated reminders</li>
+                        <li><strong>Data Management:</strong> Automated data entry, cleaning, and synchronization across platforms</li>
+                        <li><strong>Team Collaboration:</strong> Automated task assignment, status updates, and notifications</li>
+                    </ul>
+
+                    <div class="pricing-preview">
+                        <h4>Ideal For:</h4>
+                        <p>Growing service businesses spending 15+ hours per week on administrative tasks and manual data entry.</p>
+                        <a href="contact.html" class="btn btn-primary">Get Custom Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 3: AI Implementation -->
+    <section id="ai-implementation" class="service-detail">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-info">
+                    <h2>🤖 AI Implementation</h2>
+                    <p class="lead">Deploy custom AI agents and integrations that handle customer service, content generation, and business intelligence like a team of experts.</p>
+                    
+                    <h3>What We Do</h3>
+                    <ul class="service-benefits">
+                        <li><strong>AI Chatbots:</strong> Intelligent customer service bots powered by ChatGPT/Claude that handle common queries 24/7</li>
+                        <li><strong>Custom AI Agents:</strong> Specialized assistants for appointment booking, lead qualification, or data analysis</li>
+                        <li><strong>Content Generation:</strong> Automated blog posts, social media, email campaigns using AI</li>
+                        <li><strong>Sentiment Analysis:</strong> Monitor customer feedback and reviews automatically</li>
+                        <li><strong>Predictive Analytics:</strong> AI-powered forecasting for sales, churn, and resource planning</li>
+                        <li><strong>API Integrations:</strong> Connect ChatGPT/Claude/other AI APIs to your existing tools</li>
+                    </ul>
+
+                    <div class="pricing-preview">
+                        <h4>Ideal For:</h4>
+                        <p>Forward-thinking businesses ready to leverage AI for competitive advantage and scalable customer interactions.</p>
+                        <a href="contact.html" class="btn btn-primary">Get Custom Quote</a>
+                    </div>
+                </div>
+                <div class="service-visual">
+                    🧠
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 4: CRM & Sales Automation -->
+    <section id="crm" class="service-detail">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-visual">
+                    📊
+                </div>
+                <div class="service-info">
+                    <h2>📈 CRM & Sales Automation</h2>
+                    <p class="lead">Never lose a lead or miss a follow-up again. We implement and customize CRM systems that turn prospects into customers systematically.</p>
+                    
+                    <h3>What We Do</h3>
+                    <ul class="service-benefits">
+                        <li><strong>CRM Setup & Migration:</strong> GoHighLevel, HubSpot, Salesforce implementation and data migration</li>
+                        <li><strong>Pipeline Automation:</strong> Automatic deal stage progression based on actions and time</li>
+                        <li><strong>Lead Scoring:</strong> AI-powered qualification to prioritize your hottest prospects</li>
+                        <li><strong>Automated Follow-ups:</strong> Never-miss-a-beat email and SMS sequences</li>
+                        <li><strong>Sales Analytics:</strong> Real-time dashboards showing pipeline health, conversion rates, and forecasts</li>
+                        <li><strong>Team Management:</strong> Automated task assignment, activity tracking, and performance reporting</li>
+                    </ul>
+
+                    <div class="pricing-preview">
+                        <h4>Ideal For:</h4>
+                        <p>Service businesses with a sales team or high-volume lead flow needing systematic follow-up and pipeline management.</p>
+                        <a href="contact.html" class="btn btn-primary">Get Custom Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 5: Marketing Automation -->
+    <section id="marketing" class="service-detail">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-info">
+                    <h2>📧 Marketing Automation</h2>
+                    <p class="lead">Run sophisticated marketing campaigns on autopilot. From email sequences to social media scheduling, we automate your entire marketing engine.</p>
+                    
+                    <h3>What We Do</h3>
+                    <ul class="service-benefits">
+                        <li><strong>Email Marketing:</strong> Segmented campaigns, drip sequences, and behavioral triggers</li>
+                        <li><strong>Social Media Automation:</strong> Schedule, publish, and engage across all platforms</li>
+                        <li><strong>Lead Nurturing:</strong> Multi-channel campaigns that warm up prospects over time</li>
+                        <li><strong>Segmentation & Personalization:</strong> Dynamic content based on user behavior and preferences</li>
+                        <li><strong>Campaign Analytics:</strong> Track performance and ROI across all marketing channels</li>
+                        <li><strong>Newsletter Management:</strong> Automated content curation and distribution</li>
+                    </ul>
+
+                    <div class="pricing-preview">
+                        <h4>Ideal For:</h4>
+                        <p>Service businesses with email lists of 500+ subscribers looking to systematize their marketing efforts.</p>
+                        <a href="contact.html" class="btn btn-primary">Get Custom Quote</a>
+                    </div>
+                </div>
+                <div class="service-visual">
+                    📱
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Overview -->
+    <section style="background: var(--white); padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>How We <span class="gradient-text">Work Together</span></h2>
+                <p>Our proven 5-step process</p>
+            </div>
+            <div class="approach-steps" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div style="text-align: center;">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; margin: 0 auto 1rem;">1</div>
+                    <h4>Discovery Call</h4>
+                    <p>30-minute consultation to understand your business and goals</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; margin: 0 auto 1rem;">2</div>
+                    <h4>Audit & Strategy</h4>
+                    <p>Deep dive into your current systems and create custom roadmap</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; margin: 0 auto 1rem;">3</div>
+                    <h4>Implementation</h4>
+                    <p>Build and deploy your automation systems</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; margin: 0 auto 1rem;">4</div>
+                    <h4>Training</h4>
+                    <p>Comprehensive team onboarding and documentation</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; margin: 0 auto 1rem;">5</div>
+                    <h4>Optimization</h4>
+                    <p>Ongoing support and continuous improvement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Automate Your Business?</h2>
+                <p>Book a free discovery call to get a custom automation roadmap.</p>
+                <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary btn-large" target="_blank">Book Free Discovery Call</a>
+                <p class="cta-note">30-minute consultation • Custom roadmap • No commitment required</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AHERI <span class="logo-systems">SYSTEMS</span></h3>
+                    <p class="footer-tagline">Automating Growth Through Intelligence</p>
+                    <p>Transforming service businesses with AI-powered automation systems. Based in Kenya, serving clients globally.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#customer-journey">Customer Journey Systems</a></li>
+                        <li><a href="services.html#operations">Operations Automation</a></li>
+                        <li><a href="services.html#ai-implementation">AI Implementation</a></li>
+                        <li><a href="services.html#crm">CRM & Sales Automation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <ul class="contact-info">
+                        <li><a href="mailto:rita@aherisystems.com">rita@aherisystems.com</a></li>
+                        <li><a href="tel:+254716850772">+254 716 850 772</a></li>
+                        <li>Nairobi, Kenya</li>
+                        <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" target="_blank">Book a Call</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aheri Systems. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
