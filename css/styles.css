@@ -150,7 +150,10 @@ a:hover {
     font-weight: 800;
     color: var(--navy);
 }
-
+.logo {
+    width: 150px;  /* adjust as needed */
+    height: auto;
+}
 .logo-text {
     color: var(--navy);
 }
