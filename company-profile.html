@@ -40,6 +40,18 @@
             padding: 0;
         }
         
+        /* Logo Styles */
+        .logo-header {
+            text-align: center;
+            padding: 2rem 0;
+            background: white;
+        }
+        
+        .logo-header img {
+            max-width: 200px;
+            height: auto;
+        }
+        
         /* Cover Page */
         .cover-page {
             min-height: 100vh;
@@ -85,6 +97,8 @@
             display: flex;
             gap: 3rem;
             margin-top: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         
         .cover-metric {
@@ -338,9 +352,20 @@
         .contact-section {
             background: var(--navy);
             color: white;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 0.75rem;
             margin-top: 2rem;
+        }
+        
+        .contact-section h2 {
+            color: white;
+            border-left-color: var(--primary);
+        }
+        
+        .contact-section h3 {
+            color: white;
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
         }
         
         .contact-grid {
@@ -358,6 +383,22 @@
         
         .contact-icon {
             font-size: 1.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
         }
         
         .cta-box {
@@ -462,10 +503,14 @@
 <body>
     <div class="document">
         
-        <!-- COVER PAGE --> 
-      <div class="cover-logo">
-    <img src="aheri-logo.png" alt="Aheri Systems" style="max-width: 400px; height: auto; margin-bottom: 2rem;">
-</div>
+        <!-- LOGO HEADER -->
+        <div class="logo-header">
+            <img src="aheri-logo.png" alt="Aheri Systems Logo">
+        </div>
+        
+        <!-- COVER PAGE -->
+        <div class="cover-page">
+            <div class="cover-logo">AHERI <span>SYSTEMS</span></div>
             <div class="cover-tagline">Automating Growth Through Intelligence</div>
             <div class="cover-subtitle">
                 Transforming Service Businesses with AI-Powered Customer Journey Systems and Operations Automation
@@ -778,500 +823,124 @@
             <div class="service-card">
                 <h4>🎯 Customer Journey Systems</h4>
                 <p><strong>Transform every touchpoint from first contact to loyal advocate</strong></p>
-                
-                <p style="margin-top: 1rem;">
-                    We design and implement complete customer journey systems that automate acquisition, nurturing, conversion, retention, and advocacy. Stop losing leads to slow follow-up. Stop manually tracking every interaction. Let intelligent systems handle the repetitive work while you focus on delivering exceptional service.
-                </p>
-                
-                <p><strong>What's Included:</strong></p>
+                <p>We map, design, and automate your complete customer journey with intelligent touchpoints at every stage. From the moment a prospect discovers you to becoming a raving fan, every interaction is optimized and automated.</p>
                 <ul style="margin-left: 1.5rem; font-size: 0.95rem;">
-                    <li><strong>Journey Mapping & Optimization:</strong> Visualize and perfect every step of your customer experience</li>
-                    <li><strong>Lead Generation Automation:</strong> 24/7 capture and qualification with intelligent forms, chatbots, and landing pages</li>
-                    <li><strong>AI-Powered Nurture Sequences:</strong> Email and SMS campaigns that adapt to customer behavior and preferences</li>
-                    <li><strong>Conversion Funnel Optimization:</strong> A/B testing, analytics, and continuous improvement of conversion rates</li>
-                    <li><strong>Retention & Re-engagement Systems:</strong> Automated check-ins, feedback loops, and win-back campaigns</li>
-                    <li><strong>Upsell/Cross-sell Automation:</strong> Smart triggers that identify and act on expansion opportunities</li>
-                    <li><strong>Multi-Channel Orchestration:</strong> Coordinated communication across email, SMS, WhatsApp, and social</li>
+                    <li>Lead capture and qualification automation</li>
+                    <li>Multi-channel nurture sequences (email, SMS, WhatsApp)</li>
+                    <li>Automated appointment booking and reminders</li>
+                    <li>Post-service follow-up and feedback collection</li>
+                    <li>Retention and re-engagement campaigns</li>
+                    <li>Referral and advocacy programs</li>
                 </ul>
-                
-                <p><strong>Ideal For:</strong> Service businesses with 50+ leads per month looking to increase conversion rates and customer lifetime value</p>
-                
-                <p><strong>Typical Results:</strong> 40-60% increase in conversion rates, 3X improvement in lead response time, 25% boost in customer retention</p>
+                <p><strong>Typical Impact:</strong> 3X conversion rates, 50% reduction in no-shows, 10X more consistent follow-up</p>
             </div>
             
             <div class="service-card">
-                <h4>🔄 Operations Automation</h4>
-                <p><strong>Reclaim 20+ hours per week by automating repetitive operational tasks</strong></p>
-                
-                <p style="margin-top: 1rem;">
-                    Eliminate the manual work that keeps you from growing your business. We build intelligent workflows that handle appointment scheduling, data entry, document generation, task management, and everything in between—automatically, consistently, perfectly.
-                </p>
-                
-                <p><strong>What's Included:</strong></p>
+                <h4>🤖 AI-Powered CRM Implementation</h4>
+                <p><strong>Your business brain—centralized, intelligent, always working</strong></p>
+                <p>Custom CRM setup with AI integrations that don't just store data—they work with it. Predictive analytics, intelligent routing, automated data entry, and insights that drive decisions.</p>
                 <ul style="margin-left: 1.5rem; font-size: 0.95rem;">
-                    <li><strong>Workflow Mapping & Automation:</strong> Identify and automate repetitive processes across your business</li>
-                    <li><strong>System Integration:</strong> Connect your CRM, calendar, payment processor, project management, and other tools seamlessly</li>
-                    <li><strong>Document Automation:</strong> Auto-generate contracts, invoices, reports, proposals, and client deliverables</li>
-                    <li><strong>Appointment & Calendar Management:</strong> Self-service booking with automated reminders and confirmations</li>
-                    <li><strong>Data Management & Sync:</strong> Automated data entry, cleaning, and synchronization across platforms</li>
-                    <li><strong>Team Collaboration:</strong> Automated task assignment, status updates, notifications, and handoffs</li>
-                    <li><strong>Reporting & Analytics:</strong> Automated dashboards with real-time business intelligence</li>
+                    <li>Platform selection (GoHighLevel, HubSpot, Salesforce, Zoho)</li>
+                    <li>Custom configuration for your workflows</li>
+                    <li>AI chatbots for 24/7 customer interaction</li>
+                    <li>Automated lead scoring and routing</li>
+                    <li>Pipeline management and forecasting</li>
+                    <li>Team training and adoption support</li>
                 </ul>
-                
-                <p><strong>Ideal For:</strong> Growing service businesses spending 15+ hours per week on administrative tasks</p>
-                
-                <p><strong>Typical Results:</strong> 50-70% reduction in admin time, 95% decrease in manual errors, 100% consistent processes</p>
+                <p><strong>Typical Impact:</strong> 100% visibility into customer data, 70% faster response times, zero lost leads</p>
             </div>
             
             <div class="service-card">
-                <h4>🤖 AI Implementation</h4>
-                <p><strong>Deploy custom AI agents that work like a team of expert assistants—24/7</strong></p>
-                
-                <p style="margin-top: 1rem;">
-                    Harness the power of ChatGPT, Claude, and other advanced AI to automate customer service, content creation, data analysis, and business intelligence. Get the capabilities of a full team without the overhead.
-                </p>
-                
-                <p><strong>What's Included:</strong></p>
+                <h4>⚙️ Operations Automation</h4>
+                <p><strong>Eliminate repetitive work that drains your team's energy</strong></p>
+                <p>We identify, map, and automate your most time-consuming operational processes. From data entry to report generation, if it's repetitive, we can automate it.</p>
                 <ul style="margin-left: 1.5rem; font-size: 0.95rem;">
-                    <li><strong>AI Chatbots & Virtual Assistants:</strong> Handle common customer queries, provide information, and route complex issues</li>
-                    <li><strong>Custom AI Agents:</strong> Specialized assistants for appointment booking, lead qualification, or customer onboarding</li>
-                    <li><strong>Content Generation:</strong> Automated blog posts, social media content, email campaigns, and marketing materials</li>
-                    <li><strong>Sentiment Analysis:</strong> Monitor customer feedback, reviews, and conversations for insights and issues</li>
-                    <li><strong>Predictive Analytics:</strong> AI-powered forecasting for sales pipeline, churn risk, and resource planning</li>
-                    <li><strong>API Integrations:</strong> Connect ChatGPT/Claude APIs to your existing tools and workflows</li>
+                    <li>Process documentation and optimization</li>
+                    <li>Workflow automation (approvals, notifications, task creation)</li>
+                    <li>Document generation and management</li>
+                    <li>Data synchronization across platforms</li>
+                    <li>Automated reporting and dashboards</li>
+                    <li>Payment processing and invoicing automation</li>
                 </ul>
-                
-                <p><strong>Ideal For:</strong> Forward-thinking businesses ready to leverage AI for competitive advantage</p>
-                
-                <p><strong>Typical Results:</strong> 80% of common inquiries handled by AI, 10X content production capacity, 24/7 availability</p>
+                <p><strong>Typical Impact:</strong> 20+ hours saved per week, 95% reduction in manual errors, instant data updates</p>
             </div>
             
             <div class="service-card">
-                <h4>📊 CRM & Sales Automation</h4>
-                <p><strong>Never lose a lead or miss a follow-up. Systematize your sales process end-to-end</strong></p>
-                
-                <p style="margin-top: 1rem;">
-                    We implement and customize best-in-class CRM systems (Zoho, GoHighLevel, HubSpot, Salesforce) that automatically capture leads, score prospects, manage pipelines, and ensure perfect follow-up. Your sales process runs like clockwork.
-                </p>
-                
-                <p><strong>What's Included:</strong></p>
+                <h4>🌐 Web & Booking Systems</h4>
+                <p><strong>Your 24/7 sales and service representative</strong></p>
+                <p>Modern, conversion-optimized websites with integrated booking systems that work while you sleep. Mobile-responsive, fast, and designed to turn visitors into customers.</p>
                 <ul style="margin-left: 1.5rem; font-size: 0.95rem;">
-                    <li><strong>CRM Selection & Setup:</strong> Choose and implement the right platform for your business needs</li>
-                    <li><strong>Data Migration:</strong> Clean and transfer existing customer data from spreadsheets or legacy systems</li>
-                    <li><strong>Pipeline Automation:</strong> Automatic deal progression based on actions, time, and triggers</li>
-                    <li><strong>Lead Scoring & Qualification:</strong> AI-powered prioritization of your hottest prospects</li>
-                    <li><strong>Automated Follow-ups:</strong> Never-miss-a-beat email and SMS sequences for every stage</li>
-                    <li><strong>Sales Analytics & Forecasting:</strong> Real-time dashboards showing pipeline health and conversion rates</li>
-                    <li><strong>Team Management:</strong> Activity tracking, performance reporting, and automated task assignment</li>
+                    <li>Professional website design and development</li>
+                    <li>Online appointment scheduling integration</li>
+                    <li>Payment gateway setup</li>
+                    <li>Customer portal development</li>
+                    <li>SEO optimization</li>
+                    <li>Analytics and conversion tracking</li>
                 </ul>
-                
-                <p><strong>Ideal For:</strong> Service businesses with a sales team or high-volume lead flow</p>
-                
-                <p><strong>Typical Results:</strong> 35% increase in close rates, 60% faster sales cycles, zero lost opportunities</p>
+                <p><strong>Typical Impact:</strong> 40% increase in appointments, 24/7 booking capability, professional brand presence</p>
             </div>
             
             <div class="service-card">
-                <h4>📧 Marketing Automation</h4>
-                <p><strong>Run sophisticated marketing campaigns on autopilot across all channels</strong></p>
-                
-                <p style="margin-top: 1rem;">
-                    From email drip campaigns to social media scheduling to lead nurturing, we automate your entire marketing engine. Consistent messaging, perfect timing, intelligent segmentation—all running automatically while you focus on strategy.
-                </p>
-                
-                <p><strong>What's Included:</strong></p>
+                <h4>📊 Analytics & Performance Tracking</h4>
+                <p><strong>Make decisions with data, not guesses</strong></p>
+                <p>Custom dashboards that show what matters: revenue, conversion rates, customer lifetime value, operational efficiency. Real-time insights delivered how you want them.</p>
                 <ul style="margin-left: 1.5rem; font-size: 0.95rem;">
-                    <li><strong>Email Marketing Automation:</strong> Segmented campaigns, drip sequences, and behavioral triggers</li>
-                    <li><strong>Social Media Management:</strong> Automated scheduling, publishing, and engagement across platforms</li>
-                    <li><strong>Lead Nurturing Campaigns:</strong> Multi-channel sequences that warm up prospects over time</li>
-                    <li><strong>Segmentation & Personalization:</strong> Dynamic content based on user behavior, preferences, and stage</li>
-                    <li><strong>Campaign Analytics & Attribution:</strong> Track ROI and performance across all marketing channels</li>
-                    <li><strong>Newsletter Management:</strong> Automated content curation and distribution to subscribers</li>
+                    <li>KPI identification and tracking</li>
+                    <li>Custom dashboard development</li>
+                    <li>Automated reporting (daily, weekly, monthly)</li>
+                    <li>Data visualization</li>
+                    <li>Predictive analytics</li>
+                    <li>A/B testing and optimization</li>
                 </ul>
-                
-                <p><strong>Ideal For:</strong> Service businesses with email lists of 500+ subscribers</p>
-                
-                <p><strong>Typical Results:</strong> 45% increase in email engagement, 3X content production, 25% more qualified leads</p>
+                <p><strong>Typical Impact:</strong> Real-time business visibility, data-driven decisions, 3X faster problem identification</p>
             </div>
             
-            <h2>Service Delivery Model</h2>
+            <div class="service-card">
+                <h4>🎓 Training & Change Management</h4>
+                <p><strong>Your team, empowered and confident with new systems</strong></p>
+                <p>Technology is only valuable if your team uses it. We provide comprehensive training, documentation, and ongoing support to ensure successful adoption.</p>
+                <ul style="margin-left: 1.5rem; font-size: 0.95rem;">
+                    <li>Custom training programs</li>
+                    <li>Video tutorials and documentation</li>
+                    <li>Hands-on workshops</li>
+                    <li>Ongoing support and troubleshooting</li>
+                    <li>System optimization and updates</li>
+                    <li>Performance monitoring</li>
+                </ul>
+                <p><strong>Typical Impact:</strong> 95% team adoption, confident system usage, reduced support dependency</p>
+            </div>
             
-            <h3>Our 5-Step Process</h3>
+            <h2>Service Delivery Models</h2>
             
-            <table>
-                <tr>
-                    <th style="width: 25%;">Phase</th>
-                    <th style="width: 75%;">Activities & Deliverables</th>
-                </tr>
-                <tr>
-                    <td><strong>1. Discovery</strong><br><span style="font-size: 0.875rem; color: var(--gray-600);">1-2 weeks</span></td>
-                    <td>Deep dive into your business, goals, current systems, workflows, and pain points. Stakeholder interviews, process mapping, opportunity identification.</td>
-                </tr>
-                <tr>
-                    <td><strong>2. Strategy</strong><br><span style="font-size: 0.875rem; color: var(--gray-600);">1 week</span></td>
-                    <td>Create custom automation roadmap with prioritized recommendations, ROI projections, and implementation timeline. Present strategic plan for approval.</td>
-                </tr>
-                <tr>
-                    <td><strong>3. Build</strong><br><span style="font-size: 0.875rem; color: var(--gray-600);">2-4 weeks</span></td>
-                    <td>Design and implement automation systems, workflows, and integrations. Configure CRM, build AI agents, create customer journeys, test thoroughly.</td>
-                </tr>
-                <tr>
-                    <td><strong>4. Launch</strong><br><span style="font-size: 0.875rem; color: var(--gray-600);">1 week</span></td>
-                    <td>Team training, documentation handoff, go-live support, final testing, and optimization. Ensure team is confident and systems are running smoothly.</td>
-                </tr>
-                <tr>
-                    <td><strong>5. Optimize</strong><br><span style="font-size: 0.875rem; color: var(--gray-600);">Ongoing</span></td>
-                    <td>Monitor performance, gather feedback, make adjustments, and continuously improve. 30-day post-launch support included; ongoing support available.</td>
-                </tr>
-            </table>
-        <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary: #4FD1C5;
-            --primary-dark: #38B2AC;
-            --navy: #1A2332;
-            --navy-light: #2D3748;
-            --gray-50: #F7FAFC;
-            --gray-100: #EDF2F7;
-            --gray-600: #718096;
-            --gray-700: #4A5568;
-            --gray-900: #1A202C;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.7;
-            color: var(--gray-700);
-            background: white;
-            font-size: 11pt;
-        }
-        
-        .document {
-            max-width: 210mm;
-            margin: 0 auto;
-            background: white;
-            padding: 0;
-        }
-        
-        .content-page {
-            padding: 3rem;
-            page-break-after: always;
-        }
-        
-        .page-header {
-            border-bottom: 3px solid var(--primary);
-            padding-bottom: 1.5rem;
-            margin-bottom: 3rem;
-        }
-        
-        .page-number {
-            text-align: right;
-            color: var(--gray-600);
-            font-size: 0.875rem;
-            margin-top: 0.5rem;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            color: var(--navy);
-            font-weight: 800;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-        
-        h2 {
-            font-size: 1.75rem;
-            color: var(--navy);
-            font-weight: 700;
-            margin: 2.5rem 0 1.25rem 0;
-            border-left: 4px solid var(--primary);
-            padding-left: 1rem;
-        }
-        
-        h3 {
-            font-size: 1.25rem;
-            color: var(--navy);
-            font-weight: 700;
-            margin: 2rem 0 1rem 0;
-        }
-        
-        h4 {
-            font-size: 1.1rem;
-            color: var(--navy);
-            font-weight: 600;
-            margin: 1.5rem 0 0.75rem 0;
-        }
-        
-        p {
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-        
-        .lead {
-            font-size: 1.15rem;
-            color: var(--gray-600);
-            line-height: 1.7;
-            margin-bottom: 2rem;
-        }
-        
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(79, 209, 197, 0.1) 0%, rgba(56, 178, 172, 0.1) 100%);
-            border-left: 4px solid var(--primary);
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 0.5rem;
-        }
-        
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 1.5rem 0;
-        }
-        
-        .info-box {
-            background: var(--gray-50);
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            border-top: 3px solid var(--primary);
-        }
-        
-        .info-box h4 {
-            margin-top: 0;
-            color: var(--primary-dark);
-        }
-        
-        ul, ol {
-            margin: 1rem 0 1.5rem 1.5rem;
-        }
-        
-        li {
-            margin-bottom: 0.75rem;
-            line-height: 1.6;
-        }
-        
-        .bullet-list {
-            list-style: none;
-            margin-left: 0;
-        }
-        
-        .bullet-list li {
-            position: relative;
-            padding-left: 2rem;
-        }
-        
-        .bullet-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-        
-        .case-study {
-            background: var(--gray-50);
-            border-left: 4px solid var(--primary);
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 0.5rem;
-            page-break-inside: avoid;
-        }
-        
-        .case-study-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 1rem;
-        }
-        
-        .case-study-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--navy);
-        }
-        
-        .case-study-tag {
-            background: var(--primary);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-        
-        .result-highlight {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            padding: 0.75rem 1.25rem;
-            border-radius: 0.5rem;
-            margin: 0.75rem 0;
-            font-weight: 700;
-            font-size: 0.95rem;
-        }
-        
-        .team-member {
-            background: white;
-            border: 2px solid var(--gray-100);
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            page-break-inside: avoid;
-        }
-        
-        .team-member-name {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--navy);
-            margin-bottom: 0.25rem;
-        }
-        
-        .team-member-title {
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-section {
-            background: var(--navy);
-            color: white;
-            padding: 2.5rem;
-            border-radius: 0.75rem;
-            margin-top: 2rem;
-        }
-        
-        .contact-section h2 {
-            color: white;
-            border-left-color: var(--primary);
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-size: 1.05rem;
-        }
-        
-        .contact-icon {
-            font-size: 1.5rem;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .social-link {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-        
-        .cta-box {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: var(--navy);
-            padding: 2.5rem;
-            border-radius: 1rem;
-            text-align: center;
-            margin: 2rem 0;
-        }
-        
-        .cta-box h3 {
-            color: var(--navy);
-            margin: 0 0 1rem 0;
-            font-size: 1.75rem;
-        }
-        
-        .cta-button {
-            background: var(--navy);
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            display: inline-block;
-            font-weight: 700;
-            margin-top: 1rem;
-            font-size: 1.1rem;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
-        }
-        
-        th, td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid var(--gray-100);
-        }
-        
-        th {
-            background: var(--gray-50);
-            font-weight: 700;
-            color: var(--navy);
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 2rem 3rem;
-            border-top: 2px solid var(--gray-100);
-            color: var(--gray-600);
-            font-size: 0.875rem;
-        }
-        
-        @media print {
-            body {
-                background: white;
-            }
-            .document {
-                max-width: 100%;
-            }
-            .content-page {
-                page-break-after: always;
-            }
-            .cta-button {
-                display: none;
-            }
-            a {
-                color: var(--navy);
-                text-decoration: none;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .two-column,
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            .content-page {
-                padding: 2rem 1.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="document">
-        
+            <div class="two-column">
+                <div class="info-box">
+                    <h4>Done-For-You Implementation</h4>
+                    <p>We handle everything from strategy to launch. You focus on your business while we build your systems. Includes discovery, implementation, testing, training, and 30-day optimization.</p>
+                    <p><strong>Timeline:</strong> 2-8 weeks depending on complexity</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>Done-With-You Consulting</h4>
+                    <p>We guide your team through implementation with expert oversight. Perfect for businesses with technical resources who need strategic direction and expertise.</p>
+                    <p><strong>Timeline:</strong> 4-12 weeks with weekly check-ins</p>
+                </div>
+            </div>
+            
+            <div class="two-column">
+                <div class="info-box">
+                    <h4>Ongoing Optimization & Support</h4>
+                    <p>Monthly retainer for continuous improvement, troubleshooting, training, and system evolution as your business grows.</p>
+                    <p><strong>Format:</strong> Monthly hours package with priority support</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>Strategic Advisory</h4>
+                    <p>High-level consulting for businesses planning major transformations. We assess, strategize, and roadmap your automation journey.</p>
+                    <p><strong>Format:</strong> Project-based or quarterly engagements</p>
+                </div>
+            </div>
+        </div>
+
         <!-- PAGE 5: TARGET MARKET & CUSTOMER SEGMENTS -->
         <div class="content-page">
             <div class="page-header">
@@ -1568,7 +1237,7 @@
             </div>
         </div>
 
-        <!-- PAGE 8: CASE STUDIES (Continued from main profile) -->
+        <!-- PAGE 8: CASE STUDIES -->
         <div class="content-page">
             <div class="page-header">
                 <h1>Client Success Stories</h1>
@@ -1895,4 +1564,4 @@
         
     </div>
 </body>
-</html>
+</html
