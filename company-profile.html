@@ -923,4 +923,709 @@
                     <td>Monitor performance, gather feedback, make adjustments, and continuously improve. 30-day post-launch support included; ongoing support available.</td>
                 </tr>
             </table>
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aheri Systems - Company Profile (Pages 5-10)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #4FD1C5;
+            --primary-dark: #38B2AC;
+            --navy: #1A2332;
+            --navy-light: #2D3748;
+            --gray-50: #F7FAFC;
+            --gray-100: #EDF2F7;
+            --gray-600: #718096;
+            --gray-700: #4A5568;
+            --gray-900: #1A202C;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--gray-700);
+            background: white;
+            font-size: 11pt;
+        }
+        
+        .document {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            padding: 0;
+        }
+        
+        .content-page {
+            padding: 3rem;
+            page-break-after: always;
+        }
+        
+        .page-header {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .page-number {
+            text-align: right;
+            color: var(--gray-600);
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: var(--navy);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 1.75rem;
+            color: var(--navy);
+            font-weight: 700;
+            margin: 2.5rem 0 1.25rem 0;
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+        }
+        
+        h3 {
+            font-size: 1.25rem;
+            color: var(--navy);
+            font-weight: 700;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        h4 {
+            font-size: 1.1rem;
+            color: var(--navy);
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        
+        .lead {
+            font-size: 1.15rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(79, 209, 197, 0.1) 0%, rgba(56, 178, 172, 0.1) 100%);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        
+        .info-box {
+            background: var(--gray-50);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border-top: 3px solid var(--primary);
+        }
+        
+        .info-box h4 {
+            margin-top: 0;
+            color: var(--primary-dark);
+        }
+        
+        ul, ol {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+        }
+        
+        .bullet-list {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .bullet-list li {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .bullet-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .case-study {
+            background: var(--gray-50);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+            page-break-inside: avoid;
+        }
+        
+        .case-study-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+        
+        .case-study-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+        
+        .case-study-tag {
+            background: var(--primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        .result-highlight {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.5rem;
+            margin: 0.75rem 0;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        
+        .team-member {
+            background: white;
+            border: 2px solid var(--gray-100);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            page-break-inside: avoid;
+        }
+        
+        .team-member-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.25rem;
+        }
+        
+        .team-member-title {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-section {
+            background: var(--navy);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 0.75rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-section h2 {
+            color: white;
+            border-left-color: var(--primary);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.05rem;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--navy);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .cta-box h3 {
+            color: var(--navy);
+            margin: 0 0 1rem 0;
+            font-size: 1.75rem;
+        }
+        
+        .cta-button {
+            background: var(--navy);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 700;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        
+        th {
+            background: var(--gray-50);
+            font-weight: 700;
+            color: var(--navy);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem 3rem;
+            border-top: 2px solid var(--gray-100);
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .document {
+                max-width: 100%;
+            }
+            .content-page {
+                page-break-after: always;
+            }
+            .cta-button {
+                display: none;
+            }
+            a {
+                color: var(--navy);
+                text-decoration: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .two-column,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .content-page {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="document">
+        
+        <!-- PAGE 5: TARGET MARKET & CUSTOMER SEGMENTS -->
+        <div class="content-page">
+            <div class="page-header">
+                <h1>Target Market & Customer Segments</h1>
+                <div class="page-number">Page 5</div>
+            </div>
             
+            <h2>Primary Target Market</h2>
+            
+            <p class="lead">
+                We serve service-based SMBs and entrepreneurs who have proven their business model and are ready to scale systematically. Our sweet spot is businesses experiencing growing pains—they have demand but lack the systems to serve more clients efficiently.
+            </p>
+            
+            <div class="highlight-box">
+                <h4>Ideal Client Profile</h4>
+                <ul style="margin: 0.5rem 0 0 1.5rem;">
+                    <li><strong>Revenue:</strong> $100K - $5M annually</li>
+                    <li><strong>Team Size:</strong> 5-50 employees (or solopreneurs ready to scale)</li>
+                    <li><strong>Growth Stage:</strong> Beyond startup, entering scale-up phase</li>
+                    <li><strong>Tech Adoption:</strong> Comfortable with technology, ready for automation</li>
+                    <li><strong>Pain Point:</strong> Manual processes limiting growth</li>
+                    <li><strong>Mindset:</strong> Invested in systems, not just quick fixes</li>
+                </ul>
+            </div>
+            
+            <h2>Industry Verticals</h2>
+            
+            <h3>1. Healthcare & Wellness</h3>
+            <p><strong>Target Businesses:</strong> Medical clinics (pediatrics, dental, general practice), mental health practices, physical therapy & rehabilitation, wellness centers & spas, alternative medicine practitioners</p>
+            <p><strong>Why Healthcare:</strong> High appointment volume, complex scheduling, critical follow-up needs, significant administrative burden that automation can eliminate.</p>
+            
+            <h3>2. Professional Services</h3>
+            <p><strong>Target Businesses:</strong> Legal practices, accounting & bookkeeping firms, consulting (management, HR, IT), real estate agencies, insurance agencies</p>
+            <p><strong>Why Professional Services:</strong> Knowledge-based work, high-value transactions, relationship-driven business model requiring sophisticated CRM and client management systems.</p>
+            
+            <h3>3. Education & Training</h3>
+            <p><strong>Target Businesses:</strong> Coaching businesses, training providers, educational consultants, online course creators, corporate training firms</p>
+            <p><strong>Why Education:</strong> Student/client journey optimization opportunities, enrollment automation needs, structured content delivery systems.</p>
+            
+            <h3>4. Events & Hospitality</h3>
+            <p><strong>Target Businesses:</strong> Event planning & management, wedding services, conference organizers, catering services, venue management</p>
+            <p><strong>Why Events:</strong> Registration automation, payment processing, communication sequences, high-volume coordination requirements perfect for automation.</p>
+            
+            <h3>5. Creative & Design Services</h3>
+            <p><strong>Target Businesses:</strong> Marketing agencies, photography studios, design firms, video production, content creation businesses</p>
+            <p><strong>Why Creative Services:</strong> Project management complexity, client communication intensity, portfolio management, and booking systems needs.</p>
+            
+            <h2>Geographic Markets</h2>
+            
+            <div class="two-column">
+                <div class="info-box">
+                    <h4>Primary Markets</h4>
+                    <p>Kenya, East Africa (Tanzania, Uganda, Rwanda)</p>
+                </div>
+                <div class="info-box">
+                    <h4>Secondary Markets</h4>
+                    <p>Sub-Saharan Africa (Nigeria, South Africa, Ghana)</p>
+                </div>
+            </div>
+            
+            <div class="info-box" style="margin-top: 1rem;">
+                <h4>Tertiary Markets</h4>
+                <p>Global reach via remote service delivery: United States, United Kingdom, Canada, Middle East, and other international markets seeking cost-effective, high-quality automation solutions.</p>
+            </div>
+            
+            <h2>Customer Personas</h2>
+            
+            <div class="info-box" style="margin-bottom: 1.5rem;">
+                <h4>Persona 1: "The Overwhelmed Entrepreneur"</h4>
+                <p><strong>Profile:</strong> Solo practitioner or small team (2-5 people), spending 70% of time on admin vs. delivery, turning away clients due to capacity constraints.</p>
+                <p><strong>Pain Points:</strong> Knows automation exists but doesn't know where to start, drowning in manual tasks.</p>
+                <p><strong>Needs:</strong> Time freedom, scalability, simple and affordable solutions.</p>
+            </div>
+            
+            <div class="info-box" style="margin-bottom: 1.5rem;">
+                <h4>Persona 2: "The Growth-Stage Founder"</h4>
+                <p><strong>Profile:</strong> 10-30 employee service business, growing rapidly but systems haven't kept pace, data scattered across tools and spreadsheets.</p>
+                <p><strong>Pain Points:</strong> Team members duplicating effort, lack of visibility into operations.</p>
+                <p><strong>Needs:</strong> Integration, centralized visibility, process optimization.</p>
+            </div>
+            
+            <div class="info-box">
+                <h4>Persona 3: "The Tech-Forward Professional"</h4>
+                <p><strong>Profile:</strong> Early adopter comfortable with technology, already uses some tools but they're not connected, values efficiency and innovation.</p>
+                <p><strong>Pain Points:</strong> Tools working in silos, wants cutting-edge solutions.</p>
+                <p><strong>Needs:</strong> Advanced automation, AI implementation, seamless integration.</p>
+            </div>
+        </div>
+
+        <!-- PAGE 6: UNIQUE VALUE PROPOSITION -->
+        <div class="content-page">
+            <div class="page-header">
+                <h1>Unique Value Proposition</h1>
+                <div class="page-number">Page 6</div>
+            </div>
+            
+            <h2>What Makes Aheri Systems Different</h2>
+            
+            <div class="info-box" style="margin-bottom: 1.5rem;">
+                <h4>1. Specialized Focus = Deep Expertise</h4>
+                <p>Unlike generalist technology consultants or broad automation agencies, we focus exclusively on service businesses. This specialization means:</p>
+                <ul class="bullet-list">
+                    <li>We understand your business model intimately</li>
+                    <li>We've solved your specific problems before</li>
+                    <li>We know which tools work best for service delivery</li>
+                    <li>We speak your language, not just tech jargon</li>
+                </ul>
+            </div>
+            
+            <div class="info-box" style="margin-bottom: 1.5rem;">
+                <h4>2. AI-First Approach</h4>
+                <p>We're not just automating—we're making systems intelligent with ChatGPT and Claude integrations, AI agents that learn and improve, predictive analytics, content generation at scale, and smart decision-making built into workflows. Most automation providers are still using basic triggers—we're leveraging AI to create truly intelligent systems.</p>
+            </div>
+            
+            <div class="info-box" style="margin-bottom: 1.5rem;">
+                <h4>3. No Vendor Lock-In</h4>
+                <p>Your business, your data, your control. We use best-in-class tools (not proprietary platforms), provide full data portability, offer open integrations, and ensure you can take everything with you. Any developer can work on your systems. We build capacity, not dependency.</p>
+            </div>
+            
+            <div class="info-box" style="margin-bottom: 1.5rem;">
+                <h4>4. Accessible Enterprise Quality</h4>
+                <p>Enterprise-level automation without the enterprise price tag. Our solutions are typically 70-80% less expensive than traditional consulting, with implementation in weeks (not months), flexible payment options, scalable pricing that grows with you, and no mandatory multi-year contracts.</p>
+            </div>
+            
+            <div class="info-box" style="margin-bottom: 1.5rem;">
+                <h4>5. Proven, Measurable Results</h4>
+                <p>We don't sell hope—we deliver outcomes. Real case studies with actual metrics, clear ROI projections upfront, performance monitoring and reporting, 30-day post-launch optimization, and satisfaction guarantee.</p>
+            </div>
+            
+            <div class="info-box">
+                <h4>6. Global Reach, Local Understanding</h4>
+                <p>Based in Kenya, serving the world. We understand emerging market dynamics, know developed market expectations, leverage global best practices, respect local contexts and constraints, and offer competitive pricing with international quality.</p>
+            </div>
+            
+            <h2>Our Competitive Advantages</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>vs. Competitor Type</th>
+                        <th>Our Advantages</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Freelance Developers</strong></td>
+                        <td>Business strategy + implementation (not just coding), proven methodologies and frameworks, ongoing support and optimization, specialized service business expertise</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Traditional Consulting Firms</strong></td>
+                        <td>70% lower cost structure, 3X faster implementation, modern AI-powered solutions, hands-on implementation (not just recommendations)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DIY Software Platforms</strong></td>
+                        <td>Custom to your exact needs, full integration across tools, expert implementation and training, ongoing optimization and support</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Offshore Development Shops</strong></td>
+                        <td>Strategic thinking (not just execution), service business domain expertise, real-time communication and collaboration, cultural understanding and alignment</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- PAGE 7: TECHNOLOGY & INNOVATION -->
+        <div class="content-page">
+            <div class="page-header">
+                <h1>Technology & Innovation</h1>
+                <div class="page-number">Page 7</div>
+            </div>
+            
+            <h2>Our Technology Stack</h2>
+            
+            <div class="two-column">
+                <div class="info-box">
+                    <h4>CRM Platforms</h4>
+                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
+                        <li>GoHighLevel (primary for SMBs)</li>
+                        <li>HubSpot (mid-market)</li>
+                        <li>Salesforce (enterprise)</li>
+                        <li>Zoho CRM (cost-effective)</li>
+                        <li>Custom implementations</li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <h4>Automation Tools</h4>
+                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
+                        <li>Zapier (no-code automation)</li>
+                        <li>Make.com (advanced workflows)</li>
+                        <li>n8n (open-source)</li>
+                        <li>Custom API integrations</li>
+                        <li>Webhooks and middleware</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="two-column">
+                <div class="info-box">
+                    <h4>AI Technologies</h4>
+                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
+                        <li>ChatGPT API (OpenAI)</li>
+                        <li>Claude API (Anthropic)</li>
+                        <li>Custom AI agents & chatbots</li>
+                        <li>Natural language processing</li>
+                        <li>Machine learning models</li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <h4>Communication Platforms</h4>
+                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
+                        <li>Email marketing (multiple platforms)</li>
+                        <li>SMS automation (Twilio, TextMagic)</li>
+                        <li>WhatsApp Business API</li>
+                        <li>VoIP integrations</li>
+                        <li>Multi-channel orchestration</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="two-column">
+                <div class="info-box">
+                    <h4>Booking & Scheduling</h4>
+                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
+                        <li>Calendly integrations</li>
+                        <li>Custom booking systems</li>
+                        <li>Calendar synchronization</li>
+                        <li>Reminder automation</li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <h4>Analytics & Reporting</h4>
+                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
+                        <li>Google Analytics</li>
+                        <li>Custom dashboards</li>
+                        <li>CRM native analytics</li>
+                        <li>Data visualization</li>
+                        <li>Automated reporting</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h4>Web & App Development</h4>
+                <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
+                    <li>HTML/CSS/JavaScript</li>
+                    <li>React and modern frameworks</li>
+                    <li>Responsive design</li>
+                    <li>Progressive web apps</li>
+                    <li>API-first architecture</li>
+                </ul>
+            </div>
+            
+            <h2>Innovation Philosophy</h2>
+            
+            <p>We invest heavily in continuous learning and experimentation. Our team actively tests new AI models as they're released, adopts promising automation tools early, maintains regular training on emerging technologies, participates in AI/automation communities, and develops partnerships with leading technology providers.</p>
+            
+            <h3>Current R&D Focus Areas</h3>
+            
+            <ol>
+                <li><strong>AI Agent Orchestration:</strong> Multiple specialized AI agents working together seamlessly</li>
+                <li><strong>Predictive Churn Prevention:</strong> Machine learning models identifying at-risk customers proactively</li>
+                <li><strong>Voice AI Integration:</strong> Automated phone interactions and intelligent voice assistants</li>
+                <li><strong>Computer Vision:</strong> Document processing and image recognition for workflow automation</li>
+                <li><strong>Blockchain for Data Integrity:</strong> Exploring decentralized automation triggers and audit trails</li>
+            </ol>
+            
+            <h2>Security & Compliance</h2>
+            
+            <div class="two-column">
+                <div class="info-box">
+                    <h4>Data Protection</h4>
+                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
+                        <li>End-to-end encryption</li>
+                        <li>SOC 2 compliant infrastructure</li>
+                        <li>GDPR and data privacy compliance</li>
+                        <li>Regular security audits</li>
+                        <li>Access control & authentication</li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <h4>Industry Compliance</h4>
+                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
+                        <li>HIPAA compliance (healthcare)</li>
+                        <li>Financial services regulations</li>
+                        <li>Industry-specific certifications</li>
+                        <li>Data residency requirements</li>
+                        <li>Audit trail and logging</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 8: CASE STUDIES (Continued from main profile) -->
+        <div class="content-page">
+            <div class="page-header">
+                <h1>Client Success Stories</h1>
+                <div class="page-number">Page 8</div>
+            </div>
+            
+            <div class="case-study">
+                <div class="case-study-header">
+                    <div>
+                        <div class="case-study-title">VivaLife Pediatric Clinic</div>
+                        <p style="margin: 0.25rem 0; font-size: 0.9rem; color: var(--gray-600);"><strong>Industry:</strong> Healthcare | <strong>Location:</strong> Kenya</p>
+                    </div>
+                    <span class="case-study-tag">Healthcare</span>
+                </div>
+                
+                <p><strong>Challenge:</strong> Completely manual patient registration, scheduling, and follow-up processes. Long wait times, frequent data entry errors, no visibility into patient history. Staff spending 60% of time on admin instead of patient care.</p>
+                
+                <p><strong>Solution:</strong> Implemented comprehensive healthcare CRM with digital patient registration, automated appointment booking and reminders (SMS + email), patient portal for medical records, post-visit follow-up sequences, and real-time analytics dashboard.</p>
+                
+                <div class="result-highlight">Results: 50% reduction in admin time | 95% appointment attendance | 100% data accuracy | 24/7 self-service booking</div>
+                
+                <p style="font-style: italic; margin-top: 1rem;">"The automation systems Rita implemented have transformed how we operate. We've cut admin time in half and can now focus on patient care. The real-time analytics give us insights we never had before."</p>
+            </div>
+            
+            <div class="case-study">
+                <div class="case-study-header">
+                    <div>
+                        <div class="case-study-title">DiaspoCare Healthcare Platform</div>
+                        <p style="margin: 0.25rem 0; font-size: 0.9rem; color: var(--gray-600);"><strong>Industry:</strong> HealthTech | <strong>Location:</strong> Kenya (Global Service)</p>
+                    </div>
+                    <span class="case-study-tag">HealthTech</span>
+                </div>
+                
+                <p><strong>Challenge:</strong> Coordinating care across multiple healthcare providers while maintaining seamless patient experience. Fragmented patient data, manual coordination between specialists, no unified view of patient journey.</p>
+                
+                <p><strong>Solution:</strong> GoHighLevel CRM as central automation hub, unified patient database across all providers, multi-provider workflow automation, integrated multi-channel communication, centralized appointment coordination, complete journey tracking, and real-time provider dashboards.</p>
+                
+                <div class="result-highlight">Results: 100% automated patient journey | 70% faster referral processing | 3X provider efficiency | Zero lost referrals</div>
+                
+                <p style="font-style: italic; margin-top: 1rem;">"From manual chaos to fully automated operations. The CRM system has been a game-changer for our platform. We can now coordinate care across providers seamlessly."</p>
+            </div>
+            
+            <div class="case-study">
+                <div class="case-study-header">
+                    <div>
+                        <div class="case-study-title">Events Business Automation</div>
+                        <p style="margin: 0.25rem 0; font-size: 0.9rem; color: var(--gray-600);"><strong>Industry:</strong> Events & Conferences | <strong>Location:</strong> Kenya</p>
+                    </div>
+                    <span class="case-study-tag">Events</span>
+                </div>
+                
+                <p><strong>Challenge:</strong> Manual event management from registration to post-event follow-up. Time-consuming processes, payment tracking issues, inconsistent attendee communication, limited engagement data.</p>
+                
+                <p><strong>Solution:</strong> Custom online registration system, automated payment processing and tracking, CRM with attendee segmentation, multi-stage email marketing sequences, automated SMS reminders,
