@@ -320,89 +320,69 @@
             opacity: 0.9;
         }
 
-        /* Team/Founder Section */
-       /* Founder Section */
-.founder-section {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 48px;
-  align-items: right;
-  text-align: left;
-}
+        /* Founder Section */
+        .founder-section {
+            max-width: 1000px;
+            margin: 50px auto 0;
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 50px;
+            align-items: start;
+        }
 
-/* Image styling (premium look) */
-.founder-image {
-  position: relative;
-  padding: 10px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #3bc3b7, #2da89e);
-}
+        .founder-image {
+            position: relative;
+            padding: 10px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #3bc3b7, #2da89e);
+        }
 
-.founder-image img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 16px;
-  display: block;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
+        .founder-image img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 16px;
+            display: block;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
 
-/* Content */
-.founder-content {
-  max-width: 640px;
-}
+        .founder-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            color: #112837;
+            font-weight: 700;
+        }
 
-.founder-content h3 {
-  font-size: 2rem;
-  margin-bottom: 8px;
-  color: #112837;
-  font-weight: 700;
-}
+        .founder-title {
+            font-size: 1.1rem;
+            color: #3bc3b7;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
 
-.founder-title {
-  font-size: 1.2rem;
-  color: #3bc3b7;
-  font-weight: 600;
-  margin-bottom: 25px;
-}
+        .founder-content p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #4a5568;
+            margin-bottom: 20px;
+        }
 
-.founder-content p {
-  font-size: 1.1rem;
-  line-height: 1.9;
-  color: #4a5568;
-  margin-bottom: 20px;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .founder-section {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .founder-content {
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  .founder-image {
-    margin: 0 auto;
-  }
-}
+        .founder-content p strong {
+            color: #112837;
+            font-weight: 600;
+        }
 
         /* Approach Section */
         .approach-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
         }
 
         .approach-card {
             background: white;
             border-radius: 16px;
-            padding: 30px;
+            padding: 35px;
             border: 1px solid #e2e8f0;
             border-left: 5px solid #3bc3b7;
             transition: all 0.3s ease;
@@ -417,19 +397,19 @@
             display: inline-block;
             background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
             color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
             text-align: center;
-            line-height: 40px;
+            line-height: 45px;
             font-weight: 700;
             margin-bottom: 20px;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             box-shadow: 0 4px 12px rgba(59, 195, 183, 0.3);
         }
 
         .approach-card h3 {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             margin-bottom: 12px;
             color: #112837;
             font-weight: 700;
@@ -438,6 +418,7 @@
         .approach-card p {
             color: #64748b;
             line-height: 1.7;
+            font-size: 1.05rem;
         }
 
         /* CTA Section */
@@ -532,7 +513,7 @@
 
         .footer-tagline {
             color: #3bc3b7;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             margin-bottom: 10px;
             font-weight: 500;
         }
@@ -578,6 +559,7 @@
             font-size: 0.9rem;
         }
 
+        /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .mobile-menu-btn {
                 display: flex;
@@ -612,17 +594,39 @@
                 font-size: 2rem;
             }
 
+            .section-subtitle {
+                font-size: 1.05rem;
+            }
+
             .founder-section {
                 grid-template-columns: 1fr;
                 gap: 30px;
+                text-align: center;
+            }
+
+            .founder-image {
+                max-width: 300px;
+                margin: 0 auto;
             }
 
             .cta-content h2 {
                 font-size: 2rem;
             }
 
+            .cta-content p {
+                font-size: 1.1rem;
+            }
+
             .stat-number {
                 font-size: 2.5rem;
+            }
+
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -753,14 +757,16 @@
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Meet <span class="gradient-text">Rita Ndubi</span></h2>
-                <p class="section-subtitle">Founder & Chief Automation Architect</p>
-          <div class="founder-section">
-  <div class="founder-image">
-    <img src="assets/images/rita-ndubi.jpg" alt="Rita Ndubi – Founder, Aheri Systems">
-  </div>
-</div>
+                <h2 class="section-title">Meet the <span class="gradient-text">Founder</span></h2>
+                <p class="section-subtitle">The architect behind your automated future</p>
+            </div>
+            <div class="founder-section">
+                <div class="founder-image">
+                    <img src="assets/images/rita-ndubi.jpg" alt="Rita Ndubi – Founder, Aheri Systems">
+                </div>
                 <div class="founder-content">
+                    <h3>Rita Ndubi</h3>
+                    <p class="founder-title">Founder & Chief Automation Architect</p>
                     <p>
                         Rita Ndubi is a systems architect and automation specialist with a passion for eliminating business inefficiencies through intelligent technology.
                     </p>
@@ -825,7 +831,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>AHERI <span class="logo-systems">SYSTEMS</span></h3>
-                    <p class="footer-tagline">Automating Growth Through Intelligence</p>
+                    <p class="footer-tagline">Smart Systems for Scalable Growth</p>
                     <p>Transforming service businesses with AI-powered automation systems. Based in Kenya, serving clients globally.</p>
                 </div>
                 <div class="footer-col">
@@ -854,27 +860,4 @@
                         <li><a href="mailto:rita@aherisystems.com">rita@aherisystems.com</a></li>
                         <li><a href="tel:+254716850772">+254 716 850 772</a></li>
                         <li>Nairobi, Kenya</li>
-                        <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" target="_blank">Book a Call</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Aheri Systems. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navMenu = document.querySelector('.nav-menu');
-
-        if (mobileMenuBtn && navMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-            });
-        }
-    </script>
-
-</body>
-</html>
+                        <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" target="_blank">Book a
