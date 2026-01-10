@@ -321,52 +321,76 @@
         }
 
         /* Team/Founder Section */
-        .founder-section {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 50px;
-            align-items: left;
-        }
-      .founder-section {
+       /* Founder Section */
+.founder-section {
+  max-width: 1000px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 320px 1fr;
   gap: 48px;
-  align-items: left;
+  align-items: center;
+  text-align: left;
 }
 
+/* Image styling (premium look) */
+.founder-image {
+  position: relative;
+  padding: 6px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #3bc3b7, #2da89e);
+}
+
+.founder-image img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Content */
+.founder-content {
+  max-width: 640px;
+}
+
+.founder-content h3 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #112837;
+  font-weight: 700;
+}
+
+.founder-title {
+  font-size: 1.2rem;
+  color: #3bc3b7;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.founder-content p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #4a5568;
+  margin-bottom: 20px;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .founder-section {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
+  .founder-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
   .founder-image {
     margin: 0 auto;
+  }
 }
-        }
-
-        .founder-content h3 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            color: #112837;
-            font-weight: 700;
-        }
-
-        .founder-title {
-            font-size: 1.2rem;
-            color: #3bc3b7;
-            font-weight: 600;
-            margin-bottom: 25px;
-        }
-
-        .founder-content p {
-            font-size: 1.1rem;
-            line-height: 1.9;
-            color: #4a5568;
-            margin-bottom: 20px;
-        }
 
         /* Approach Section */
         .approach-grid {
