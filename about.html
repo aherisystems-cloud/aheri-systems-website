@@ -3,138 +3,603 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Favicon -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-    <title>About Us | Aheri Systems</title>
-    <meta name="description" content="Learn about Aheri Systems' mission to transform service businesses through AI-powered automation. Meet our founder and discover our proven methodology.">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <title>About Us - Aheri Systems</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        .about-hero {
-            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-            color: var(--white);
-            padding: calc(80px + 4rem) 0 4rem;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #112837;
+            background: white;
+        }
+
+        /* Navigation Styles */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(17, 40, 55, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #112837;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #112837;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #3bc3b7;
+        }
+
+        .nav-menu .btn-primary {
+            background: #3bc3b7;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .nav-menu .btn-primary:hover {
+            background: #2da89e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 195, 183, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
+            color: white;
+            padding: 100px 20px 80px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
-        .about-hero h1 {
-            color: var(--white);
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 195, 183, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero > .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
             font-size: 3rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
-        .about-hero p {
-            font-size: 1.25rem;
-            color: var(--primary-light);
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3bc3b7 0%, #5fd4c7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 20px;
+        }
+
+        .section-alt {
+            background: #f8fafc;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #112837;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #64748b;
             max-width: 700px;
             margin: 0 auto;
         }
-        .story-section {
-            padding: 4rem 0;
+
+        /* Story Section */
+        .story-content {
+            max-width: 900px;
+            margin: 0 auto;
         }
-        .story-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
+
+        .story-content p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: #4a5568;
+            margin-bottom: 25px;
         }
-        .story-content h2 {
-            margin-bottom: 1.5rem;
+
+        .story-content p strong {
+            color: #112837;
+            font-weight: 600;
         }
-        .story-image {
-            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
-            border-radius: 1rem;
-            padding: 3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8rem;
-            min-height: 400px;
+
+        .highlight-box {
+            background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 16px;
+            margin: 40px 0;
+            text-align: center;
         }
-        .values-section {
-            background: var(--gray-50);
-            padding: 4rem 0;
+
+        .highlight-box p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin: 0;
+            color: white;
         }
+
+        /* Mission/Vision Cards */
         .values-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: 30px;
+            margin-top: 50px;
         }
+
         .value-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 1rem;
-            border-left: 4px solid var(--primary);
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #3bc3b7 0%, #2da89e 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(59, 195, 183, 0.15);
+        }
+
         .value-icon {
             font-size: 3rem;
-            margin-bottom: 1rem;
+            margin-bottom: 20px;
+            display: block;
         }
-        .approach-section {
-            padding: 4rem 0;
-        }
-        .approach-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        .approach-step {
-            text-align: center;
-            padding: 2rem;
-        }
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
+        .value-card h3 {
             font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #112837;
+            font-weight: 700;
+        }
+
+        .value-card p {
+            color: #64748b;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
+            color: white;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
             font-weight: 800;
-            margin: 0 auto 1.5rem;
+            color: #3bc3b7;
+            display: block;
+            line-height: 1;
+            margin-bottom: 10px;
         }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Team/Founder Section */
         .founder-section {
-            background: var(--white);
-            padding: 4rem 0;
-        }
-        .founder-grid {
+            max-width: 1000px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 2fr;
-            gap: 3rem;
-            align-items: start;
+            gap: 50px;
+            align-items: center;
         }
+
         .founder-image {
-            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
-            border-radius: 1rem;
+            text-align: center;
+        }
+
+        .founder-image-placeholder {
+            width: 100%;
+            max-width: 300px;
             aspect-ratio: 1;
+            background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 6rem;
+            color: white;
+            margin: 0 auto;
         }
-        .founder-bio h3 {
-            color: var(--navy);
-            margin-bottom: 1rem;
+
+        .founder-content h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #112837;
+            font-weight: 700;
         }
+
         .founder-title {
-            color: var(--primary);
+            font-size: 1.2rem;
+            color: #3bc3b7;
             font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 25px;
         }
-        @media (max-width: 968px) {
-            .story-grid, .founder-grid {
-                grid-template-columns: 1fr;
+
+        .founder-content p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #4a5568;
+            margin-bottom: 20px;
+        }
+
+        /* Approach Section */
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .approach-card {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            border: 1px solid #e2e8f0;
+            border-left: 5px solid #3bc3b7;
+            transition: all 0.3s ease;
+        }
+
+        .approach-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(59, 195, 183, 0.15);
+        }
+
+        .approach-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(59, 195, 183, 0.3);
+        }
+
+        .approach-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #112837;
+            font-weight: 700;
+        }
+
+        .approach-card p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-content p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            background: #3bc3b7;
+            color: white;
+            box-shadow: 0 4px 14px rgba(59, 195, 183, 0.4);
+        }
+
+        .btn:hover {
+            background: #2da89e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 195, 183, 0.5);
+        }
+
+        .cta-note {
+            margin-top: 20px;
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        .footer {
+            background: #112837;
+            color: white;
+            padding: 60px 20px 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .logo-systems {
+            color: #3bc3b7;
+        }
+
+        .footer-tagline {
+            color: #3bc3b7;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footer h4 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .footer ul li a:hover {
+            color: #3bc3b7;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
             }
-            .about-hero h1 {
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 10px rgba(17, 40, 55, 0.1);
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
                 font-size: 2rem;
             }
-            .story-image {
-                min-height: 300px;
+
+            .founder-section {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -145,165 +610,188 @@
         <div class="container">
             <div class="nav-wrapper">
                 <a href="index.html" class="logo">
-    <img src="assets/images/aheri-logo.png" alt="Aheri Systems logo" style="width:120px;">
-</a>
+                    <img src="assets/images/aheri-logo.png" alt="AHERI SYSTEMS">
+                </a>
                 <button class="mobile-menu-btn" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-               <ul class="nav-menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="case-studies.html">Case Studies</a></li>
-    <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
-    <li><a href="https://ritandubi.com/resources" target="_blank">Resources & Tools</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn-primary" target="_blank">Book Consultation</a></li>
-</ul>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
+                    <li><a href="https://ritandubi.com/resources" target="_blank">Resources & Tools</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn-primary" target="_blank">Book Consultation</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="about-hero">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <h1>Transforming Businesses Through <span class="gradient-text">Intelligence & Automation</span></h1>
-            <p>We're on a mission to help service businesses scale faster, work smarter, and grow sustainably through AI-powered systems.</p>
+            <h1>We Fix the <span class="gradient-text">Systems Problem</span></h1>
+            <p class="hero-subtitle">
+                Most businesses don't have a product problem or a marketing problem. They have a systems problem. We build the automation and AI systems that stop customers from falling through the cracks.
+            </p>
         </div>
     </section>
 
     <!-- Our Story -->
-    <section class="story-section">
+    <section class="section">
         <div class="container">
-            <div class="story-grid">
-                <div class="story-content">
-                    <h2>Our <span class="gradient-text">Story</span></h2>
-                    <p>Aheri Systems was born from a simple observation: service businesses are drowning in manual work that technology could eliminate.</p>
-                    <p>After years in digital marketing helping businesses grow online, we noticed a pattern. The businesses that scaled fastest weren't just marketing harder—they had systems. Automated workflows. Customer journeys that ran like clockwork. Operations that didn't depend on someone remembering to do something.</p>
-                    <p>In 2019, we started Aheri Brands Agency, working hands-on with service businesses across healthcare, events, and professional services. We saw firsthand how manual processes held back growth. How talented entrepreneurs spent 60% of their time on admin work instead of serving clients.</p>
-                    <p>That's when everything changed. We shifted our focus from just marketing to building complete growth systems powered by AI and automation. We went from helping businesses get customers to helping them serve those customers 10X better with half the effort.</p>
-                    <p>Today, Aheri Systems works with service businesses globally, implementing AI-powered customer journeys and operations automation that free entrepreneurs to focus on what they do best: delivering exceptional service.</p>
+            <div class="section-header">
+                <h2 class="section-title">Our <span class="gradient-text">Story</span></h2>
+                <p class="section-subtitle">Built from real business pain, designed for real business growth</p>
+            </div>
+            <div class="story-content">
+                <p>
+                    Aheri Systems was born from a simple observation: <strong>most service businesses are losing customers not because of bad service, but because of broken systems.</strong>
+                </p>
+                <p>
+                    We watched businesses spend thousands on marketing, only to lose leads because nobody responded fast enough. We saw sales teams forget to follow up with hot prospects. We witnessed customer complaints disappearing into WhatsApp black holes.
+                </p>
+                <p>
+                    The problem wasn't the people. It was the systems—or lack thereof. Everything was manual, disconnected, and chaotic.
+                </p>
+
+                <div class="highlight-box">
+                    <p>
+                        <strong>So we decided to fix it.</strong> We build the three core systems every service business needs: Get customers. Close deals. Keep customers coming back. Then we automate it all with AI so it runs 24/7.
+                    </p>
                 </div>
-                <div class="story-image">
-                </div>
+
+                <p>
+                    Today, we help service businesses across Africa and beyond stop losing customers and start growing revenue through intelligent automation. From healthcare clinics to marketing agencies, our systems capture more leads, close more deals, and keep customers engaged—automatically.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Mission & Vision -->
-    <section class="values-section">
+    <section class="section section-alt">
         <div class="container">
             <div class="section-header">
-                <h2>Our <span class="gradient-text">Mission & Values</span></h2>
-                <p>What drives us every day</p>
+                <h2 class="section-title">What We <span class="gradient-text">Stand For</span></h2>
             </div>
             <div class="values-grid">
                 <div class="value-card">
-                    <div class="value-icon">🎯</div>
-                    <h3>Mission</h3>
-                    <p>To democratize business automation and AI, making enterprise-level systems accessible to SMBs and entrepreneurs worldwide. Every business deserves to operate like a Fortune 500 company.</p>
+                    <span class="value-icon">🎯</span>
+                    <h3>Our Mission</h3>
+                    <p>To eliminate the systems gap that holds service businesses back. We build automation and AI systems that capture every customer, close every deal, and maximize every opportunity—so business owners can focus on what they do best.</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon">🔮</div>
-                    <h3>Vision</h3>
-                    <p>A world where entrepreneurs spend zero time on repetitive work. Where every service business has intelligent systems that handle the mundane, freeing humans for creativity, strategy, and relationships.</p>
+                    <span class="value-icon">🚀</span>
+                    <h3>Our Vision</h3>
+                    <p>A world where every service business—regardless of size or location—has access to enterprise-level automation and AI. Where customers never fall through the cracks and revenue growth is systematic, not random.</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon">💡</div>
-                    <h3>Innovation First</h3>
-                    <p>We stay at the cutting edge of AI and automation technology, constantly learning and implementing the latest tools to give our clients unfair advantages.</p>
+                    <span class="value-icon">💡</span>
+                    <h3>Our Values</h3>
+                    <p>Results over promises. Systems over chaos. Automation over manual work. We believe in building solutions that actually work, deliver measurable outcomes, and grow with your business. No fluff, just results.</p>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">🤝</div>
-                    <h3>Partnership Mindset</h3>
-                    <p>Your success is our success. We don't just implement systems—we become your growth partners, invested in your long-term transformation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">By the <span class="gradient-text">Numbers</span></h2>
+                <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.9);">Our impact across service businesses</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">30-50%</span>
+                    <span class="stat-label">More Leads Captured</span>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">📊</div>
-                    <h3>Results-Driven</h3>
-                    <p>Pretty dashboards don't matter if they don't move the needle. We focus obsessively on metrics that impact revenue and time saved.</p>
+                <div class="stat-item">
+                    <span class="stat-number">50%</span>
+                    <span class="stat-label">Faster Deal Closure</span>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">🌍</div>
-                    <h3>Global Impact</h3>
-                    <p>Based in Kenya, serving the world. We believe great systems transcend borders, and every entrepreneur deserves access to world-class automation.</p>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">AI Automation</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10-15hrs</span>
+                    <span class="stat-label">Saved Per Week</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet <span class="gradient-text">Rita Andubi</span></h2>
+                <p class="section-subtitle">Founder & Chief Automation Architect</p>
+            </div>
+            <div class="founder-section">
+                <div class="founder-image">
+                    <div class="founder-image-placeholder">👩🏾‍💼</div>
+                </div>
+                <div class="founder-content">
+                    <p>
+                        Rita Andubi is a systems architect and automation specialist with a passion for eliminating business inefficiencies through intelligent technology.
+                    </p>
+                    <p>
+                        After witnessing countless service businesses struggle with manual processes, scattered customer data, and lost opportunities, Rita founded Aheri Systems to bring enterprise-level automation and AI to SMBs and entrepreneurs.
+                    </p>
+                    <p>
+                        <strong>Her philosophy is simple:</strong> Every business deserves systems that work as hard as they do. Through strategic automation and AI implementation, she's helped businesses across healthcare, professional services, and beyond reclaim their time and multiply their revenue.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Our Approach -->
-    <section class="approach-section">
+    <section class="section section-alt">
         <div class="container">
             <div class="section-header">
-                <h2>Our <span class="gradient-text">Proven Approach</span></h2>
-                <p>How we transform service businesses systematically</p>
+                <h2 class="section-title">How We <span class="gradient-text">Work</span></h2>
+                <p class="section-subtitle">Our proven methodology for business transformation</p>
             </div>
-            <div class="approach-steps">
-                <div class="approach-step">
-                    <div class="step-number">1</div>
-                    <h3>Deep Discovery</h3>
-                    <p>We audit your current systems, workflows, and pain points. No cookie-cutter solutions—every recommendation is tailored to your business.</p>
+            <div class="approach-grid">
+                <div class="approach-card">
+                    <span class="approach-number">1</span>
+                    <h3>Diagnose</h3>
+                    <p>We audit your current systems to identify where customers are falling through the cracks and revenue is being left on the table.</p>
                 </div>
-                <div class="approach-step">
-                    <div class="step-number">2</div>
-                    <h3>Strategic Design</h3>
-                    <p>We map out your ideal customer journey and operational workflows, identifying automation opportunities that will have the biggest impact.</p>
+                <div class="approach-card">
+                    <span class="approach-number">2</span>
+                    <h3>Design</h3>
+                    <p>We create a custom automation blueprint tailored to your business—covering acquisition, conversion, and retention systems.</p>
                 </div>
-                <div class="approach-step">
-                    <div class="step-number">3</div>
-                    <h3>Smart Implementation</h3>
-                    <p>We build and deploy your systems using best-in-class tools (CRMs, AI agents, automation platforms), with minimal disruption to your operations.</p>
+                <div class="approach-card">
+                    <span class="approach-number">3</span>
+                    <h3>Deploy</h3>
+                    <p>We build and implement your systems using best-in-class tools, AI integrations, and proven workflows that work 24/7.</p>
                 </div>
-                <div class="approach-step">
-                    <div class="step-number">4</div>
-                    <h3>Team Training</h3>
-                    <p>We don't just hand over systems—we ensure your team knows how to use, maintain, and optimize them for continued growth.</p>
-                </div>
-                <div class="approach-step">
-                    <div class="step-number">5</div>
-                    <h3>Continuous Optimization</h3>
-                    <p>Systems need care. We monitor performance, gather feedback, and continuously refine to ensure you're always getting better results.</p>
+                <div class="approach-card">
+                    <span class="approach-number">4</span>
+                    <h3>Optimize</h3>
+                    <p>We continuously monitor, refine, and improve your systems based on real data and results—ensuring maximum ROI.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Founder -->
-    <section class="founder-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Meet the <span class="gradient-text">Founder</span></h2>
-            </div>
-            <div class="founder-grid">
-                <div class="founder-image">
-             <img src="assets/images/rita-ndubi.jpg" alt="Rita Ndubi" style="width:200px; border-radius:50%;">
-                </div>
-                <div class="founder-bio">
-                    <h3>Rita Ndubi</h3>
-                    <p class="founder-title">Founder & Chief Automation Architect</p>
-                    <p>Rita brings over 5 years of digital marketing and systems expertise to every client engagement. After running Aheri Brands Agency and witnessing how manual processes limited business growth, she pivoted to focus entirely on automation and AI implementation.</p>
-                    <p>Her background spans the full spectrum of business operations—from marketing strategy and customer acquisition to CRM implementation and workflow optimization. This 360-degree perspective allows her to see opportunities others miss and build systems that truly transform businesses.</p>
-                    <p>Rita works with a global network of specialists on a project-by-project basis, ensuring every client gets access to world-class expertise without the overhead of a large agency.</p>
-                    <p>When she's not architecting automation systems, Rita is studying the latest AI developments, testing new tools, and finding ways to push the boundaries of what's possible with business automation.</p>
-                    <div style="margin-top: 2rem;">
-                        <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary" target="_blank">Book a Call with Rita</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
+    <!-- CTA Section -->
     <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Transform Your Business?</h2>
-                <p>Let's discuss how AI and automation can 10X your growth.</p>
-                <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary btn-large" target="_blank">Book Free Discovery Call</a>
-                <p class="cta-note">30-minute consultation • Custom growth plan • No commitment required</p>
+        <div class="cta-content">
+            <div class="container">
+                <h2>Ready to Stop Losing Customers?</h2>
+                <p>Let's diagnose where your customers are falling through the cracks and build the systems to fix it.</p>
+                <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn" target="_blank">Book Your Free Discovery Call</a>
+                <p class="cta-note">45-minute session • Custom systems audit • No pressure, just insights</p>
             </div>
         </div>
     </section>
@@ -320,23 +808,23 @@
                 <div class="footer-col">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="services.html#customer-journey">Customer Journey Systems</a></li>
-                        <li><a href="services.html#operations">Operations Automation</a></li>
-                        <li><a href="services.html#ai-implementation">AI Implementation</a></li>
-                        <li><a href="services.html#crm">CRM & Sales Automation</a></li>
+                        <li><a href="services.html">Customer Acquisition Systems</a></li>
+                        <li><a href="services.html">Customer Conversion Systems</a></li>
+                        <li><a href="services.html">Customer Retention Systems</a></li>
+                        <li><a href="services.html">Operations Automation</a></li>
+                        <li><a href="services.html">AI Implementation</a></li>
                     </ul>
                 </div>
-                <!-- NEW -->
-<div class="footer-col">
-    <h4>Company</h4>
-    <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="case-studies.html">Case Studies</a></li>
-        <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
-        <li><a href="https://ritandubi.com/resources" target="_blank">Resources & Tools</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
+                        <li><a href="https://ritandubi.com/resources" target="_blank">Resources & Tools</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
                 <div class="footer-col">
                     <h4>Get In Touch</h4>
                     <ul class="contact-info">
@@ -353,6 +841,17 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (mobileMenuBtn && navMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+
 </body>
 </html>
