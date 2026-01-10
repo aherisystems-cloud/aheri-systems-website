@@ -14,15 +14,15 @@
         }
         
         :root {
-            --primary: #4FD1C5;
-            --primary-dark: #38B2AC;
-            --navy: #1A2332;
-            --navy-light: #2D3748;
-            --gray-50: #F7FAFC;
-            --gray-100: #EDF2F7;
-            --gray-600: #718096;
-            --gray-700: #4A5568;
-            --gray-900: #1A202C;
+            --primary: #3bc3b7;
+            --primary-dark: #2da89e;
+            --navy: #112837;
+            --navy-light: #1a3a52;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-600: #64748b;
+            --gray-700: #4a5568;
+            --gray-900: #112837;
         }
         
         body {
@@ -64,6 +64,26 @@
             text-align: center;
             padding: 4rem 3rem;
             page-break-after: always;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cover-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 195, 183, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .cover-page > * {
+            position: relative;
+            z-index: 1;
         }
         
         .cover-logo {
@@ -79,15 +99,18 @@
         
         .cover-tagline {
             font-size: 2rem;
-            color: var(--primary);
-            font-weight: 600;
+            background: linear-gradient(135deg, #3bc3b7 0%, #5fd4c7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
             margin-bottom: 2rem;
             letter-spacing: 0.02em;
         }
         
         .cover-subtitle {
             font-size: 1.5rem;
-            opacity: 0.9;
+            opacity: 0.95;
             max-width: 700px;
             margin-bottom: 3rem;
             line-height: 1.6;
@@ -115,7 +138,7 @@
         
         .cover-metric-label {
             font-size: 0.95rem;
-            opacity: 0.8;
+            opacity: 0.9;
         }
         
         .cover-date {
@@ -149,6 +172,7 @@
             font-weight: 800;
             margin-bottom: 1rem;
             line-height: 1.2;
+            letter-spacing: -0.02em;
         }
         
         h2 {
@@ -182,12 +206,19 @@
         .lead {
             font-size: 1.15rem;
             color: var(--gray-600);
-            line-height: 1.7;
+            line-height: 1.8;
             margin-bottom: 2rem;
         }
         
+        .gradient-text {
+            background: linear-gradient(135deg, #3bc3b7 0%, #5fd4c7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
         .highlight-box {
-            background: linear-gradient(135deg, rgba(79, 209, 197, 0.1) 0%, rgba(56, 178, 172, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(59, 195, 183, 0.1) 0%, rgba(45, 168, 158, 0.1) 100%);
             border-left: 4px solid var(--primary);
             padding: 1.5rem;
             margin: 1.5rem 0;
@@ -207,6 +238,7 @@
             padding: 2rem 1.5rem;
             border-radius: 0.75rem;
             text-align: center;
+            box-shadow: 0 4px 14px rgba(59, 195, 183, 0.3);
         }
         
         .stat-number {
@@ -232,7 +264,7 @@
         .info-box {
             background: var(--gray-50);
             padding: 1.5rem;
-            border-radius: 0.5rem;
+            border-radius: 0.75rem;
             border-top: 3px solid var(--primary);
         }
         
@@ -276,6 +308,7 @@
             padding: 1.5rem;
             margin-bottom: 1.5rem;
             page-break-inside: avoid;
+            transition: all 0.3s ease;
         }
         
         .service-card h4 {
@@ -511,26 +544,26 @@
         <!-- COVER PAGE -->
         <div class="cover-page">
             <div class="cover-logo">AHERI <span>SYSTEMS</span></div>
-            <div class="cover-tagline">Automating Growth Through Intelligence</div>
+            <div class="cover-tagline">Smart Systems for Scalable Growth</div>
             <div class="cover-subtitle">
-                Transforming Service Businesses with AI-Powered Customer Journey Systems and Operations Automation
+                We build the automation and AI systems that stop customers from falling through the cracks—so service businesses can scale without chaos.
             </div>
             <div class="cover-metrics">
                 <div class="cover-metric">
-                    <span class="cover-metric-number">10X</span>
-                    <span class="cover-metric-label">Revenue Growth</span>
+                    <span class="cover-metric-number">30-50%</span>
+                    <span class="cover-metric-label">More Leads Captured</span>
                 </div>
                 <div class="cover-metric">
                     <span class="cover-metric-number">50%</span>
-                    <span class="cover-metric-label">Time Saved</span>
-                </div>
-                <div class="cover-metric">
-                    <span class="cover-metric-number">95%</span>
-                    <span class="cover-metric-label">Client Satisfaction</span>
+                    <span class="cover-metric-label">Faster Deal Closure</span>
                 </div>
                 <div class="cover-metric">
                     <span class="cover-metric-number">24/7</span>
-                    <span class="cover-metric-label">Automation</span>
+                    <span class="cover-metric-label">AI Automation</span>
+                </div>
+                <div class="cover-metric">
+                    <span class="cover-metric-number">10-15hrs</span>
+                    <span class="cover-metric-label">Saved Per Week</span>
                 </div>
             </div>
             <div class="cover-date">Company Profile | January 2026</div>
@@ -544,575 +577,564 @@
             </div>
             
             <p class="lead">
-                Aheri Systems is a boutique business automation and AI implementation firm dedicated to transforming service-based SMBs and entrepreneurs through intelligent systems and customer journey optimization. Based in Nairobi, Kenya, with a global reach, we make enterprise-level automation accessible to businesses ready to scale.
+                Aheri Systems builds the three core systems every service business needs to scale: customer acquisition systems, customer conversion systems, and customer retention systems—all automated with AI to run 24/7.
             </p>
             
             <div class="highlight-box">
-                <h4>At a Glance</h4>
-                <p><strong>Founded:</strong> 2024 (Evolved from Aheri Brands Agency, established 2019)<br>
+                <h4>Company Overview</h4>
+                <p><strong>Founded:</strong> 2024<br>
                 <strong>Headquarters:</strong> Nairobi, Kenya<br>
-                <strong>Service Area:</strong> Global, with focus on service industries<br>
-                <strong>Specialization:</strong> AI & Automation for Service Businesses<br>
-                <strong>Target Market:</strong> SMBs with 5-50 employees, $100K-$5M annual revenue</p>
+                <strong>Service Area:</strong> Global (Africa, North America, Europe)<br>
+                <strong>Specialization:</strong> Business Automation & AI for Service Industries<br>
+                <strong>Core Focus:</strong> Stopping customers from falling through the cracks</p>
             </div>
             
-            <h3>Who We Are</h3>
+            <h2>The Problem We Solve</h2>
             <p>
-                We are systems architects, automation specialists, and AI implementation experts who understand the unique challenges facing service businesses. Unlike generalist technology consultants, we focus exclusively on creating intelligent, automated systems that optimize customer journeys and eliminate operational bottlenecks for service providers.
+                Most service businesses don't have a product problem or a marketing problem—they have a <strong>systems problem</strong>. They spend thousands on marketing, only to lose leads because nobody responded fast enough. Sales teams forget to follow up with hot prospects. Customer complaints disappear into WhatsApp black holes. Everything is manual, disconnected, and chaotic.
             </p>
             
-            <h3>What We Do</h3>
+            <p>The problem isn't the people. It's the systems—or lack thereof.</p>
+            
+            <h2>Our Solution</h2>
             <p>
-                We design, implement, and optimize AI-powered automation systems that transform how service businesses operate. Our solutions span the entire customer lifecycle—from lead generation and nurturing to conversion, retention, and advocacy—while simultaneously automating backend operations to free teams from repetitive manual work.
-            </p>
-            
-            <div class="stats-grid">
-                <div class="stat-box">
-                    <span class="stat-number">10X</span>
-                    <span class="stat-label">Average Revenue Growth</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">50%</span>
-                    <span class="stat-label">Time Saved on Admin</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">300%</span>
-                    <span class="stat-label">ROI in Year 1</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">20+</span>
-                    <span class="stat-label">Hours Freed Weekly</span>
-                </div>
-            </div>
-            
-            <h3>The Problem We Solve</h3>
-            <p>
-                Service businesses face a critical dilemma: they need to scale to grow revenue, but scaling requires either hiring more people (expensive and slow) or working longer hours (unsustainable). Manual processes create bottlenecks. Customer follow-ups fall through cracks. Data lives in spreadsheets instead of systems. Opportunities are missed because there aren't enough hours in the day.
-            </p>
-            <p>
-                The result? Talented entrepreneurs spend 60-70% of their time on administrative work instead of serving clients, delivering their core service, and growing their business strategically.
-            </p>
-            
-            <h3>Our Solution</h3>
-            <p>
-                We build intelligent automation systems powered by AI that handle the repetitive, time-consuming work—so business owners can focus on what they do best. Our systems work 24/7, never forget a follow-up, maintain perfect data consistency, and scale infinitely without adding headcount.
-            </p>
-            
-            <div class="highlight-box">
-                <h4>Core Value Proposition</h4>
-                <p>
-                    <strong>We help service businesses 10X their revenue and reclaim 20+ hours per week through AI-powered customer journey systems and operations automation—without hiring, without complexity, and without the enterprise price tag.</strong>
-                </p>
-            </div>
-        </div>
-
-        <!-- PAGE 2: COMPANY HISTORY & BACKGROUND -->
-        <div class="content-page">
-            <div class="page-header">
-                <h1>Company History & Background</h1>
-                <div class="page-number">Page 2</div>
-            </div>
-            
-            <h2>The Genesis Story</h2>
-            
-            <h3>2019: The Foundation - Aheri Brands Agency</h3>
-            <p>
-                Aheri Systems' roots trace back to 2019 with the founding of Aheri Brands Agency, a digital marketing agency focused on helping service businesses grow their online presence. Through hands-on work with clients across healthcare, events, professional services, and education, a critical pattern emerged: the businesses that scaled fastest weren't just marketing harder—they had systems.
-            </p>
-            
-            <h3>The Turning Point</h3>
-            <p>
-                While working with dozens of service businesses, founder Rita Ndubi observed a consistent barrier to growth: manual processes. Talented professionals were spending the majority of their time on administrative work—data entry, appointment scheduling, follow-up emails, payment collection, report generation. They were stuck in the weeds instead of serving clients and building their businesses.
-            </p>
-            
-            <p>
-                The businesses that broke through this ceiling shared one thing in common: they had automated systems. Customer journeys that ran like clockwork. CRM systems that tracked every interaction. Marketing sequences that nurtured leads automatically. Operations that didn't depend on someone remembering to do something.
-            </p>
-            
-            <h3>2024: The Pivot - Birth of Aheri Systems</h3>
-            <p>
-                Recognizing that systems—not just marketing—were the real growth lever, Rita made a decisive pivot. Aheri Systems was born with a laser focus: helping service businesses scale through intelligent automation and AI-powered systems.
-            </p>
-            
-            <div class="highlight-box">
-                <h4>The Mission Crystallized</h4>
-                <p>
-                    "Every business deserves to operate like a Fortune 500 company. Enterprise-level automation shouldn't be reserved for enterprises. We're democratizing intelligent systems for the service businesses that are the backbone of economies worldwide."
-                </p>
-                <p style="text-align: right; margin-top: 1rem;"><em>— Rita Ndubi, Founder</em></p>
-            </div>
-            
-            <h2>Evolution of Our Approach</h2>
-            
-            <h3>Phase 1: Digital Marketing (2019-2023)</h3>
-            <ul>
-                <li>Focused on customer acquisition and online visibility</li>
-                <li>Helped businesses attract leads through digital channels</li>
-                <li>Identified the systems gap limiting client growth</li>
-            </ul>
-            
-            <h3>Phase 2: Systems Integration (2023-2024)</h3>
-            <ul>
-                <li>Began implementing CRM and automation solutions alongside marketing</li>
-                <li>Witnessed dramatic results when systems were in place</li>
-                <li>Clients reported 3-5X productivity gains</li>
-            </ul>
-            
-            <h3>Phase 3: AI-Powered Automation (2024-Present)</h3>
-            <ul>
-                <li>Full pivot to automation and AI implementation</li>
-                <li>Leveraging ChatGPT, Claude, and custom AI agents</li>
-                <li>Building complete customer journey systems</li>
-                <li>Delivering 10X revenue growth outcomes</li>
-            </ul>
-            
-            <h2>The Problem We're Solving</h2>
-            
-            <p>
-                Service businesses face unique challenges that traditional software doesn't address:
+                We build intelligent automation and AI systems that capture every customer, close every deal, and maximize every opportunity. Our three core systems transform how service businesses operate:
             </p>
             
             <div class="two-column">
                 <div class="info-box">
-                    <h4>⚠️ The Pain Points</h4>
-                    <ul style="margin: 1rem 0 0 1.5rem; font-size: 0.95rem;">
-                        <li>Manual appointment scheduling</li>
-                        <li>Lost leads due to slow follow-up</li>
-                        <li>Inconsistent customer communication</li>
-                        <li>Data scattered across tools</li>
-                        <li>Time-consuming admin work</li>
-                        <li>No visibility into customer journey</li>
-                        <li>Difficulty scaling without hiring</li>
+                    <h4>🎯 Customer Acquisition Systems</h4>
+                    <p>Capture more leads, respond instantly, and never lose another opportunity. Automated lead capture, instant response systems, multi-channel follow-up, and intelligent lead qualification.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>💰 Customer Conversion Systems</h4>
+                    <p>Turn prospects into paying customers faster. Automated nurture sequences, smart appointment booking, sales pipeline automation, and deal tracking that works.</p>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h4>❤️ Customer Retention Systems</h4>
+                <p>Keep customers engaged, buying more, and referring others. Automated onboarding, proactive check-ins, loyalty programs, and referral automation that creates advocates.</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-number">30-50%</span>
+                    <span class="stat-label">More Leads Captured</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">50%</span>
+                    <span class="stat-label">Faster Conversions</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">AI Working</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">10-15hrs</span>
+                    <span class="stat-label">Saved Weekly</span>
+                </div>
+            </div>
+            
+            <h2>Who We Serve</h2>
+            <p>
+                We work exclusively with service-based businesses—healthcare clinics, professional services firms, coaching businesses, marketing agencies, event companies, and consultants. These are businesses where relationships matter, where manual follow-up is killing growth, and where automation can create immediate, measurable impact.
+            </p>
+            
+            <div class="highlight-box">
+                <h4>Core Value Proposition</h4>
+                <p style="font-size: 1.1rem; font-weight: 600;">
+                    We help service businesses stop losing customers and start growing revenue through the three systems that matter: Get customers. Close deals. Keep customers coming back. Then we automate it all with AI so it runs 24/7—without hiring, without complexity, without breaking the bank.
+                </p>
+            </div>
+        </div>
+
+        <!-- PAGE 2: OUR STORY -->
+        <div class="content-page">
+            <div class="page-header">
+                <h1>Our Story</h1>
+                <div class="page-number">Page 2</div>
+            </div>
+            
+            <h2>Built from Real Business Pain</h2>
+            
+            <p class="lead">
+                Aheri Systems was born from a simple observation: most service businesses are losing customers not because of bad service, but because of broken systems.
+            </p>
+            
+            <p>
+                We watched businesses spend thousands on marketing, only to lose leads because nobody responded fast enough. We saw sales teams forget to follow up with hot prospects. We witnessed customer complaints disappearing into WhatsApp black holes.
+            </p>
+            
+            <p>
+                The problem wasn't the people. It was the systems—or lack thereof. Everything was manual, disconnected, and chaotic.
+            </p>
+            
+            <div class="highlight-box">
+                <p style="font-size: 1.15rem; font-weight: 600;">
+                    So we decided to fix it. We build the three core systems every service business needs: Get customers. Close deals. Keep customers coming back. Then we automate it all with AI so it runs 24/7.
+                </p>
+            </div>
+            
+            <h2>From Observation to Action</h2>
+            
+            <p>
+                Through years of working with service businesses across healthcare, events, professional services, and education, founder Rita Ndubi identified a consistent pattern: the businesses that scaled fastest weren't just marketing harder—they had systems.
+            </p>
+            
+            <p>
+                Customer journeys that ran like clockwork. CRM systems that tracked every interaction. Marketing sequences that nurtured leads automatically. Operations that didn't depend on someone remembering to do something.
+            </p>
+            
+            <p>
+                Meanwhile, talented professionals were spending 60-70% of their time on administrative work—data entry, appointment scheduling, follow-up emails, payment collection. They were stuck in the weeds instead of serving clients and building their businesses.
+            </p>
+            
+            <h2>The Solution: Intelligent Automation</h2>
+            
+            <p>
+                Today, we help service businesses across Africa and beyond stop losing customers and start growing revenue through intelligent automation. From healthcare clinics to marketing agencies, our systems capture more leads, close more deals, and keep customers engaged—automatically.
+            </p>
+            
+            <div class="two-column">
+                <div class="info-box">
+                    <h4>⚠️ Before Aheri Systems</h4>
+                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
+                        <li>Leads lost due to slow response</li>
+                        <li>Manual follow-up that never happens</li>
+                        <li>Scattered customer data</li>
+                        <li>No visibility into pipeline</li>
+                        <li>Time wasted on admin</li>
+                        <li>Growth limited by capacity</li>
                     </ul>
                 </div>
                 
                 <div class="info-box">
-                    <h4>✅ Our Solutions</h4>
-                    <ul style="margin: 1rem 0 0 1.5rem; font-size: 0.95rem;">
-                        <li>24/7 automated booking systems</li>
-                        <li>Instant, intelligent lead follow-up</li>
-                        <li>Consistent multi-channel nurturing</li>
-                        <li>Unified CRM with real-time data</li>
-                        <li>Automated workflows for everything</li>
-                        <li>Complete journey analytics</li>
-                        <li>Infinite scalability with AI</li>
+                    <h4>✅ After Aheri Systems</h4>
+                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
+                        <li>Instant response to every lead</li>
+                        <li>Automated follow-up sequences</li>
+                        <li>Centralized CRM with real-time data</li>
+                        <li>Complete pipeline visibility</li>
+                        <li>10-15 hours saved per week</li>
+                        <li>Scalable growth without hiring</li>
                     </ul>
                 </div>
             </div>
             
-            <h2>Why Now? The AI Inflection Point</h2>
+            <h2>Why Now? The AI Opportunity</h2>
             
             <p>
-                The emergence of advanced AI (ChatGPT, Claude, and similar technologies) has created an unprecedented opportunity. What previously required complex programming and large development teams can now be implemented quickly and affordably. AI agents can handle customer conversations, qualify leads, schedule appointments, generate content, and provide insights—all tasks that used to require full-time employees.
+                The emergence of advanced AI (ChatGPT, Claude, and similar technologies) has created an unprecedented opportunity. What previously required complex programming and large development teams can now be implemented quickly and affordably.
             </p>
             
             <p>
-                We're at the perfect intersection of need (service businesses desperate to scale) and capability (AI making sophisticated automation accessible). Aheri Systems exists to bridge this gap for SMBs who lack the technical expertise or resources to implement these solutions themselves.
+                AI agents can handle customer conversations, qualify leads, schedule appointments, generate content, and provide insights—all tasks that used to require full-time employees. We're at the perfect intersection of need (service businesses desperate to scale) and capability (AI making sophisticated automation accessible).
             </p>
         </div>
 
-        <!-- PAGE 3: VISION, MISSION & VALUES -->
+        <!-- PAGE 3: MISSION, VISION & VALUES -->
         <div class="content-page">
             <div class="page-header">
-                <h1>Vision, Mission & Core Values</h1>
+                <h1>What We Stand For</h1>
                 <div class="page-number">Page 3</div>
-            </div>
-            
-            <h2>Our Vision</h2>
-            <div class="highlight-box">
-                <p style="font-size: 1.15rem; line-height: 1.7;">
-                    <strong>A world where entrepreneurs spend zero time on repetitive work.</strong> Where every service business has intelligent systems that handle the mundane, freeing humans for creativity, strategy, and meaningful relationships with clients. We envision a future where business automation is not a luxury for large enterprises but a fundamental right for every entrepreneur with ambition to grow.
-                </p>
             </div>
             
             <h2>Our Mission</h2>
             <div class="highlight-box">
                 <p style="font-size: 1.15rem; line-height: 1.7;">
-                    <strong>To democratize business automation and AI, making enterprise-level systems accessible to SMBs and entrepreneurs worldwide.</strong> We believe every business deserves to operate with the efficiency of a Fortune 500 company—optimized customer journeys, intelligent automation, data-driven decision making, and systems that scale. Our mission is to make this possible for service businesses of all sizes, anywhere in the world.
+                    <strong>To eliminate the systems gap that holds service businesses back.</strong> We build automation and AI systems that capture every customer, close every deal, and maximize every opportunity—so business owners can focus on what they do best.
                 </p>
             </div>
             
-            <h2>Core Values & Guiding Principles</h2>
+            <h2>Our Vision</h2>
+            <div class="highlight-box">
+                <p style="font-size: 1.15rem; line-height: 1.7;">
+                    <strong>A world where every service business—regardless of size or location—has access to enterprise-level automation and AI.</strong> Where customers never fall through the cracks and revenue growth is systematic, not random.
+                </p>
+            </div>
             
-            <p>
-                These values drive every decision we make, every system we build, and every interaction with clients and partners:
-            </p>
+            <h2>Our Values</h2>
             
             <div class="service-card">
-                <h4>💡 Innovation First</h4>
+                <h4>🎯 Results Over Promises</h4>
                 <p>
-                    We stay at the cutting edge of AI and automation technology. While others are catching up to yesterday's tools, we're implementing tomorrow's solutions. We constantly learn, experiment, and evolve to give our clients unfair advantages in their markets.
+                    We don't measure success by hours worked or features implemented. We measure success by impact: revenue generated, time saved, clients served better. Every system we build must deliver measurable ROI.
                 </p>
             </div>
             
             <div class="service-card">
-                <h4>🎯 Results Over Activity</h4>
+                <h4>⚡ Systems Over Chaos</h4>
                 <p>
-                    We don't measure success by hours worked or features implemented. We measure success by impact: revenue generated, time saved, clients served better. Pretty dashboards don't matter if they don't move the needle. Every system we build must deliver measurable ROI.
+                    We believe in building solutions that actually work, deliver measurable outcomes, and grow with your business. No fluff, just results. Process and repeatability beat heroic efforts every time.
+                </p>
+            </div>
+            
+            <div class="service-card">
+                <h4>🤖 Automation Over Manual Work</h4>
+                <p>
+                    If it's repetitive, we can automate it. We're obsessed with eliminating manual work so teams can focus on strategy, relationships, and growth. Technology should work for humans, not the other way around.
                 </p>
             </div>
             
             <div class="service-card">
                 <h4>🤝 Partnership Mindset</h4>
                 <p>
-                    Your success is our success. We don't just implement systems and disappear—we become growth partners invested in your long-term transformation. We celebrate your wins, troubleshoot your challenges, and continuously optimize for better outcomes.
-                </p>
-            </div>
-            
-            <div class="service-card">
-                <h4>🔓 No Vendor Lock-In</h4>
-                <p>
-                    We build with best-in-class tools and create systems you own. You're never trapped in proprietary platforms or dependent on us to make changes. Full portability and flexibility are non-negotiable. Your business, your data, your control.
-                </p>
-            </div>
-            
-            <div class="service-card">
-                <h4>🌍 Global Impact, Local Understanding</h4>
-                <p>
-                    Based in Kenya but serving the world, we bring a unique perspective. We understand emerging market dynamics and developed market expectations. We leverage global best practices while respecting local contexts. Great systems transcend borders.
+                    Your success is our success. We don't just implement systems and disappear—we become growth partners invested in your long-term transformation. We celebrate your wins and troubleshoot your challenges.
                 </p>
             </div>
             
             <div class="service-card">
                 <h4>📚 Teach, Don't Gate-Keep</h4>
                 <p>
-                    We empower clients with knowledge, not mystify them with jargon. We document everything, train teams thoroughly, and explain how systems work. An educated client is a successful client. We build capacity, not dependency.
+                    We empower clients with knowledge, not mystify them with jargon. We document everything, train teams thoroughly, and explain how systems work. An educated client is a successful client.
                 </p>
             </div>
             
             <div class="service-card">
-                <h4>⚡ Speed Without Compromise</h4>
+                <h4>🌍 Global Impact, Local Understanding</h4>
                 <p>
-                    Fast implementation doesn't mean sloppy work. We move quickly because we're experts, not because we cut corners. Our clients get professional quality at startup speed. Time to value matters—every week without automation is revenue left on the table.
+                    Based in Kenya but serving the world, we bring a unique perspective. We understand emerging market dynamics and developed market expectations. Great systems transcend borders.
                 </p>
             </div>
             
-            <div class="service-card">
-                <h4>🔒 Security & Privacy by Design</h4>
-                <p>
-                    We handle sensitive business and customer data with the highest standards of security. Privacy isn't an afterthought—it's built into every system from day one. Compliance, encryption, and data protection are non-negotiable.
-                </p>
-            </div>
-            
-            <h2>Our Commitment to Clients</h2>
+            <h2>Our Commitment</h2>
             
             <div class="highlight-box">
                 <ul class="bullet-list">
-                    <li><strong>Honesty First:</strong> We tell you what you need, not what makes the biggest sale. If automation isn't the answer, we'll say so.</li>
-                    <li><strong>Measurable Outcomes:</strong> Every project has clear KPIs. You'll know exactly what success looks like and how to measure it.</li>
-                    <li><strong>Continuous Improvement:</strong> We don't build and forget. Systems need care and optimization. We're committed to making your systems better over time.</li>
-                    <li><strong>Accessibility:</strong> You can reach us. You won't be stuck in support ticket limbo or routed to offshore call centers. Real humans, real help.</li>
-                    <li><strong>Knowledge Transfer:</strong> We don't hoard expertise. You'll understand how your systems work and how to maintain them.</li>
+                    <li><strong>Honest recommendations:</strong> We tell you what you need, not what makes the biggest sale</li>
+                    <li><strong>Measurable outcomes:</strong> Every project has clear KPIs and success metrics</li>
+                    <li><strong>Continuous improvement:</strong> We optimize your systems over time, not build and forget</li>
+                    <li><strong>Real accessibility:</strong> You can reach us—no support ticket limbo</li>
+                    <li><strong>Knowledge transfer:</strong> You'll understand how your systems work and how to maintain them</li>
                 </ul>
             </div>
         </div>
 
-        <!-- PAGE 4: PRODUCTS & SERVICES -->
+        <!-- PAGE 4: SERVICES -->
         <div class="content-page">
             <div class="page-header">
-                <h1>Products & Services</h1>
+                <h1>Services & Solutions</h1>
                 <div class="page-number">Page 4</div>
             </div>
             
             <p class="lead">
-                Our service portfolio is designed specifically for service-based businesses—consultants, healthcare providers, professional services, events, education, and similar industries. Every solution is customized to your business model, workflows, and growth objectives.
+                We build the three core systems every service business needs to scale, then automate them with AI. Every solution is customized to your business model, workflows, and growth objectives.
             </p>
             
-            <h2>Core Service Offerings</h2>
+            <h2>Core Service Systems</h2>
             
             <div class="service-card">
-                <h4>🎯 Customer Journey Systems</h4>
-                <p><strong>Transform every touchpoint from first contact to loyal advocate</strong></p>
-                <p>We map, design, and automate your complete customer journey with intelligent touchpoints at every stage. From the moment a prospect discovers you to becoming a raving fan, every interaction is optimized and automated.</p>
+                <h4>🎯 Customer Acquisition Systems</h4>
+                <p><strong>Capture more leads and never lose another opportunity</strong></p>
+                <p>
+                    Stop leads from falling through the cracks with systems that capture, respond, and nurture automatically—24/7.
+                </p>
                 <ul style="margin-left: 1.5rem; font-size: 0.95rem;">
-                    <li>Lead capture and qualification automation</li>
-                    <li>Multi-channel nurture sequences (email, SMS, WhatsApp)</li>
-                    <li>Automated appointment booking and reminders</li>
-                    <li>Post-service follow-up and feedback collection</li>
-                    <li>Retention and re-engagement campaigns</li>
-                    <li>Referral and advocacy programs</li>
+                    <li>Automated lead capture across all channels (web, social, email, phone)</li>
+                    <li>Instant response systems (no more 24-hour delays)</li>
+                    <li>Multi-channel follow-up sequences (email, SMS, WhatsApp)</li>
+                    <li>Intelligent lead qualification and scoring</li>
+                    <li>CRM integration and data centralization</li>
+                    <li>Real-time lead notifications and routing</li>
                 </ul>
-                <p><strong>Typical Impact:</strong> 3X conversion rates, 50% reduction in no-shows, 10X more consistent follow-up</p>
+                <p><strong>Impact:</strong> 30-50% more leads captured, instant response times, zero lost opportunities</p>
             </div>
             
             <div class="service-card">
-                <h4>🤖 AI-Powered CRM Implementation</h4>
-                <p><strong>Your business brain—centralized, intelligent, always working</strong></p>
-                <p>Custom CRM setup with AI integrations that don't just store data—they work with it. Predictive analytics, intelligent routing, automated data entry, and insights that drive decisions.</p>
+                <h4>💰 Customer Conversion Systems</h4>
+                <p><strong>Turn prospects into paying customers faster</strong></p>
+                <p>
+                    Automated nurture sequences, appointment booking, and sales pipeline management that closes deals while you focus on delivery.
+                </p>
                 <ul style="margin-left: 1.5rem; font-size: 0.95rem;">
-                    <li>Platform selection (GoHighLevel, HubSpot, Salesforce, Zoho)</li>
-                    <li>Custom configuration for your workflows</li>
-                    <li>AI chatbots for 24/7 customer interaction</li>
-                    <li>Automated lead scoring and routing</li>
-                    <li>Pipeline management and forecasting</li>
-                    <li>Team training and adoption support</li>
+                    <li>Automated appointment booking and reminders</li>
+                    <li>Smart nurture sequences based on behavior</li>
+                    <li>Sales pipeline automation and tracking</li>
+                    <li>Proposal and quote automation</li>
+                    <li>Payment processing and invoicing</li>
+                    <li>Deal forecasting and analytics</li>
                 </ul>
-                <p><strong>Typical Impact:</strong> 100% visibility into customer data, 70% faster response times, zero lost leads</p>
+                <p><strong>Impact:</strong> 50% faster deal closure, 95% appointment attendance, zero forgotten follow-ups</p>
+            </div>
+            
+            <div class="service-card">
+                <h4>❤️ Customer Retention Systems</h4>
+                <p><strong>Keep customers engaged, buying more, and referring others</strong></p>
+                <p>
+                    Automated onboarding, proactive engagement, and loyalty programs that turn customers into advocates.
+                </p>
+                <ul style="margin-left: 1.5rem; font-size: 0.95rem;">
+                    <li>Automated onboarding sequences</li>
+                    <li>Proactive check-ins and engagement</li>
+                    <li>Feedback collection and issue resolution</li>
+                    <li>Upsell and cross-sell automation</li>
+                    <li>Referral programs and advocacy systems</li>
+                    <li>Churn prevention and win-back campaigns</li>
+                </ul>
+                <p><strong>Impact:</strong> Higher customer lifetime value, consistent engagement, automatic referrals</p>
+            </div>
+            
+            <h2>Additional Services</h2>
+            
+            <div class="service-card">
+                <h4>🤖 AI Implementation</h4>
+                <p>
+                    We integrate AI into your workflows—chatbots for customer service, AI assistants for content creation, predictive analytics for decision-making, and intelligent automation that learns and improves.
+                </p>
             </div>
             
             <div class="service-card">
                 <h4>⚙️ Operations Automation</h4>
-                <p><strong>Eliminate repetitive work that drains your team's energy</strong></p>
-                <p>We identify, map, and automate your most time-consuming operational processes. From data entry to report generation, if it's repetitive, we can automate it.</p>
-                <ul style="margin-left: 1.5rem; font-size: 0.95rem;">
-                    <li>Process documentation and optimization</li>
-                    <li>Workflow automation (approvals, notifications, task creation)</li>
-                    <li>Document generation and management</li>
-                    <li>Data synchronization across platforms</li>
-                    <li>Automated reporting and dashboards</li>
-                    <li>Payment processing and invoicing automation</li>
-                </ul>
-                <p><strong>Typical Impact:</strong> 20+ hours saved per week, 95% reduction in manual errors, instant data updates</p>
+                <p>
+                    Eliminate repetitive work: document generation, data synchronization, workflow automation, reporting dashboards, and process optimization. If it's manual and repetitive, we can automate it.
+                </p>
             </div>
             
             <div class="service-card">
                 <h4>🌐 Web & Booking Systems</h4>
-                <p><strong>Your 24/7 sales and service representative</strong></p>
-                <p>Modern, conversion-optimized websites with integrated booking systems that work while you sleep. Mobile-responsive, fast, and designed to turn visitors into customers.</p>
-                <ul style="margin-left: 1.5rem; font-size: 0.95rem;">
-                    <li>Professional website design and development</li>
-                    <li>Online appointment scheduling integration</li>
-                    <li>Payment gateway setup</li>
-                    <li>Customer portal development</li>
-                    <li>SEO optimization</li>
-                    <li>Analytics and conversion tracking</li>
-                </ul>
-                <p><strong>Typical Impact:</strong> 40% increase in appointments, 24/7 booking capability, professional brand presence</p>
+                <p>
+                    Professional websites with integrated booking, payment processing, customer portals, and conversion optimization. Your 24/7 sales representative that never sleeps.
+                </p>
             </div>
             
             <div class="service-card">
-                <h4>📊 Analytics & Performance Tracking</h4>
-                <p><strong>Make decisions with data, not guesses</strong></p>
-                <p>Custom dashboards that show what matters: revenue, conversion rates, customer lifetime value, operational efficiency. Real-time insights delivered how you want them.</p>
-                <ul style="margin-left: 1.5rem; font-size: 0.95rem;">
-                    <li>KPI identification and tracking</li>
-                    <li>Custom dashboard development</li>
-                    <li>Automated reporting (daily, weekly, monthly)</li>
-                    <li>Data visualization</li>
-                    <li>Predictive analytics</li>
-                    <li>A/B testing and optimization</li>
-                </ul>
-                <p><strong>Typical Impact:</strong> Real-time business visibility, data-driven decisions, 3X faster problem identification</p>
+                <h4>📊 Analytics & Tracking</h4>
+                <p>
+                    Custom dashboards showing what matters: revenue, conversion rates, customer lifetime value, operational efficiency. Make decisions with data, not guesses.
+                </p>
             </div>
             
-            <div class="service-card">
-                <h4>🎓 Training & Change Management</h4>
-                <p><strong>Your team, empowered and confident with new systems</strong></p>
-                <p>Technology is only valuable if your team uses it. We provide comprehensive training, documentation, and ongoing support to ensure successful adoption.</p>
-                <ul style="margin-left: 1.5rem; font-size: 0.95rem;">
-                    <li>Custom training programs</li>
-                    <li>Video tutorials and documentation</li>
-                    <li>Hands-on workshops</li>
-                    <li>Ongoing support and troubleshooting</li>
-                    <li>System optimization and updates</li>
-                    <li>Performance monitoring</li>
-                </ul>
-                <p><strong>Typical Impact:</strong> 95% team adoption, confident system usage, reduced support dependency</p>
-            </div>
-            
-            <h2>Service Delivery Models</h2>
+            <h2>How We Work</h2>
             
             <div class="two-column">
                 <div class="info-box">
-                    <h4>Done-For-You Implementation</h4>
-                    <p>We handle everything from strategy to launch. You focus on your business while we build your systems. Includes discovery, implementation, testing, training, and 30-day optimization.</p>
-                    <p><strong>Timeline:</strong> 2-8 weeks depending on complexity</p>
+                    <h4>1. Diagnose</h4>
+                    <p>We audit your current systems to identify where customers are falling through the cracks and revenue is being left on the table.</p>
                 </div>
                 
                 <div class="info-box">
-                    <h4>Done-With-You Consulting</h4>
-                    <p>We guide your team through implementation with expert oversight. Perfect for businesses with technical resources who need strategic direction and expertise.</p>
-                    <p><strong>Timeline:</strong> 4-12 weeks with weekly check-ins</p>
+                    <h4>2. Design</h4>
+                    <p>We create a custom automation blueprint tailored to your business—covering acquisition, conversion, and retention systems.</p>
                 </div>
             </div>
             
             <div class="two-column">
                 <div class="info-box">
-                    <h4>Ongoing Optimization & Support</h4>
-                    <p>Monthly retainer for continuous improvement, troubleshooting, training, and system evolution as your business grows.</p>
-                    <p><strong>Format:</strong> Monthly hours package with priority support</p>
+                    <h4>3. Deploy</h4>
+                    <p>We build and implement your systems using best-in-class tools, AI integrations, and proven workflows that work 24/7.</p>
                 </div>
                 
                 <div class="info-box">
-                    <h4>Strategic Advisory</h4>
-                    <p>High-level consulting for businesses planning major transformations. We assess, strategize, and roadmap your automation journey.</p>
-                    <p><strong>Format:</strong> Project-based or quarterly engagements</p>
+                    <h4>4. Optimize</h4>
+                    <p>We continuously monitor, refine, and improve your systems based on real data and results—ensuring maximum ROI.</p>
                 </div>
             </div>
         </div>
 
-        <!-- PAGE 5: TARGET MARKET & CUSTOMER SEGMENTS -->
+        <!-- PAGE 5: TARGET MARKET -->
         <div class="content-page">
             <div class="page-header">
-                <h1>Target Market & Customer Segments</h1>
+                <h1>Who We Serve</h1>
                 <div class="page-number">Page 5</div>
             </div>
             
-            <h2>Primary Target Market</h2>
+            <h2>Ideal Client Profile</h2>
             
             <p class="lead">
-                We serve service-based SMBs and entrepreneurs who have proven their business model and are ready to scale systematically. Our sweet spot is businesses experiencing growing pains—they have demand but lack the systems to serve more clients efficiently.
+                We serve service-based businesses experiencing growing pains—they have demand but lack the systems to serve more clients efficiently without losing their minds.
             </p>
             
             <div class="highlight-box">
-                <h4>Ideal Client Profile</h4>
+                <h4>Perfect Fit For:</h4>
                 <ul style="margin: 0.5rem 0 0 1.5rem;">
-                    <li><strong>Revenue:</strong> $100K - $5M annually</li>
-                    <li><strong>Team Size:</strong> 5-50 employees (or solopreneurs ready to scale)</li>
-                    <li><strong>Growth Stage:</strong> Beyond startup, entering scale-up phase</li>
-                    <li><strong>Tech Adoption:</strong> Comfortable with technology, ready for automation</li>
-                    <li><strong>Pain Point:</strong> Manual processes limiting growth</li>
-                    <li><strong>Mindset:</strong> Invested in systems, not just quick fixes</li>
+                    <li><strong>Business Type:</strong> Service-based (consulting, healthcare, professional services, coaching, events)</li>
+                    <li><strong>Revenue Stage:</strong> $100K+ annually, ready to scale</li>
+                    <li><strong>Team Size:</strong> Solopreneurs to 50 employees</li>
+                    <li><strong>Pain Point:</strong> Losing customers due to manual processes and broken systems</li>
+                    <li><strong>Mindset:</strong> Invested in systems and long-term growth, not quick fixes</li>
+                    <li><strong>Tech Comfort:</strong> Comfortable with technology, ready for automation</li>
                 </ul>
             </div>
             
-            <h2>Industry Verticals</h2>
+            <h2>Industries We Serve</h2>
             
-            <h3>1. Healthcare & Wellness</h3>
-            <p><strong>Target Businesses:</strong> Medical clinics (pediatrics, dental, general practice), mental health practices, physical therapy & rehabilitation, wellness centers & spas, alternative medicine practitioners</p>
-            <p><strong>Why Healthcare:</strong> High appointment volume, complex scheduling, critical follow-up needs, significant administrative burden that automation can eliminate.</p>
+            <h3>Healthcare & Wellness</h3>
+            <p>
+                Medical clinics, dental practices, mental health providers, physical therapy, wellness centers. High appointment volume, complex scheduling, critical follow-up needs, and significant administrative burden that automation eliminates.
+            </p>
             
-            <h3>2. Professional Services</h3>
-            <p><strong>Target Businesses:</strong> Legal practices, accounting & bookkeeping firms, consulting (management, HR, IT), real estate agencies, insurance agencies</p>
-            <p><strong>Why Professional Services:</strong> Knowledge-based work, high-value transactions, relationship-driven business model requiring sophisticated CRM and client management systems.</p>
+            <h3>Professional Services</h3>
+            <p>
+                Legal practices, accounting firms, consultants, real estate agencies, insurance agencies. Knowledge-based work with high-value transactions and relationship-driven business models requiring sophisticated client management.
+            </p>
             
-            <h3>3. Education & Training</h3>
-            <p><strong>Target Businesses:</strong> Coaching businesses, training providers, educational consultants, online course creators, corporate training firms</p>
-            <p><strong>Why Education:</strong> Student/client journey optimization opportunities, enrollment automation needs, structured content delivery systems.</p>
+            <h3>Coaching & Education</h3>
+            <p>
+                Business coaches, training providers, educational consultants, online course creators. Student journey optimization, enrollment automation, structured content delivery, and engagement tracking.
+            </p>
             
-            <h3>4. Events & Hospitality</h3>
-            <p><strong>Target Businesses:</strong> Event planning & management, wedding services, conference organizers, catering services, venue management</p>
-            <p><strong>Why Events:</strong> Registration automation, payment processing, communication sequences, high-volume coordination requirements perfect for automation.</p>
+            <h3>Events & Hospitality</h3>
+            <p>
+                Event planners, wedding services, conference organizers, catering, venue management. Registration automation, payment processing, communication sequences, and high-volume coordination.
+            </p>
             
-            <h3>5. Creative & Design Services</h3>
-            <p><strong>Target Businesses:</strong> Marketing agencies, photography studios, design firms, video production, content creation businesses</p>
-            <p><strong>Why Creative Services:</strong> Project management complexity, client communication intensity, portfolio management, and booking systems needs.</p>
+            <h3>Creative & Marketing Services</h3>
+            <p>
+                Marketing agencies, photography studios, design firms, video production, content creation. Project management, client communication, portfolio management, and booking systems.
+            </p>
             
-            <h2>Geographic Markets</h2>
+            <h2>Geographic Reach</h2>
             
             <div class="two-column">
                 <div class="info-box">
-                    <h4>Primary Markets</h4>
-                    <p>Kenya, East Africa (Tanzania, Uganda, Rwanda)</p>
+                    <h4>🌍 Primary Markets</h4>
+                    <p>Kenya and East Africa (Tanzania, Uganda, Rwanda)</p>
                 </div>
+                
                 <div class="info-box">
-                    <h4>Secondary Markets</h4>
-                    <p>Sub-Saharan Africa (Nigeria, South Africa, Ghana)</p>
+                    <h4>🌎 Global Service</h4>
+                    <p>North America, Europe, Middle East, and Africa-wide via remote delivery</p>
                 </div>
             </div>
             
-            <div class="info-box" style="margin-top: 1rem;">
-                <h4>Tertiary Markets</h4>
-                <p>Global reach via remote service delivery: United States, United Kingdom, Canada, Middle East, and other international markets seeking cost-effective, high-quality automation solutions.</p>
+            <h2>Client Success Profiles</h2>
+            
+            <div class="service-card">
+                <h4>The Overwhelmed Entrepreneur</h4>
+                <p><strong>Profile:</strong> Solo or small team (2-5 people) spending 70% of time on admin, turning away clients due to capacity.</p>
+                <p><strong>Pain:</strong> Knows automation exists but doesn't know where to start. Drowning in manual tasks.</p>
+                <p><strong>Solution:</strong> Simple, affordable automation that frees 10-15 hours per week immediately.</p>
             </div>
             
-            <h2>Customer Personas</h2>
-            
-            <div class="info-box" style="margin-bottom: 1.5rem;">
-                <h4>Persona 1: "The Overwhelmed Entrepreneur"</h4>
-                <p><strong>Profile:</strong> Solo practitioner or small team (2-5 people), spending 70% of time on admin vs. delivery, turning away clients due to capacity constraints.</p>
-                <p><strong>Pain Points:</strong> Knows automation exists but doesn't know where to start, drowning in manual tasks.</p>
-                <p><strong>Needs:</strong> Time freedom, scalability, simple and affordable solutions.</p>
+            <div class="service-card">
+                <h4>The Growth-Stage Founder</h4>
+                <p><strong>Profile:</strong> 10-30 employees, growing rapidly but systems haven't kept pace. Data scattered across tools.</p>
+                <p><strong>Pain:</strong> Team duplicating effort, no visibility into operations, customers slipping through cracks.</p>
+                <p><strong>Solution:</strong> Integrated systems with centralized visibility and process optimization.</p>
             </div>
             
-            <div class="info-box" style="margin-bottom: 1.5rem;">
-                <h4>Persona 2: "The Growth-Stage Founder"</h4>
-                <p><strong>Profile:</strong> 10-30 employee service business, growing rapidly but systems haven't kept pace, data scattered across tools and spreadsheets.</p>
-                <p><strong>Pain Points:</strong> Team members duplicating effort, lack of visibility into operations.</p>
-                <p><strong>Needs:</strong> Integration, centralized visibility, process optimization.</p>
-            </div>
-            
-            <div class="info-box">
-                <h4>Persona 3: "The Tech-Forward Professional"</h4>
-                <p><strong>Profile:</strong> Early adopter comfortable with technology, already uses some tools but they're not connected, values efficiency and innovation.</p>
-                <p><strong>Pain Points:</strong> Tools working in silos, wants cutting-edge solutions.</p>
-                <p><strong>Needs:</strong> Advanced automation, AI implementation, seamless integration.</p>
+            <div class="service-card">
+                <h4>The Tech-Forward Professional</h4>
+                <p><strong>Profile:</strong> Early adopter using tools that don't talk to each other. Values efficiency and innovation.</p>
+                <p><strong>Pain:</strong> Tools working in silos, wants cutting-edge AI solutions.</p>
+                <p><strong>Solution:</strong> Advanced automation with AI integration and seamless tool orchestration.</p>
             </div>
         </div>
 
-        <!-- PAGE 6: UNIQUE VALUE PROPOSITION -->
+        <!-- PAGE 6: CASE STUDIES -->
         <div class="content-page">
             <div class="page-header">
-                <h1>Unique Value Proposition</h1>
+                <h1>Client Success Stories</h1>
                 <div class="page-number">Page 6</div>
             </div>
             
-            <h2>What Makes Aheri Systems Different</h2>
+            <p class="lead">
+                Real businesses, real results. Here's how our systems stopped customers from falling through the cracks and drove measurable growth.
+            </p>
             
-            <div class="info-box" style="margin-bottom: 1.5rem;">
-                <h4>1. Specialized Focus = Deep Expertise</h4>
-                <p>Unlike generalist technology consultants or broad automation agencies, we focus exclusively on service businesses. This specialization means:</p>
-                <ul class="bullet-list">
-                    <li>We understand your business model intimately</li>
-                    <li>We've solved your specific problems before</li>
-                    <li>We know which tools work best for service delivery</li>
-                    <li>We speak your language, not just tech jargon</li>
-                </ul>
+            <div class="case-study">
+                <div class="case-study-header">
+                    <div>
+                        <div class="case-study-title">VivaLife Pediatric Clinic</div>
+                        <p style="margin: 0.25rem 0; font-size: 0.9rem; color: var(--gray-600);"><strong>Industry:</strong> Healthcare | <strong>Location:</strong> Nairobi, Kenya</p>
+                    </div>
+                    <span class="case-study-tag">Healthcare</span>
+                </div>
+                
+                <p><strong>The Problem:</strong> Completely manual patient registration, scheduling, and follow-up. Long wait times, frequent data entry errors, no visibility into patient history. Staff spending 60% of time on admin instead of patient care.</p>
+                
+                <p><strong>The Solution:</strong> Comprehensive healthcare CRM with digital patient registration, automated appointment booking and reminders (SMS + email), patient portal for medical records access, post-visit follow-up sequences, and real-time analytics dashboard.</p>
+                
+                <div class="result-highlight">
+                    50% Reduction in Admin Time | 95% Appointment Attendance | 100% Data Accuracy | 24/7 Self-Service Booking
+                </div>
+                
+                <p style="font-style: italic; margin-top: 1rem; color: var(--gray-700);">
+                    "The automation systems have transformed how we operate. We've cut admin time in half and can now focus on patient care. The real-time analytics give us insights we never had before."
+                </p>
             </div>
             
-            <div class="info-box" style="margin-bottom: 1.5rem;">
-                <h4>2. AI-First Approach</h4>
-                <p>We're not just automating—we're making systems intelligent with ChatGPT and Claude integrations, AI agents that learn and improve, predictive analytics, content generation at scale, and smart decision-making built into workflows. Most automation providers are still using basic triggers—we're leveraging AI to create truly intelligent systems.</p>
+            <div class="case-study">
+                <div class="case-study-header">
+                    <div>
+                        <div class="case-study-title">DiaspoCare Healthcare Platform</div>
+                        <p style="margin: 0.25rem 0; font-size: 0.9rem; color: var(--gray-600);"><strong>Industry:</strong> HealthTech | <strong>Location:</strong> Kenya (Global Service)</p>
+                    </div>
+                    <span class="case-study-tag">HealthTech</span>
+                </div>
+                
+                <p><strong>The Problem:</strong> Coordinating care across multiple healthcare providers while maintaining seamless patient experience. Fragmented patient data, manual coordination between specialists, no unified view of patient journey.</p>
+                
+                <p><strong>The Solution:</strong> GoHighLevel CRM as central automation hub, unified patient database across all providers, multi-provider workflow automation, integrated multi-channel communication, centralized appointment coordination, complete journey tracking, and real-time provider dashboards.</p>
+                
+                <div class="result-highlight">
+                    100% Automated Patient Journey | 70% Faster Referral Processing | 3X Provider Efficiency | Zero Lost Referrals
+                </div>
+                
+                <p style="font-style: italic; margin-top: 1rem; color: var(--gray-700);">
+                    "From manual chaos to fully automated operations. The CRM system has been a game-changer for our platform. We can now coordinate care across providers seamlessly."
+                </p>
             </div>
             
-            <div class="info-box" style="margin-bottom: 1.5rem;">
-                <h4>3. No Vendor Lock-In</h4>
-                <p>Your business, your data, your control. We use best-in-class tools (not proprietary platforms), provide full data portability, offer open integrations, and ensure you can take everything with you. Any developer can work on your systems. We build capacity, not dependency.</p>
+            <div class="case-study">
+                <div class="case-study-header">
+                    <div>
+                        <div class="case-study-title">Mapenzi Connect Events</div>
+                        <p style="margin: 0.25rem 0; font-size: 0.9rem; color: var(--gray-600);"><strong>Industry:</strong> Events & Conferences | <strong>Location:</strong> Kenya</p>
+                    </div>
+                    <span class="case-study-tag">Events</span>
+                </div>
+                
+                <p><strong>The Problem:</strong> Manual event management from registration to post-event follow-up. Time-consuming processes, payment tracking issues, inconsistent attendee communication, limited engagement data.</p>
+                
+                <p><strong>The Solution:</strong> Custom online registration system, automated payment processing and tracking, CRM with attendee segmentation, multi-stage email marketing sequences, automated SMS reminders, QR code check-in system, and real-time analytics dashboard.</p>
+                
+                <div class="result-highlight">
+                    80% Process Automation | 90% Payment Collection | 15 Hours Saved Per Event | 2X Email Engagement
+                </div>
+                
+                <p style="font-style: italic; margin-top: 1rem; color: var(--gray-700);">
+                    "The automation transformed our events business. What used to take days now happens automatically. We can focus on creating great experiences instead of managing spreadsheets."
+                </p>
             </div>
             
-            <div class="info-box" style="margin-bottom: 1.5rem;">
-                <h4>4. Accessible Enterprise Quality</h4>
-                <p>Enterprise-level automation without the enterprise price tag. Our solutions are typically 70-80% less expensive than traditional consulting, with implementation in weeks (not months), flexible payment options, scalable pricing that grows with you, and no mandatory multi-year contracts.</p>
+            <div class="case-study">
+                <div class="case-study-header">
+                    <div>
+                        <div class="case-study-title">Unicorn Dental Clinic</div>
+                        <p style="margin: 0.25rem 0; font-size: 0.9rem; color: var(--gray-600);"><strong>Industry:</strong> Dental Healthcare | <strong>Location:</strong> Kenya</p>
+                    </div>
+                    <span class="case-study-tag">Healthcare</span>
+                </div>
+                
+                <p><strong>The Problem:</strong> Basic website with no online booking capability. Patients had to call during business hours. Missed appointment opportunities after hours, staff time spent on scheduling calls, no automated follow-up system.</p>
+                
+                <p><strong>The Solution:</strong> Modern, mobile-responsive website redesign, 24/7 online appointment booking system, automated confirmations and reminders, post-appointment feedback system, recall reminders for checkups, real-time calendar integration.</p>
+                
+                <div class="result-highlight">
+                    40% Increase in Appointments | 24/7 Booking Availability | 85% Attendance Rate | 10 Hours Saved Weekly
+                </div>
+                
+                <p style="font-style: italic; margin-top: 1rem; color: var(--gray-700);">
+                    "Professional, efficient, and delivers results. Our appointment booking system now runs seamlessly. Patients love the convenience of online booking."
+                </p>
             </div>
-            
-            <div class="info-box" style="margin-bottom: 1.5rem;">
-                <h4>5. Proven, Measurable Results</h4>
-                <p>We don't sell hope—we deliver outcomes. Real case studies with actual metrics, clear ROI projections upfront, performance monitoring and reporting, 30-day post-launch optimization, and satisfaction guarantee.</p>
-            </div>
-            
-            <div class="info-box">
-                <h4>6. Global Reach, Local Understanding</h4>
-                <p>Based in Kenya, serving the world. We understand emerging market dynamics, know developed market expectations, leverage global best practices, respect local contexts and constraints, and offer competitive pricing with international quality.</p>
-            </div>
-            
-            <h2>Our Competitive Advantages</h2>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>vs. Competitor Type</th>
-                        <th>Our Advantages</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Freelance Developers</strong></td>
-                        <td>Business strategy + implementation (not just coding), proven methodologies and frameworks, ongoing support and optimization, specialized service business expertise</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Traditional Consulting Firms</strong></td>
-                        <td>70% lower cost structure, 3X faster implementation, modern AI-powered solutions, hands-on implementation (not just recommendations)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>DIY Software Platforms</strong></td>
-                        <td>Custom to your exact needs, full integration across tools, expert implementation and training, ongoing optimization and support</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Offshore Development Shops</strong></td>
-                        <td>Strategic thinking (not just execution), service business domain expertise, real-time communication and collaboration, cultural understanding and alignment</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
 
-        <!-- PAGE 7: TECHNOLOGY & INNOVATION -->
+        <!-- PAGE 7: TECHNOLOGY & LEADERSHIP -->
         <div class="content-page">
             <div class="page-header">
-                <h1>Technology & Innovation</h1>
+                <h1>Technology & Leadership</h1>
                 <div class="page-number">Page 7</div>
             </div>
             
             <h2>Our Technology Stack</h2>
+            
+            <p class="lead">
+                We use best-in-class tools—not proprietary platforms—so you own your systems and can work with any provider in the future.
+            </p>
             
             <div class="two-column">
                 <div class="info-box">
@@ -1122,7 +1144,6 @@
                         <li>HubSpot (mid-market)</li>
                         <li>Salesforce (enterprise)</li>
                         <li>Zoho (cost-effective)</li>
-                        <li>Custom implementations</li>
                     </ul>
                 </div>
                 
@@ -1130,8 +1151,7 @@
                     <h4>Automation Tools</h4>
                     <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
                         <li>Zapier (no-code automation)</li>
-                        <li>Make.com (advanced workflows)</li>
-                        <li>n8n (open-source)</li>
+                        <li>Make (advanced workflows)</li>
                         <li>Custom API integrations</li>
                         <li>Webhooks and middleware</li>
                     </ul>
@@ -1146,299 +1166,75 @@
                         <li>Claude API (Anthropic)</li>
                         <li>Custom AI agents & chatbots</li>
                         <li>Natural language processing</li>
-                        <li>Machine learning models</li>
                     </ul>
                 </div>
                 
                 <div class="info-box">
-                    <h4>Communication Platforms</h4>
+                    <h4>Communication</h4>
                     <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
-                        <li>Email marketing (multiple platforms)</li>
-                        <li>SMS automation (Twilio, TextMagic)</li>
+                        <li>Email marketing automation</li>
+                        <li>SMS (Twilio, TextMagic)</li>
                         <li>WhatsApp Business API</li>
-                        <li>VoIP integrations</li>
                         <li>Multi-channel orchestration</li>
                     </ul>
                 </div>
             </div>
             
-            <div class="two-column">
-                <div class="info-box">
-                    <h4>Booking & Scheduling</h4>
-                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
-                        <li>Calendly integrations</li>
-                        <li>Custom booking systems</li>
-                        <li>Calendar synchronization</li>
-                        <li>Reminder automation</li>
-                    </ul>
-                </div>
-                
-                <div class="info-box">
-                    <h4>Analytics & Reporting</h4>
-                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
-                        <li>Google Analytics</li>
-                        <li>Custom dashboards</li>
-                        <li>CRM native analytics</li>
-                        <li>Data visualization</li>
-                        <li>Automated reporting</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="info-box">
-                <h4>Web & App Development</h4>
-                <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
-                    <li>HTML/CSS/JavaScript</li>
-                    <li>React and modern frameworks</li>
-                    <li>Responsive design</li>
-                    <li>Progressive web apps</li>
-                    <li>API-first architecture</li>
-                </ul>
-            </div>
-            
-            <h2>Innovation Philosophy</h2>
-            
-            <p>We invest heavily in continuous learning and experimentation. Our team actively tests new AI models as they're released, adopts promising automation tools early, maintains regular training on emerging technologies, participates in AI/automation communities, and develops partnerships with leading technology providers.</p>
-            
-            <h3>Current R&D Focus Areas</h3>
-            
-            <ol>
-                <li><strong>AI Agent Orchestration:</strong> Multiple specialized AI agents working together seamlessly</li>
-                <li><strong>Predictive Churn Prevention:</strong> Machine learning models identifying at-risk customers proactively</li>
-                <li><strong>Voice AI Integration:</strong> Automated phone interactions and intelligent voice assistants</li>
-                <li><strong>Computer Vision:</strong> Document processing and image recognition for workflow automation</li>
-                <li><strong>Blockchain for Data Integrity:</strong> Exploring decentralized automation triggers and audit trails</li>
-            </ol>
-            
-            <h2>Security & Compliance</h2>
-            
-            <div class="two-column">
-                <div class="info-box">
-                    <h4>Data Protection</h4>
-                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
-                        <li>End-to-end encryption</li>
-                        <li>SOC 2 compliant infrastructure</li>
-                        <li>GDPR and data privacy compliance</li>
-                        <li>Regular security audits</li>
-                        <li>Access control & authentication</li>
-                    </ul>
-                </div>
-                
-                <div class="info-box">
-                    <h4>Industry Compliance</h4>
-                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
-                        <li>HIPAA compliance (healthcare)</li>
-                        <li>Financial services regulations</li>
-                        <li>Industry-specific certifications</li>
-                        <li>Data residency requirements</li>
-                        <li>Audit trail and logging</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- PAGE 8: CASE STUDIES -->
-        <div class="content-page">
-            <div class="page-header">
-                <h1>Client Success Stories</h1>
-                <div class="page-number">Page 8</div>
-            </div>
-            
-            <div class="case-study">
-                <div class="case-study-header">
-                    <div>
-                        <div class="case-study-title">VivaLife Pediatric Clinic</div>
-                        <p style="margin: 0.25rem 0; font-size: 0.9rem; color: var(--gray-600);"><strong>Industry:</strong> Healthcare | <strong>Location:</strong> Kenya</p>
-                    </div>
-                    <span class="case-study-tag">Healthcare</span>
-                </div>
-                
-                <p><strong>Challenge:</strong> Completely manual patient registration, scheduling, and follow-up processes. Long wait times, frequent data entry errors, no visibility into patient history. Staff spending 60% of time on admin instead of patient care.</p>
-                
-                <p><strong>Solution:</strong> Implemented comprehensive healthcare CRM with digital patient registration, automated appointment booking and reminders (SMS + email), patient portal for medical records, post-visit follow-up sequences, and real-time analytics dashboard.</p>
-                
-                <div class="result-highlight">Results: 50% reduction in admin time | 95% appointment attendance | 100% data accuracy | 24/7 self-service booking</div>
-                
-                <p style="font-style: italic; margin-top: 1rem;">"The automation systems Rita implemented have transformed how we operate. We've cut admin time in half and can now focus on patient care. The real-time analytics give us insights we never had before."</p>
-            </div>
-            
-            <div class="case-study">
-                <div class="case-study-header">
-                    <div>
-                        <div class="case-study-title">DiaspoCare Healthcare Platform</div>
-                        <p style="margin: 0.25rem 0; font-size: 0.9rem; color: var(--gray-600);"><strong>Industry:</strong> HealthTech | <strong>Location:</strong> Kenya (Global Service)</p>
-                    </div>
-                    <span class="case-study-tag">HealthTech</span>
-                </div>
-                
-                <p><strong>Challenge:</strong> Coordinating care across multiple healthcare providers while maintaining seamless patient experience. Fragmented patient data, manual coordination between specialists, no unified view of patient journey.</p>
-                
-                <p><strong>Solution:</strong> GoHighLevel CRM as central automation hub, unified patient database across all providers, multi-provider workflow automation, integrated multi-channel communication, centralized appointment coordination, complete journey tracking, and real-time provider dashboards.</p>
-                
-                <div class="result-highlight">Results: 100% automated patient journey | 70% faster referral processing | 3X provider efficiency | Zero lost referrals</div>
-                
-                <p style="font-style: italic; margin-top: 1rem;">"From manual chaos to fully automated operations. The CRM system has been a game-changer for our platform. We can now coordinate care across providers seamlessly."</p>
-            </div>
-            
-            <div class="case-study">
-                <div class="case-study-header">
-                    <div>
-                        <div class="case-study-title">Events Business Automation (Mapenzi Connect)</div>
-                        <p style="margin: 0.25rem 0; font-size: 0.9rem; color: var(--gray-600);"><strong>Industry:</strong> Events & Conferences | <strong>Location:</strong> Kenya</p>
-                    </div>
-                    <span class="case-study-tag">Events</span>
-                </div>
-                
-                <p><strong>Challenge:</strong> Manual event management from registration to post-event follow-up. Time-consuming processes, payment tracking issues, inconsistent attendee communication, limited engagement data.</p>
-                
-                <p><strong>Solution:</strong> Custom online registration system, automated payment processing and tracking, CRM with attendee segmentation, multi-stage email marketing sequences, automated SMS reminders, QR code check-in system, and real-time analytics dashboard.</p>
-                
-                <div class="result-highlight">Results: 80% process automation | 90% payment collection | 15 hours saved per event | 2X email engagement</div>
-                
-                <p style="font-style: italic; margin-top: 1rem;">"The automation transformed our events business. What used to take days now happens automatically. We can focus on creating great experiences instead of managing spreadsheets."</p>
-            </div>
-            
-            <div class="case-study">
-                <div class="case-study-header">
-                    <div>
-                        <div class="case-study-title">Unicorn Dental Clinic</div>
-                        <p style="margin: 0.25rem 0; font-size: 0.9rem; color: var(--gray-600);"><strong>Industry:</strong> Dental Healthcare | <strong>Location:</strong> Kenya</p>
-                    </div>
-                    <span class="case-study-tag">Healthcare</span>
-                </div>
-                
-                <p><strong>Challenge:</strong> Basic website with no online booking capability. Patients had to call during business hours. Missed appointment opportunities after hours, staff time spent on scheduling calls, no automated follow-up system.</p>
-                
-                <p><strong>Solution:</strong> Modern, mobile-responsive website redesign, 24/7 online appointment booking system, automated confirmations and reminders, post-appointment feedback system, recall reminders for checkups, real-time calendar integration.</p>
-                
-                <div class="result-highlight">Results: 40% increase in appointments | 24/7 booking availability | 85% attendance rate | 10 hours saved weekly</div>
-                
-                <p style="font-style: italic; margin-top: 1rem;">"Professional, efficient, and delivers results. Our appointment booking system now runs seamlessly. Patients love the convenience of online booking."</p>
-            </div>
-        </div>
-
-        <!-- PAGE 9: LEADERSHIP & PARTNERSHIPS -->
-        <div class="content-page">
-            <div class="page-header">
-                <h1>Leadership & Strategic Partnerships</h1>
-                <div class="page-number">Page 9</div>
-            </div>
-            
-            <h2>Leadership Team</h2>
+            <h2>Meet Rita Ndubi</h2>
+            <p style="margin-bottom: 1rem;"><strong>Founder & Chief Automation Architect</strong></p>
             
             <div class="team-member">
-                <div class="team-member-name">Rita Ndubi</div>
-                <div class="team-member-title">Founder & Chief Automation Architect</div>
+                <p>
+                    Rita Ndubi is a systems architect and automation specialist with a passion for eliminating business inefficiencies through intelligent technology.
+                </p>
                 
-                <p>Rita is the visionary founder behind Aheri Systems, bringing over 5 years of digital marketing and business systems expertise to every client engagement. Her journey from digital marketing agency owner to automation specialist was driven by a deep observation: the businesses that scaled fastest weren't just marketing harder—they had systems.</p>
+                <p>
+                    After witnessing countless service businesses struggle with manual processes, scattered customer data, and lost opportunities, Rita founded Aheri Systems to bring enterprise-level automation and AI to SMBs and entrepreneurs.
+                </p>
                 
-                <p><strong>Professional Background:</strong></p>
-                <ul style="margin-left: 1.5rem;">
-                    <li><strong>2019-2023:</strong> Founder, Aheri Brands Agency - Digital marketing for service businesses</li>
-                    <li><strong>2023-2024:</strong> Transitioned focus to systems integration and CRM implementation</li>
-                    <li><strong>2024-Present:</strong> Founded Aheri Systems with exclusive focus on AI and automation</li>
-                </ul>
+                <p><strong>Her philosophy is simple:</strong> Every business deserves systems that work as hard as they do. Through strategic automation and AI implementation, she's helped businesses across healthcare, professional services, and beyond reclaim their time and multiply their revenue.</p>
                 
-                <p><strong>Core Expertise:</strong> Customer journey design and optimization, CRM implementation (GoHighLevel, HubSpot, Salesforce, Zoho), marketing automation and campaign orchestration, AI integration (ChatGPT, Claude APIs), workflow automation and process optimization, business operations and systems thinking.</p>
-                
-                <div class="highlight-box" style="margin-top: 1rem;">
-                    <p style="font-style: italic; margin: 0;">
-                        "Technology should work for humans, not the other way around. My mission is to free entrepreneurs from the prison of manual work so they can focus on what they love: serving clients and growing their businesses. Every business deserves enterprise-level systems, regardless of size."
+                <div class="highlight-box" style="margin-top: 1.5rem;">
+                    <p style="font-style: italic; margin: 0; font-size: 1.05rem;">
+                        "Most businesses don't have a product problem or a marketing problem. They have a systems problem. We fix that."
                     </p>
                     <p style="text-align: right; margin-top: 0.5rem; font-weight: 600;">— Rita Ndubi</p>
                 </div>
             </div>
             
-            <h2>Our Team Model</h2>
-            
-            <p>Aheri Systems operates with a lean core team supplemented by a global network of specialized experts engaged on a project-by-project basis. This model provides clients with access to world-class specialists without agency overhead, flexibility to scale resources per project needs, lower costs versus traditional agency models, and diverse expertise across technologies and industries.</p>
-            
-            <div class="two-column">
-                <div class="info-box">
-                    <h4>Technical Specialists</h4>
-                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
-                        <li>Frontend & backend developers</li>
-                        <li>CRM implementation experts</li>
-                        <li>AI/ML engineers</li>
-                        <li>Integration specialists</li>
-                        <li>QA and testing professionals</li>
-                    </ul>
-                </div>
-                
-                <div class="info-box">
-                    <h4>Strategic Specialists</h4>
-                    <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.95rem;">
-                        <li>Business process consultants</li>
-                        <li>UX/UI designers</li>
-                        <li>Copywriters & content strategists</li>
-                        <li>Data analysts</li>
-                        <li>Industry-specific advisors</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <h2>Strategic Partnerships & Alliances</h2>
-            
-            <h3>Technology Partners</h3>
+            <h2>Strategic Partnerships</h2>
             
             <div class="info-box" style="margin-bottom: 1rem;">
                 <h4>GoHighLevel</h4>
-                <p>Primary CRM platform for SMB clients. Advanced implementation expertise with direct support channel access.</p>
+                <p>Primary CRM platform partner for SMB clients with advanced implementation expertise.</p>
             </div>
             
             <div class="info-box" style="margin-bottom: 1rem;">
-                <h4>Zapier, Make & Zoho Flow</h4>
-                <p>Integration platforms of choice for no-code automation. Advanced workflow capabilities with expert-level implementation.</p>
-            </div>
-            
-            <div class="info-box" style="margin-bottom: 1rem;">
-                <h4>Anthropic (Claude) & OpenAI (ChatGPT)- AI Implementation & Solutions</h4>
-                <p>Early adopter of Claude API for custom AI agent development and advanced AI integration capabilities.</p>
+                <h4>Anthropic (Claude) & OpenAI (ChatGPT)</h4>
+                <p>AI implementation partners for custom agent development and advanced automation.</p>
             </div>
             
             <div class="info-box">
-                <h4>Zoho One - All in One platform</h4>
-                <p>All in one affordable solutions for every business function and workflow (operating system).</p>
-            </div>          
-            <h2>Social Impact & Sustainability</h2>
-            
-            <h3>Empowering African Entrepreneurs</h3>
-            <p>We believe technology can level the playing field for African businesses competing globally. By making enterprise-level automation accessible and affordable, we're helping African SMBs operate with the efficiency of Fortune 500 companies.</p>
-            
-            <h3>Knowledge Sharing</h3>
-            <ul style="margin-left: 1.5rem;">
-                <li>Educational content and resources</li>
-                <li>Workshops and training sessions</li>
-                <li>Mentorship for aspiring automation consultants</li>
-                <li>Open-source contributions where possible</li>
-            </ul>
-            
-            <h3>Sustainable Business Practices</h3>
-            <ul style="margin-left: 1.5rem;">
-                <li>Remote-first operations (reduced carbon footprint)</li>
-                <li>Paperless processes</li>
-                <li>Ethical AI usage</li>
-                <li>Fair pricing and transparent practices</li>
-                <li>Investment in local talent development</li>
-            </ul>
+                <h4>Zoho One</h4>
+                <p>All-in-one affordable solutions for comprehensive business operations.</p>
+            </div>
         </div>
 
-        <!-- PAGE 10: CONTACT & CALL TO ACTION -->
+        <!-- PAGE 8: CONTACT & NEXT STEPS -->
         <div class="content-page">
             <div class="page-header">
-                <h1>Contact Information</h1>
-                <div class="page-number">Page 10</div>
+                <h1>Ready to Stop Losing Customers?</h1>
+                <div class="page-number">Page 8</div>
             </div>
+            
+            <p class="lead">
+                Let's diagnose where your customers are falling through the cracks and build the systems to fix it.
+            </p>
             
             <div class="contact-section">
                 <h2 style="margin-top: 0;">Get In Touch</h2>
                 
                 <div class="contact-grid">
-                    <div class="contact-item">
-                        <span class="contact-icon">🌐</span>
-                        <span>www.aherisystems.com</span>
-                    </div>
-                    
                     <div class="contact-item">
                         <span class="contact-icon">📧</span>
                         <span>rita@aherisystems.com</span>
@@ -1450,108 +1246,97 @@
                     </div>
                     
                     <div class="contact-item">
+                        <span class="contact-icon">🌐</span>
+                        <span>www.aherisystems.com</span>
+                    </div>
+                    
+                    <div class="contact-item">
                         <span class="contact-icon">📍</span>
                         <span>Nairobi, Kenya</span>
                     </div>
                 </div>
                 
-                <h3 style="color: white; border-left-color: var(--primary); margin-top: 2rem;">Schedule a Consultation</h3>
+                <h3 style="color: white; border-left-color: var(--primary); margin-top: 2rem;">Book Your Free Discovery Call</h3>
                 <div class="contact-item" style="margin-top: 1rem;">
                     <span class="contact-icon">📅</span>
-                    <span>Book a Call: bookings.ritandubi.com</span>
+                    <span>bookings.ritandubi.com/#/discovery-introduction-meeting</span>
                 </div>
                 
-                <h3 style="color: white; border-left-color: var(--primary); margin-top: 2rem;">Connect on Social Media</h3>
-                <div class="social-links">
-                    <div class="social-link">
-                        <span>📘</span>
-                        <span>Facebook: @aherisystems</span>
-                    </div>
-                    <div class="social-link">
-                        <span>💼</span>
-                        <span>LinkedIn: @aherisystems</span>
-                    </div>
-                    <div class="social-link">
-                        <span>🐦</span>
-                        <span>Twitter: @aherisystems</span>
-                    </div>
-                    <div class="social-link">
-                        <span>📸</span>
-                        <span>Instagram: @aherisystems</span>
-                    </div>
-                </div>
+                <p style="margin-top: 1.5rem; opacity: 0.9;">
+                    45-minute session • Custom systems audit • No pressure, just insights
+                </p>
             </div>
             
             <div class="cta-box">
-                <h3>Ready to Transform Your Business?</h3>
-                <p style="font-size: 1.1rem; margin-bottom: 1rem;">
-                    If you're a service business owner tired of being trapped in manual work, ready to scale without hiring an army, and committed to building systems that work while you sleep—let's talk.
-                </p>
-                <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="cta-button" target="_blank">
+                <h3>What Happens Next?</h3>
+                
+                <div class="two-column" style="margin-top: 1.5rem; text-align: left;">
+                    <div>
+                        <h4 style="color: var(--navy); margin-top: 0;">1. Discovery Call</h4>
+                        <p style="color: var(--navy); margin-bottom: 1rem;">
+                            We listen, ask questions, and understand where customers are falling through your cracks.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: var(--navy); margin-top: 0;">2. Custom Roadmap</h4>
+                        <p style="color: var(--navy); margin-bottom: 1rem;">
+                            Detailed automation plan with priorities, timeline, and clear ROI projections.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="two-column" style="text-align: left;">
+                    <div>
+                        <h4 style="color: var(--navy); margin-top: 0;">3. Your Decision</h4>
+                        <p style="color: var(--navy); margin-bottom: 1rem;">
+                            Choose to move forward, implement yourself, or explore other options. No pressure.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: var(--navy); margin-top: 0;">4. Implementation</h4>
+                        <p style="color: var(--navy); margin-bottom: 1rem;">
+                            If we're a fit, we begin within 1 week. Your transformation starts immediately.
+                        </p>
+                    </div>
+                </div>
+                
+                <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="cta-button" style="margin-top: 1rem;">
                     BOOK FREE DISCOVERY CALL
                 </a>
-                <p style="margin-top: 1.5rem; font-size: 0.95rem;">
-                    No-pressure consultation • 30 minutes • Custom automation roadmap • Same-day response
-                </p>
             </div>
             
-            <h2>What Happens Next</h2>
+            <h2>Our Promise</h2>
             
-            <div class="two-column">
-                <div class="info-box">
-                    <h4>1. Discovery Call</h4>
-                    <p>30-minute conversation about your business, challenges, and goals. We listen, ask questions, and understand your unique situation.</p>
-                </div>
-                
-                <div class="info-box">
-                    <h4>2. Custom Roadmap</h4>
-                    <p>Detailed automation plan with priorities, timeline, investment requirements, and clear ROI projections.</p>
-                </div>
-            </div>
-            
-            <div class="two-column">
-                <div class="info-box">
-                    <h4>3. Your Decision</h4>
-                    <p>Choose to move forward with us, take the roadmap and implement yourself, or explore other options. No pressure.</p>
-                </div>
-                
-                <div class="info-box">
-                    <h4>4. Transform Your Business</h4>
-                    <p>If we're a fit, we begin implementation within 1 week. Your systems transformation starts immediately.</p>
-                </div>
-            </div>
-            
-            <div class="highlight-box" style="margin-top: 2rem;">
-                <h4>Our Promise</h4>
+            <div class="highlight-box">
                 <ul class="bullet-list">
-                    <li>Free 30-minute discovery call with actionable insights</li>
-                    <li>Custom automation roadmap (yours to keep, regardless of decision)</li>
+                    <li>Free discovery call with actionable insights</li>
+                    <li>Custom automation roadmap (yours to keep)</li>
                     <li>Clear ROI projections and honest recommendations</li>
                     <li>No-pressure consultation focused on your success</li>
                     <li>Same-day response to all inquiries</li>
                 </ul>
             </div>
             
-            <p style="text-align: center; font-size: 1.15rem; margin-top: 2rem; font-weight: 600;">
-                Don't let another month pass with manual processes holding you back.<br>
-                Your competitors are automating. Your future self will thank you.
-            </p>
-            
-            <p style="text-align: center; font-size: 1.25rem; margin-top: 2rem;">
-                📞 <strong>Call or WhatsApp:</strong> +254 716 850 772<br>
-                📧 <strong>Email:</strong> rita@aherisystems.com<br>
-                🌐 <strong>Visit:</strong> www.aherisystems.com<br>
-                📅 <strong>Book Now:</strong> bookings.ritandubi.com
-            </p>
+            <div class="highlight-box" style="margin-top: 2rem; text-align: center; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); color: white;">
+                <h3 style="color: white; border: none; padding: 0; margin-bottom: 1rem;">Don't Let Another Month Pass</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                    Every day without systems is another day of lost customers, wasted time, and missed revenue.
+                </p>
+                <p style="font-size: 1.2rem; font-weight: 700;">
+                    📞 +254 716 850 772 | 📧 rita@aherisystems.com
+                </p>
+            </div>
         </div>
 
         <!-- FOOTER -->
         <div class="footer">
-            <p><strong>AHERI SYSTEMS</strong> | Automating Growth Through Intelligence</p>
-            <p>www.aherisystems.com | rita@aherisystems.com | +254 716 850 772 | @aherisystems</p>
+            <p><strong>AHERI SYSTEMS</strong> | Smart Systems for Scalable Growth</p>
+            <p>www.aherisystems.com | rita@aherisystems.com | +254 716 850 772</p>
             <p>&copy; 2026 Aheri Systems. All rights reserved. | Confidential Business Profile</p>
         </div>
         
     </div>
 </body>
-</html
+</html>
