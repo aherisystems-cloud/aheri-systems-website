@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <title>Services - Aheri Systems</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -17,6 +20,84 @@
             line-height: 1.6;
             color: #112837;
             background: white;
+        }
+
+        /* Navigation Styles */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(17, 40, 55, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #112837;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #112837;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #3bc3b7;
+        }
+
+        .nav-menu .btn-primary {
+            background: #3bc3b7;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .nav-menu .btn-primary:hover {
+            background: #2da89e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 195, 183, 0.3);
         }
 
         .hero {
@@ -53,12 +134,6 @@
         .hero-tagline strong {
             color: #3bc3b7;
             font-weight: 600;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
         }
 
         .section {
@@ -385,7 +460,99 @@
             opacity: 0.85;
         }
 
+        /* Footer Styles */
+        .footer {
+            background: #112837;
+            color: white;
+            padding: 60px 20px 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .logo-systems {
+            color: #3bc3b7;
+        }
+
+        .footer-tagline {
+            color: #3bc3b7;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footer h4 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .footer ul li a:hover {
+            color: #3bc3b7;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
         @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 10px rgba(17, 40, 55, 0.1);
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
             .hero h1 {
                 font-size: 2.2rem;
             }
@@ -433,6 +600,32 @@
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/aheri-logo.png" alt="AHERI SYSTEMS">
+                </a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
+                    <li><a href="https://ritandubi.com/resources" target="_blank">Resources & Tools</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn-primary" target="_blank">Book Consultation</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -469,195 +662,6 @@
                         <li>No one available at 7 PM when leads come in</li>
                         <li>Hot leads going cold because nobody followed up</li>
                         <li>You have no idea which marketing channels actually work</li>
-                    </ul>
-                </div>
-
-                <div class="builds-section">
-                    <h4 class="builds-title">What we build:</h4>
-                    <ul class="builds-list">
-                        <li>Lead capture from all sources (website, social, calls, chat)</li>
-                        <li>24/7 AI chatbot responding instantly to inquiries</li>
-                        <li>Automatic lead notifications to your team</li>
-                        <li>Lead scoring (system tells you who's hot)</li>
-                        <li>First-touch email/SMS (automatic welcome)</li>
-                        <li>Marketing campaign tracking and analytics</li>
-                    </ul>
-                </div>
-
-                <div class="outcomes-section">
-                    <h4 class="outcomes-title">Guaranteed outcomes:</h4>
-                    <ul class="outcomes-list">
-                        <li>30-50% reduction in lost leads</li>
-                        <li>Response time cut in half (hours → minutes)</li>
-                        <li>Every lead tracked and assigned automatically</li>
-                        <li>24/7 lead engagement (even when you sleep)</li>
-                    </ul>
-                </div>
-
-                <div class="example-box">
-                    <div class="example-title">Real Example:</div>
-                    <div class="example-text">Pediatric clinic went from 60% to 95% lead capture with 24/7 AI chatbot. Now captures leads at 2 AM that used to go to competitors.</div>
-                </div>
-
-                <div class="ideal-for">
-                    <div class="ideal-title">Ideal for:</div>
-                    <div class="ideal-text">Service businesses spending on ads but losing leads to slow follow-up, healthcare practices with after-hours inquiries, professional services tired of playing phone tag</div>
-                </div>
-
-                <div class="cta-buttons">
-                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Consultation</a>
-                    <a href="#" class="btn btn-secondary">See Case Studies</a>
-                </div>
-            </div>
-
-            <!-- Service 2: Customer Conversion -->
-            <div class="service-card">
-                <div class="service-header">
-                    <span class="service-number">2</span>
-                    <div style="display: inline-block; vertical-align: top;">
-                        <h3 class="service-title">Customer Conversion Systems</h3>
-                        <p class="service-tagline">Turn leads into paying customers. Fast.</p>
-                    </div>
-                </div>
-
-                <div class="breaks-section">
-                    <h4 class="breaks-title">What breaks without this:</h4>
-                    <ul class="breaks-list">
-                        <li>Salespeople forget to follow up with leads</li>
-                        <li>Quotes take 2 hours to create (and often have errors)</li>
-                        <li>Deals stall in your pipeline with no reminders</li>
-                        <li>No visibility into what your sales team is actually doing</li>
-                        <li>You can't forecast revenue (pure guesswork)</li>
-                        <li>Best opportunities slip away due to lack of follow-up</li>
-                    </ul>
-                </div>
-
-                <div class="builds-section">
-                    <h4 class="builds-title">What we build:</h4>
-                    <ul class="builds-list">
-                        <li>Complete CRM & pipeline tracking system</li>
-                        <li>Automatic follow-up reminders (no more "I forgot")</li>
-                        <li>Quote/proposal automation (10 minutes vs 2 hours)</li>
-                        <li>Self-service appointment booking system</li>
-                        <li>Real-time deal tracking & revenue forecasts</li>
-                        <li>Automatic call & email logging (no manual data entry)</li>
-                        <li>AI-powered lead qualification</li>
-                    </ul>
-                </div>
-
-                <div class="outcomes-section">
-                    <h4 class="outcomes-title">Guaranteed outcomes:</h4>
-                    <ul class="outcomes-list">
-                        <li>20-40% increase in follow-up conversion rates</li>
-                        <li>Quote creation: 2 hours → 10 minutes</li>
-                        <li>Real-time deal visibility (see your entire pipeline)</li>
-                        <li>Accurate revenue forecasting</li>
-                        <li>50% faster deal closure</li>
-                    </ul>
-                </div>
-
-                <div class="example-box">
-                    <div class="example-title">Real Example:</div>
-                    <div class="example-text">Marketing agency discovered 6 leads stuck at "quote sent" with zero follow-up. Called them all, closed 2 for KES 75,000. That's from ONE Monday morning report.</div>
-                </div>
-
-                <div class="ideal-for">
-                    <div class="ideal-title">Ideal for:</div>
-                    <div class="ideal-text">Sales-driven businesses with follow-up failures, service providers who spend hours creating quotes, business owners who have no idea what's in their pipeline, teams where deals mysteriously disappear</div>
-                </div>
-
-                <div class="cta-buttons">
-                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Consultation</a>
-                    <a href="#" class="btn btn-secondary">See Case Studies</a>
-                </div>
-            </div>
-
-            <!-- Service 3: Customer Retention -->
-            <div class="service-card">
-                <div class="service-header">
-                    <span class="service-number">3</span>
-                    <div style="display: inline-block; vertical-align: top;">
-                        <h3 class="service-title">Customer Retention Systems</h3>
-                        <p class="service-tagline">Turn one-time buyers into lifelong customers.</p>
-                    </div>
-                </div>
-
-                <div class="breaks-section">
-                    <h4 class="breaks-title">What breaks without this:</h4>
-                    <ul class="breaks-list">
-                        <li>Customers buy once, you never hear from them again</li>
-                        <li>Customer complaints lost in email/WhatsApp black holes</li>
-                        <li>No system to re-engage inactive customers</li>
-                        <li>Upsell opportunities passing by unnoticed</li>
-                        <li>Referrals happen by random luck (not systematically)</li>
-                        <li>You're constantly hunting for NEW customers (expensive)</li>
-                    </ul>
-                </div>
-
-                <div class="builds-section">
-                    <h4 class="builds-title">What we build:</h4>
-                    <ul class="builds-list">
-                        <li>AI-powered customer support (24/7 chatbot handles common questions)</li>
-                        <li>Help desk ticketing system (all issues tracked, nothing lost)</li>
-                        <li>Customer engagement campaigns (stay top-of-mind)</li>
-                        <li>Win-back campaigns for inactive customers</li>
-                        <li>Automated upsell/cross-sell triggers</li>
-                        <li>Referral program automation</li>
-                        <li>Review & testimonial collection system</li>
-                    </ul>
-                </div>
-
-                <div class="outcomes-section">
-                    <h4 class="outcomes-title">Guaranteed outcomes:</h4>
-                    <ul class="outcomes-list">
-                        <li>15-25% improvement in customer retention</li>
-                        <li>Zero lost customer complaints</li>
-                        <li>70% of customer questions answered by AI (24/7)</li>
-                        <li>More referrals and repeat business (systematic, not random)</li>
-                        <li>Higher customer lifetime value</li>
-                    </ul>
-                </div>
-
-                <div class="example-box">
-                    <div class="example-title">Real Example:</div>
-                    <div class="example-text">Wellness center implemented automated recall reminders for 6-month checkups. Repeat visit rate increased by 40%. That's 40% more revenue from existing customers with zero new marketing spend.</div>
-                </div>
-
-                <div class="ideal-for">
-                    <div class="ideal-title">Ideal for:</div>
-                    <div class="ideal-text">Businesses with high customer churn, service providers overwhelmed with customer inquiries, companies leaving upsell money on the table, businesses where customers buy once and disappear</div>
-                </div>
-
-                <div class="cta-buttons">
-                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Consultation</a>
-                    <a href="#" class="btn btn-secondary">See Case Studies</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Supporting Services -->
-    <section class="supporting-services">
-        <div class="container">
-            <h2 class="section-title">The Supporting Systems</h2>
-            <p class="section-subtitle">The foundation that makes everything else work smoothly</p>
-
-            <!-- Operations Automation -->
-            <div class="supporting-card">
-                <h3 class="service-title">Operations Automation</h3>
-                <p class="service-tagline">End the WhatsApp chaos. Run your business smoothly.</p>
-                
-                <div class="breaks-section">
-                    <h4 class="breaks-title">What breaks without this:</h4>
-                    <ul class="breaks-list">
-                        <li>Manual customer onboarding taking 5-10 hours per customer</li>
-                        <li>WhatsApp/email coordination nightmare (can't find anything)</li>
-                        <li>Tasks falling through cracks ("I forgot" is the team mantra)</li>
-                        <li>Chasing customers for payments manually</li>
-                        <li>No idea of cash flow until month-end panic</li>
                     </ul>
                 </div>
 
@@ -757,5 +761,249 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AHERI <span class="logo-systems">SYSTEMS</span></h3>
+                    <p class="footer-tagline">Automating Growth Through Intelligence</p>
+                    <p>Transforming service businesses with AI-powered automation systems. Based in Kenya, serving clients globally.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#customer-acquisition">Customer Acquisition Systems</a></li>
+                        <li><a href="services.html#customer-conversion">Customer Conversion Systems</a></li>
+                        <li><a href="services.html#customer-retention">Customer Retention Systems</a></li>
+                        <li><a href="services.html#operations">Operations Automation</a></li>
+                        <li><a href="services.html#ai-implementation">AI Implementation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
+                        <li><a href="https://ritandubi.com/resources" target="_blank">Resources & Tools</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <ul class="contact-info">
+                        <li><a href="mailto:rita@aherisystems.com">rita@aherisystems.com</a></li>
+                        <li><a href="tel:+254716850772">+254 716 850 772</a></li>
+                        <li>Nairobi, Kenya</li>
+                        <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" target="_blank">Book a Call</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aheri Systems. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+
 </body>
 </html>
+                        <li>Lead capture from all sources (website, social, calls, chat)</li>
+                        <li>24/7 AI chatbot responding instantly to inquiries</li>
+                        <li>Automatic lead notifications to your team</li>
+                        <li>Lead scoring (system tells you who's hot)</li>
+                        <li>First-touch email/SMS (automatic welcome)</li>
+                        <li>Marketing campaign tracking and analytics</li>
+                    </ul>
+                </div>
+
+                <div class="outcomes-section">
+                    <h4 class="outcomes-title">Guaranteed outcomes:</h4>
+                    <ul class="outcomes-list">
+                        <li>30-50% reduction in lost leads</li>
+                        <li>Response time cut in half (hours → minutes)</li>
+                        <li>Every lead tracked and assigned automatically</li>
+                        <li>24/7 lead engagement (even when you sleep)</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">Real Example:</div>
+                    <div class="example-text">Pediatric clinic went from 60% to 95% lead capture with 24/7 AI chatbot. Now captures leads at 2 AM that used to go to competitors.</div>
+                </div>
+
+                <div class="ideal-for">
+                    <div class="ideal-title">Ideal for:</div>
+                    <div class="ideal-text">Service businesses spending on ads but losing leads to slow follow-up, healthcare practices with after-hours inquiries, professional services tired of playing phone tag</div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Consultation</a>
+                    <a href="case-studies.html" class="btn btn-secondary">See Case Studies</a>
+                </div>
+            </div>
+
+            <!-- Service 2: Customer Conversion -->
+            <div class="service-card">
+                <div class="service-header">
+                    <span class="service-number">2</span>
+                    <div style="display: inline-block; vertical-align: top;">
+                        <h3 class="service-title">Customer Conversion Systems</h3>
+                        <p class="service-tagline">Turn leads into paying customers. Fast.</p>
+                    </div>
+                </div>
+
+                <div class="breaks-section">
+                    <h4 class="breaks-title">What breaks without this:</h4>
+                    <ul class="breaks-list">
+                        <li>Salespeople forget to follow up with leads</li>
+                        <li>Quotes take 2 hours to create (and often have errors)</li>
+                        <li>Deals stall in your pipeline with no reminders</li>
+                        <li>No visibility into what your sales team is actually doing</li>
+                        <li>You can't forecast revenue (pure guesswork)</li>
+                        <li>Best opportunities slip away due to lack of follow-up</li>
+                    </ul>
+                </div>
+
+                <div class="builds-section">
+                    <h4 class="builds-title">What we build:</h4>
+                    <ul class="builds-list">
+                        <li>Complete CRM & pipeline tracking system</li>
+                        <li>Automatic follow-up reminders (no more "I forgot")</li>
+                        <li>Quote/proposal automation (10 minutes vs 2 hours)</li>
+                        <li>Self-service appointment booking system</li>
+                        <li>Real-time deal tracking & revenue forecasts</li>
+                        <li>Automatic call & email logging (no manual data entry)</li>
+                        <li>AI-powered lead qualification</li>
+                    </ul>
+                </div>
+
+                <div class="outcomes-section">
+                    <h4 class="outcomes-title">Guaranteed outcomes:</h4>
+                    <ul class="outcomes-list">
+                        <li>20-40% increase in follow-up conversion rates</li>
+                        <li>Quote creation: 2 hours → 10 minutes</li>
+                        <li>Real-time deal visibility (see your entire pipeline)</li>
+                        <li>Accurate revenue forecasting</li>
+                        <li>50% faster deal closure</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">Real Example:</div>
+                    <div class="example-text">Marketing agency discovered 6 leads stuck at "quote sent" with zero follow-up. Called them all, closed 2 for KES 75,000. That's from ONE Monday morning report.</div>
+                </div>
+
+                <div class="ideal-for">
+                    <div class="ideal-title">Ideal for:</div>
+                    <div class="ideal-text">Sales-driven businesses with follow-up failures, service providers who spend hours creating quotes, business owners who have no idea what's in their pipeline, teams where deals mysteriously disappear</div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Consultation</a>
+                    <a href="case-studies.html" class="btn btn-secondary">See Case Studies</a>
+                </div>
+            </div>
+
+            <!-- Service 3: Customer Retention -->
+            <div class="service-card">
+                <div class="service-header">
+                    <span class="service-number">3</span>
+                    <div style="display: inline-block; vertical-align: top;">
+                        <h3 class="service-title">Customer Retention Systems</h3>
+                        <p class="service-tagline">Turn one-time buyers into lifelong customers.</p>
+                    </div>
+                </div>
+
+                <div class="breaks-section">
+                    <h4 class="breaks-title">What breaks without this:</h4>
+                    <ul class="breaks-list">
+                        <li>Customers buy once, you never hear from them again</li>
+                        <li>Customer complaints lost in email/WhatsApp black holes</li>
+                        <li>No system to re-engage inactive customers</li>
+                        <li>Upsell opportunities passing by unnoticed</li>
+                        <li>Referrals happen by random luck (not systematically)</li>
+                        <li>You're constantly hunting for NEW customers (expensive)</li>
+                    </ul>
+                </div>
+
+                <div class="builds-section">
+                    <h4 class="builds-title">What we build:</h4>
+                    <ul class="builds-list">
+                        <li>AI-powered customer support (24/7 chatbot handles common questions)</li>
+                        <li>Help desk ticketing system (all issues tracked, nothing lost)</li>
+                        <li>Customer engagement campaigns (stay top-of-mind)</li>
+                        <li>Win-back campaigns for inactive customers</li>
+                        <li>Automated upsell/cross-sell triggers</li>
+                        <li>Referral program automation</li>
+                        <li>Review & testimonial collection system</li>
+                    </ul>
+                </div>
+
+                <div class="outcomes-section">
+                    <h4 class="outcomes-title">Guaranteed outcomes:</h4>
+                    <ul class="outcomes-list">
+                        <li>15-25% improvement in customer retention</li>
+                        <li>Zero lost customer complaints</li>
+                        <li>70% of customer questions answered by AI (24/7)</li>
+                        <li>More referrals and repeat business (systematic, not random)</li>
+                        <li>Higher customer lifetime value</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <div class="example-title">Real Example:</div>
+                    <div class="example-text">Wellness center implemented automated recall reminders for 6-month checkups. Repeat visit rate increased by 40%. That's 40% more revenue from existing customers with zero new marketing spend.</div>
+                </div>
+
+                <div class="ideal-for">
+                    <div class="ideal-title">Ideal for:</div>
+                    <div class="ideal-text">Businesses with high customer churn, service providers overwhelmed with customer inquiries, companies leaving upsell money on the table, businesses where customers buy once and disappear</div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Consultation</a>
+                    <a href="case-studies.html" class="btn btn-secondary">See Case Studies</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Supporting Services -->
+    <section class="supporting-services">
+        <div class="container">
+            <h2 class="section-title">The Supporting Systems</h2>
+            <p class="section-subtitle">The foundation that makes everything else work smoothly</p>
+
+            <!-- Operations Automation -->
+            <div class="supporting-card">
+                <h3 class="service-title">Operations Automation</h3>
+                <p class="service-tagline">End the WhatsApp chaos. Run your business smoothly.</p>
+                
+                <div class="breaks-section">
+                    <h4 class="breaks-title">What breaks without this:</h4>
+                    <ul class="breaks-list">
+                        <li>Manual customer onboarding taking 5-10 hours per customer</li>
+                        <li>WhatsApp/email coordination nightmare (can't find anything)</li>
+                        <li>Tasks falling through cracks ("I forgot" is the team mantra)</li>
+                        <li>Chasing customers for payments manually</li>
+                        <li>No idea of cash flow until month-end panic</li>
+                    </ul>
+                </div>
+
+                <div class="builds-section">
+                    <h4 class="builds-title">What we build:</h4>
+                    <ul class="builds-list">
