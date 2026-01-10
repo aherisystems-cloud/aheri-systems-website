@@ -105,6 +105,26 @@
             color: white;
             padding: 100px 20px 80px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 195, 183, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero > .container {
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
@@ -164,12 +184,24 @@
             border: 1px solid #e2e8f0;
             border-left: 5px solid #3bc3b7;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(59, 195, 183, 0.05) 0%, transparent 70%);
+            pointer-events: none;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(59, 195, 183, 0.15);
-            border-left-width: 5px;
         }
 
         .service-header {
@@ -178,7 +210,7 @@
 
         .service-number {
             display: inline-block;
-            background: #3bc3b7;
+            background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
             color: white;
             width: 45px;
             height: 45px;
@@ -188,6 +220,7 @@
             font-weight: 700;
             margin-right: 15px;
             font-size: 1.3rem;
+            box-shadow: 0 4px 12px rgba(59, 195, 183, 0.3);
         }
 
         .service-title {
@@ -418,7 +451,21 @@
             margin-bottom: 40px;
             box-shadow: 0 1px 3px rgba(17, 40, 55, 0.08);
             border: 1px solid #e2e8f0;
+            border-left: 5px solid #3bc3b7;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .supporting-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(59, 195, 183, 0.05) 0%, transparent 70%);
+            pointer-events: none;
         }
 
         .supporting-card:hover {
@@ -668,156 +715,6 @@
                 <div class="builds-section">
                     <h4 class="builds-title">What we build:</h4>
                     <ul class="builds-list">
-                        <li>Automated customer onboarding (emails, documents, welcome sequences)</li>
-                        <li>Task & project management system (replace WhatsApp chaos)</li>
-                        <li>Team coordination hub (everyone knows what to do)</li>
-                        <li>Financial/payment automation (invoicing, reminders, tracking)</li>
-                        <li>Document automation (contracts, quotes, reports)</li>
-                        <li>Real-time cash flow dashboards</li>
-                    </ul>
-                </div>
-
-                <div class="outcomes-section">
-                    <h4 class="outcomes-title">Guaranteed outcomes:</h4>
-                    <ul class="outcomes-list">
-                        <li>10-15 hours/week saved on manual tasks</li>
-                        <li>Onboarding time cut by 60%</li>
-                        <li>80% reduction in "I forgot"</li>
-                        <li>40% faster payment collection</li>
-                        <li>Clear team accountability</li>
-                    </ul>
-                </div>
-
-                <div class="ideal-for">
-                    <div class="ideal-title">Ideal for:</div>
-                    <div class="ideal-text">Growing teams drowning in WhatsApp coordination, businesses where manual onboarding limits capacity, service providers tired of chasing payments</div>
-                </div>
-
-                <div class="cta-buttons">
-                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Consultation</a>
-                </div>
-            </div>
-
-            <!-- AI Implementation -->
-            <div class="supporting-card">
-                <h3 class="service-title">AI Implementation</h3>
-                <p class="service-tagline">Work 24/7 without hiring more people.</p>
-                
-                <div class="breaks-section">
-                    <h4 class="breaks-title">What breaks without this:</h4>
-                    <ul class="breaks-list">
-                        <li>Can't respond to customers 24/7 (lose after-hours inquiries)</li>
-                        <li>Manual lead qualification wastes sales team time</li>
-                        <li>Repetitive customer questions overwhelm your team</li>
-                        <li>Content creation is a constant bottleneck</li>
-                        <li>No insights from your data (it just sits there)</li>
-                    </ul>
-                </div>
-
-                <div class="builds-section">
-                    <h4 class="builds-title">What we build:</h4>
-                    <ul class="builds-list">
-                        <li>AI chatbots for customer service & sales (24/7 availability)</li>
-                        <li>AI lead scoring & qualification (prioritize hot prospects)</li>
-                        <li>AI content generation (social posts, emails, blog content)</li>
-                        <li>Predictive analytics (forecast revenue, identify churn risks)</li>
-                        <li>AI meeting summaries and action items</li>
-                        <li>Custom AI agents trained on your business</li>
-                    </ul>
-                </div>
-
-                <div class="outcomes-section">
-                    <h4 class="outcomes-title">Guaranteed outcomes:</h4>
-                    <ul class="outcomes-list">
-                        <li>70% of routine questions handled by AI</li>
-                        <li>24/7 customer & lead availability</li>
-                        <li>10X content production speed</li>
-                        <li>Instant insights from your business data</li>
-                        <li>Equivalent of 2-3 full-time employees (without hiring)</li>
-                    </ul>
-                </div>
-
-                <div class="ideal-for">
-                    <div class="ideal-title">Ideal for:</div>
-                    <div class="ideal-text">Tech-forward businesses ready to gain competitive advantage, companies overwhelmed with customer inquiries, businesses that need 24/7 availability, teams drowning in repetitive work</div>
-                </div>
-
-                <div class="cta-buttons">
-                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Consultation</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>Ready to Stop Losing Customers?</h2>
-            <p>Most businesses don't have a product problem or a marketing problem.<br>They have a systems problem.</p>
-            <p>Customers fall through the cracks because everything is manual and disconnected.</p>
-            <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Your Free Consultation</a>
-            <p class="cta-note">45-minute session • We'll show you exactly where your customers are falling through • No pressure, just insights</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>AHERI <span class="logo-systems">SYSTEMS</span></h3>
-                    <p class="footer-tagline">Automating Growth Through Intelligence</p>
-                    <p>Transforming service businesses with AI-powered automation systems. Based in Kenya, serving clients globally.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html#customer-acquisition">Customer Acquisition Systems</a></li>
-                        <li><a href="services.html#customer-conversion">Customer Conversion Systems</a></li>
-                        <li><a href="services.html#customer-retention">Customer Retention Systems</a></li>
-                        <li><a href="services.html#operations">Operations Automation</a></li>
-                        <li><a href="services.html#ai-implementation">AI Implementation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="case-studies.html">Case Studies</a></li>
-                        <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
-                        <li><a href="https://ritandubi.com/resources" target="_blank">Resources & Tools</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Get In Touch</h4>
-                    <ul class="contact-info">
-                        <li><a href="mailto:rita@aherisystems.com">rita@aherisystems.com</a></li>
-                        <li><a href="tel:+254716850772">+254 716 850 772</a></li>
-                        <li>Nairobi, Kenya</li>
-                        <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" target="_blank">Book a Call</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Aheri Systems. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navMenu = document.querySelector('.nav-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-    </script>
-
-</body>
-</html>
                         <li>Lead capture from all sources (website, social, calls, chat)</li>
                         <li>24/7 AI chatbot responding instantly to inquiries</li>
                         <li>Automatic lead notifications to your team</li>
@@ -1003,6 +900,159 @@
                         <li>No idea of cash flow until month-end panic</li>
                     </ul>
                 </div>
+
                 <div class="builds-section">
                     <h4 class="builds-title">What we build:</h4>
                     <ul class="builds-list">
+                        <li>Automated customer onboarding (emails, documents, welcome sequences)</li>
+                        <li>Task & project management system (replace WhatsApp chaos)</li>
+                        <li>Team coordination hub (everyone knows what to do)</li>
+                        <li>Financial/payment automation (invoicing, reminders, tracking)</li>
+                        <li>Document automation (contracts, quotes, reports)</li>
+                        <li>Real-time cash flow dashboards</li>
+                    </ul>
+                </div>
+
+                <div class="outcomes-section">
+                    <h4 class="outcomes-title">Guaranteed outcomes:</h4>
+                    <ul class="outcomes-list">
+                        <li>10-15 hours/week saved on manual tasks</li>
+                        <li>Onboarding time cut by 60%</li>
+                        <li>80% reduction in "I forgot"</li>
+                        <li>40% faster payment collection</li>
+                        <li>Clear team accountability</li>
+                    </ul>
+                </div>
+
+                <div class="ideal-for">
+                    <div class="ideal-title">Ideal for:</div>
+                    <div class="ideal-text">Growing teams drowning in WhatsApp coordination, businesses where manual onboarding limits capacity, service providers tired of chasing payments</div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Consultation</a>
+                </div>
+            </div>
+
+            <!-- AI Implementation -->
+            <div class="supporting-card">
+                <h3 class="service-title">AI Implementation</h3>
+                <p class="service-tagline">Work 24/7 without hiring more people.</p>
+                
+                <div class="breaks-section">
+                    <h4 class="breaks-title">What breaks without this:</h4>
+                    <ul class="breaks-list">
+                        <li>Can't respond to customers 24/7 (lose after-hours inquiries)</li>
+                        <li>Manual lead qualification wastes sales team time</li>
+                        <li>Repetitive customer questions overwhelm your team</li>
+                        <li>Content creation is a constant bottleneck</li>
+                        <li>No insights from your data (it just sits there)</li>
+                    </ul>
+                </div>
+
+                <div class="builds-section">
+                    <h4 class="builds-title">What we build:</h4>
+                    <ul class="builds-list">
+                        <li>AI chatbots for customer service & sales (24/7 availability)</li>
+                        <li>AI lead scoring & qualification (prioritize hot prospects)</li>
+                        <li>AI content generation (social posts, emails, blog content)</li>
+                        <li>Predictive analytics (forecast revenue, identify churn risks)</li>
+                        <li>AI meeting summaries and action items</li>
+                        <li>Custom AI agents trained on your business</li>
+                    </ul>
+                </div>
+
+                <div class="outcomes-section">
+                    <h4 class="outcomes-title">Guaranteed outcomes:</h4>
+                    <ul class="outcomes-list">
+                        <li>70% of routine questions handled by AI</li>
+                        <li>24/7 customer & lead availability</li>
+                        <li>10X content production speed</li>
+                        <li>Instant insights from your business data</li>
+                        <li>Equivalent of 2-3 full-time employees (without hiring)</li>
+                    </ul>
+                </div>
+
+                <div class="ideal-for">
+                    <div class="ideal-title">Ideal for:</div>
+                    <div class="ideal-text">Tech-forward businesses ready to gain competitive advantage, companies overwhelmed with customer inquiries, businesses that need 24/7 availability, teams drowning in repetitive work</div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Consultation</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Stop Losing Customers?</h2>
+            <p>Most businesses don't have a product problem or a marketing problem.<br>They have a systems problem.</p>
+            <p>Customers fall through the cracks because everything is manual and disconnected.</p>
+            <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Your Free Consultation</a>
+            <p class="cta-note">45-minute session • We'll show you exactly where your customers are falling through • No pressure, just insights</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AHERI <span class="logo-systems">SYSTEMS</span></h3>
+                    <p class="footer-tagline">Automating Growth Through Intelligence</p>
+                    <p>Transforming service businesses with AI-powered automation systems. Based in Kenya, serving clients globally.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Customer Acquisition Systems</a></li>
+                        <li><a href="services.html">Customer Conversion Systems</a></li>
+                        <li><a href="services.html">Customer Retention Systems</a></li>
+                        <li><a href="services.html">Operations Automation</a></li>
+                        <li><a href="services.html">AI Implementation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
+                        <li><a href="https://ritandubi.com/resources" target="_blank">Resources & Tools</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <ul class="contact-info">
+                        <li><a href="mailto:rita@aherisystems.com">rita@aherisystems.com</a></li>
+                        <li><a href="tel:+254716850772">+254 716 850 772</a></li>
+                        <li>Nairobi, Kenya</li>
+                        <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" target="_blank">Book a Call</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aheri Systems. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (mobileMenuBtn && navMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+
+</body>
+</html>
