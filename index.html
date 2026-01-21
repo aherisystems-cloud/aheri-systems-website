@@ -7,8 +7,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <title>Aheri Systems | Smart Systems for Scalable Growth</title>
-    <meta name="description" content="Transform your business with AI-powered automation systems. Stop losing customers and start growing revenue with our proven customer acquisition, conversion, and retention systems.">
+    <title>Aheri Systems | Revenue Growth Systems - Stop Losing Leads, Close More Deals, Keep Customers</title>
+    <meta name="description" content="We build, monitor, and optimize the systems that turn leads into revenue. End-to-end revenue growth automation: capture every lead, accelerate sales cycles, and maximize customer lifetime value.">
+    <meta name="keywords" content="revenue growth systems, lead capture automation, sales pipeline management, customer retention automation, CRM implementation, revenue operations, AI sales automation, business process automation">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -132,8 +133,20 @@
             text-align: center;
         }
 
+        .hero-eyebrow {
+            display: inline-block;
+            background: rgba(59, 195, 183, 0.2);
+            color: #3bc3b7;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            border: 1px solid rgba(59, 195, 183, 0.3);
+        }
+
         .hero-title {
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             margin-bottom: 25px;
             font-weight: 800;
             letter-spacing: -0.02em;
@@ -148,8 +161,8 @@
         }
 
         .hero-subtitle {
-            font-size: 1.4rem;
-            max-width: 800px;
+            font-size: 1.5rem;
+            max-width: 900px;
             margin: 0 auto 40px;
             opacity: 0.95;
             line-height: 1.7;
@@ -223,6 +236,49 @@
             opacity: 0.85;
         }
 
+        /* Problem Section */
+        .problem-section {
+            padding: 80px 20px;
+            background: #f8fafc;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .problem-card {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            border: 2px solid #fee;
+            transition: all 0.3s ease;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(239, 68, 68, 0.1);
+        }
+
+        .problem-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .problem-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #991b1b;
+            font-weight: 700;
+        }
+
+        .problem-card p {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
         /* Section Styles */
         .section {
             padding: 80px 20px;
@@ -234,7 +290,7 @@
         }
 
         .section-header h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 15px;
             font-weight: 700;
             letter-spacing: -0.02em;
@@ -244,283 +300,368 @@
         .section-header p {
             font-size: 1.2rem;
             color: #64748b;
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        /* Services Grid */
-        .services-grid {
+        /* Flagship Offer Section */
+        .flagship-section {
+            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
+            color: white;
+            padding: 80px 20px;
+        }
+
+        .flagship-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .flagship-badge {
+            display: inline-block;
+            background: rgba(59, 195, 183, 0.2);
+            color: #3bc3b7;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(59, 195, 183, 0.3);
+        }
+
+        .flagship-intro h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .flagship-intro p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Tier Cards */
+        .tiers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
 
-        .service-card {
+        .tier-card {
             background: white;
-            border-radius: 16px;
-            padding: 40px 30px;
-            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 40px;
+            color: #112837;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            border: 2px solid transparent;
         }
 
-        .service-card::before {
+        .tier-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 4px;
+            height: 6px;
             background: linear-gradient(90deg, #3bc3b7 0%, #2da89e 100%);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
         }
 
-        .service-card:hover::before {
-            transform: scaleX(1);
+        .tier-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(59, 195, 183, 0.2);
+            border-color: #3bc3b7;
         }
 
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 35px rgba(59, 195, 183, 0.15);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .service-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #112837;
+        .tier-number {
+            display: inline-block;
+            background: #e0f7f5;
+            color: #0f766e;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
             font-weight: 700;
+            margin-bottom: 15px;
         }
 
-        .service-card p {
-            color: #64748b;
+        .tier-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            font-weight: 800;
+            color: #112837;
+        }
+
+        .tier-tagline {
+            font-size: 1.05rem;
+            color: #3bc3b7;
+            font-weight: 600;
             margin-bottom: 20px;
-            line-height: 1.7;
         }
 
-        .service-features {
-            list-style: none;
+        .tier-best-for {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 10px;
             margin-bottom: 25px;
+            border-left: 3px solid #3bc3b7;
         }
 
-        .service-features li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-            color: #4a5568;
+        .tier-best-for strong {
+            display: block;
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tier-best-for p {
+            color: #112837;
             font-size: 0.95rem;
         }
 
-        .service-features li:before {
+        .tier-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .tier-features li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #4a5568;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .tier-features li:before {
             content: "✓";
             position: absolute;
             left: 0;
             color: #3bc3b7;
             font-weight: bold;
+            font-size: 1.2rem;
         }
 
-        .service-link {
-            color: #3bc3b7;
-            text-decoration: none;
+        .tier-kpis {
+            background: #f0fdfc;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .tier-kpis strong {
+            display: block;
+            color: #0f766e;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .tier-kpis ul {
+            list-style: none;
+        }
+
+        .tier-kpis li {
+            color: #115e59;
+            font-size: 0.9rem;
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .tier-kpis li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #14b8a6;
+        }
+
+        .tier-outcome {
+            background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .tier-outcome strong {
+            display: block;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tier-outcome p {
+            font-size: 1.05rem;
             font-weight: 600;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
+            line-height: 1.5;
         }
 
-        .service-link:hover {
-            color: #2da89e;
-            gap: 8px;
+        .tier-price {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 2px solid #e2e8f0;
         }
 
-        /* Case Studies */
-        .case-studies-preview {
+        .tier-price .price-label {
+            display: block;
+            color: #64748b;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tier-price .price {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #112837;
+            margin-bottom: 5px;
+        }
+
+        .tier-price .price-note {
+            display: block;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        /* How It Works */
+        .how-it-works {
             background: #f8fafc;
             padding: 80px 20px;
         }
 
-        .case-studies-grid {
+        .process-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
         }
 
-        .case-study-card {
-            background: white;
-            border-radius: 16px;
-            padding: 35px;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s ease;
+        .process-step {
+            text-align: center;
+            position: relative;
         }
 
-        .case-study-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(17, 40, 55, 0.1);
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
+            color: white;
+            border-radius: 50%;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(59, 195, 183, 0.3);
         }
 
-        .case-tag {
-            display: inline-block;
-            background: #e0f7f5;
-            color: #0f766e;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .case-study-card h3 {
-            font-size: 1.5rem;
+        .process-step h3 {
+            font-size: 1.3rem;
             margin-bottom: 12px;
             color: #112837;
             font-weight: 700;
         }
 
-        .case-challenge {
+        .process-step p {
             color: #64748b;
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-
-        .case-result {
-            background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .result-number {
-            display: block;
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 5px;
-        }
-
-        .result-label {
-            display: block;
-            font-size: 0.9rem;
-            opacity: 0.95;
-        }
-
-        .case-description {
-            color: #4a5568;
             line-height: 1.7;
-            margin-bottom: 20px;
         }
 
-        .case-link {
-            color: #3bc3b7;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .case-link:hover {
-            color: #2da89e;
-        }
-
-        /* Testimonials */
-        .testimonials {
+        /* Difference Section */
+        .difference-section {
             padding: 80px 20px;
         }
 
-        .testimonials-grid {
+        .comparison-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
         }
 
-        .testimonial-card {
-            background: white;
-            border-radius: 16px;
-            padding: 35px;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            box-shadow: 0 8px 25px rgba(17, 40, 55, 0.08);
-        }
-
-        .stars {
-            color: #fbbf24;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
-
-        .testimonial-text {
-            color: #4a5568;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-        }
-
-        .testimonial-author strong {
-            display: block;
-            color: #112837;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        .testimonial-author span {
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-
-        /* Resources */
-        .resources {
-            background: #f8fafc;
-            padding: 80px 20px;
-        }
-
-        .resources-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .resource-card {
+        .comparison-card {
             background: white;
             border-radius: 16px;
             padding: 40px;
-            border: 1px solid #e2e8f0;
             text-align: center;
-            transition: all 0.3s ease;
         }
 
-        .resource-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(59, 195, 183, 0.12);
+        .comparison-card.others {
+            border: 2px solid #fee;
         }
 
-        .resource-icon {
-            font-size: 3.5rem;
+        .comparison-card.us {
+            border: 2px solid #d1fae5;
+            background: linear-gradient(135deg, #f0fdfc 0%, #e6fffa 100%);
+        }
+
+        .comparison-label {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
             margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
-        .resource-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #112837;
+        .comparison-card.others .comparison-label {
+            background: #fee;
+            color: #991b1b;
+        }
+
+        .comparison-card.us .comparison-label {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .comparison-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
             font-weight: 700;
         }
 
-        .resource-card p {
-            color: #64748b;
-            margin-bottom: 25px;
-            line-height: 1.7;
+        .comparison-list {
+            list-style: none;
+            text-align: left;
+        }
+
+        .comparison-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .comparison-card.others .comparison-list li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #dc2626;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .comparison-card.us .comparison-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #059669;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
         /* CTA Section */
@@ -552,7 +693,7 @@
         }
 
         .cta-content h2 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin-bottom: 20px;
             font-weight: 700;
             letter-spacing: -0.02em;
@@ -574,6 +715,28 @@
             margin-top: 20px;
             font-size: 0.95rem;
             opacity: 0.8;
+        }
+
+        .cta-benefits {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .cta-benefit {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .cta-benefit:before {
+            content: "✓";
+            color: #3bc3b7;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
         /* Footer */
@@ -702,6 +865,10 @@
             .cta-content h2 {
                 font-size: 2rem;
             }
+
+            .flagship-intro h2 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -724,9 +891,8 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="case-studies.html">Case Studies</a></li>
                     <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
-                    <li><a href="https://ritandubi.com/resources" target="_blank">Resources & Tools</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn-primary" target="_blank">Book Consultation</a></li>
+                    <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn-primary" target="_blank">Book Free Audit</a></li>
                 </ul>
             </div>
         </div>
@@ -736,292 +902,64 @@
     <section class="hero">
         <div class="hero-content">
             <div class="container">
+                <div class="hero-eyebrow">Revenue Growth Systems</div>
                 <h1 class="hero-title">
-                    Stop Losing Customers.<br>
-                    Start <span class="gradient-text">Growing Revenue</span>
+                    Stop Losing Revenue<br>
+                    <span class="gradient-text">After the Lead Comes In</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Get more customers. Close more deals. Keep customers coming back.
+                    We build, monitor, and optimize the systems that turn leads into revenue — consistently. End the chaos of missed follow-ups, stalled deals, and disappearing customers.
                 </p>
                 <div class="hero-cta">
-                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary" target="_blank">Book Free Discovery Call</a>
-                    <a href="services.html" class="btn btn-secondary">Explore Our Systems</a>
+                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary" target="_blank">Book Free Revenue Audit</a>
+                    <a href="#revenue-command-system" class="btn btn-secondary">See How It Works</a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
-                        <span class="stat-number">30-50%</span>
-                        <span class="stat-label">More Leads Captured</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">50%</span>
-                        <span class="stat-label">Faster Deal Closure</span>
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Lead Capture Rate</span>
                     </div>
                     <div class="stat">
                         <span class="stat-number">24/7</span>
-                        <span class="stat-label">AI Automation</span>
+                        <span class="stat-label">Automated Response</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">3X</span>
+                        <span class="stat-label">Faster Revenue Growth</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Overview -->
-    <section class="section">
+    <!-- Problem Section -->
+    <section class="problem-section">
         <div class="container">
             <div class="section-header">
-                <h2>The <span class="gradient-text">3 Core Systems</span> Your Business Needs</h2>
-                <p>Every business needs these three systems to scale revenue and stop losing customers</p>
+                <h2>Most Businesses Don't Have a <span class="gradient-text">Marketing Problem</span></h2>
+                <p>They have a revenue execution problem. Sound familiar?</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🎯</div>
-                    <h3>Customer Acquisition Systems</h3>
-                    <p>Never miss another lead. Capture and respond to inquiries in minutes, not hours.</p>
-                    <ul class="service-features">
-                        <li>24/7 AI chatbot for instant responses</li>
-                        <li>Multi-channel lead capture</li>
-                        <li>Automatic lead scoring & routing</li>
-                    </ul>
-                    <a href="services.html" class="service-link">Learn More →</a>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">📱</div>
+                    <h3>Leads Come In...</h3>
+                    <p>From ads, website forms, WhatsApp, and calls. But they're scattered everywhere with no central system to track them.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">💰</div>
-                    <h3>Customer Conversion Systems</h3>
-                    <p>Turn leads into paying customers with automated follow-ups and smart CRM.</p>
-                    <ul class="service-features">
-                        <li>CRM & pipeline management</li>
-                        <li>Quote/proposal automation</li>
-                        <li>AI-powered lead qualification</li>
-                    </ul>
-                    <a href="services.html" class="service-link">Learn More →</a>
+                <div class="problem-card">
+                    <div class="problem-icon">⏰</div>
+                    <h3>Follow-Up is Slow...</h3>
+                    <p>Response times measured in hours instead of minutes. Hot leads go cold while you're busy running your business.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🔄</div>
-                    <h3>Customer Retention Systems</h3>
-                    <p>Keep customers coming back with automated engagement and support.</p>
-                    <ul class="service-features">
-                        <li>24/7 AI customer support</li>
-                        <li>Win-back campaigns</li>
-                        <li>Automated referral programs</li>
-                    </ul>
-                    <a href="services.html" class="service-link">Learn More →</a>
+                <div class="problem-card">
+                    <div class="problem-icon">📉</div>
+                    <h3>Deals Stall...</h3>
+                    <p>Sales reps forget follow-ups. Quotes sit in drafts. No alerts when opportunities go silent. Pipeline visibility is zero.</p>
                 </div>
-            </div>
-
-            <div class="section-header" style="margin-top: 80px;">
-                <h2>Plus <span class="gradient-text">Supporting Systems</span> That Make It All Work</h2>
-                <p>The foundation that powers your growth</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3>Operations Automation</h3>
-                    <p>End the Spreadsheets and WhatsApp chaos. Automate onboarding, tasks, payments, and team coordination.</p>
-                    <ul class="service-features">
-                        <li>Workflow automation</li>
-                        <li>Payment & invoicing automation</li>
-                        <li>Team coordination hub</li>
-                    </ul>
-                    <a href="services.html" class="service-link">Learn More →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🤖</div>
-                    <h3>AI Implementation</h3>
-                    <p>Work 24/7 without hiring more people with custom AI agents and ChatGPT integrations.</p>
-                    <ul class="service-features">
-                        <li>Custom AI chatbots & agents</li>
-                        <li>AI content generation</li>
-                        <li>Predictive analytics</li>
-                    </ul>
-                    <a href="services.html" class="service-link">Learn More →</a>
+                <div class="problem-card">
+                    <div class="problem-icon">👻</div>
+                    <h3>Customers Disappear...</h3>
+                    <p>After the first sale, they're gone. No systematic re-engagement, upsells, or referrals. Revenue potential left on the table.</p>
                 </div>
             </div>
             <div class="text-center" style="margin-top: 50px;">
-                <a href="services.html" class="btn btn-primary">View All Systems</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies Preview -->
-    <section class="case-studies-preview">
-        <div class="container">
-            <div class="section-header">
-                <h2>Proven <span class="gradient-text">Results</span></h2>
-                <p>Real businesses, real transformations</p>
-            </div>
-            <div class="case-studies-grid">
-                <div class="case-study-card">
-                    <div class="case-tag">Healthcare</div>
-                    <h3>VivaLife Pediatric Clinic</h3>
-                    <p class="case-challenge">Manual patient registration causing delays and data inconsistencies</p>
-                    <div class="case-result">
-                        <span class="result-number">50%</span>
-                        <span class="result-label">Time Saved on Admin Tasks</span>
-                    </div>
-                    <p class="case-description">Complete CRM automation with patient experience optimization, real-time reporting, and automated follow-ups.</p>
-                    <a href="case-studies.html#vivalife" class="case-link">Read Full Story →</a>
-                </div>
-                <div class="case-study-card">
-                    <div class="case-tag">HealthTech</div>
-                    <h3>DiaspoCare Platform</h3>
-                    <p class="case-challenge">Fragmented patient data and manual coordination across providers</p>
-                    <div class="case-result">
-                        <span class="result-number">100%</span>
-                        <span class="result-label">Automated Patient Journey</span>
-                    </div>
-                    <p class="case-description">GoHighLevel CRM hub implementation with multi-provider coordination and automated workflows.</p>
-                    <a href="case-studies.html#diaspocare" class="case-link">Read Full Story →</a>
-                </div>
-                <div class="case-study-card">
-                    <div class="case-tag">Events</div>
-                    <h3>Events Business Automation</h3>
-                    <p class="case-challenge">Manual event management from registration to follow-up</p>
-                    <div class="case-result">
-                        <span class="result-number">80%</span>
-                        <span class="result-label">Process Automation</span>
-                    </div>
-                    <p class="case-description">End-to-end automation: registration, CRM, payments, email marketing, and attendee management.</p>
-                    <a href="case-studies.html#events" class="case-link">Read Full Story →</a>
-                </div>
-            </div>
-            <div class="text-center" style="margin-top: 50px;">
-                <a href="case-studies.html" class="btn btn-secondary">View All Case Studies</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Proof / Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Our <span class="gradient-text">Clients Say</span></h2>
-                <p>Trusted by businesses across industries</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"The automation systems Rita implemented have transformed how we operate. We've cut admin time in half and can now focus on patient care."</p>
-                    <div class="testimonial-author">
-                        <strong>VivaLife Pediatric Clinic</strong>
-                        <span>Healthcare Provider</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"From manual chaos to fully automated operations. The CRM system has been a game-changer for our platform."</p>
-                    <div class="testimonial-author">
-                        <strong>DiaspoCare</strong>
-                        <span>HealthTech Platform</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Professional, efficient, and delivers results. Our appointment booking system now runs seamlessly."</p>
-                    <div class="testimonial-author">
-                        <strong>Damency Technologies</strong>
-                        <span>Software Business</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lead Magnets / Resources -->
-    <section class="resources">
-        <div class="container">
-            <div class="section-header">
-                <h2>Free <span class="gradient-text">Resources & Tools</span></h2>
-                <p>Start automating your business today</p>
-            </div>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <div class="resource-icon">🚀</div>
-                    <h3>AI Prompts for 10X Productivity</h3>
-                    <p>50+ battle-tested AI prompts to automate tasks, generate content, and streamline operations.</p>
-                    <a href="https://go.ritandubi.com/ai-prompts-for-10x-productivity/" class="btn btn-primary" target="_blank">Download Free Guide</a>
-                </div>
-                <div class="resource-card">
-                    <div class="resource-icon">📧</div>
-                    <h3>Automated Lead Follow-Up System</h3>
-                    <p>Complete blueprint for setting up automated email sequences that convert leads into customers.</p>
-                    <a href="https://go.ritandubi.com/automated-lead-follow-up-system/" class="btn btn-primary" target="_blank">Get Template</a>
-                </div>
-            </div>
-            <div class="text-center" style="margin-top: 50px;">
-                <a href="https://ritandubi.com/resources" class="btn btn-secondary" target="_blank">View All Resources & Tools →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-content">
-            <div class="container">
-                <h2>Ready to Stop Losing Customers?</h2>
-                <p>Most businesses don't have a product problem or a marketing problem. They have a systems problem.</p>
-                <p>Book a free discovery call to explore how AI and automation can transform your business.</p>
-                <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary btn-large" target="_blank">Book Free Discovery Call</a>
-                <p class="cta-note">No commitment required • 45-minute consultation • Custom growth plan</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>AHERI <span class="logo-systems">SYSTEMS</span></h3>
-                    <p class="footer-tagline">Smart Systems for Scalable Growth</p>
-                    <p>Transforming businesses with AI-powered automation systems. Based in Kenya, serving clients globally.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html">Customer Acquisition Systems</a></li>
-                        <li><a href="services.html">Customer Conversion Systems</a></li>
-                        <li><a href="services.html">Customer Retention Systems</a></li>
-                        <li><a href="services.html">Operations Automation</a></li>
-                        <li><a href="services.html">AI Implementation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="case-studies.html">Case Studies</a></li>
-                        <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
-                        <li><a href="https://ritandubi.com/resources" target="_blank">Resources & Tools</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Get In Touch</h4>
-                    <ul class="contact-info">
-                        <li><a href="mailto:rita@aherisystems.com">rita@aherisystems.com</a></li>
-                        <li><a href="tel:+254716850772">+254 716 850 772</a></li>
-                        <li>Nairobi, Kenya</li>
-                        <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" target="_blank">Book a Call</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Aheri Systems. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navMenu = document.querySelector('.nav-menu');
-
-        if (mobileMenuBtn && navMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-            });
-        }
-    </script>
-
-</body>
-</html>
+                <p style="font-size: 1.3rem; color: #112837; font-weight: 600; max-width: 800
