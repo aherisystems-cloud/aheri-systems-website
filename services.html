@@ -6,7 +6,105 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <title>Services - Aheri Systems</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Revenue Execution Systems Kenya | Stop Revenue Leakage | Aheri Systems</title>
+    <meta name="description" content="Stop losing revenue after leads come in. Aheri Systems builds managed revenue execution systems for Kenyan businesses. Capture leads, close deals, retain customers — automatically.">
+    <meta name="keywords" content="revenue execution system Kenya, CRM automation Kenya, sales pipeline management, customer retention automation, business automation Nairobi, lead management system, sales automation Kenya">
+    <meta name="author" content="Aheri Systems">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Stop Losing Revenue After the Lead Comes In | Aheri Systems">
+    <meta property="og:description" content="Managed revenue execution systems that turn leads into revenue consistently. Capture, convert, and retain customers automatically.">
+    <meta property="og:url" content="https://aherisystems.com/services">
+    <meta property="og:site_name" content="Aheri Systems">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Revenue Execution Systems | Aheri Systems Kenya">
+    <meta name="twitter:description" content="Stop revenue leakage with automated lead capture, sales pipeline management, and customer retention systems.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://aherisystems.com/services">
+    
+    <!-- Schema.org Structured Data for AIEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Aheri Systems",
+      "image": "https://aherisystems.com/assets/images/aheri-logo.png",
+      "description": "Revenue execution systems and business automation for Kenyan businesses. We build, monitor, and optimize systems that turn leads into revenue consistently.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nairobi",
+        "addressCountry": "KE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -1.286389,
+        "longitude": 36.817223
+      },
+      "telephone": "+254716850772",
+      "email": "rita@aherisystems.com",
+      "priceRange": "KES 35,000 - KES 100,000 per month",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Kenya"
+      },
+      "serviceType": ["Revenue Execution Systems", "CRM Automation", "Sales Pipeline Management", "Customer Retention Systems", "Business Process Automation", "AI Implementation"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Revenue Command System",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Revenue Capture System",
+              "description": "Stop losing leads with 24/7 AI lead response, multi-channel lead capture, and automated follow-up systems."
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "35000",
+              "priceCurrency": "KES",
+              "unitText": "MONTH"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Revenue Acceleration System",
+              "description": "Close more deals with full CRM automation, sales pipeline enforcement, and revenue forecasting dashboards."
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "60000",
+              "priceCurrency": "KES",
+              "unitText": "MONTH"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Revenue Optimization System",
+              "description": "Retain customers and increase lifetime value with automated retention, 24/7 AI support, and systematic upsells."
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "100000",
+              "priceCurrency": "KES",
+              "unitText": "MONTH"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -143,7 +241,7 @@
         }
 
         .hero-tagline {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             max-width: 900px;
             margin: 0 auto;
             opacity: 0.9;
@@ -166,16 +264,21 @@
             color: #112837;
             font-weight: 700;
             letter-spacing: -0.02em;
+            text-align: center;
         }
 
         .section-subtitle {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: #64748b;
             margin-bottom: 50px;
             font-weight: 400;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .service-card {
+        .tier-card {
             background: white;
             border-radius: 16px;
             padding: 45px;
@@ -188,7 +291,7 @@
             overflow: hidden;
         }
 
-        .service-card::before {
+        .tier-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -199,45 +302,66 @@
             pointer-events: none;
         }
 
-        .service-card:hover {
+        .tier-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(59, 195, 183, 0.15);
         }
 
-        .service-header {
+        .tier-header {
             margin-bottom: 30px;
         }
 
-        .service-number {
+        .tier-number {
             display: inline-block;
             background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
             color: white;
-            width: 45px;
-            height: 45px;
+            padding: 8px 20px;
             border-radius: 12px;
-            text-align: center;
-            line-height: 45px;
             font-weight: 700;
-            margin-right: 15px;
-            font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(59, 195, 183, 0.3);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
-        .service-title {
-            font-size: 1.9rem;
+        .tier-title {
+            font-size: 2rem;
             color: #112837;
             font-weight: 700;
             margin-bottom: 10px;
             letter-spacing: -0.01em;
         }
 
-        .service-tagline {
+        .tier-tagline {
             font-size: 1.2rem;
             color: #3bc3b7;
             font-weight: 600;
+            margin-bottom: 15px;
         }
 
-        .breaks-section {
+        .tier-best-for {
+            font-size: 1rem;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .tier-investment {
+            font-size: 1.3rem;
+            color: #112837;
+            font-weight: 700;
+            margin-top: 15px;
+            padding: 15px 20px;
+            background: #f0fdfa;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .tier-investment span {
+            color: #3bc3b7;
+        }
+
+        .problem-section {
             background: #fef2f2;
             padding: 25px;
             border-radius: 12px;
@@ -245,19 +369,19 @@
             border-left: 4px solid #ef4444;
         }
 
-        .breaks-title {
-            font-size: 1.1rem;
+        .problem-title {
+            font-size: 1.15rem;
             font-weight: 700;
             color: #991b1b;
             margin-bottom: 15px;
         }
 
-        .breaks-list {
+        .problem-list {
             list-style: none;
             padding: 0;
         }
 
-        .breaks-list li {
+        .problem-list li {
             padding: 10px 0;
             padding-left: 30px;
             position: relative;
@@ -266,7 +390,7 @@
             line-height: 1.6;
         }
 
-        .breaks-list li:before {
+        .problem-list li:before {
             content: "✗";
             position: absolute;
             left: 0;
@@ -275,7 +399,7 @@
             font-size: 1.2rem;
         }
 
-        .builds-section {
+        .solution-section {
             background: #f0fdfa;
             padding: 25px;
             border-radius: 12px;
@@ -283,19 +407,26 @@
             border-left: 4px solid #3bc3b7;
         }
 
-        .builds-title {
-            font-size: 1.1rem;
+        .solution-title {
+            font-size: 1.15rem;
             font-weight: 700;
             color: #0f766e;
             margin-bottom: 15px;
         }
 
-        .builds-list {
+        .solution-content {
+            color: #4a5568;
+            font-size: 0.98rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .solution-list {
             list-style: none;
             padding: 0;
         }
 
-        .builds-list li {
+        .solution-list li {
             padding: 10px 0;
             padding-left: 30px;
             position: relative;
@@ -304,7 +435,7 @@
             line-height: 1.6;
         }
 
-        .builds-list li:before {
+        .solution-list li:before {
             content: "✓";
             position: absolute;
             left: 0;
@@ -313,7 +444,7 @@
             font-size: 1.3rem;
         }
 
-        .outcomes-section {
+        .outcome-section {
             background: #eff6ff;
             padding: 25px;
             border-radius: 12px;
@@ -321,75 +452,52 @@
             border-left: 4px solid #112837;
         }
 
-        .outcomes-title {
-            font-size: 1.1rem;
+        .outcome-title {
+            font-size: 1.15rem;
             font-weight: 700;
             color: #112837;
             margin-bottom: 15px;
         }
 
-        .outcomes-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .outcomes-list li {
-            padding: 10px 0;
-            padding-left: 30px;
-            position: relative;
+        .outcome-text {
             color: #112837;
             font-weight: 600;
-            font-size: 0.98rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
         }
 
-        .outcomes-list li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #3bc3b7;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .example-box {
-            background: #fffbeb;
+        .kpi-section {
+            background: #fefce8;
             padding: 20px 25px;
             border-radius: 12px;
             margin: 25px 0;
             border-left: 4px solid #f59e0b;
         }
 
-        .example-title {
+        .kpi-title {
             font-weight: 700;
             color: #92400e;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             font-size: 1rem;
         }
 
-        .example-text {
+        .kpi-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .kpi-item {
             color: #78350f;
-            line-height: 1.6;
-            font-size: 0.98rem;
+            font-size: 0.9rem;
+            padding-left: 20px;
+            position: relative;
         }
 
-        .ideal-for {
-            background: #f5f3ff;
-            padding: 20px 25px;
-            border-radius: 12px;
-            margin: 25px 0;
-        }
-
-        .ideal-title {
-            font-weight: 700;
-            color: #6b21a8;
-            margin-bottom: 8px;
-            font-size: 1rem;
-        }
-
-        .ideal-text {
-            color: #581c87;
-            line-height: 1.6;
-            font-size: 0.98rem;
+        .kpi-item:before {
+            content: "📊";
+            position: absolute;
+            left: 0;
         }
 
         .cta-buttons {
@@ -439,38 +547,152 @@
             margin: 70px 0;
         }
 
-        .supporting-services {
+        .value-prop-section {
             background: #f8fafc;
             padding: 70px 20px;
         }
 
-        .supporting-card {
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-card {
             background: white;
-            border-radius: 16px;
-            padding: 40px;
-            margin-bottom: 40px;
+            padding: 30px;
+            border-radius: 12px;
             box-shadow: 0 1px 3px rgba(17, 40, 55, 0.08);
-            border: 1px solid #e2e8f0;
-            border-left: 5px solid #3bc3b7;
-            transition: all 0.3s ease;
+            border-left: 4px solid #3bc3b7;
+        }
+
+        .value-card h3 {
+            color: #112837;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .value-card p {
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        .comparison-section {
+            padding: 70px 20px;
+            background: white;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .comparison-card {
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .comparison-card.others {
+            background: #fef2f2;
+            border: 2px solid #ef4444;
+        }
+
+        .comparison-card.aheri {
+            background: #f0fdfa;
+            border: 2px solid #3bc3b7;
+        }
+
+        .comparison-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .comparison-card.others h3 {
+            color: #991b1b;
+        }
+
+        .comparison-card.aheri h3 {
+            color: #0f766e;
+        }
+
+        .comparison-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .comparison-card ul li {
+            padding: 10px 0;
+            padding-left: 30px;
             position: relative;
-            overflow: hidden;
+            line-height: 1.6;
         }
 
-        .supporting-card::before {
-            content: '';
+        .comparison-card.others ul li:before {
+            content: "✗";
             position: absolute;
-            top: 0;
-            right: 0;
-            width: 150px;
-            height: 150px;
-            background: radial-gradient(circle, rgba(59, 195, 183, 0.05) 0%, transparent 70%);
-            pointer-events: none;
+            left: 0;
+            color: #ef4444;
+            font-weight: bold;
         }
 
-        .supporting-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(17, 40, 55, 0.1);
+        .comparison-card.aheri ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #3bc3b7;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .process-section {
+            background: #f8fafc;
+            padding: 70px 20px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .process-step {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(17, 40, 55, 0.08);
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
+            color: white;
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .process-step h4 {
+            font-size: 1.2rem;
+            color: #112837;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .process-step p {
+            color: #64748b;
+            line-height: 1.6;
         }
 
         .final-cta {
@@ -507,7 +729,6 @@
             opacity: 0.85;
         }
 
-        /* Footer Styles */
         .footer {
             background: #112837;
             color: white;
@@ -612,11 +833,11 @@
                 font-size: 1.05rem;
             }
 
-            .service-title {
+            .tier-title {
                 font-size: 1.6rem;
             }
 
-            .service-tagline {
+            .tier-tagline {
                 font-size: 1.05rem;
             }
 
@@ -632,7 +853,7 @@
                 width: 100%;
             }
 
-            .service-card {
+            .tier-card {
                 padding: 30px 25px;
             }
 
@@ -643,6 +864,14 @@
             .final-cta p {
                 font-size: 1.1rem;
             }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .kpi-list {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -652,7 +881,7 @@
         <div class="container">
             <div class="nav-wrapper">
                 <a href="index.html" class="logo">
-                    <img src="assets/images/aheri-logo.png" alt="AHERI SYSTEMS">
+                    <img src="assets/images/aheri-logo.png" alt="AHERI SYSTEMS - Revenue Execution Systems Kenya">
                 </a>
                 <button class="mobile-menu-btn" aria-label="Toggle menu">
                     <span></span>
@@ -676,324 +905,284 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Stop Losing Customers. Start Growing Revenue.</h1>
-            <p>We build the three systems every business needs to thrive</p>
+            <h1>Stop Losing Revenue After the Lead Comes In</h1>
+            <p>We build, monitor, and optimize the systems that turn leads into revenue — consistently.</p>
             <div class="hero-tagline">
-                <strong>Get more customers.</strong> Close more deals. <strong>Keep customers coming back.</strong><br>
-                Then we automate your operations and add AI so it all runs 24/7.
+                Most businesses don't have a marketing problem. <strong>They have a revenue execution problem.</strong><br>
+                Leads come in… Follow-up is slow… Deals stall… Customers disappear after the first sale.<br>
+                <strong>Aheri Systems fixes what happens after the lead arrives.</strong>
             </div>
         </div>
     </section>
 
-    <!-- Core Services Section -->
+    <!-- Revenue Command System Section -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">The 3 Core Systems</h2>
-            <p class="section-subtitle">Every business needs these to scale</p>
+            <h2 class="section-title">The Revenue Command System™</h2>
+            <p class="section-subtitle">A managed, end-to-end revenue execution system designed to stop leakage and create predictable growth. Choose the level of control you need.</p>
 
-            <!-- Service 1: Customer Acquisition -->
-            <div class="service-card">
-                <div class="service-header">
-                    <span class="service-number">1</span>
-                    <div style="display: inline-block; vertical-align: top;">
-                        <h3 class="service-title">Customer Acquisition Systems</h3>
-                        <p class="service-tagline">Never miss another lead. Respond in minutes, not hours.</p>
+            <!-- TIER 1: Revenue Capture System -->
+            <article class="tier-card">
+                <div class="tier-header">
+                    <span class="tier-number">TIER 1</span>
+                    <h3 class="tier-title">Revenue Capture System™</h3>
+                    <p class="tier-tagline">Stop Losing Leads. Respond Faster. Recover Missed Opportunities.</p>
+                    <p class="tier-best-for"><strong>Best for:</strong> Businesses running ads or inbound marketing with slow response and poor follow-up</p>
+                </div>
+
+                <div class="problem-section">
+                    <h4 class="problem-title">The Problem We Fix:</h4>
+                    <ul class="problem-list">
+                        <li>Leads scattered across WhatsApp, website, ads, and calls</li>
+                        <li>Response times measured in hours instead of minutes</li>
+                        <li>Hot leads going cold with no visibility</li>
+                        <li>No clarity on which channels actually convert</li>
+                        <li>After-hours inquiries lost to competitors</li>
+                    </ul>
+                </div>
+
+                <div class="solution-section">
+                    <h4 class="solution-title">What We Build & Manage:</h4>
+                    <ul class="solution-list">
+                        <li>Multi-channel lead capture (ads, website, WhatsApp, calls)</li>
+                        <li>24/7 AI lead response (including after-hours)</li>
+                        <li>Automatic lead assignment & notifications</li>
+                        <li>First-touch follow-up automation (SMS, WhatsApp, email)</li>
+                        <li>Lead scoring & prioritization</li>
+                        <li>Centralized CRM visibility</li>
+                        <li>Weekly Revenue Capture Report delivered every Monday</li>
+                    </ul>
+                </div>
+
+                <div class="kpi-section">
+                    <h4 class="kpi-title">Key Performance Indicators We Own:</h4>
+                    <div class="kpi-list">
+                        <div class="kpi-item">Speed-to-first-contact</div>
+                        <div class="kpi-item">% of leads contacted</div>
+                        <div class="kpi-item">Lead capture rate</div>
+                        <div class="kpi-item">Lead-to-opportunity conversion</div>
                     </div>
                 </div>
 
-                <div class="breaks-section">
-                    <h4 class="breaks-title">What breaks without this:</h4>
-                    <ul class="breaks-list">
-                        <li>Leads from all sources e.g. website, Facebook/Meta, Instagram, WhatsApp, Calls scattered everywhere</li>
-                        <li>Response time is 6+ hours (competitors respond in 5 minutes)</li>
-                        <li>No one available at 7 PM when leads come in</li>
-                        <li>Hot leads going cold because nobody followed up</li>
-                        <li>You have no idea which marketing channels actually work</li>
-                    </ul>
+                <div class="outcome-section">
+                    <h4 class="outcome-title">Guaranteed Outcome:</h4>
+                    <p class="outcome-text">Every lead is captured, responded to, and followed up — automatically. No more revenue walking out the door.</p>
                 </div>
 
-                <div class="builds-section">
-                    <h4 class="builds-title">What we build:</h4>
-                    <ul class="builds-list">
-                        <li>Lead capture from all sources (website, social, calls, chat)</li>
-                        <li>24/7 AI chatbot responding instantly to inquiries</li>
-                        <li>Automatic lead notifications to your team</li>
-                        <li>Lead scoring (system tells you who's hot)</li>
-                        <li>First-touch email/SMS (automatic welcome)</li>
-                        <li>Marketing campaign tracking and analytics</li>
-                    </ul>
-                </div>
-
-                <div class="outcomes-section">
-                    <h4 class="outcomes-title">Guaranteed outcomes:</h4>
-                    <ul class="outcomes-list">
-                        <li>30-50% reduction in lost leads</li>
-                        <li>Response time cut in half (hours → minutes)</li>
-                        <li>Every lead tracked and assigned automatically</li>
-                        <li>24/7 lead engagement (even when you sleep)</li>
-                    </ul>
-                </div>
-
-                <div class="example-box">
-                    <div class="example-title">Real Example:</div>
-                    <div class="example-text">Pediatric clinic went from 60% to 95% lead capture with 24/7 AI chatbot. Now captures leads at 2 AM that used to go to competitors.</div>
-                </div>
-
-                <div class="ideal-for">
-                    <div class="ideal-title">Ideal for:</div>
-                    <div class="ideal-text">Businesses spending on ads but losing leads to slow follow-up, healthcare practices with after-hours inquiries, professional services tired of playing phone tag</div>
+                <div class="tier-investment">
+                    Investment: <span>Starting from KES 35,000/month</span>
                 </div>
 
                 <div class="cta-buttons">
-                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Consultation</a>
-                    <a href="case-studies.html" class="btn btn-secondary">See Case Studies</a>
+                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Revenue Audit</a>
+                    <a href="case-studies.html" class="btn btn-secondary">See Results</a>
                 </div>
-            </div>
+            </article>
 
-            <!-- Service 2: Customer Conversion -->
-            <div class="service-card">
-                <div class="service-header">
-                    <span class="service-number">2</span>
-                    <div style="display: inline-block; vertical-align: top;">
-                        <h3 class="service-title">Customer Conversion Systems</h3>
-                        <p class="service-tagline">Turn leads into paying customers. Fast.</p>
+            <!-- TIER 2: Revenue Acceleration System -->
+            <article class="tier-card">
+                <div class="tier-header">
+                    <span class="tier-number">TIER 2</span>
+                    <h3 class="tier-title">Revenue Acceleration System™</h3>
+                    <p class="tier-tagline">Close More Deals. Shorten Sales Cycles. Gain Pipeline Control.</p>
+                    <p class="tier-best-for"><strong>Best for:</strong> Businesses with sales teams and active pipelines that lack discipline and visibility</p>
+                </div>
+
+                <div class="problem-section">
+                    <h4 class="problem-title">The Problem We Fix:</h4>
+                    <ul class="problem-list">
+                        <li>Sales reps forgetting follow-ups</li>
+                        <li>Deals stalling with no alerts</li>
+                        <li>Quotes taking hours and losing momentum</li>
+                        <li>No real-time pipeline or revenue forecasting</li>
+                        <li>No visibility into sales team activity</li>
+                    </ul>
+                </div>
+
+                <div class="solution-section">
+                    <h4 class="solution-title">What We Build & Manage:</h4>
+                    <p class="solution-content"><strong>Everything in Revenue Capture System™, PLUS:</strong></p>
+                    <ul class="solution-list">
+                        <li>Full CRM & sales pipeline enforcement</li>
+                        <li>Automated follow-up reminders & escalation logic</li>
+                        <li>Quote & proposal automation</li>
+                        <li>Appointment booking automation</li>
+                        <li>Deal stagnation alerts</li>
+                        <li>AI lead scoring & qualification</li>
+                        <li>Revenue forecasting dashboards</li>
+                        <li>Monthly pipeline optimization</li>
+                    </ul>
+                </div>
+
+                <div class="kpi-section">
+                    <h4 class="kpi-title">Key Performance Indicators We Own:</h4>
+                    <div class="kpi-list">
+                        <div class="kpi-item">Lead-to-deal conversion rate</div>
+                        <div class="kpi-item">Sales cycle length</div>
+                        <div class="kpi-item">Pipeline velocity</div>
+                        <div class="kpi-item">Follow-up compliance</div>
+                        <div class="kpi-item">Forecast accuracy</div>
                     </div>
                 </div>
 
-                <div class="breaks-section">
-                    <h4 class="breaks-title">What breaks without this:</h4>
-                    <ul class="breaks-list">
-                        <li>Salespeople forget to follow up with leads</li>
-                        <li>Quotes take 2 hours to create (and often have errors)</li>
-                        <li>Deals stall in your pipeline with no reminders</li>
-                        <li>No visibility into what your sales team is actually doing</li>
-                        <li>You can't forecast revenue (pure guesswork)</li>
-                        <li>Best opportunities slip away due to lack of follow-up</li>
-                    </ul>
+                <div class="outcome-section">
+                    <h4 class="outcome-title">Guaranteed Outcome:</h4>
+                    <p class="outcome-text">Deals move forward. Nothing stalls. Revenue becomes predictable. You know exactly what's closing and when.</p>
                 </div>
 
-                <div class="builds-section">
-                    <h4 class="builds-title">What we build:</h4>
-                    <ul class="builds-list">
-                        <li>Complete CRM & pipeline tracking system</li>
-                        <li>Automatic follow-up reminders (no more "I forgot")</li>
-                        <li>Quote/proposal automation (10 minutes vs 2 hours)</li>
-                        <li>Self-service appointment booking system</li>
-                        <li>Real-time deal tracking & revenue forecasts</li>
-                        <li>Automatic call & email logging (no manual data entry)</li>
-                        <li>AI-powered lead qualification</li>
-                    </ul>
-                </div>
-
-                <div class="outcomes-section">
-                    <h4 class="outcomes-title">Guaranteed outcomes:</h4>
-                    <ul class="outcomes-list">
-                        <li>20-40% increase in follow-up conversion rates</li>
-                        <li>Quote creation: 2 hours → 10 minutes</li>
-                        <li>Real-time deal visibility (see your entire pipeline)</li>
-                        <li>Accurate revenue forecasting</li>
-                        <li>50% faster deal closure</li>
-                    </ul>
-                </div>
-
-                <div class="example-box">
-                    <div class="example-title">Real Example:</div>
-                    <div class="example-text">Marketing agency discovered 6 leads stuck at "quote sent" with zero follow-up. Called them all, closed 2 for KES 75,000. That's from ONE Monday morning report.</div>
-                </div>
-
-                <div class="ideal-for">
-                    <div class="ideal-title">Ideal for:</div>
-                    <div class="ideal-text">Sales-driven businesses with follow-up failures, service providers who spend hours creating quotes, business owners who have no idea what's in their pipeline, teams where deals mysteriously disappear</div>
+                <div class="tier-investment">
+                    Investment: <span>Starting from KES 60,000/month</span>
                 </div>
 
                 <div class="cta-buttons">
-                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Consultation</a>
-                    <a href="case-studies.html" class="btn btn-secondary">See Case Studies</a>
+                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Revenue Audit</a>
+                    <a href="case-studies.html" class="btn btn-secondary">See Results</a>
                 </div>
-            </div>
+            </article>
 
-            <!-- Service 3: Customer Retention -->
-            <div class="service-card">
-                <div class="service-header">
-                    <span class="service-number">3</span>
-                    <div style="display: inline-block; vertical-align: top;">
-                        <h3 class="service-title">Customer Retention Systems</h3>
-                        <p class="service-tagline">Turn one-time buyers into lifelong customers.</p>
+            <!-- TIER 3: Revenue Optimization System -->
+            <article class="tier-card">
+                <div class="tier-header">
+                    <span class="tier-number">TIER 3</span>
+                    <h3 class="tier-title">Revenue Optimization System™</h3>
+                    <p class="tier-tagline">Retain Customers. Increase Lifetime Value. Compound Growth.</p>
+                    <p class="tier-best-for"><strong>Best for:</strong> Established businesses ready to scale revenue without adding headcount</p>
+                </div>
+
+                <div class="problem-section">
+                    <h4 class="problem-title">The Problem We Fix:</h4>
+                    <ul class="problem-list">
+                        <li>One-time buyers who disappear</li>
+                        <li>Customer complaints lost or delayed</li>
+                        <li>No structured upsells, reactivation, or referrals</li>
+                        <li>Support teams overwhelmed during business hours</li>
+                        <li>High customer churn draining revenue</li>
+                    </ul>
+                </div>
+
+                <div class="solution-section">
+                    <h4 class="solution-title">What We Build & Manage:</h4>
+                    <p class="solution-content"><strong>Everything in Revenue Acceleration System™, PLUS:</strong></p>
+                    <ul class="solution-list">
+                        <li>Customer retention & win-back automation</li>
+                        <li>24/7 AI customer support</li>
+                        <li>Helpdesk & SLA enforcement</li>
+                        <li>Customer health scoring</li>
+                        <li>Automated upsell & cross-sell triggers</li>
+                        <li>Referral & review automation</li>
+                        <li>Quarterly revenue optimization roadmap</li>
+                        <li>Full Revenue Command Center</li>
+                    </ul>
+                </div>
+
+                <div class="kpi-section">
+                    <h4 class="kpi-title">Key Performance Indicators We Own:</h4>
+                    <div class="kpi-list">
+                        <div class="kpi-item">Retention rate</div>
+                        <div class="kpi-item">Repeat purchase rate</div>
+                        <div class="kpi-item">Customer lifetime value (CLV)</div>
+                        <div class="kpi-item">Upsell & referral revenue</div>
+                        <div class="kpi-item">Support resolution times</div>
                     </div>
                 </div>
 
-                <div class="breaks-section">
-                    <h4 class="breaks-title">What breaks without this:</h4>
-                    <ul class="breaks-list">
-                        <li>Customers buy once, you never hear from them again</li>
-                        <li>Customer complaints lost in email/WhatsApp black holes</li>
-                        <li>No system to re-engage inactive customers</li>
-                        <li>Upsell opportunities passing by unnoticed</li>
-                        <li>Referrals happen by random luck (not systematically)</li>
-                        <li>You're constantly hunting for NEW customers (expensive)</li>
-                    </ul>
+                <div class="outcome-section">
+                    <h4 class="outcome-title">Guaranteed Outcome:</h4>
+                    <p class="outcome-text">Customers stay longer, buy more, and refer — systematically. You stop chasing new customers and start maximizing existing ones.</p>
                 </div>
 
-                <div class="builds-section">
-                    <h4 class="builds-title">What we build:</h4>
-                    <ul class="builds-list">
-                        <li>AI-powered customer support (24/7 chatbot handles common questions)</li>
-                        <li>Help desk ticketing system (all issues tracked, nothing lost)</li>
-                        <li>Customer engagement campaigns (stay top-of-mind)</li>
-                        <li>Win-back campaigns for inactive customers</li>
-                        <li>Automated upsell/cross-sell triggers</li>
-                        <li>Referral program automation</li>
-                        <li>Review & testimonial collection system</li>
-                    </ul>
-                </div>
-
-                <div class="outcomes-section">
-                    <h4 class="outcomes-title">Guaranteed outcomes:</h4>
-                    <ul class="outcomes-list">
-                        <li>15-25% improvement in customer retention</li>
-                        <li>Zero lost customer complaints</li>
-                        <li>70% of customer questions answered by AI (24/7)</li>
-                        <li>More referrals and repeat business (systematic, not random)</li>
-                        <li>Higher customer lifetime value</li>
-                    </ul>
-                </div>
-
-                <div class="example-box">
-                    <div class="example-title">Real Example:</div>
-                    <div class="example-text">Wellness center implemented automated recall reminders for 6-month checkups. Repeat visit rate increased by 40%. That's 40% more revenue from existing customers with zero new marketing spend.</div>
-                </div>
-
-                <div class="ideal-for">
-                    <div class="ideal-title">Ideal for:</div>
-                    <div class="ideal-text">Businesses with high customer churn, overwhelmed with customer inquiries, companies leaving upsell money on the table, businesses where customers buy once and disappear</div>
+                <div class="tier-investment">
+                    Investment: <span>Starting from KES 100,000/month</span>
                 </div>
 
                 <div class="cta-buttons">
-                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Consultation</a>
-                    <a href="case-studies.html" class="btn btn-secondary">See Case Studies</a>
+                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Revenue Audit</a>
+                    <a href="case-studies.html" class="btn btn-secondary">See Results</a>
                 </div>
-            </div>
+            </article>
 
         </div>
     </section>
 
     <div class="divider"></div>
 
-    <!-- Supporting Services -->
-    <section class="supporting-services">
+    <!-- Value Proposition Section -->
+    <section class="value-prop-section">
         <div class="container">
-            <h2 class="section-title">The Supporting Systems</h2>
-            <p class="section-subtitle">The foundation that makes everything else work smoothly</p>
+            <h2 class="section-title">How This Is Different</h2>
+            <p class="section-subtitle">We're not a vendor. We're your Revenue Operations Partner.</p>
 
-            <!-- Operations Automation -->
-            <div class="supporting-card">
-                <h3 class="service-title">Operations Automation</h3>
-                <p class="service-tagline">End the Spreadsheets and WhatsApp chaos. Run your business smoothly.</p>
-                
-                <div class="breaks-section">
-                    <h4 class="breaks-title">What breaks without this:</h4>
-                    <ul class="breaks-list">
-                        <li>Manual customer onboarding taking 5-10 hours per customer</li>
-                        <li>WhatsApp/email coordination nightmare (can't find anything)</li>
-                        <li>Tasks falling through cracks ("I forgot" is the team mantra)</li>
-                        <li>Chasing customers for payments manually</li>
-                        <li>No idea of cash flow until month-end panic</li>
+            <div class="comparison-grid">
+                <div class="comparison-card others">
+                    <h3>Most Competitors</h3>
+                    <ul>
+                        <li>Focus on traffic and leads</li>
+                        <li>Sell tools or setups</li>
+                        <li>Build systems and disappear</li>
+                        <li>No accountability after launch</li>
+                        <li>You're left to figure it out</li>
                     </ul>
                 </div>
 
-                <div class="builds-section">
-                    <h4 class="builds-title">What we build:</h4>
-                    <ul class="builds-list">
-                        <li>Automated customer onboarding (emails, documents, welcome sequences)</li>
-                        <li>Task & project management system (replace WhatsApp chaos)</li>
-                        <li>Team coordination hub (everyone knows what to do)</li>
-                        <li>Financial/payment automation (invoicing, reminders, tracking)</li>
-                        <li>Document automation (contracts, quotes, reports)</li>
-                        <li>Real-time performance dashboards - No more flying blind.</li>
+                <div class="comparison-card aheri">
+                    <h3>Aheri Systems</h3>
+                    <ul>
+                        <li>Own revenue execution end-to-end</li>
+                        <li>Enforce follow-up and accountability</li>
+                        <li>Monitor systems continuously</li>
+                        <li>Optimize monthly based on real data</li>
+                        <li>Weekly insights into your revenue</li>
                     </ul>
-                </div>
-
-                <div class="outcomes-section">
-                    <h4 class="outcomes-title">Guaranteed outcomes:</h4>
-                    <ul class="outcomes-list">
-                        <li>10-15 hours/week saved on manual tasks</li>
-                        <li>Onboarding time cut by 60%</li>
-                        <li>80% reduction in "I forgot"</li>
-                        <li>40% faster payment collection</li>
-                        <li>Clear team accountability</li>
-                    </ul>
-                </div>
-
-                <div class="ideal-for">
-                    <div class="ideal-title">Ideal for:</div>
-                    <div class="ideal-text">Growing teams drowning in WhatsApp coordination, businesses where manual onboarding limits capacity, service providers tired of chasing payments</div>
-                </div>
-
-                <div class="cta-buttons">
-                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Consultation</a>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- AI Implementation -->
-            <div class="supporting-card">
-                <h3 class="service-title">AI Implementation</h3>
-                <p class="service-tagline">Work 24/7 without hiring more people.</p>
-                
-                <div class="breaks-section">
-                    <h4 class="breaks-title">What breaks without this:</h4>
-                    <ul class="breaks-list">
-                        <li>Can't respond to customers 24/7 (lose after-hours inquiries)</li>
-                        <li>Manual lead qualification wastes sales team time</li>
-                        <li>Repetitive customer questions overwhelm your team</li>
-                        <li>Content creation is a constant bottleneck</li>
-                        <li>No insights from your data (it just sits there)</li>
-                    </ul>
+    <div class="divider"></div>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">How We Work</h2>
+            <p class="section-subtitle">From revenue audit to consistent growth in 4 clear steps</p>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>Revenue Leakage Audit</h4>
+                    <p>We map your current lead-to-cash flow and identify exactly where money is leaking. (Free)</p>
                 </div>
 
-                <div class="builds-section">
-                    <h4 class="builds-title">What we build:</h4>
-                    <ul class="builds-list">
-                        <li>AI chatbots for customer service & sales (24/7 availability)</li>
-                        <li>AI lead scoring & qualification (prioritize hot prospects)</li>
-                        <li>AI content generation (social posts, emails, blog content)</li>
-                        <li>Predictive analytics (forecast revenue, identify churn risks)</li>
-                        <li>AI meeting summaries and action items</li>
-                        <li>Custom AI agents trained on your business</li>
-                    </ul>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>System Design</h4>
+                    <p>We design the exact workflows, automation, and enforcement mechanisms your business needs.</p>
                 </div>
 
-                <div class="outcomes-section">
-                    <h4 class="outcomes-title">Guaranteed outcomes:</h4>
-                    <ul class="outcomes-list">
-                        <li>70% of routine questions handled by AI</li>
-                        <li>24/7 customer & lead availability</li>
-                        <li>10X content production speed</li>
-                        <li>Instant insights from your business data</li>
-                        <li>Equivalent of 2-3 full-time employees (without hiring)</li>
-                    </ul>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>Build & Go Live</h4>
+                    <p>Systems are implemented, tested, and activated. Your team is fully trained.</p>
                 </div>
 
-                <div class="ideal-for">
-                    <div class="ideal-title">Ideal for:</div>
-                    <div class="ideal-text">Tech-forward businesses ready to gain competitive advantage, companies overwhelmed with customer inquiries, businesses that need 24/7 availability, teams drowning in repetitive work</div>
-                </div>
-
-                <div class="cta-buttons">
-                    <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Free Consultation</a>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>Ongoing Management</h4>
+                    <p>We monitor, report, and improve your revenue systems every week. You get consistent visibility and optimization.</p>
                 </div>
             </div>
-
         </div>
     </section>
 
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="container">
-            <h2>Ready to Stop Losing Customers?</h2>
-            <p>Most businesses don't have a product problem or a marketing problem.<br>They have a systems problem.</p>
-            <p>Customers fall through the cracks because everything is manual and disconnected.</p>
-            <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Your Free Consultation</a>
-            <p class="cta-note">45-minute session • We'll show you exactly where your customers are falling through • No pressure, just insights</p>
+            <h2>Ready to Stop Losing Revenue?</h2>
+            <p>If you're already paying for leads, ads, or traffic — but don't have full visibility and control after the lead comes in — this is for you.</p>
+            <p><strong>Book a Free Revenue Leakage Audit</strong></p>
+            <p>We'll show you where leads are falling through, what it's costing you, and which Revenue Command tier fits your business.</p>
+            <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary">Book Your Free Revenue Audit</a>
+            <p class="cta-note">45-minute session • Zero pressure, just insights • See exactly where your revenue is leaking</p>
         </div>
     </section>
 
@@ -1004,15 +1193,15 @@
                 <div class="footer-col">
                     <h3>AHERI <span class="logo-systems">SYSTEMS</span></h3>
                     <p class="footer-tagline">Smart Systems for Scalable Growth</p>
-                    <p>Transforming businesses with AI-powered automation systems. Based in Kenya, serving clients globally.</p>
+                    <p>Transforming Kenyan businesses with AI-powered revenue execution systems. Stop losing revenue after the lead comes in.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="services.html">Customer Acquisition Systems</a></li>
-                        <li><a href="services.html">Customer Conversion Systems</a></li>
-                        <li><a href="services.html">Customer Retention Systems</a></li>
-                        <li><a href="services.html">Operations Automation</a></li>
+                        <li><a href="services.html">Revenue Capture System™</a></li>
+                        <li><a href="services.html">Revenue Acceleration System™</a></li>
+                        <li><a href="services.html">Revenue Optimization System™</a></li>
+                        <li><a href="services.html">CRM Automation Kenya</a></li>
                         <li><a href="services.html">AI Implementation</a></li>
                     </ul>
                 </div>
@@ -1032,12 +1221,12 @@
                         <li><a href="mailto:rita@aherisystems.com">rita@aherisystems.com</a></li>
                         <li><a href="tel:+254716850772">+254 716 850 772</a></li>
                         <li>Nairobi, Kenya</li>
-                        <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" target="_blank">Book a Call</a></li>
+                        <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" target="_blank">Book a Revenue Audit</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Aheri Systems. All rights reserved.</p>
+                <p>&copy; 2026 Aheri Systems. All rights reserved. | Revenue Execution Systems | CRM Automation Kenya</p>
             </div>
         </div>
     </footer>
