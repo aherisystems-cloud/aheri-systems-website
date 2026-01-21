@@ -6,7 +6,17 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <title>About Us - Aheri Systems</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>About Aheri Systems | Revenue Growth Systems & CRM Automation Experts</title>
+    <meta name="description" content="Aheri Systems builds managed revenue growth systems that stop lead leakage and turn every opportunity into revenue. We capture leads, accelerate deals, and retain customers automatically—24/7.">
+    <meta name="keywords" content="revenue growth systems, CRM automation, lead management, sales pipeline automation, customer retention systems, AI lead response, business automation, revenue operations">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="About Aheri Systems | Revenue Growth Systems & CRM Automation">
+    <meta property="og:description" content="We fix what happens after the lead comes in. Managed systems that capture every lead, close every deal, and keep customers buying—automatically.">
+    <meta property="og:type" content="website">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -138,9 +148,16 @@
         .hero-subtitle {
             font-size: 1.4rem;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 20px;
             opacity: 0.95;
             line-height: 1.7;
+        }
+
+        .hero-emphasis {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #3bc3b7;
+            margin-top: 15px;
         }
 
         .gradient-text {
@@ -200,17 +217,86 @@
         .highlight-box {
             background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
             color: white;
-            padding: 35px;
+            padding: 40px;
             border-radius: 16px;
             margin: 40px 0;
             text-align: center;
         }
 
+        .highlight-box h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
         .highlight-box p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             line-height: 1.8;
             margin: 0;
             color: white;
+        }
+
+        /* Problem Statement */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .problem-item {
+            background: white;
+            border-left: 4px solid #ef4444;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .problem-item h4 {
+            color: #ef4444;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .problem-item p {
+            color: #64748b;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Solution Grid */
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .solution-item {
+            background: white;
+            border-left: 4px solid #3bc3b7;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .solution-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .solution-item h4 {
+            color: #3bc3b7;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .solution-item p {
+            color: #64748b;
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
         /* Mission/Vision Cards */
@@ -628,6 +714,11 @@
             .values-grid {
                 grid-template-columns: 1fr;
             }
+
+            .problem-grid,
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -637,7 +728,7 @@
         <div class="container">
             <div class="nav-wrapper">
                 <a href="index.html" class="logo">
-                    <img src="assets/images/aheri-logo.png" alt="AHERI SYSTEMS">
+                    <img src="assets/images/aheri-logo.png" alt="AHERI SYSTEMS - Revenue Growth Systems">
                 </a>
                 <button class="mobile-menu-btn" aria-label="Toggle menu">
                     <span></span>
@@ -652,7 +743,7 @@
                     <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
                     <li><a href="https://ritandubi.com/resources" target="_blank">Resources & Tools</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn-primary" target="_blank">Book Consultation</a></li>
+                    <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn-primary" target="_blank">Book Free Audit</a></li>
                 </ul>
             </div>
         </div>
@@ -661,12 +752,77 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>We Fix the <span class="gradient-text">Systems Problem</span></h1>
-            <br>
-<strong><em>Get more customers. Close more deals. Keep customers coming back.</em></strong>
+            <h1>We Stop Revenue <span class="gradient-text">Leakage</span></h1>
             <p class="hero-subtitle">
-                Most businesses don't have a product problem or a marketing problem. They have a systems problem. We build the automation and AI systems that stop customers from falling through the cracks.
+                Most businesses don't have a marketing problem. They have a revenue execution problem. Leads come in, but follow-up is slow, deals stall, and customers disappear after the first sale.
             </p>
+            <p class="hero-emphasis">Aheri Systems fixes what happens after the lead arrives.</p>
+        </div>
+    </section>
+
+    <!-- The Problem We Solve -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Revenue <span class="gradient-text">Problem</span></h2>
+                <p class="section-subtitle">You're paying for leads, but losing money after they arrive</p>
+            </div>
+            
+            <div class="problem-grid">
+                <div class="problem-item">
+                    <h4>Leads Fall Through the Cracks</h4>
+                    <p>Scattered across WhatsApp, email, website forms, and ads with no central tracking. Response times measured in hours instead of minutes.</p>
+                </div>
+                <div class="problem-item">
+                    <h4>Deals Stall Without Visibility</h4>
+                    <p>Sales reps forget follow-ups. Quotes take hours to send. No alerts when deals go cold. No real pipeline forecasting.</p>
+                </div>
+                <div class="problem-item">
+                    <h4>Customers Buy Once and Disappear</h4>
+                    <p>No structured retention, reactivation, or upsell process. Customer complaints get lost. Referrals happen by accident, not by design.</p>
+                </div>
+            </div>
+
+            <div class="story-content" style="margin-top: 60px;">
+                <p>
+                    We've seen it hundreds of times: businesses invest thousands in marketing and ads, generate quality leads, but then lose 30-50% of potential revenue because <strong>what happens after the lead comes in is broken.</strong>
+                </p>
+                <p>
+                    The problem isn't the people. It's the lack of systems. Everything is manual, disconnected, and chaotic. There's no enforcement, no automation, no real-time visibility into where revenue is leaking.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Solution -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our <span class="gradient-text">Solution</span></h2>
+                <p class="section-subtitle">Managed revenue growth systems that run 24/7</p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>We don't run ads. We don't do content.</h3>
+                <p>
+                    We own the systems, automation, and discipline that ensure every lead is captured and followed up, every deal is tracked and pushed forward, and every customer is retained, re-engaged, and monetized.
+                </p>
+            </div>
+
+            <div class="solution-grid">
+                <div class="solution-item">
+                    <h4>✓ Capture Every Lead</h4>
+                    <p>Multi-channel lead capture with instant AI response. No lead falls through the cracks—24/7 automated follow-up across email, SMS, and WhatsApp.</p>
+                </div>
+                <div class="solution-item">
+                    <h4>✓ Accelerate Every Deal</h4>
+                    <p>Full CRM enforcement with automated reminders, quote generation, and deal stagnation alerts. Pipeline visibility and revenue forecasting in real-time.</p>
+                </div>
+                <div class="solution-item">
+                    <h4>✓ Retain Every Customer</h4>
+                    <p>Automated retention campaigns, 24/7 AI support, customer health scoring, and systematic upsell triggers. Turn one-time buyers into repeat customers.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -675,27 +831,23 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Our <span class="gradient-text">Story</span></h2>
-                <p class="section-subtitle">Built from real business pain, designed for real business growth</p>
+                <p class="section-subtitle">Built from real business pain, designed for real revenue growth</p>
             </div>
             <div class="story-content">
                 <p>
-                    Aheri Systems was born from a simple observation: <strong>most businesses are losing customers not because of bad service, but because of broken systems.</strong>
+                    Aheri Systems was founded on a simple observation: <strong>businesses aren't failing because of bad products or lack of marketing. They're failing because they can't execute on revenue after the lead arrives.</strong>
                 </p>
                 <p>
-                    We watched businesses spend thousands on marketing, only to lose leads because nobody responded fast enough. We saw sales teams forget to follow up with hot prospects. We witnessed customer complaints disappearing into WhatsApp black holes.
+                    We watched companies spend thousands generating leads, only to lose them because response times were too slow. We saw sales teams with messy pipelines and zero visibility into what was actually happening. We witnessed customer complaints disappearing into WhatsApp black holes while businesses wondered why retention was so low.
                 </p>
                 <p>
-                    The problem wasn't the people. It was the systems—or lack thereof. Everything was manual, disconnected, and chaotic.
+                    The gap was clear: businesses needed someone to own revenue execution end-to-end—not just sell them tools or build systems and disappear, but actually manage, monitor, and optimize those systems continuously.
                 </p>
-
-                <div class="highlight-box">
-                    <p>
-                        <strong>So we decided to fix it.</strong> We build the three core systems every business needs: Get customers. Close deals. Keep customers coming back. Then we automate it all with AI so it runs 24/7.
-                    </p>
-                </div>
-
                 <p>
-                    Today, we help businesses across Africa and beyond stop losing customers and start growing revenue through intelligent automation. From healthcare clinics to marketing agencies, our systems capture more leads, close more deals, and keep customers engaged—automatically.
+                    So we built the Revenue Command System™: a managed, tiered approach to fixing revenue leakage at every stage—lead capture, deal acceleration, and customer retention. We combine CRM automation, AI integration, and ongoing optimization to turn revenue into a predictable, scalable process.
+                </p>
+                <p>
+                    Today, we help businesses globally stop losing revenue and start building predictable growth through intelligent, managed automation systems.
                 </p>
             </div>
         </div>
@@ -711,17 +863,17 @@
                 <div class="value-card">
                     <span class="value-icon">🎯</span>
                     <h3>Our Mission</h3>
-                    <p>To eliminate the systems gap that holds businesses back. We build automation and AI systems that capture every customer, close every deal, and maximize every opportunity—so business owners can focus on what they do best.</p>
+                    <p>To stop revenue leakage and create predictable growth for businesses worldwide. We build and manage the systems that ensure every lead, deal, and customer opportunity is captured, tracked, and monetized—automatically.</p>
                 </div>
                 <div class="value-card">
                     <span class="value-icon">🚀</span>
                     <h3>Our Vision</h3>
-                    <p>A world where every business—regardless of size or location—has access to enterprise-level automation and AI. Where customers never fall through the cracks and revenue growth is systematic, not random.</p>
+                    <p>A world where businesses no longer lose revenue due to poor execution. Where every company has access to enterprise-level revenue operations systems—regardless of size, industry, or location.</p>
                 </div>
                 <div class="value-card">
-                    <span class="value-icon">💡</span>
-                    <h3>Our Values</h3>
-                    <p>Results over promises. Systems over chaos. Automation over manual work. We believe in building solutions that actually work, deliver measurable outcomes, and grow with your business. No fluff, just results.</p>
+                    <span class="value-icon">⚡</span>
+                    <h3>How We're Different</h3>
+                    <p>We're not a vendor. We're your Revenue Operations Partner. We don't just build systems and walk away—we own them, monitor them, enforce them, and optimize them monthly based on real data and results.</p>
                 </div>
             </div>
         </div>
@@ -731,25 +883,25 @@
     <section class="stats-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" style="color: white;">By the <span class="gradient-text">Numbers</span></h2>
-                <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.9);">Our impact across service businesses</p>
+                <h2 class="section-title" style="color: white;">Impact <span class="gradient-text">Delivered</span></h2>
+                <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.9);">Real results from managed revenue systems</p>
             </div>
             <div class="stats-grid">
                 <div class="stat-item">
-                    <span class="stat-number">30-50%</span>
-                    <span class="stat-label">More Leads Captured</span>
+                    <span class="stat-number">Minutes</span>
+                    <span class="stat-label">Response Time (Not Hours)</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">50%</span>
-                    <span class="stat-label">Faster Deal Closure</span>
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Lead Capture Rate</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">24/7</span>
                     <span class="stat-label">AI Automation</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">10-15hrs</span>
-                    <span class="stat-label">Saved Per Week</span>
+                    <span class="stat-number">Real-Time</span>
+                    <span class="stat-label">Pipeline Visibility</span>
                 </div>
             </div>
         </div>
@@ -760,7 +912,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Meet the <span class="gradient-text">Founder</span></h2>
-                <p class="section-subtitle">The architect behind your automated future</p>
+                <p class="section-subtitle">Building systems that eliminate revenue leakage</p>
             </div>
             <div class="founder-section">
                 <div class="founder-image">
@@ -768,15 +920,18 @@
                 </div>
                 <div class="founder-content">
                     <h3>Rita Ndubi</h3>
-                    <p class="founder-title">Founder & Chief Automation Architect</p>
+                    <p class="founder-title">Founder & Chief Revenue Systems Architect</p>
                     <p>
-                        Rita Ndubi is a systems architect and automation specialist with a passion for eliminating business inefficiencies through intelligent technology.
+                        Rita Ndubi is a revenue operations specialist and CRM automation expert with a singular mission: help businesses stop losing money after the lead comes in.
                     </p>
                     <p>
-                        After witnessing countless businesses struggle with manual processes, scattered customer data, and lost opportunities, Rita founded Aheri Systems to bring enterprise-level automation and AI to SMBs and entrepreneurs.
+                        After witnessing countless businesses struggle with disconnected tools, manual follow-up processes, and zero visibility into their revenue pipeline, Rita founded Aheri Systems to bring enterprise-level revenue operations to growing businesses worldwide.
                     </p>
                     <p>
-                        <strong>Her philosophy is simple:</strong> Every business deserves systems that work as hard as they do. Through strategic automation and AI implementation, she's helped businesses across healthcare, professional services, and beyond reclaim their time and multiply their revenue.
+                        <strong>Her approach is simple:</strong> Fix the three critical points where revenue leaks—lead capture, deal acceleration, and customer retention. Build automated systems that enforce discipline and accountability. Monitor and optimize continuously based on real data.
+                    </p>
+                    <p>
+                        Through the Revenue Command System™, Rita and the Aheri team have helped businesses across industries reclaim lost revenue, shorten sales cycles, and build predictable growth engines that run 24/7.
                     </p>
                 </div>
             </div>
@@ -788,28 +943,28 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">How We <span class="gradient-text">Work</span></h2>
-                <p class="section-subtitle">Our proven methodology for business transformation</p>
+                <p class="section-subtitle">A proven process for stopping revenue leakage</p>
             </div>
             <div class="approach-grid">
                 <div class="approach-card">
                     <span class="approach-number">1</span>
-                    <h3>Diagnose</h3>
-                    <p>We audit your current systems to identify where customers are falling through the cracks and revenue is being left on the table.</p>
+                    <h3>Revenue Leakage Audit</h3>
+                    <p>We map your current lead-to-cash flow and identify exactly where money is leaking. Free initial audit shows you what's broken and what it's costing you.</p>
                 </div>
                 <div class="approach-card">
                     <span class="approach-number">2</span>
-                    <h3>Design</h3>
-                    <p>We create a custom automation blueprint tailored to your business—covering acquisition, conversion, and retention systems.</p>
+                    <h3>System Design</h3>
+                    <p>We design the exact workflows, automation, and enforcement mechanisms your business needs—tailored to your industry, team structure, and revenue goals.</p>
                 </div>
                 <div class="approach-card">
                     <span class="approach-number">3</span>
-                    <h3>Deploy</h3>
-                    <p>We build and implement your systems using best-in-class tools, AI integrations, and proven workflows that work 24/7.</p>
+                    <h3>Build & Activate</h3>
+                    <p>Systems are implemented, integrated with your existing tools, tested thoroughly, and activated. Your team is trained and ready to execute with full support.</p>
                 </div>
                 <div class="approach-card">
                     <span class="approach-number">4</span>
-                    <h3>Optimize</h3>
-                    <p>We continuously monitor, refine, and improve your systems based on real data and results—ensuring maximum ROI.</p>
+                    <h3>Ongoing Management</h3>
+                    <p>We continuously monitor performance, send weekly/monthly reports, and optimize your systems based on real data. This is managed service, not one-time setup.</p>
                 </div>
             </div>
         </div>
@@ -819,10 +974,10 @@
     <section class="cta-section">
         <div class="cta-content">
             <div class="container">
-                <h2>Ready to Stop Losing Customers?</h2>
-                <p>Let's diagnose where your customers are falling through the cracks and build the systems to fix it.</p>
-                <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn" target="_blank">Book Your Free Discovery Call</a>
-                <p class="cta-note">45-minute session • Custom systems audit • No pressure, just insights</p>
+                <h2>Ready to Stop Losing Revenue?</h2>
+                <p>Get a free Revenue Leakage Audit and discover exactly where leads, deals, and customers are slipping through the cracks.</p>
+                <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn" target="_blank">Book Your Free Revenue Audit</a>
+                <p class="cta-note">Free 45-minute audit • Identify your biggest leaks • No pressure, just insights</p>
             </div>
         </div>
     </section>
@@ -833,17 +988,17 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>AHERI <span class="logo-systems">SYSTEMS</span></h3>
-                    <p class="footer-tagline">Smart Systems for Scalable Growth</p>
-                    <p>Transforming businesses with AI-powered automation systems. Based in Kenya, serving clients globally.</p>
+                    <p class="footer-tagline">Revenue Growth Systems That Work 24/7</p>
+                    <p>We build, monitor, and optimize the systems that turn leads into revenue—consistently. Serving businesses globally.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="services.html">Customer Acquisition Systems</a></li>
-                        <li><a href="services.html">Customer Conversion Systems</a></li>
-                        <li><a href="services.html">Customer Retention Systems</a></li>
-                        <li><a href="services.html">Operations Automation</a></li>
-                        <li><a href="services.html">AI Implementation</a></li>
+                        <li><a href="services.html">Revenue Capture System™</a></li>
+                        <li><a href="services.html">Revenue Acceleration System™</a></li>
+                        <li><a href="services.html">Revenue Optimization System™</a></li>
+                        <li><a href="services.html">CRM Automation</a></li>
+                        <li><a href="services.html">AI Integration</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -861,5 +1016,31 @@
                     <ul class="contact-info">
                         <li><a href="mailto:rita@aherisystems.com">rita@aherisystems.com</a></li>
                         <li><a href="tel:+254716850772">+254 716 850 772</a></li>
-                        <li>Nairobi, Kenya</li>
-                        <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" target="_blank">Book a Free Discovery Call</li>
+                        <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" target="_blank">Book a Free Revenue Audit</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aheri Systems. All rights reserved. | Revenue Operations Partner for Growing Businesses Worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-wrapper')) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
