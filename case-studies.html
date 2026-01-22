@@ -3,156 +3,610 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Favicon -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-    <title>Case Studies | Aheri Systems Success Stories</title>
-    <meta name="description" content="See how Aheri Systems has transformed service businesses through AI and automation. Real results from healthcare, events, and service industries.">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <title>Revenue Growth Systems Case Studies | Real Results from Lead Capture to Customer Retention | Aheri Systems</title>
+    <meta name="description" content="Stop losing revenue after leads come in. See how SaaS, healthcare, and events businesses transformed scattered leads into predictable revenue with automated capture, follow-up, and retention systems. Real case studies with measurable ROI.">
+    <meta name="keywords" content="revenue growth system case studies, lead capture automation results, sales pipeline automation ROI, customer retention system, CRM automation success stories, stop revenue leakage, automated follow-up systems, SaaS revenue growth, healthcare patient retention, event management automation">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Revenue Growth Systems Case Studies | Stop Losing Leads & Revenue">
+    <meta property="og:description" content="See how businesses stopped revenue leakage with automated lead capture, sales acceleration, and customer retention systems. Real results, real ROI.">
+    <meta property="og:type" content="website">
+    
+    <!-- Schema Markup for AIEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Revenue Command System Case Studies",
+      "description": "Real businesses that stopped losing revenue through automated lead capture, sales acceleration, and customer retention systems",
+      "provider": {
+        "@type": "Organization",
+        "name": "Aheri Systems",
+        "description": "Revenue growth systems that stop lead leakage and revenue loss through automated capture, follow-up, and retention",
+        "url": "https://aherisystems.com",
+        "sameAs": [
+          "https://www.linkedin.com/company/aheri-systems"
+        ]
+      },
+      "hasPart": [
+        {
+          "@type": "CaseStudy",
+          "name": "VivaLife Pediatric Clinic Revenue Capture System",
+          "description": "Healthcare clinic achieved 95% appointment attendance and 50% admin time savings through automated patient capture and follow-up",
+          "industry": "Healthcare",
+          "result": "95% appointment attendance rate, 50% admin time eliminated, 100% lead capture"
+        },
+        {
+          "@type": "CaseStudy",
+          "name": "DiaspoCare Healthcare Platform Revenue Acceleration",
+          "description": "Multi-provider platform achieved 70% faster referral processing and eliminated lost referrals through unified CRM automation",
+          "industry": "HealthTech",
+          "result": "70% faster referral processing, zero lost referrals, 3x provider efficiency"
+        },
+        {
+          "@type": "CaseStudy",
+          "name": "Mapenzi Connect Event Management Automation",
+          "description": "Events business achieved 90% payment collection and saved 15 hours per event through end-to-end automation",
+          "industry": "Events",
+          "result": "90% payment collection rate, 15 hours saved per event, 80% process automation"
+        },
+        {
+          "@type": "CaseStudy",
+          "name": "Damency Technologies SaaS Revenue Growth System",
+          "description": "SaaS platform increased trial-to-paid conversion by 45% through automated onboarding and engagement",
+          "industry": "SaaS",
+          "result": "45% increase in trial conversions, 60% higher feature adoption, 35% churn reduction"
+        }
+      ]
+    }
+    </script>
+    
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --gradient-primary: linear-gradient(135deg, #0EA5E9 0%, #06B6D4 100%);
+            --gradient-dark: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+        }
+        
         .case-hero {
-            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-            color: var(--white);
-            padding: calc(80px + 4rem) 0 4rem;
-            text-align: center;
+            background: var(--gradient-dark);
+            color: #ffffff;
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
         }
+        
+        .case-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .case-hero .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
         .case-hero h1 {
-            color: var(--white);
-            font-size: 3rem;
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.1;
             margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #0EA5E9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        .case-hero p {
-            font-size: 1.25rem;
-            color: var(--primary-light);
-            max-width: 700px;
-            margin: 0 auto;
+        
+        .case-hero .subtitle {
+            font-size: 1.5rem;
+            color: #94a3b8;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
         }
-        .case-study-full {
-            padding: 4rem 0;
-        }
-        .case-study-full:nth-child(even) {
-            background: var(--gray-50);
-        }
-        .case-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        .case-meta {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1.5rem;
-        }
-        .meta-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .meta-label {
-            font-size: 0.875rem;
-            color: var(--gray-600);
-            margin-bottom: 0.5rem;
-        }
-        .meta-value {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: var(--navy);
-        }
-        .case-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .case-section {
-            margin-bottom: 3rem;
-        }
-        .case-section h3 {
-            color: var(--navy);
-            margin-bottom: 1rem;
-            padding-left: 1rem;
-            border-left: 4px solid var(--primary);
-        }
-        .challenge-box {
-            background: #FEF2F2;
-            border-left: 4px solid #EF4444;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            margin: 1.5rem 0;
-        }
-        .solution-box {
-            background: #F0F9FF;
-            border-left: 4px solid var(--primary);
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            margin: 1.5rem 0;
-        }
-        .results-grid {
+        
+        .revenue-stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
-            margin: 2rem 0;
+            margin-top: 3rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        .result-box {
-            background: var(--white);
+        
+        .stat-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 2rem;
             border-radius: 1rem;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
-        .result-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary);
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             display: block;
             margin-bottom: 0.5rem;
         }
-        .result-label {
-            color: var(--gray-600);
+        
+        .stat-label {
             font-size: 0.95rem;
+            color: #cbd5e1;
         }
-        .tools-used {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin: 1.5rem 0;
+        
+        .case-study-full {
+            padding: 5rem 0;
+            background: #ffffff;
         }
-        .tool-badge {
-            background: var(--gray-100);
-            padding: 0.5rem 1rem;
+        
+        .case-study-full:nth-child(even) {
+            background: #f8fafc;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .case-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .case-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gradient-primary);
+            color: #ffffff;
+            padding: 0.6rem 1.5rem;
             border-radius: 2rem;
+            font-weight: 700;
             font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--navy);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-        .testimonial-box {
-            background: var(--gray-50);
-            padding: 2rem;
-            border-radius: 1rem;
-            border-left: 4px solid var(--primary);
-            margin: 2rem 0;
-        }
-        .testimonial-text {
-            font-size: 1.125rem;
-            font-style: italic;
-            color: var(--gray-700);
+        
+        .case-header h2 {
+            font-size: 2.75rem;
+            font-weight: 900;
+            color: #0f172a;
             margin-bottom: 1rem;
+            line-height: 1.2;
         }
-        .testimonial-author {
+        
+        .tier-badge {
+            display: inline-block;
+            background: #0f172a;
+            color: #0EA5E9;
+            padding: 0.7rem 1.8rem;
+            border-radius: 2rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-top: 1rem;
+            border: 2px solid #0EA5E9;
+        }
+        
+        .case-subtitle {
+            font-size: 1.25rem;
+            color: #64748b;
+            max-width: 700px;
+            margin: 1rem auto;
+            line-height: 1.7;
+        }
+        
+        .case-meta {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            text-align: center;
+        }
+        
+        .meta-label {
+            font-size: 0.875rem;
+            color: #94a3b8;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             font-weight: 600;
-            color: var(--navy);
         }
+        
+        .meta-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        
+        .case-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .case-section {
+            margin-bottom: 4rem;
+        }
+        
+        .case-section h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 5px solid #0EA5E9;
+        }
+        
+        .leakage-box {
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+            border: 2px solid #fca5a5;
+            border-radius: 1rem;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(239, 68, 68, 0.1);
+        }
+        
+        .leakage-box h4 {
+            color: #dc2626;
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .leakage-box h4::before {
+            content: '⚠️';
+            font-size: 1.5rem;
+        }
+        
+        .solution-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 2px solid #7dd3fc;
+            border-radius: 1rem;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(14, 165, 233, 0.1);
+        }
+        
+        .solution-box h4 {
+            color: #0369a1;
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .solution-box h4::before {
+            content: '✓';
+            font-size: 1.8rem;
+            color: #0EA5E9;
+        }
+        
+        .system-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+        
+        .system-list li {
+            padding: 1rem 0;
+            padding-left: 2rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .system-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #0EA5E9;
+            font-weight: 900;
+            font-size: 1.2rem;
+        }
+        
+        .system-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .system-list strong {
+            color: #0f172a;
+            font-weight: 700;
+        }
+        
+        .leakage-box .system-list li::before {
+            content: '✗';
+            color: #dc2626;
+        }
+        
+        .leakage-impact {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(220, 38, 38, 0.1);
+            border-radius: 0.5rem;
+            font-weight: 700;
+            color: #991b1b;
+            border-left: 4px solid #dc2626;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .result-box {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 1.25rem;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border: 2px solid #f1f5f9;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .result-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(14, 165, 233, 0.15);
+            border-color: #0EA5E9;
+        }
+        
+        .result-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 0.75rem;
+            line-height: 1;
+        }
+        
+        .result-label {
+            color: #64748b;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        
+        .kpi-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            margin: 3rem 0;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .kpi-section h4 {
+            color: #0f172a;
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+        
+        .kpi-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+        
+        .kpi-item {
+            background: #ffffff;
+            padding: 1.25rem;
+            border-radius: 0.75rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #475569;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 3px solid #0EA5E9;
+        }
+        
+        .testimonial-box {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 3rem;
+            border-radius: 1.25rem;
+            margin: 3rem 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-box::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 10rem;
+            color: rgba(14, 165, 233, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial-text {
+            font-size: 1.25rem;
+            font-style: italic;
+            color: #e2e8f0;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #0EA5E9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .outcome-highlight {
+            background: var(--gradient-primary);
+            color: #ffffff;
+            padding: 3rem;
+            border-radius: 1.25rem;
+            text-align: center;
+            margin: 3rem 0;
+            box-shadow: 0 10px 40px rgba(14, 165, 233, 0.3);
+        }
+        
+        .outcome-highlight h4 {
+            color: #ffffff;
+            font-size: 1.75rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .outcome-highlight p {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+        
+        .pattern-section {
+            padding: 6rem 0;
+            background: var(--gradient-dark);
+            color: #ffffff;
+            text-align: center;
+        }
+        
+        .pattern-section h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #ffffff 0%, #0EA5E9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .comparison-column h3 {
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+        }
+        
+        .comparison-column.before h3 {
+            color: #ef4444;
+        }
+        
+        .comparison-column.after h3 {
+            color: #0EA5E9;
+        }
+        
+        .comparison-column ul {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .comparison-column li {
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0.75rem;
+            font-size: 1.05rem;
+            font-weight: 500;
+            border-left: 3px solid;
+        }
+        
+        .comparison-column.before li {
+            border-color: #ef4444;
+            color: #fca5a5;
+        }
+        
+        .comparison-column.after li {
+            border-color: #0EA5E9;
+            color: #7dd3fc;
+        }
+        
         @media (max-width: 968px) {
+            .case-hero {
+                padding: 120px 0 60px;
+            }
+            
             .case-hero h1 {
+                font-size: 2.25rem;
+            }
+            
+            .case-hero .subtitle {
+                font-size: 1.125rem;
+            }
+            
+            .case-header h2 {
                 font-size: 2rem;
             }
-            .case-meta {
-                flex-direction: column;
-                gap: 1rem;
+            
+            .case-section h3 {
+                font-size: 1.5rem;
             }
-            .results-grid {
+            
+            .results-grid,
+            .kpi-list,
+            .comparison-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .revenue-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .pattern-section h2 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -163,32 +617,51 @@
         <div class="container">
             <div class="nav-wrapper">
                 <a href="index.html" class="logo">
-    <img src="assets/images/aheri-logo.png" alt="Aheri Systems logo" style="width:120px;">
-</a>
+                    <img src="assets/images/aheri-logo.png" alt="Aheri Systems logo" style="width:120px;">
+                </a>
                 <button class="mobile-menu-btn" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
                 <ul class="nav-menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="case-studies.html">Case Studies</a></li>
-    <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
-    <li><a href="https://ritandubi.com/resources" target="_blank">Resources & Tools</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn-primary" target="_blank">Book Consultation</a></li>
-</ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
+                    <li><a href="https://ritandubi.com/resources" target="_blank">Resources & Tools</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn-primary" target="_blank">Book Consultation</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
     <section class="case-hero">
-        <div class="container">
-            <h1>Real Businesses, <span class="gradient-text">Real Results</span></h1>
-            <p>See how we've helped service businesses transform their operations and scale with AI-powered automation.</p>
+        <div class="container" style="text-align: center;">
+            <h1>Stop Losing Revenue After the Lead Comes In</h1>
+            <p class="subtitle">Real businesses. Real revenue growth. See how our Revenue Command System™ transformed scattered leads and stalled deals into predictable, growing revenue.</p>
+            
+            <div class="revenue-stats">
+                <div class="stat-box">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Lead Capture Rate</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">15hrs+</span>
+                    <span class="stat-label">Saved Per Month</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">45%</span>
+                    <span class="stat-label">Higher Conversions</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Automated Operations</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -196,91 +669,99 @@
     <section id="vivalife" class="case-study-full">
         <div class="container">
             <div class="case-header">
-                <div class="case-tag">Healthcare</div>
+                <div class="case-tag">🏥 Healthcare • Pediatric Clinic</div>
                 <h2>VivaLife Pediatric Clinic</h2>
-                <p style="font-size: 1.125rem; color: var(--gray-600); max-width: 700px; margin: 1rem auto;">How we transformed a pediatric clinic's patient experience through complete CRM automation</p>
+                <div class="tier-badge">Revenue Capture System™</div>
+                <p class="case-subtitle">From manual registration chaos to automated patient capture with 95% appointment attendance</p>
                 <div class="case-meta">
                     <div class="meta-item">
-                        <span class="meta-label">Industry</span>
-                        <span class="meta-value">Healthcare</span>
+                        <div class="meta-label">Challenge</div>
+                        <div class="meta-value">Lead Leakage</div>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label">Service</span>
-                        <span class="meta-value">CRM & Patient Journey</span>
+                        <div class="meta-label">Solution</div>
+                        <div class="meta-value">Revenue Capture</div>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label">Timeline</span>
-                        <span class="meta-value">6 weeks</span>
+                        <div class="meta-label">Timeline</div>
+                        <div class="meta-value">6 Weeks</div>
                     </div>
                 </div>
             </div>
 
             <div class="case-content">
                 <div class="case-section">
-                    <h3>The Challenge</h3>
-                    <div class="challenge-box">
-                        <p><strong>Problem:</strong> VivaLife was operating with completely manual patient registration processes. Every new patient required staff to manually input information, create files, schedule appointments, and send reminders. This led to:</p>
-                        <ul style="margin-top: 1rem;">
-                            <li>Long wait times for patients during check-in</li>
-                            <li>Frequent data entry errors and inconsistencies</li>
-                            <li>Missed appointments due to manual reminder systems</li>
-                            <li>Staff spending 60% of their time on administrative tasks</li>
-                            <li>No clear view of patient history or analytics</li>
+                    <h3>The Revenue Leakage</h3>
+                    <div class="leakage-box">
+                        <h4>Where Money Was Leaking</h4>
+                        <ul class="system-list">
+                            <li><strong>Slow Response Times:</strong> Patient inquiries taking hours to respond to—by then, they'd booked elsewhere</li>
+                            <li><strong>Manual Data Entry:</strong> Every new patient required 15+ minutes of staff time for registration</li>
+                            <li><strong>Missed Appointments:</strong> Manual reminder system resulted in 30% no-show rate</li>
+                            <li><strong>After-Hours Black Hole:</strong> No way to capture or respond to leads outside business hours</li>
+                            <li><strong>Zero Follow-Up:</strong> No automated system to re-engage no-shows or schedule follow-up visits</li>
                         </ul>
+                        <div class="leakage-impact">
+                            💸 Result: 60% of staff time wasted on admin tasks, revenue walking out the door daily through missed appointments and slow response
+                        </div>
                     </div>
                 </div>
 
                 <div class="case-section">
-                    <h3>The Solution</h3>
+                    <h3>The Revenue Capture System We Built</h3>
                     <div class="solution-box">
-                        <p><strong>We implemented a complete healthcare CRM system with automated patient journey workflows:</strong></p>
-                        <ul style="margin-top: 1rem;">
-                            <li><strong>Digital Patient Registration:</strong> Online forms that auto-populate the CRM</li>
-                            <li><strong>Automated Appointment Booking:</strong> Self-service scheduling integrated with clinic calendar</li>
-                            <li><strong>Smart Reminders:</strong> Automated SMS and email reminders 48 hours and 2 hours before appointments</li>
-                            <li><strong>Patient Portal:</strong> Secure access to medical records and test results</li>
-                            <li><strong>Follow-up Automation:</strong> Post-visit surveys and check-in sequences</li>
-                            <li><strong>Real-time Analytics:</strong> Dashboard showing patient volume, demographics, and appointment trends</li>
+                        <h4>Systems Deployed</h4>
+                        <ul class="system-list">
+                            <li><strong>24/7 Multi-Channel Lead Capture:</strong> Instant capture from website, phone, WhatsApp—nothing slips through</li>
+                            <li><strong>AI-Powered Auto-Response:</strong> 60-second first response time, even after hours and weekends</li>
+                            <li><strong>Digital Self-Service Registration:</strong> Online forms auto-populate CRM—zero manual data entry</li>
+                            <li><strong>Smart Reminder Sequences:</strong> Automated SMS and email at 48hrs, 24hrs, and 2hrs before appointments</li>
+                            <li><strong>Automated Follow-Up Workflows:</strong> Post-visit check-ins, no-show re-engagement, recall scheduling</li>
+                            <li><strong>Real-Time Dashboard:</strong> Complete visibility into every lead, appointment, and patient interaction</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="case-section">
-                    <h3>Tools & Technologies</h3>
-                    <div class="tools-used">
-                        <span class="tool-badge">CRM Platform</span>
-                        <span class="tool-badge">Automated Workflows</span>
-                        <span class="tool-badge">SMS Integration</span>
-                        <span class="tool-badge">Email Automation</span>
-                        <span class="tool-badge">Analytics Dashboard</span>
-                        <span class="tool-badge">Patient Portal</span>
+                <div class="kpi-section">
+                    <h4>📊 KPIs We Owned & Monitored</h4>
+                    <div class="kpi-list">
+                        <div class="kpi-item">Speed-to-first-contact</div>
+                        <div class="kpi-item">% of leads contacted</div>
+                        <div class="kpi-item">Lead capture rate</div>
+                        <div class="kpi-item">Appointment show rate</div>
+                        <div class="kpi-item">Follow-up completion rate</div>
                     </div>
                 </div>
 
                 <div class="case-section">
-                    <h3>The Results</h3>
+                    <h3>The Revenue Impact</h3>
                     <div class="results-grid">
                         <div class="result-box">
-                            <span class="result-number">50%</span>
-                            <span class="result-label">Time Saved on Admin Tasks</span>
+                            <span class="result-number">95%</span>
+                            <span class="result-label">Appointment Attendance (up from 70%)</span>
                         </div>
                         <div class="result-box">
-                            <span class="result-number">95%</span>
-                            <span class="result-label">Appointment Attendance Rate</span>
+                            <span class="result-number">50%</span>
+                            <span class="result-label">Admin Time Eliminated</span>
                         </div>
                         <div class="result-box">
                             <span class="result-number">100%</span>
-                            <span class="result-label">Data Accuracy</span>
+                            <span class="result-label">Leads Captured & Responded To</span>
                         </div>
                         <div class="result-box">
                             <span class="result-number">24/7</span>
-                            <span class="result-label">Self-Service Booking</span>
+                            <span class="result-label">Patient Self-Service</span>
                         </div>
                     </div>
                 </div>
 
+                <div class="outcome-highlight">
+                    <h4>The Bottom Line</h4>
+                    <p>Staff now spend time on patient care instead of paperwork. Every lead is captured and followed up automatically. No more revenue leaking through forgotten appointments or slow response. Patient satisfaction through the roof.</p>
+                </div>
+
                 <div class="testimonial-box">
-                    <p class="testimonial-text">"The automation systems Rita implemented have transformed how we operate. We've cut admin time in half and can now focus on patient care. The real-time analytics give us insights we never had before."</p>
+                    <p class="testimonial-text">"The automation systems have transformed how we operate. We've cut admin time in half and can now focus entirely on patient care. The real-time analytics give us insights we never had before. No more missed appointments or lost inquiries."</p>
                     <p class="testimonial-author">— VivaLife Pediatric Clinic Team</p>
                 </div>
             </div>
@@ -291,171 +772,179 @@
     <section id="diaspocare" class="case-study-full">
         <div class="container">
             <div class="case-header">
-                <div class="case-tag">HealthTech</div>
+                <div class="case-tag">💊 HealthTech • Multi-Provider Platform</div>
                 <h2>DiaspoCare Healthcare Platform</h2>
-                <p style="font-size: 1.125rem; color: var(--gray-600); max-width: 700px; margin: 1rem auto;">Building a centralized CRM hub for a multi-provider healthcare platform</p>
+                <div class="tier-badge">Revenue Acceleration System™</div>
+                <p class="case-subtitle">From fragmented patient data to unified pipeline control with zero lost referrals</p>
                 <div class="case-meta">
                     <div class="meta-item">
-                        <span class="meta-label">Industry</span>
-                        <span class="meta-value">HealthTech</span>
+                        <div class="meta-label">Challenge</div>
+                        <div class="meta-value">Pipeline Chaos</div>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label">Service</span>
-                        <span class="meta-value">CRM Implementation</span>
+                        <div class="meta-label">Solution</div>
+                        <div class="meta-value">Revenue Acceleration</div>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label">Timeline</span>
-                        <span class="meta-value">8 weeks</span>
+                        <div class="meta-label">Timeline</div>
+                        <div class="meta-value">8 Weeks</div>
                     </div>
                 </div>
             </div>
 
             <div class="case-content">
                 <div class="case-section">
-                    <h3>The Challenge</h3>
-                    <div class="challenge-box">
-                        <p><strong>Problem:</strong> DiaspoCare needed to coordinate care across multiple healthcare providers while maintaining a seamless patient experience. They faced:</p>
-                        <ul style="margin-top: 1rem;">
-                            <li>Fragmented patient data across different providers</li>
-                            <li>Manual coordination between specialists and primary care</li>
-                            <li>No unified view of patient journey</li>
-                            <li>Difficulty tracking referrals and follow-ups</li>
-                            <li>Limited analytics on platform performance</li>
+                    <h3>The Revenue Leakage</h3>
+                    <div class="leakage-box">
+                        <h4>Where Money Was Leaking</h4>
+                        <ul class="system-list">
+                            <li><strong>Fragmented Patient Data:</strong> Information scattered across providers with no single source of truth</li>
+                            <li><strong>Lost Referrals:</strong> Manual referral process meant specialists never received patient info—follow-ups fell through</li>
+                            <li><strong>Stalled Appointments:</strong> No automated escalation when patients didn't book required follow-ups</li>
+                            <li><strong>Zero Pipeline Visibility:</strong> No tracking of which patients were in-process or revenue forecasting capability</li>
+                            <li><strong>Manual Coordination Hell:</strong> Staff spending hours daily coordinating care between providers</li>
                         </ul>
-                    </div>
-                </div>
-
-                <div class="case-section">
-                    <h3>The Solution</h3>
-                    <div class="solution-box">
-                        <p><strong>We implemented GoHighLevel as the central CRM automation hub:</strong></p>
-                        <ul style="margin-top: 1rem;">
-                            <li><strong>Unified Patient Database:</strong> Single source of truth for all patient interactions</li>
-                            <li><strong>Multi-Provider Workflows:</strong> Automated referral and coordination processes</li>
-                            <li><strong>Communication Hub:</strong> Integrated messaging across SMS, email, and WhatsApp</li>
-                            <li><strong>Appointment Coordination:</strong> Centralized scheduling across all providers</li>
-                            <li><strong>Patient Journey Tracking:</strong> Complete visibility from first contact to ongoing care</li>
-                            <li><strong>Provider Dashboard:</strong> Real-time view of their patient queue and tasks</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="case-section">
-                    <h3>Tools & Technologies</h3>
-                    <div class="tools-used">
-                        <span class="tool-badge">GoHighLevel CRM</span>
-                        <span class="tool-badge">Multi-Channel Communication</span>
-                        <span class="tool-badge">Workflow Automation</span>
-                        <span class="tool-badge">Provider Portal</span>
-                        <span class="tool-badge">Analytics & Reporting</span>
-                    </div>
-                </div>
-
-                <div class="case-section">
-                    <h3>The Results</h3>
-                    <div class="results-grid">
-                        <div class="result-box">
-                            <span class="result-number">100%</span>
-                            <span class="result-label">Automated Patient Journey</span>
+                        <div class="leakage-impact">
+                            💸 Result: Referral revenue lost daily, patient experience suffering, impossible to scale operations efficiently
                         </div>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h3>The Revenue Acceleration System We Built</h3>
+                    <div class="solution-box">
+                        <h4>Systems Deployed</h4>
+                        <ul class="system-list">
+                            <li><strong>Unified CRM & Sales Pipeline:</strong> Single database tracking every patient across all providers with complete journey visibility</li>
+                            <li><strong>Automated Referral Routing:</strong> Instant specialist assignment with auto-follow-up until appointment booked</li>
+                            <li><strong>Multi-Provider Coordination:</strong> Automated handoff workflows ensuring seamless transitions between care teams</li>
+                            <li><strong>Deal Progression Alerts:</strong> Automatic escalation when patients don't book or miss critical follow-ups</li>
+                            <li><strong>Provider Dashboards:</strong> Real-time view of patient queue, pending tasks, and revenue pipeline per provider</li>
+                            <li><strong>Unified Communications:</strong> Single conversation history across SMS, email, WhatsApp for all providers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="kpi-section">
+                    <h4>📊 KPIs We Owned & Monitored</h4>
+                    <div class="kpi-list">
+                        <div class="kpi-item">Referral conversion rate</div>
+                        <div class="kpi-item">Time to appointment booking</div>
+                        <div class="kpi-item">Pipeline velocity</div>
+                        <div class="kpi-item">Provider utilization rate</div>
+                        <div class="kpi-item">Revenue forecast accuracy</div>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h3>The Revenue Impact</h3>
+                    <div class="results-grid">
                         <div class="result-box">
                             <span class="result-number">70%</span>
                             <span class="result-label">Faster Referral Processing</span>
                         </div>
                         <div class="result-box">
-                            <span class="result-number">3X</span>
-                            <span class="result-label">Provider Efficiency Increase</span>
-                        </div>
-                        <div class="result-box">
                             <span class="result-number">Zero</span>
                             <span class="result-label">Lost Referrals</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-number">3X</span>
+                            <span class="result-label">Provider Efficiency</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-number">100%</span>
+                            <span class="result-label">Patient Journey Visibility</span>
                         </div>
                     </div>
                 </div>
 
+                <div class="outcome-highlight">
+                    <h4>The Bottom Line</h4>
+                    <p>From referral chaos to complete pipeline control. Every patient tracked, every handoff automated, every deal pushed forward. The platform can now scale without adding coordination staff.</p>
+                </div>
+
                 <div class="testimonial-box">
-                    <p class="testimonial-text">"From manual chaos to fully automated operations. The CRM system has been a game-changer for our platform. We can now coordinate care across providers seamlessly."</p>
+                    <p class="testimonial-text">"From manual chaos to fully automated operations. The CRM system has been a game-changer for our platform. We can now coordinate care across multiple providers seamlessly, and we never lose track of a referral."</p>
                     <p class="testimonial-author">— DiaspoCare Platform Team</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Case Study 3: Events Business -->
-    <section id="events" class="case-study-full">
+    <!-- Case Study 3: Mapenzi Connect -->
+    <section id="mapenzi-connect" class="case-study-full">
         <div class="container">
             <div class="case-header">
-                <div class="case-tag">Events</div>
-                <h2>Events Business Automation</h2>
-                <p style="font-size: 1.125rem; color: var(--gray-600); max-width: 700px; margin: 1rem auto;">End-to-end automation for event management from registration to post-event follow-up</p>
+                <div class="case-tag">🎉 Events & Conferences</div>
+                <h2>Mapenzi Connect</h2>
+                <div class="tier-badge">Revenue Capture + Acceleration System™</div>
+                <p class="case-subtitle">From manual event chaos to end-to-end automated revenue system with 90% payment collection</p>
                 <div class="case-meta">
                     <div class="meta-item">
-                        <span class="meta-label">Industry</span>
-                        <span class="meta-value">Events & Conferences</span>
+                        <div class="meta-label">Challenge</div>
+                        <div class="meta-value">Total Manual Chaos</div>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label">Service</span>
-                        <span class="meta-value">Full Operations Automation</span>
+                        <div class="meta-label">Solution</div>
+                        <div class="meta-value">Full Revenue System</div>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label">Timeline</span>
-                        <span class="meta-value">5 weeks</span>
+                        <div class="meta-label">Timeline</div>
+                        <div class="meta-value">5 Weeks</div>
                     </div>
                 </div>
             </div>
 
             <div class="case-content">
                 <div class="case-section">
-                    <h3>The Challenge</h3>
-                    <div class="challenge-box">
-                        <p><strong>Problem:</strong> The events business was managing everything manually—from registration to ticketing to attendee communication. This created:</p>
-                        <ul style="margin-top: 1rem;">
-                            <li>Time-consuming manual registration process</li>
-                            <li>Payment tracking nightmare</li>
-                            <li>Inconsistent attendee communication</li>
-                            <li>No automated reminders or updates</li>
-                            <li>Post-event follow-up required manual effort</li>
-                            <li>Limited data on attendee engagement</li>
+                    <h3>The Revenue Leakage</h3>
+                    <div class="leakage-box">
+                        <h4>Where Money Was Leaking</h4>
+                        <ul class="system-list">
+                            <li><strong>Registration Nightmare:</strong> Manual attendee registration eating up 15+ hours per event with high error rates</li>
+                            <li><strong>Payment Collection Disaster:</strong> No automated tracking—chasing payments manually, 40% left unpaid</li>
+                            <li><strong>Inconsistent Communication:</strong> Event reminders sent manually (sometimes), post-event engagement non-existent</li>
+                            <li><strong>Scattered Attendee Data:</strong> Information in spreadsheets, emails, texts—impossible to track or analyze</li>
+                            <li><strong>Zero Retention System:</strong> No way to re-engage past attendees for future events</li>
+                            <li><strong>No Reporting Capability:</strong> No insights into what's working, which events are profitable, or attendee patterns</li>
                         </ul>
-                    </div>
-                </div>
-
-                <div class="case-section">
-                    <h3>The Solution</h3>
-                    <div class="solution-box">
-                        <p><strong>We built a complete event management automation system:</strong></p>
-                        <ul style="margin-top: 1rem;">
-                            <li><strong>Online Registration System:</strong> Custom forms with conditional logic and instant confirmation</li>
-                            <li><strong>Payment Integration:</strong> Automated payment processing and tracking</li>
-                            <li><strong>CRM & Pipeline:</strong> Automatic attendee segmentation and status tracking</li>
-                            <li><strong>Email Marketing:</strong> Pre-event sequences, day-of reminders, and post-event follow-ups</li>
-                            <li><strong>Newsletter System:</strong> Regular updates and engagement campaigns</li>
-                            <li><strong>Check-in System:</strong> QR code-based automated check-in</li>
-                            <li><strong>Analytics Dashboard:</strong> Real-time registration and engagement metrics</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="case-section">
-                    <h3>Tools & Technologies</h3>
-                    <div class="tools-used">
-                        <span class="tool-badge">Registration Platform</span>
-                        <span class="tool-badge">Payment Gateway</span>
-                        <span class="tool-badge">CRM System</span>
-                        <span class="tool-badge">Email Marketing</span>
-                        <span class="tool-badge">SMS Automation</span>
-                        <span class="tool-badge">QR Check-in</span>
-                        <span class="tool-badge">Analytics</span>
-                    </div>
-                </div>
-
-                <div class="case-section">
-                    <h3>The Results</h3>
-                    <div class="results-grid">
-                        <div class="result-box">
-                            <span class="result-number">80%</span>
-                            <span class="result-label">Process Automation</span>
+                        <div class="leakage-impact">
+                            💸 Result: 15+ hours wasted per event, 40% payment collection rate, no repeat attendee strategy, scaling impossible
                         </div>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h3>The Complete Revenue System We Built</h3>
+                    <div class="solution-box">
+                        <h4>Systems Deployed</h4>
+                        <ul class="system-list">
+                            <li><strong>Automated Registration System:</strong> Online forms with conditional logic, instant confirmation, zero manual entry</li>
+                            <li><strong>Integrated Payment & Invoicing:</strong> Automated payment processing, invoice generation, and payment reminder sequences</li>
+                            <li><strong>CRM & Pipeline Management:</strong> Complete attendee database with segmentation (registered, paid, attended, VIP)</li>
+                            <li><strong>Multi-Touch Communication:</strong> Pre-event sequences (confirmation, 7-day, 3-day, 1-day reminders), day-of logistics, post-event follow-up</li>
+                            <li><strong>QR Check-In System:</strong> Instant automated check-in with real-time attendance tracking and analytics</li>
+                            <li><strong>Engagement & Newsletter System:</strong> Ongoing communication to promote future events to past attendees</li>
+                            <li><strong>Analytics & Reporting Dashboard:</strong> Real-time metrics on registration, payments, attendance, engagement, ROI per event</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="kpi-section">
+                    <h4>📊 KPIs We Owned & Monitored</h4>
+                    <div class="kpi-list">
+                        <div class="kpi-item">Registration-to-payment rate</div>
+                        <div class="kpi-item">Payment collection rate</div>
+                        <div class="kpi-item">Registration-to-attendance rate</div>
+                        <div class="kpi-item">Email engagement rate</div>
+                        <div class="kpi-item">Repeat attendee rate</div>
+                        <div class="kpi-item">Event ROI tracking</div>
+                    </div>
+                </div>
+
+                <div class="case-section">
+                    <h3>The Revenue Impact</h3>
+                    <div class="results-grid">
                         <div class="result-box">
                             <span class="result-number">90%</span>
                             <span class="result-label">Payment Collection Rate</span>
@@ -465,108 +954,163 @@
                             <span class="result-label">Saved Per Event</span>
                         </div>
                         <div class="result-box">
+                            <span class="result-number">80%</span>
+                            <span class="result-label">Process Automation</span>
+                        </div>
+                        <div class="result-box">
                             <span class="result-number">2X</span>
-                            <span class="result-label">Email Engagement</span>
+                            <span class="result-label">Repeat Attendee Rate</span>
                         </div>
                     </div>
                 </div>
 
+                <div class="outcome-highlight">
+                    <h4>The Bottom Line</h4>
+                    <p>What used to take days now happens automatically. Payment collection went from nightmare to seamless. Complete visibility into every event's performance. The business can now scale events without scaling admin headcount.</p>
+                </div>
+
                 <div class="testimonial-box">
-                    <p class="testimonial-text">"The automation transformed our events business. What used to take days now happens automatically. We can focus on creating great experiences instead of managing spreadsheets."</p>
-                    <p class="testimonial-author">— Events Business Owner</p>
+                    <p class="testimonial-text">"The automation transformed our events business completely. Registration, payment tracking, reminders, invoicing—it all happens automatically now. We can focus on creating amazing experiences instead of drowning in spreadsheets and chasing payments."</p>
+                    <p class="testimonial-author">— Mapenzi Connect Team</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Case Study 4: Unicorn Dental -->
-    <section id="unicorn-dental" class="case-study-full">
+    <!-- Case Study 4: Damency Technologies -->
+    <section id="damency-technologies" class="case-study-full">
         <div class="container">
             <div class="case-header">
-                <div class="case-tag">Healthcare</div>
-                <h2>Unicorn Dental Clinic</h2>
-                <p style="font-size: 1.125rem; color: var(--gray-600); max-width: 700px; margin: 1rem auto;">Website optimization and automated appointment booking system</p>
+                <div class="case-tag">💻 SaaS • Technology Platform</div>
+                <h2>Damency Technologies</h2>
+                <div class="tier-badge">Revenue Acceleration + Optimization System™</div>
+                <p class="case-subtitle">From trial sign-up chaos to optimized user journey with 45% higher conversion rates</p>
                 <div class="case-meta">
                     <div class="meta-item">
-                        <span class="meta-label">Industry</span>
-                        <span class="meta-value">Dental Healthcare</span>
+                        <div class="meta-label">Challenge</div>
+                        <div class="meta-value">Low Trial Conversions</div>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label">Service</span>
-                        <span class="meta-value">Website & Booking Automation</span>
+                        <div class="meta-label">Solution</div>
+                        <div class="meta-value">Full Revenue System</div>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label">Timeline</span>
-                        <span class="meta-value">4 weeks</span>
+                        <div class="meta-label">Timeline</div>
+                        <div class="meta-value">6 Weeks</div>
                     </div>
                 </div>
             </div>
 
             <div class="case-content">
                 <div class="case-section">
-                    <h3>The Challenge</h3>
-                    <div class="challenge-box">
-                        <p><strong>Problem:</strong> Unicorn Dental had a basic website with no online booking capability. Patients had to call during business hours, leading to:</p>
-                        <ul style="margin-top: 1rem;">
-                            <li>Missed appointment opportunities after hours</li>
-                            <li>Phone tag with patients</li>
-                            <li>Staff time spent on scheduling calls</li>
-                            <li>No automated follow-up system</li>
-                            <li>Poor website user experience</li>
+                    <h3>The Revenue Leakage</h3>
+                    <div class="leakage-box">
+                        <h4>Where Money Was Leaking</h4>
+                        <ul class="system-list">
+                            <li><strong>Ghost Trial Users:</strong> Trial sign-ups happening but 70% never logging in after registration—no onboarding automation</li>
+                            <li><strong>Feature Adoption Black Hole:</strong> Users not discovering core features that drive value and conversion</li>
+                            <li><strong>Silent Churn:</strong> Users churning without warning—no engagement tracking or win-back automation</li>
+                            <li><strong>Manual Sales Follow-Up:</strong> Sales team manually trying to identify and reach out to qualified leads—inconsistent and slow</li>
+                            <li><strong>No Upsell System:</strong> Existing customers never receiving upgrade prompts or expansion offers</li>
+                            <li><strong>Support Bottlenecks:</strong> User questions going unanswered during off-hours, leading to frustration and churn</li>
                         </ul>
+                        <div class="leakage-impact">
+                            💸 Result: 18% trial-to-paid conversion rate, 35% annual churn, massive revenue left on the table from existing users
+                        </div>
                     </div>
                 </div>
 
                 <div class="case-section">
-                    <h3>The Solution</h3>
+                    <h3>The Complete Revenue System We Built</h3>
                     <div class="solution-box">
-                        <p><strong>We optimized their website and implemented a complete booking automation system:</strong></p>
-                        <ul style="margin-top: 1rem;">
-                            <li><strong>Website Redesign:</strong> Modern, mobile-responsive design optimized for conversions</li>
-                            <li><strong>Online Booking:</strong> 24/7 self-service appointment scheduling</li>
-                            <li><strong>Automated Reminders:</strong> SMS and email confirmations and reminders</li>
-                            <li><strong>Follow-up System:</strong> Post-appointment feedback and recall reminders</li>
-                            <li><strong>Calendar Integration:</strong> Real-time synchronization with clinic schedule</li>
+                        <h4>Systems Deployed</h4>
+                        <ul class="system-list">
+                            <li><strong>Automated Onboarding Sequences:</strong> Behavior-triggered email and in-app messages guiding users to first value within 24 hours</li>
+                            <li><strong>Feature Adoption Tracking:</strong> Automated tracking and nudges when users don't engage with core features</li>
+                            <li><strong>Lead Scoring & Sales Automation:</strong> Automatic qualification and routing of hot trial users to sales team in real-time</li>
+                            <li><strong>Customer Health Monitoring:</strong> Engagement scoring system with automated intervention when users show churn signals</li>
+                            <li><strong>Upsell & Expansion Automation:</strong> Triggered upgrade offers based on usage patterns and feature limits</li>
+                            <li><strong>24/7 AI Customer Support:</strong> Automated support system handling common questions and ticket routing</li>
+                            <li><strong>Win-Back Campaigns:</strong> Automated re-engagement sequences for churned and at-risk customers</li>
+                            <li><strong>Analytics Dashboard:</strong> Real-time visibility into trial health, conversion pipeline, churn risk, and expansion opportunities</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="case-section">
-                    <h3>Tools & Technologies</h3>
-                    <div class="tools-used">
-                        <span class="tool-badge">Website Design</span>
-                        <span class="tool-badge">Booking System</span>
-                        <span class="tool-badge">SMS Automation</span>
-                        <span class="tool-badge">Email Automation</span>
-                        <span class="tool-badge">Calendar Sync</span>
+                <div class="kpi-section">
+                    <h4>📊 KPIs We Owned & Monitored</h4>
+                    <div class="kpi-list">
+                        <div class="kpi-item">Trial-to-paid conversion rate</div>
+                        <div class="kpi-item">Time to first value</div>
+                        <div class="kpi-item">Feature adoption rate</div>
+                        <div class="kpi-item">Customer health score</div>
+                        <div class="kpi-item">Churn rate</div>
+                        <div class="kpi-item">Expansion revenue</div>
+                        <div class="kpi-item">Support resolution time</div>
                     </div>
                 </div>
 
                 <div class="case-section">
-                    <h3>The Results</h3>
+                    <h3>The Revenue Impact</h3>
                     <div class="results-grid">
                         <div class="result-box">
-                            <span class="result-number">40%</span>
-                            <span class="result-label">Increase in Appointments</span>
+                            <span class="result-number">45%</span>
+                            <span class="result-label">Increase in Trial-to-Paid Conversion</span>
                         </div>
                         <div class="result-box">
-                            <span class="result-number">24/7</span>
-                            <span class="result-label">Booking Availability</span>
+                            <span class="result-number">60%</span>
+                            <span class="result-label">Higher Feature Adoption</span>
                         </div>
                         <div class="result-box">
-                            <span class="result-number">85%</span>
-                            <span class="result-label">Appointment Attendance</span>
+                            <span class="result-number">35%</span>
+                            <span class="result-label">Churn Reduction</span>
                         </div>
                         <div class="result-box">
-                            <span class="result-number">10hrs</span>
-                            <span class="result-label">Saved Weekly</span>
+                            <span class="result-number">28%</span>
+                            <span class="result-label">Expansion Revenue Growth</span>
                         </div>
                     </div>
+                </div>
+
+                <div class="outcome-highlight">
+                    <h4>The Bottom Line</h4>
+                    <p>From leaky trial funnel to optimized user journey. Every trial user guided to value, every hot lead captured automatically, every at-risk customer engaged. The platform now grows predictably without proportional increase in support or sales headcount.</p>
                 </div>
 
                 <div class="testimonial-box">
-                    <p class="testimonial-text">"Professional, efficient, and delivers results. Our appointment booking system now runs seamlessly. Patients love the convenience of online booking."</p>
-                    <p class="testimonial-author">— Unicorn Dental Clinic</p>
+                    <p class="testimonial-text">"The automated systems transformed our SaaS business model. We're converting nearly half of our trial users now, and our churn has dropped dramatically. The best part? Our team can focus on product innovation instead of manual user follow-up."</p>
+                    <p class="testimonial-author">— Damency Technologies Founder</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pattern Section -->
+    <section class="pattern-section">
+        <div class="container">
+            <h2>The Pattern Is Clear</h2>
+            <div class="comparison-grid">
+                <div class="comparison-column before">
+                    <h3>❌ Before</h3>
+                    <ul>
+                        <li>Leads leaking after hours</li>
+                        <li>Slow follow-up losing deals</li>
+                        <li>Forgotten appointments & renewals</li>
+                        <li>Manual chaos everywhere</li>
+                        <li>No pipeline visibility</li>
+                        <li>Revenue unpredictable</li>
+                    </ul>
+                </div>
+                <div class="comparison-column after">
+                    <h3>✓ After</h3>
+                    <ul>
+                        <li>100% lead capture 24/7</li>
+                        <li>Instant automated response</li>
+                        <li>Every deal tracked & pushed</li>
+                        <li>Full automation & control</li>
+                        <li>Complete revenue visibility</li>
+                        <li>Predictable growth</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -576,10 +1120,10 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready for Similar Results?</h2>
-                <p>Let's discuss how we can transform your business with automation.</p>
-                <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary btn-large" target="_blank">Book Free Discovery Call</a>
-                <p class="cta-note">30-minute consultation • Custom strategy • No commitment required</p>
+                <h2>Ready to Stop Losing Revenue?</h2>
+                <p>Get your free Revenue Leakage Audit. We'll show you exactly where your money is leaking and which tier of the Revenue Command System™ fits your business.</p>
+                <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn btn-primary btn-large" target="_blank">Book Free Revenue Leakage Audit</a>
+                <p class="cta-note">30-minute audit • See where leads are falling through • Custom revenue system recommendation • No commitment required</p>
             </div>
         </div>
     </section>
@@ -590,36 +1134,35 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>AHERI <span class="logo-systems">SYSTEMS</span></h3>
-                    <p class="footer-tagline">Automating Growth Through Intelligence</p>
-                    <p>Transforming service businesses with AI-powered automation systems. Based in Kenya, serving clients globally.</p>
+                    <p class="footer-tagline">Stop Losing Revenue After the Lead Comes In</p>
+                    <p>We build, monitor, and optimize the systems that turn leads into revenue—consistently. Serving businesses globally.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Services</h4>
+                    <h4>Revenue Systems</h4>
                     <ul>
-                        <li><a href="services.html#customer-journey">Customer Journey Systems</a></li>
-                        <li><a href="services.html#operations">Operations Automation</a></li>
-                        <li><a href="services.html#ai-implementation">AI Implementation</a></li>
-                        <li><a href="services.html#crm">CRM & Sales Automation</a></li>
+                        <li><a href="services.html#tier1">Revenue Capture System™</a></li>
+                        <li><a href="services.html#tier2">Revenue Acceleration System™</a></li>
+                        <li><a href="services.html#tier3">Revenue Optimization System™</a></li>
+                        <li><a href="services.html">All Services</a></li>
                     </ul>
                 </div>
-               <!-- NEW -->
-<div class="footer-col">
-    <h4>Company</h4>
-    <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="case-studies.html">Case Studies</a></li>
-        <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
-        <li><a href="https://ritandubi.com/resources" target="_blank">Resources & Tools</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
+                        <li><a href="https://ritandubi.com/resources" target="_blank">Resources & Tools</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
                 <div class="footer-col">
                     <h4>Get In Touch</h4>
                     <ul class="contact-info">
                         <li><a href="mailto:rita@aherisystems.com">rita@aherisystems.com</a></li>
                         <li><a href="tel:+254716850772">+254 716 850 772</a></li>
-                        <li>Nairobi, Kenya</li>
-                        <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" target="_blank">Book a Call</a></li>
+                        <li>Serving Clients Globally</li>
+                        <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" target="_blank">Book Revenue Audit</a></li>
                     </ul>
                 </div>
             </div>
