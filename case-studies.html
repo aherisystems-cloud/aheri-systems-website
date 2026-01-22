@@ -70,7 +70,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --gradient-primary: linear-gradient(135deg, #0EA5E9 0%, #06B6D4 100%);
+            --primary: #3bc3b7;
+            --primary-dark: #2da399;
+            --primary-light: #5fd4ca;
+            --gradient-primary: linear-gradient(135deg, #3bc3b7 0%, #5fd4ca 100%);
             --gradient-dark: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
         }
         
@@ -101,8 +104,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 50%);
+            background: radial-gradient(circle at 20% 50%, rgba(59, 195, 183, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(59, 195, 183, 0.15) 0%, transparent 50%);
             pointer-events: none;
         }
         
@@ -119,7 +122,7 @@
             font-weight: 900;
             line-height: 1.1;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #ffffff 0%, #0EA5E9 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #3bc3b7 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -214,13 +217,13 @@
         .tier-badge {
             display: inline-block;
             background: #0f172a;
-            color: #0EA5E9;
+            color: #3bc3b7;
             padding: 0.7rem 1.8rem;
             border-radius: 2rem;
             font-weight: 700;
             font-size: 0.95rem;
             margin-top: 1rem;
-            border: 2px solid #0EA5E9;
+            border: 2px solid #3bc3b7;
         }
         
         .case-subtitle {
@@ -273,7 +276,7 @@
             color: #0f172a;
             margin-bottom: 1.5rem;
             padding-left: 1.5rem;
-            border-left: 5px solid #0EA5E9;
+            border-left: 5px solid #3bc3b7;
         }
         
         .leakage-box {
@@ -322,7 +325,7 @@
         .solution-box h4::before {
             content: '✓';
             font-size: 1.8rem;
-            color: #0EA5E9;
+            color: #3bc3b7;
         }
         
         .system-list {
@@ -342,7 +345,7 @@
             content: '→';
             position: absolute;
             left: 0;
-            color: #0EA5E9;
+            color: #3bc3b7;
             font-weight: 900;
             font-size: 1.2rem;
         }
@@ -390,8 +393,8 @@
         
         .result-box:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 50px rgba(14, 165, 233, 0.15);
-            border-color: #0EA5E9;
+            box-shadow: 0 15px 50px rgba(59, 195, 183, 0.15);
+            border-color: #3bc3b7;
         }
         
         .result-number {
@@ -442,7 +445,7 @@
             font-weight: 600;
             color: #475569;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            border-left: 3px solid #0EA5E9;
+            border-left: 3px solid #3bc3b7;
         }
         
         .testimonial-box {
@@ -461,7 +464,7 @@
             top: -20px;
             left: 20px;
             font-size: 10rem;
-            color: rgba(14, 165, 233, 0.1);
+            color: rgba(59, 195, 183, 0.1);
             font-family: Georgia, serif;
             line-height: 1;
         }
@@ -479,7 +482,7 @@
         .testimonial-author {
             font-weight: 700;
             font-size: 1.1rem;
-            color: #0EA5E9;
+            color: #3bc3b7;
             position: relative;
             z-index: 1;
         }
@@ -491,7 +494,7 @@
             border-radius: 1.25rem;
             text-align: center;
             margin: 3rem 0;
-            box-shadow: 0 10px 40px rgba(14, 165, 233, 0.3);
+            box-shadow: 0 10px 40px rgba(59, 195, 183, 0.3);
         }
         
         .outcome-highlight h4 {
@@ -520,7 +523,7 @@
             font-size: 3rem;
             font-weight: 900;
             margin-bottom: 3rem;
-            background: linear-gradient(135deg, #ffffff 0%, #0EA5E9 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #3bc3b7 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -545,7 +548,7 @@
         }
         
         .comparison-column.after h3 {
-            color: #0EA5E9;
+            color: #3bc3b7;
         }
         
         .comparison-column ul {
@@ -570,8 +573,8 @@
         }
         
         .comparison-column.after li {
-            border-color: #0EA5E9;
-            color: #7dd3fc;
+            border-color: #3bc3b7;
+            color: #5fd4ca;
         }
         
         @media (max-width: 968px) {
