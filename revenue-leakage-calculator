@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Leakage Calculator - Aheri Systems</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .client-info {
+            background: #f8fafc;
+            padding: 30px 40px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .info-field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-field label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-field input {
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .info-field input:focus {
+            outline: none;
+            border-color: #dc2626;
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .bucket {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+        }
+
+        .bucket:hover {
+            border-color: #dc2626;
+            box-shadow: 0 8px 24px rgba(220, 38, 38, 0.1);
+        }
+
+        .bucket-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f1f5f9;
+        }
+
+        .bucket-number {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-right: 20px;
+        }
+
+        .bucket-title {
+            flex: 1;
+        }
+
+        .bucket-title h2 {
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+
+        .bucket-title p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        .input-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 2fr;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+
+        .input-row label {
+            font-weight: 500;
+            color: #334155;
+        }
+
+        .input-row input {
+            padding: 10px 14px;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .input-row input:focus {
+            outline: none;
+            border-color: #dc2626;
+        }
+
+        .input-row .result {
+            background: white;
+            padding: 10px 14px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 600;
+            color: #dc2626;
+            border: 2px solid #fecaca;
+        }
+
+        .leak-total {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 3px solid #dc2626;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .leak-total h3 {
+            font-size: 1.1rem;
+            color: #991b1b;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .leak-total .amount {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #dc2626;
+            margin: 10px 0;
+        }
+
+        .summary {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 40px;
+            color: white;
+        }
+
+        .summary h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .summary-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .summary-card h4 {
+            font-size: 0.875rem;
+            opacity: 0.8;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .summary-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fca5a5;
+        }
+
+        .roi-section {
+            background: rgba(220, 38, 38, 0.2);
+            border: 2px solid #dc2626;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .roi-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .roi-calc {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .roi-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .roi-item label {
+            display: block;
+            font-size: 0.875rem;
+            opacity: 0.8;
+            margin-bottom: 8px;
+        }
+
+        .roi-item .roi-value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #fca5a5;
+        }
+
+        .print-btn {
+            background: white;
+            color: #1e293b;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: all 0.3s;
+        }
+
+        .print-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .print-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💰 Revenue Leakage Calculator</h1>
+            <p>Real Estate Revenue Diagnostic Tool</p>
+        </div>
+
+        <div class="client-info">
+            <div class="info-grid">
+                <div class="info-field">
+                    <label>Agent Name</label>
+                    <input type="text" id="agentName" placeholder="John Doe">
+                </div>
+                <div class="info-field">
+                    <label>Agency/Company</label>
+                    <input type="text" id="agencyName" placeholder="ABC Real Estate">
+                </div>
+                <div class="info-field">
+                    <label>Audit Date</label>
+                    <input type="date" id="auditDate">
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- BUCKET 1: REVENUE CAPTURE -->
+            <div class="bucket">
+                <div class="bucket-header">
+                    <div class="bucket-number">1</div>
+                    <div class="bucket-title">
+                        <h2>Revenue Capture Leakage</h2>
+                        <p>Leads not captured or responded to fast enough</p>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <label>Total leads per month</label>
+                    <input type="number" id="totalLeads" value="40" oninput="calculate()">
+                    <div class="result">—</div>
+                </div>
+
+                <div class="input-row">
+                    <label>Current capture rate (%)</label>
+                    <input type="number" id="captureRate" value="60" oninput="calculate()">
+                    <div class="result" id="missedLeads">—</div>
+                </div>
+
+                <div class="input-row">
+                    <label>Target capture rate (95%)</label>
+                    <input type="number" value="95" disabled>
+                    <div class="result" id="extraLeads">—</div>
+                </div>
+
+                <div class="input-row">
+                    <label>Current conversion rate (%)</label>
+                    <input type="number" id="conversionRate" value="10" oninput="calculate()">
+                    <div class="result" id="extraDeals1">—</div>
+                </div>
+
+                <div class="input-row">
+                    <label>Average commission (KES)</label>
+                    <input type="number" id="avgCommission" value="120000" oninput="calculate()">
+                    <div class="result" id="monthlyLeak1">—</div>
+                </div>
+
+                <div class="leak-total">
+                    <h3>Bucket 1 Annual Leakage</h3>
+                    <div class="amount" id="annualLeak1">KES 0</div>
+                </div>
+            </div>
+
+            <!-- BUCKET 2: REVENUE ACCELERATION -->
+            <div class="bucket">
+                <div class="bucket-header">
+                    <div class="bucket-number">2</div>
+                    <div class="bucket-title">
+                        <h2>Revenue Acceleration Leakage</h2>
+                        <p>Deals stalling due to poor pipeline management</p>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <label>Interested leads per month</label>
+                    <input type="number" id="interestedLeads" value="24" oninput="calculate()">
+                    <div class="result">—</div>
+                </div>
+
+                <div class="input-row">
+                    <label>Current close rate (%)</label>
+                    <input type="number" id="closeRate" value="10" oninput="calculate()">
+                    <div class="result" id="currentDeals">—</div>
+                </div>
+
+                <div class="input-row">
+                    <label>Target close rate (20%)</label>
+                    <input type="number" value="20" disabled>
+                    <div class="result" id="targetDeals">—</div>
+                </div>
+
+                <div class="input-row">
+                    <label>Extra deals per month</label>
+                    <input type="number" disabled>
+                    <div class="result" id="extraDeals2">—</div>
+                </div>
+
+                <div class="input-row">
+                    <label>Monthly leakage (KES)</label>
+                    <input type="number" disabled>
+                    <div class="result" id="monthlyLeak2">—</div>
+                </div>
+
+                <div class="leak-total">
+                    <h3>Bucket 2 Annual Leakage</h3>
+                    <div class="amount" id="annualLeak2">KES 0</div>
+                </div>
+            </div>
+
+            <!-- BUCKET 3: REVENUE OPTIMIZATION -->
+            <div class="bucket">
+                <div class="bucket-header">
+                    <div class="bucket-number">3</div>
+                    <div class="bucket-title">
+                        <h2>Revenue Optimization Leakage</h2>
+                        <p>Lost repeat business and referrals</p>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <label>Total deals closed last year</label>
+                    <input type="number" id="totalDealsYear" value="30" oninput="calculate()">
+                    <div class="result">—</div>
+                </div>
+
+                <div class="input-row">
+                    <label>Current repeat/referral rate (%)</label>
+                    <input type="number" id="repeatRate" value="10" oninput="calculate()">
+                    <div class="result" id="currentRepeat">—</div>
+                </div>
+
+                <div class="input-row">
+                    <label>Target repeat/referral rate (30%)</label>
+                    <input type="number" value="30" disabled>
+                    <div class="result" id="targetRepeat">—</div>
+                </div>
+
+                <div class="input-row">
+                    <label>Extra deals per year</label>
+                    <input type="number" disabled>
+                    <div class="result" id="extraDeals3">—</div>
+                </div>
+
+                <div class="input-row">
+                    <label>Annual leakage (KES)</label>
+                    <input type="number" disabled>
+                    <div class="result" id="annualLeak3Direct">—</div>
+                </div>
+
+                <div class="leak-total">
+                    <h3>Bucket 3 Annual Leakage</h3>
+                    <div class="amount" id="annualLeak3">KES 0</div>
+                </div>
+            </div>
+
+            <!-- SUMMARY SECTION -->
+            <div class="summary">
+                <h2>📊 Total Revenue Leakage Analysis</h2>
+                
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <h4>Bucket 1: Capture</h4>
+                        <div class="value" id="summaryLeak1">KES 0</div>
+                    </div>
+                    <div class="summary-card">
+                        <h4>Bucket 2: Acceleration</h4>
+                        <div class="value" id="summaryLeak2">KES 0</div>
+                    </div>
+                    <div class="summary-card">
+                        <h4>Bucket 3: Optimization</h4>
+                        <div class="value" id="summaryLeak3">KES 0</div>
+                    </div>
+                </div>
+
+                <div class="roi-section">
+                    <h3>🎯 Total Annual Revenue Leakage</h3>
+                    <div class="roi-value" id="totalLeakage" style="font-size: 3.5rem; margin: 20px 0; color: #fca5a5;">KES 0</div>
+                    
+                    <div class="roi-calc">
+                        <div class="roi-item">
+                            <label>Tier 1 Investment (Annual)</label>
+                            <div class="roi-value">KES 420K</div>
+                        </div>
+                        <div class="roi-item">
+                            <label>Conservative Capture (30%)</label>
+                            <div class="roi-value" id="conservativeCapture">KES 0</div>
+                        </div>
+                        <div class="roi-item">
+                            <label>ROI (Year 1)</label>
+                            <div class="roi-value" id="roiCalc">0x</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="print-btn" onclick="window.print()">📄 Print Report</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set today's date
+        document.getElementById('auditDate').valueAsDate = new Date();
+
+        function formatCurrency(num) {
+            if (num >= 1000000) {
+                return 'KES ' + (num / 1000000).toFixed(1) + 'M';
+            } else if (num >= 1000) {
+                return 'KES ' + (num / 1000).toFixed(0) + 'K';
+            }
+            return 'KES ' + num.toLocaleString();
+        }
+
+        function calculate() {
+            // Get inputs
+            const totalLeads = parseFloat(document.getElementById('totalLeads').value) || 0;
+            const captureRate = parseFloat(document.getElementById('captureRate').value) || 0;
+            const conversionRate = parseFloat(document.getElementById('conversionRate').value) || 0;
+            const avgCommission = parseFloat(document.getElementById('avgCommission').value) || 0;
+            const interestedLeads = parseFloat(document.getElementById('interestedLeads').value) || 0;
+            const closeRate = parseFloat(document.getElementById('closeRate').value) || 0;
+            const totalDealsYear = parseFloat(document.getElementById('totalDealsYear').value) || 0;
+            const repeatRate = parseFloat(document.getElementById('repeatRate').value) || 0;
+
+            // BUCKET 1 CALCULATIONS
+            const missedLeads = Math.round(totalLeads * (1 - captureRate / 100));
+            const targetCapture = Math.round(totalLeads * 0.95);
+            const extraLeads = targetCapture - Math.round(totalLeads * captureRate / 100);
+            const extraDeals1 = (extraLeads * conversionRate / 100).toFixed(1);
+            const monthlyLeak1 = Math.round(extraDeals1 * avgCommission);
+            const annualLeak1 = monthlyLeak1 * 12;
+
+            document.getElementById('missedLeads').textContent = missedLeads + ' leads lost/month';
+            document.getElementById('extraLeads').textContent = '+' + extraLeads + ' leads/month';
+            document.getElementById('extraDeals1').textContent = '+' + extraDeals1 + ' deals/month';
+            document.getElementById('monthlyLeak1').textContent = formatCurrency(monthlyLeak1) + '/month';
+            document.getElementById('annualLeak1').textContent = formatCurrency(annualLeak1);
+
+            // BUCKET 2 CALCULATIONS
+            const currentDeals = (interestedLeads * closeRate / 100).toFixed(1);
+            const targetDeals = (interestedLeads * 0.20).toFixed(1);
+            const extraDeals2 = (targetDeals - currentDeals).toFixed(1);
+            const monthlyLeak2 = Math.round(extraDeals2 * avgCommission);
+            const annualLeak2 = monthlyLeak2 * 12;
+
+            document.getElementById('currentDeals').textContent = currentDeals + ' deals/month';
+            document.getElementById('targetDeals').textContent = targetDeals + ' deals/month';
+            document.getElementById('extraDeals2').textContent = '+' + extraDeals2 + ' deals/month';
+            document.getElementById('monthlyLeak2').textContent = formatCurrency(monthlyLeak2) + '/month';
+            document.getElementById('annualLeak2').textContent = formatCurrency(annualLeak2);
+
+            // BUCKET 3 CALCULATIONS
+            const currentRepeat = Math.round(totalDealsYear * repeatRate / 100);
+            const targetRepeat = Math.round(totalDealsYear * 0.30);
+            const extraDeals3 = targetRepeat - currentRepeat;
+            const annualLeak3 = extraDeals3 * avgCommission;
+
+            document.getElementById('currentRepeat').textContent = currentRepeat + ' deals';
+            document.getElementById('targetRepeat').textContent = targetRepeat + ' deals';
+            document.getElementById('extraDeals3').textContent = '+' + extraDeals3 + ' deals/year';
+            document.getElementById('annualLeak3Direct').textContent = formatCurrency(annualLeak3);
+            document.getElementById('annualLeak3').textContent = formatCurrency(annualLeak3);
+
+            // SUMMARY CALCULATIONS
+            const totalLeakage = annualLeak1 + annualLeak2 + annualLeak3;
+            const conservativeCapture = Math.round(totalLeakage * 0.30);
+            const tier1Cost = 420000;
+            const roi = (conservativeCapture / tier1Cost).toFixed(1);
+
+            document.getElementById('summaryLeak1').textContent = formatCurrency(annualLeak1);
+            document.getElementById('summaryLeak2').textContent = formatCurrency(annualLeak2);
+            document.getElementById('summaryLeak3').textContent = formatCurrency(annualLeak3);
+            document.getElementById('totalLeakage').textContent = formatCurrency(totalLeakage);
+            document.getElementById('conservativeCapture').textContent = formatCurrency(conservativeCapture);
+            document.getElementById('roiCalc').textContent = roi + 'x';
+        }
+
+        // Calculate on page load
+        calculate();
+    </script>
+</body>
+</html>
