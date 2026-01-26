@@ -4,6 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revenue Leakage Calculator - Aheri Systems</title>
+    
+    <!-- Password Protection Script -->
+    <script>
+        // Set your password here
+        const CALCULATOR_PASSWORD = "AheriRevenue2025";
+        
+        // Check if user is authenticated
+        const isAuthenticated = sessionStorage.getItem('calculatorAuth') === 'true';
+        
+        if (!isAuthenticated) {
+            const enteredPassword = prompt("Enter password to access the Revenue Leakage Calculator:");
+            
+            if (enteredPassword === CALCULATOR_PASSWORD) {
+                sessionStorage.setItem('calculatorAuth', 'true');
+            } else {
+                alert("Incorrect password. Access denied.");
+                window.location.href = "https://aherisystems.com";
+            }
+        }
+    </script>
+    
+    <style>
+        /* Rest of your CSS here */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Leakage Calculator - Aheri Systems</title>
     <style>
         * {
             margin: 0;
