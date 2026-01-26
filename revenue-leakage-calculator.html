@@ -8,7 +8,7 @@
     <!-- Password Protection Script -->
     <script>
         // Set your password here
-        const CALCULATOR_PASSWORD = "AheriRevenue2025";
+        const CALCULATOR_PASSWORD = "AheriRevenue2026";
         
         // Check if user is authenticated
         const isAuthenticated = sessionStorage.getItem('calculatorAuth') === 'true';
@@ -316,24 +316,6 @@
             color: #fca5a5;
         }
 
-        .print-btn {
-            background: white;
-            color: #1e293b;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            margin-top: 30px;
-            transition: all 0.3s;
-        }
-
-        .print-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
         @media print {
             body {
                 background: white;
@@ -526,22 +508,120 @@
                     </div>
                 </div>
 
-                <div class="roi-section">
-                    <h3>🎯 Total Annual Revenue Leakage</h3>
-                    <div class="roi-value" id="totalLeakage" style="font-size: 3.5rem; margin: 20px 0; color: #fca5a5;">KES 0</div>
+                <div class="total-leak-box">
+                    <h3>🚨 TOTAL ANNUAL REVENUE LEAKAGE</h3>
+                    <div class="massive-number" id="totalLeakage">KES 0</div>
+                    <p style="opacity: 0.9; margin-top: 15px; font-size: 1.1rem;">That's <span id="weeklyLeak" style="font-weight: 700; color: #fca5a5;">KES 0</span> leaking every single week</p>
+                </div>
+
+                <!-- TIER RECOMMENDATION SECTION -->
+                <div class="tier-recommendation">
+                    <h2 style="text-align: center; margin-bottom: 30px;">💡 Recommended Solution: Revenue Command System™</h2>
                     
-                    <div class="roi-calc">
-                        <div class="roi-item">
-                            <label>Tier 1 Investment (Annual)</label>
-                            <div class="roi-value">KES 420K</div>
+                    <div class="tier-cards">
+                        <!-- TIER 1 -->
+                        <div class="tier-card recommended" id="tier1Card">
+                            <div class="tier-badge">RECOMMENDED START</div>
+                            <h3>Tier 1: Revenue Capture</h3>
+                            <div class="tier-price">KES 35,000<span>/month</span></div>
+                            <div class="tier-annual">KES 420,000/year</div>
+                            
+                            <div class="tier-tackles">
+                                <strong>Tackles:</strong> Bucket 1 Leakage
+                            </div>
+                            
+                            <div class="tier-features">
+                                <div class="feature">✓ 24/7 Lead Response</div>
+                                <div class="feature">✓ Multi-Channel Capture</div>
+                                <div class="feature">✓ Auto Follow-Up</div>
+                                <div class="feature">✓ CRM Centralization</div>
+                                <div class="feature">✓ Weekly Reports</div>
+                            </div>
+                            
+                            <div class="tier-roi">
+                                <div class="roi-label">Conservative Recovery (30% of Bucket 1):</div>
+                                <div class="roi-amount" id="tier1Recovery">KES 0</div>
+                                <div class="roi-multiple">ROI: <span id="tier1ROI">0x</span></div>
+                            </div>
                         </div>
-                        <div class="roi-item">
-                            <label>Conservative Capture (30%)</label>
-                            <div class="roi-value" id="conservativeCapture">KES 0</div>
+
+                        <!-- TIER 2 -->
+                        <div class="tier-card" id="tier2Card">
+                            <div class="tier-badge secondary">MONTH 3-4 UPGRADE</div>
+                            <h3>Tier 2: Revenue Acceleration</h3>
+                            <div class="tier-price">KES 60,000<span>/month</span></div>
+                            <div class="tier-annual">KES 720,000/year</div>
+                            
+                            <div class="tier-tackles">
+                                <strong>Tackles:</strong> Buckets 1 + 2 Leakage
+                            </div>
+                            
+                            <div class="tier-features">
+                                <div class="feature">✓ Everything in Tier 1, PLUS:</div>
+                                <div class="feature">✓ Pipeline Management</div>
+                                <div class="feature">✓ Deal Stagnation Alerts</div>
+                                <div class="feature">✓ Quote Automation</div>
+                                <div class="feature">✓ Revenue Forecasting</div>
+                            </div>
+                            
+                            <div class="tier-roi">
+                                <div class="roi-label">Conservative Recovery (30% of Buckets 1+2):</div>
+                                <div class="roi-amount" id="tier2Recovery">KES 0</div>
+                                <div class="roi-multiple">ROI: <span id="tier2ROI">0x</span></div>
+                            </div>
                         </div>
-                        <div class="roi-item">
-                            <label>ROI (Year 1)</label>
-                            <div class="roi-value" id="roiCalc">0x</div>
+
+                        <!-- TIER 3 -->
+                        <div class="tier-card" id="tier3Card">
+                            <div class="tier-badge secondary">MONTH 6+ UPGRADE</div>
+                            <h3>Tier 3: Revenue Optimization</h3>
+                            <div class="tier-price">KES 100,000<span>/month</span></div>
+                            <div class="tier-annual">KES 1,200,000/year</div>
+                            
+                            <div class="tier-tackles">
+                                <strong>Tackles:</strong> All 3 Buckets
+                            </div>
+                            
+                            <div class="tier-features">
+                                <div class="feature">✓ Everything in Tier 2, PLUS:</div>
+                                <div class="feature">✓ Client Retention System</div>
+                                <div class="feature">✓ 24/7 AI Support</div>
+                                <div class="feature">✓ Upsell Automation</div>
+                                <div class="feature">✓ Referral Engine</div>
+                            </div>
+                            
+                            <div class="tier-roi">
+                                <div class="roi-label">Conservative Recovery (30% of All Buckets):</div>
+                                <div class="roi-amount" id="tier3Recovery">KES 0</div>
+                                <div class="roi-multiple">ROI: <span id="tier3ROI">0x</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="next-step">
+                        <h3>📅 Recommended Action Plan</h3>
+                        <div class="action-timeline">
+                            <div class="action-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <strong>Weeks 1-2: Start with Tier 1</strong>
+                                    <p>Plug Bucket 1 leakage (fastest ROI). Setup & go live in 2 weeks.</p>
+                                </div>
+                            </div>
+                            <div class="action-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <strong>Month 1-2: Optimize & Monitor</strong>
+                                    <p>Track results. You should see 1-2 extra deals from better lead capture.</p>
+                                </div>
+                            </div>
+                            <div class="action-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <strong>Month 3-4: Upgrade to Tier 2</strong>
+                                    <p>Add pipeline management to close more existing leads.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -616,16 +696,38 @@
 
             // SUMMARY CALCULATIONS
             const totalLeakage = annualLeak1 + annualLeak2 + annualLeak3;
-            const conservativeCapture = Math.round(totalLeakage * 0.30);
-            const tier1Cost = 420000;
-            const roi = (conservativeCapture / tier1Cost).toFixed(1);
+            const weeklyLeak = Math.round(totalLeakage / 52);
+            
+            // TIER ROI CALCULATIONS
+            const tier1Cost = 420000; // KES 35K/month * 12
+            const tier2Cost = 720000; // KES 60K/month * 12
+            const tier3Cost = 1200000; // KES 100K/month * 12
+            
+            // Conservative recovery (30% of leakage)
+            const tier1Recovery = Math.round(annualLeak1 * 0.30);
+            const tier2Recovery = Math.round((annualLeak1 + annualLeak2) * 0.30);
+            const tier3Recovery = Math.round(totalLeakage * 0.30);
+            
+            // ROI multiples
+            const tier1ROI = tier1Recovery > 0 ? (tier1Recovery / tier1Cost).toFixed(1) : 0;
+            const tier2ROI = tier2Recovery > 0 ? (tier2Recovery / tier2Cost).toFixed(1) : 0;
+            const tier3ROI = tier3Recovery > 0 ? (tier3Recovery / tier3Cost).toFixed(1) : 0;
 
             document.getElementById('summaryLeak1').textContent = formatCurrency(annualLeak1);
             document.getElementById('summaryLeak2').textContent = formatCurrency(annualLeak2);
             document.getElementById('summaryLeak3').textContent = formatCurrency(annualLeak3);
             document.getElementById('totalLeakage').textContent = formatCurrency(totalLeakage);
-            document.getElementById('conservativeCapture').textContent = formatCurrency(conservativeCapture);
-            document.getElementById('roiCalc').textContent = roi + 'x';
+            document.getElementById('weeklyLeak').textContent = formatCurrency(weeklyLeak);
+            
+            // Update tier cards
+            document.getElementById('tier1Recovery').textContent = formatCurrency(tier1Recovery);
+            document.getElementById('tier1ROI').textContent = tier1ROI + 'x';
+            
+            document.getElementById('tier2Recovery').textContent = formatCurrency(tier2Recovery);
+            document.getElementById('tier2ROI').textContent = tier2ROI + 'x';
+            
+            document.getElementById('tier3Recovery').textContent = formatCurrency(tier3Recovery);
+            document.getElementById('tier3ROI').textContent = tier3ROI + 'x';
         }
 
         // Calculate on page load
