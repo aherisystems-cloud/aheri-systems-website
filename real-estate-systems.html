@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- SEO Meta Tags -->
+    <title>Real Estate Revenue System | Stop Losing Commissions | Aheri Systems Kenya</title>
+    <meta name="description" content="Revenue Command System for real estate agencies, brokers, and developers in Kenya. Stop losing commissions to slow follow-up. Capture every lead, track every deal, automate follow-up. From KES 7,500/month.">
+    <meta name="keywords" content="real estate CRM Kenya, property management system, real estate automation Kenya, lead management for agencies, commission tracking system, real estate pipeline management, property sales automation">
+    <meta name="author" content="Aheri Systems">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Real Estate Revenue System | Stop Losing Commissions | Aheri Systems">
+    <meta property="og:description" content="Stop losing commissions to disorganized follow-up. Complete revenue system for real estate agencies in Kenya. From KES 7,500/month.">
+    <meta property="og:url" content="https://aherisystems.com/real-estate-systems">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://aherisystems.com/real-estate-systems">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Real Estate Revenue Command System",
+      "provider": {
+        "@type": "Organization",
+        "name": "Aheri Systems",
+        "url": "https://aherisystems.com"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Kenya"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Real Estate Agencies, Brokers, Developers, Property Managers"
+      },
+      "description": "Complete revenue system that captures every property inquiry, automates follow-up, tracks deals, and maximizes commission revenue for real estate businesses in Kenya and Africa."
+    }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #112837;
+            background: white;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(17, 40, 55, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #112837;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #112837;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #3bc3b7;
+        }
+
+        .nav-menu .btn-primary {
+            background: #3bc3b7;
+            color: white;
+            padding: 0.7rem 1.8rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .nav-menu .btn-primary:hover {
+            background: #2da89e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 195, 183, 0.3);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
+            color: white;
+            padding: 120px 20px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(59, 195, 183, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 195, 183, 0.12) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            background: rgba(59, 195, 183, 0.15);
+            color: #3bc3b7;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 28px;
+            border: 1px solid rgba(59, 195, 183, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 28px;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1.05;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3bc3b7 0%, #5fd4c7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.45rem;
+            max-width: 920px;
+            margin: 0 auto 45px;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary {
+            background: #3bc3b7;
+            color: white;
+            box-shadow: 0 4px 14px rgba(59, 195, 183, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: #2da89e;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(59, 195, 183, 0.5);
+        }
+
+        .btn-large {
+            padding: 20px 48px;
+            font-size: 1.15rem;
+        }
+
+        /* Stats Section */
+        .stats-bar {
+            background: white;
+            padding: 40px 20px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+            margin-top: -30px;
+            position: relative;
+            z-index: 2;
+            border-radius: 16px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #3bc3b7;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #64748b;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 90px 20px;
+        }
+
+        .section-alt {
+            background: #f8fafc;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 18px;
+            font-weight: 800;
+            color: #112837;
+            line-height: 1.2;
+        }
+
+        .section-header p {
+            font-size: 1.25rem;
+            color: #64748b;
+            max-width: 820px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Problem Section */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .problem-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            border: 2px solid #fee2e2;
+            border-left: 5px solid #ef4444;
+            transition: all 0.3s ease;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 35px rgba(239, 68, 68, 0.12);
+        }
+
+        .problem-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .problem-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #991b1b;
+            font-weight: 700;
+        }
+
+        .problem-card p {
+            color: #64748b;
+            line-height: 1.75;
+            font-size: 1rem;
+        }
+
+        .cost-callout {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 3px solid #ef4444;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            margin: 50px auto;
+            max-width: 800px;
+        }
+
+        .cost-callout h3 {
+            font-size: 1.8rem;
+            color: #991b1b;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .cost-callout p {
+            font-size: 1.25rem;
+            color: #7f1d1d;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        .cost-highlight {
+            font-size: 2rem;
+            color: #dc2626;
+            font-weight: 900;
+        }
+
+        /* Solution Section */
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .solution-box {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            border: 2px solid #e2e8f0;
+            border-left: 5px solid #3bc3b7;
+            transition: all 0.3s ease;
+        }
+
+        .solution-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(59, 195, 183, 0.15);
+            border-color: #3bc3b7;
+        }
+
+        .solution-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(59, 195, 183, 0.4);
+        }
+
+        .solution-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #112837;
+            font-weight: 700;
+        }
+
+        .solution-box p {
+            color: #64748b;
+            line-height: 1.75;
+            font-size: 1rem;
+        }
+
+        .solution-box ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .solution-box ul li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        .solution-box ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #3bc3b7;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Outcomes Section */
+        .outcomes-section {
+            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
+            color: white;
+            padding: 90px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .outcomes-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(59, 195, 183, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 195, 183, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .outcomes-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .outcome-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 35px;
+            transition: all 0.3s ease;
+        }
+
+        .outcome-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-5px);
+        }
+
+        .outcome-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color: #3bc3b7;
+        }
+
+        .outcome-card p {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        /* Tiers Preview */
+        .tiers-preview {
+            padding: 90px 20px;
+            background: white;
+        }
+
+        .tiers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .tier-card {
+            background: white;
+            border-radius: 20px;
+            padding: 45px;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tier-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #3bc3b7 0%, #2da89e 100%);
+        }
+
+        .tier-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(59, 195, 183, 0.2);
+            border-color: #3bc3b7;
+        }
+
+        .tier-badge {
+            display: inline-block;
+            background: #3bc3b7;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .tier-badge.recommended {
+            background: #f59e0b;
+        }
+
+        .tier-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            color: #112837;
+            font-weight: 800;
+        }
+
+        .tier-tagline {
+            color: #3bc3b7;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .tier-price {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #112837;
+            margin: 20px 0;
+        }
+
+        .tier-price-note {
+            font-size: 0.85rem;
+            color: #64748b;
+            font-style: italic;
+        }
+
+        .tier-features {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .tier-features li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        .tier-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #3bc3b7;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .tier-cta {
+            margin-top: 30px;
+        }
+
+        .btn-block {
+            width: 100%;
+            text-align: center;
+            display: block;
+        }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            padding: 90px 20px;
+            background: #f8fafc;
+        }
+
+        .testimonial-box {
+            max-width: 900px;
+            margin: 50px auto 0;
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border-left: 5px solid #3bc3b7;
+        }
+
+        .testimonial-text {
+            font-size: 1.25rem;
+            font-style: italic;
+            color: #112837;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: #3bc3b7;
+            font-size: 1.05rem;
+        }
+
+        .testimonial-role {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
+            color: white;
+            padding: 90px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content h2 {
+            font-size: 3.2rem;
+            margin-bottom: 22px;
+            font-weight: 800;
+            line-height: 1.15;
+        }
+
+        .cta-content p {
+            font-size: 1.35rem;
+            max-width: 780px;
+            margin: 0 auto 35px;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .cta-note {
+            margin-top: 25px;
+            font-size: 0.95rem;
+            opacity: 0.82;
+        }
+
+        /* Footer */
+        .footer {
+            background: #112837;
+            color: white;
+            padding: 70px 20px 35px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 45px;
+            margin-bottom: 45px;
+        }
+
+        .footer h3 {
+            font-size: 1.6rem;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+        .logo-systems {
+            color: #3bc3b7;
+        }
+
+        .footer-tagline {
+            color: #3bc3b7;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footer h4 {
+            margin-bottom: 18px;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer ul li a {
+            color: rgba(255, 255, 255, 0.82);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .footer ul li a:hover {
+            color: #3bc3b7;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 35px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 968px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 10px rgba(17, 40, 55, 0.1);
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.15rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .problem-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .outcomes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tiers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-box {
+                padding: 35px 25px;
+            }
+
+            .cta-content h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/aheri-logo.png" alt="AHERI SYSTEMS">
+                </a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn-primary" target="_blank">Book Free Audit</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-eyebrow">🏢 Built for Real Estate</div>
+                <h1>
+                    Stop Losing Commissions to<br>
+                    <span class="gradient-text">Disorganized Follow-Up</span>
+                </h1>
+                <p class="hero-subtitle">
+                    The Real Estate Revenue Command System captures every property inquiry, automates follow-up, tracks every deal, and turns scattered leads into closed sales—automatically.
+                </p>
+                <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary btn-large" target="_blank">Book Free Revenue Audit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">60 sec</span>
+                    <span class="stat-label">Response Time (Even at 2 AM)</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Lead Capture Rate</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3X</span>
+                    <span class="stat-label">More Viewings Booked</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">40-60%</span>
+                    <span class="stat-label">More Closings in 6 Months</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Problem Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Real Estate <span class="gradient-text">Revenue Leakage Crisis</span></h2>
+                <p>Every day, agencies lose thousands in commissions—not from lack of leads, but from broken systems</p>
+            </div>
+
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <span class="problem-icon">📱</span>
+                    <h3>Leads Scattered Everywhere</h3>
+                    <p>Property inquiries come through Facebook, WhatsApp, your website, walk-ins, and referrals—but they live in 10 different places. By the time you follow up (if you follow up), they've signed with a competitor who responded in 5 minutes.</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-icon">⏰</span>
+                    <h3>Slow Response = Lost Commissions</h3>
+                    <p>You respond in 4 hours. Your competitor responds in 4 minutes. Guess who gets the listing? Every hour of delay costs you deals—and after-hours inquiries? Those are gone forever.</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-icon">👻</span>
+                    <h3>Agents Forget Follow-Ups</h3>
+                    <p>Hot leads go cold because agents forget to follow up on Day 3, Day 7, Day 14. No system means no accountability, and no accountability means lost deals sitting in WhatsApp chat history.</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-icon">📉</span>
+                    <h3>Zero Pipeline Visibility</h3>
+                    <p>How many leads came in last week? How many viewings were scheduled? How many offers were made? You don't actually know—and that's costing you predictable revenue growth.</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-icon">💸</span>
+                    <h3>No After-Sale System</h3>
+                    <p>You close a deal, celebrate, then move on. That client could have referred 5 more deals or bought again in 2 years—but you never stayed in touch. Every closed deal should become 3 more deals.</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-icon">🤷</span>
+                    <h3>Manual Everything</h3>
+                    <p>Agents spend 70% of their time on admin: data entry, scheduling viewings, sending follow-ups, updating spreadsheets. That's time NOT closing deals or building relationships.</p>
+                </div>
+            </div>
+
+            <div class="cost-callout">
+                <h3>The Real Cost of Revenue Leakage</h3>
+                <p>
+                    Every lost inquiry is <span class="cost-highlight">KES 50,000-500,000</span> in commissions walking away.<br>
+                    Every forgotten follow-up is a deal your competitor will close.<br>
+                    Every disorganized agent is revenue you can't scale.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Real Estate <span class="gradient-text">Revenue Command System™</span></h2>
+                <p>We fix what happens after the property inquiry arrives</p>
+            </div>
+
+            <div class="solution-grid">
+                <div class="solution-box">
+                    <div class="solution-number">1</div>
+                    <h3>Capture Every Inquiry</h3>
+                    <p><strong>The Problem We Fix:</strong> Leads scattered across 10 channels with no central tracking.</p>
+                    <ul>
+                        <li>All inquiries (website, WhatsApp, Facebook, calls) flow into one system</li>
+                        <li>AI responds within 60 seconds, 24/7—even at 2 AM on Sunday</li>
+                        <li>Leads automatically assigned to the right agent</li>
+                        <li>No inquiry ever falls through the cracks again</li>
+                    </ul>
+                </div>
+
+                <div class="solution-box">
+                    <div class="solution-number">2</div>
+                    <h3>Automate Follow-Up</h3>
+                    <p><strong>The Problem We Fix:</strong> Agents forget follow-ups and deals go cold.</p>
+                    <ul>
+                        <li>Automated SMS/WhatsApp/email sequences: Day 1, Day 3, Day 7, Day 14</li>
+                        <li>Agents get reminders for calls and viewings</li>
+                        <li>System alerts when deals stall or go silent</li>
+                        <li>Consistent follow-up that never depends on memory</li>
+                    </ul>
+                </div>
+
+                <div class="solution-box">
+                    <div class="solution-number">3</div>
+                    <h3>Track Every Deal</h3>
+                    <p><strong>The Problem We Fix:</strong> Zero visibility into pipeline and forecasting.</p>
+                    <ul>
+                        <li>Visual pipeline: New Lead → Viewing → Offer → Negotiation → Closed</li>
+                        <li>Know exactly what's closing this week vs. next month</li>
+                        <li>Stagnation alerts when deals go quiet</li>
+                        <li>Commission tracking built-in</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes Section -->
+    <section class="outcomes-section">
+        <div class="outcomes-content">
+            <div class="container">
+                <div class="section-header">
+                    <h2 style="color: white;">What Changes When You <span class="gradient-text">Stop Revenue Leakage</span></h2>
+                    <p style="color: rgba(255,255,255,0.9);">Real outcomes agencies see within 90 days</p>
+                </div>
+
+                <div class="outcomes-grid">
+                    <div class="outcome-card">
+                        <h3>Respond to Every Inquiry in 60 Seconds</h3>
+                        <p>Even while you're sleeping, in meetings, or with clients. AI captures and responds instantly—24/7, no exceptions.</p>
+                    </div>
+
+                    <div class="outcome-card">
+                        <h3>3X More Viewings Booked Per Week</h3>
+                        <p>Instant response + automated follow-up = more qualified prospects actually scheduling and showing up for viewings.</p>
+                    </div>
+
+                    <div class="outcome-card">
+                        <h3>Every Agent Follows Up Consistently</h3>
+                        <p>No more relying on memory or hoping agents "remember to follow up." System enforces it automatically.</p>
+                    </div>
+
+                    <div class="outcome-card">
+                        <h3>Complete Visibility: Know What's Closing</h3>
+                        <p>Real-time dashboard shows exactly which deals are hot, which are stalling, and what's closing this month. Zero guesswork.</p>
+                    </div>
+
+                    <div class="outcome-card">
+                        <h3>Reactivate Past Clients</h3>
+                        <p>30% of your business becomes repeat + referral instead of expensive new acquisition. Automated check-ins bring clients back.</p>
+                    </div>
+
+                    <div class="outcome-card">
+                        <h3>Protect Every Commission</h3>
+                        <p>No deals lost to disorganization, forgotten follow-ups, or slow response. Your pipeline becomes predictable and scalable.</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 60px;">
+                    <p style="font-size: 1.3rem; opacity: 0.95; max-width: 800px; margin: 0 auto 30px;">
+                        <strong>Most agencies see 40-60% more closings within 6 months</strong>—not from more leads, but from better management of the leads they already have.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tiers Preview -->
+    <section class="tiers-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Three Tiers for <span class="gradient-text">Every Agency Size</span></h2>
+                <p>From solo agents to multi-location agencies—we have a system that fits</p>
+            </div>
+
+            <div class="tiers-grid">
+                <!-- Tier 1 -->
+                <div class="tier-card">
+                    <div class="tier-badge">STARTER</div>
+                    <h3>Solo Agent System</h3>
+                    <p class="tier-tagline">Get organized, stop losing leads, look professional</p>
+                    <div class="tier-price">From KES 7,500/mo</div>
+                    <p class="tier-price-note">Perfect for 1-5 agents</p>
+                    <ul class="tier-features">
+                        <li>Smart property website with lead capture</li>
+                        <li>World-class CRM (Basic setup)</li>
+                        <li>Pipeline visibility (see every lead & deal)</li>
+                        <li>Automated follow-up reminders</li>
+                        <li>Basic lead assignment</li>
+                        <li>Weekly revenue reports</li>
+                    </ul>
+                    <div class="tier-cta">
+                        <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary btn-block" target="_blank">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Tier 2 -->
+                <div class="tier-card">
+                    <div class="tier-badge recommended">GROWTH (RECOMMENDED)</div>
+                    <h3>Agency Growth System</h3>
+                    <p class="tier-tagline">Automate everything, scale without chaos</p>
+                    <div class="tier-price">From KES 35,000/mo</div>
+                    <p class="tier-price-note">Perfect for 5-20 agents</p>
+                    <ul class="tier-features">
+                        <li><strong>Everything in Starter, PLUS:</strong></li>
+                        <li>Multi-channel lead capture (Facebook, WhatsApp, all sources)</li>
+                        <li>24/7 AI instant response system</li>
+                        <li>Automated follow-up sequences (email, SMS, WhatsApp)</li>
+                        <li>World-class CRM (Professional setup, multi-user)</li>
+                        <li>Deal pipeline with stagnation alerts</li>
+                        <li>Team performance tracking</li>
+                        <li>Quote/proposal automation</li>
+                        <li>Commission tracking</li>
+                        <li>Monthly strategy session</li>
+                    </ul>
+                    <div class="tier-cta">
+                        <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary btn-block" target="_blank">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="tier-card">
+                    <div class="tier-badge">ENTERPRISE</div>
+                    <h3>Enterprise Revenue System</h3>
+                    <p class="tier-tagline">Full automation + lead generation + past client reactivation</p>
+                    <div class="tier-price">From KES 75,000/mo</div>
+                    <p class="tier-price-note">Perfect for 20+ agents or multi-location</p>
+                    <ul class="tier-features">
+                        <li><strong>Everything in Growth, PLUS:</strong></li>
+                        <li>Full lead generation (Google/Facebook ads managed)</li>
+                        <li>World-class CRM (Enterprise setup, unlimited users, custom integrations)</li>
+                        <li>Advanced analytics & revenue forecasting</li>
+                        <li>Past client reactivation campaigns</li>
+                        <li>Referral program automation</li>
+                        <li>Multi-location management</li>
+                        <li>Custom integrations</li>
+                        <li>Dedicated account manager</li>
+                        <li>Quarterly business reviews</li>
+                    </ul>
+                    <div class="tier-cta">
+                        <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary btn-block" target="_blank">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <p style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 25px; border-radius: 12px; color: #78350f; font-size: 0.98rem; line-height: 1.7;">
+                    <strong style="color: #92400e;">💡 About Pricing:</strong> Prices shown are starting points. Final investment depends on your team size, number of locations, and system complexity. Book a Free Revenue Audit to get your exact pricing.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trusted by Real Estate <span class="gradient-text">Professionals Across Kenya</span></h2>
+                <p>Built specifically for African real estate markets</p>
+            </div>
+
+            <div class="testimonial-box">
+                <p class="testimonial-text">
+                    "We were losing so many deals because leads would come in after hours and we couldn't respond fast enough. Now, every single inquiry gets an instant response—even at midnight on a Sunday. Our viewing bookings have tripled, and we actually know what's in our pipeline now. The system paid for itself in the first month."
+                </p>
+                <p class="testimonial-author">Real Estate Agency in Nairobi</p>
+                <p class="testimonial-role">5-10 Agents, Using Growth System</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <div class="container">
+                <h2>Ready to Stop Losing Commissions?</h2>
+                <p>
+                    Book a Free Revenue Audit and see exactly where property inquiries are slipping through, what it's costing you in commissions, and which system stops the leakage.
+                </p>
+                <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary btn-large" target="_blank">Book Your Free Revenue Audit</a>
+                <p class="cta-note">45-minute audit • See your exact leakage points • Get custom recommendation • Zero pressure</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AHERI <span class="logo-systems">SYSTEMS</span></h3>
+                    <p class="footer-tagline">Revenue Growth Systems for Africa</p>
+                    <p>We build, monitor, and optimize revenue systems for real estate agencies and private clinics across Kenya, Africa, and emerging markets.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Industries</h4>
+                    <ul>
+                        <li><a href="real-estate-systems.html">Real Estate Agencies</a></li>
+                        <li><a href="clinic-systems.html">Private Clinics</a></li>
+                        <li><a href="services.html">All Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <ul>
+                        <li><a href="mailto:rita@aherisystems.com">rita@aherisystems.com</a></li>
+                        <li><a href="tel:+254716850772">+254 716 850 772</a></li>
+                        <li>Nairobi, Kenya</li>
+                        <li><a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" target="_blank">Book Free Audit</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aheri Systems. All rights reserved. | Built for Africa, Ready for the World</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (mobileMenuBtn && navMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.nav-wrapper')) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
