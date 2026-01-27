@@ -3,21 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
     
     <!-- SEO Meta Tags -->
-    <title>About Aheri Systems | Revenue Growth Systems & CRM Automation Experts</title>
-    <meta name="description" content="Aheri Systems builds managed revenue growth systems that stop lead leakage and turn every opportunity into revenue. We capture leads, accelerate deals, and retain customers automatically—24/7.">
-    <meta name="keywords" content="revenue growth systems, CRM automation, lead management, sales pipeline automation, customer retention systems, AI lead response, business automation, revenue operations">
+    <title>About Aheri Systems | Revenue Systems for Real Estate & Clinics | Kenya</title>
+    <meta name="description" content="Aheri Systems builds Revenue Command Systems for real estate and healthcare businesses across Africa. Stop revenue leakage, create predictable growth. Founded by systems architect Rita Ndubi.">
+    <meta name="keywords" content="Aheri Systems about, Rita Ndubi, revenue systems Africa, real estate CRM Kenya, clinic management system, systems automation Africa">
+    <meta name="author" content="Aheri Systems">
     
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="About Aheri Systems | Revenue Growth Systems & CRM Automation">
-    <meta property="og:description" content="We fix what happens after the lead comes in. Managed systems that capture every lead, close every deal, and keep customers buying—automatically.">
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
+    <meta property="og:title" content="About Aheri Systems | Revenue Systems Partner for Africa">
+    <meta property="og:description" content="Founded by systems architect Rita Ndubi. We build Revenue Command Systems for real estate and healthcare businesses across Africa.">
+    <meta property="og:url" content="https://aherisystems.com/about">
+    <meta property="og:site_name" content="Aheri Systems">
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://aherisystems.com/about">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Aheri Systems",
+      "url": "https://aherisystems.com",
+      "logo": "https://aherisystems.com/assets/images/aheri-logo.png",
+      "description": "Revenue Command Systems for real estate agencies and private clinics in Kenya and Africa",
+      "founder": {
+        "@type": "Person",
+        "name": "Rita Ndubi",
+        "jobTitle": "Founder & Chief Systems Architect",
+        "description": "Systems strategist and automation specialist focused on stopping revenue leakage for African businesses"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nairobi",
+        "addressCountry": "KE"
+      },
+      "areaServed": ["Kenya", "East Africa", "Africa"],
+      "knowsAbout": ["Revenue Systems", "Real Estate CRM", "Healthcare Management Systems", "Sales Automation", "Patient Retention"]
+    }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -30,21 +68,23 @@
             line-height: 1.6;
             color: #112837;
             background: white;
-        }
-
-        /* Navigation Styles */
-        .navbar {
-            background: white;
-            box-shadow: 0 2px 10px rgba(17, 40, 55, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(17, 40, 55, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .nav-wrapper {
@@ -99,9 +139,10 @@
         .nav-menu .btn-primary {
             background: #3bc3b7;
             color: white;
-            padding: 0.6rem 1.5rem;
+            padding: 0.7rem 1.8rem;
             border-radius: 8px;
             transition: all 0.3s;
+            font-weight: 600;
         }
 
         .nav-menu .btn-primary:hover {
@@ -115,7 +156,6 @@
             background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
             color: white;
             padding: 100px 20px 80px;
-            text-align: center;
             position: relative;
             overflow: hidden;
         }
@@ -128,36 +168,23 @@
             right: 0;
             bottom: 0;
             background: 
-                radial-gradient(circle at 20% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(59, 195, 183, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 20% 50%, rgba(59, 195, 183, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 195, 183, 0.12) 0%, transparent 50%);
             pointer-events: none;
         }
 
-        .hero > .container {
+        .hero-content {
             position: relative;
             z-index: 1;
+            text-align: center;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 25px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        .hero-subtitle {
-            font-size: 1.4rem;
-            max-width: 800px;
-            margin: 0 auto 20px;
-            opacity: 0.95;
-            line-height: 1.7;
-        }
-
-        .hero-emphasis {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #3bc3b7;
-            margin-top: 15px;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
         }
 
         .gradient-text {
@@ -167,12 +194,75 @@
             background-clip: text;
         }
 
-        /* Sections */
-        .section {
-            padding: 80px 20px;
+        .hero p {
+            font-size: 1.35rem;
+            max-width: 880px;
+            margin: 0 auto;
+            opacity: 0.95;
+            line-height: 1.7;
         }
 
-        .section-alt {
+        /* Mission Section */
+        .mission-section {
+            padding: 90px 20px;
+            background: white;
+        }
+
+        .mission-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .mission-badge {
+            display: inline-block;
+            background: rgba(59, 195, 183, 0.1);
+            color: #3bc3b7;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .mission-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 800;
+            color: #112837;
+            line-height: 1.3;
+        }
+
+        .mission-quote {
+            font-size: 1.4rem;
+            color: #3bc3b7;
+            font-weight: 600;
+            margin-bottom: 40px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .mission-expanded {
+            text-align: left;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #475569;
+        }
+
+        .mission-expanded p {
+            margin-bottom: 25px;
+        }
+
+        .mission-expanded strong {
+            color: #112837;
+            font-weight: 700;
+        }
+
+        /* Why We Exist Section */
+        .why-section {
+            padding: 90px 20px;
             background: #f8fafc;
         }
 
@@ -181,193 +271,161 @@
             margin-bottom: 60px;
         }
 
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 800;
             color: #112837;
-            font-weight: 700;
-            letter-spacing: -0.02em;
+            line-height: 1.2;
         }
 
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: #64748b;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Story Section */
-        .story-content {
+        .why-content {
             max-width: 900px;
             margin: 0 auto;
         }
 
-        .story-content p {
+        .why-intro {
             font-size: 1.15rem;
             line-height: 1.9;
-            color: #4a5568;
-            margin-bottom: 25px;
+            color: #475569;
+            margin-bottom: 50px;
         }
 
-        .story-content p strong {
-            color: #112837;
-            font-weight: 600;
-        }
-
-        .highlight-box {
-            background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
-            color: white;
-            padding: 40px;
+        .industry-problem {
+            background: white;
             border-radius: 16px;
-            margin: 40px 0;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-left: 5px solid #3bc3b7;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .industry-problem h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #112837;
+            font-weight: 700;
+        }
+
+        .industry-problem p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #475569;
+            margin-bottom: 15px;
+        }
+
+        .callout {
+            background: linear-gradient(135deg, #f0fdfc 0%, #ccfbf1 100%);
+            border: 2px solid #3bc3b7;
+            border-radius: 12px;
+            padding: 35px;
+            margin-top: 50px;
             text-align: center;
         }
 
-        .highlight-box h3 {
-            font-size: 1.6rem;
-            margin-bottom: 20px;
+        .callout p {
+            font-size: 1.35rem;
+            color: #0f766e;
             font-weight: 700;
-        }
-
-        .highlight-box p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin: 0;
-            color: white;
-        }
-
-        /* Problem Statement */
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 40px 0;
-        }
-
-        .problem-item {
-            background: white;
-            border-left: 4px solid #ef4444;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        .problem-item h4 {
-            color: #ef4444;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .problem-item p {
-            color: #64748b;
-            font-size: 1rem;
             line-height: 1.6;
         }
 
-        /* Solution Grid */
-        .solution-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 40px 0;
-        }
-
-        .solution-item {
+        /* Approach Section */
+        .approach-section {
+            padding: 90px 20px;
             background: white;
-            border-left: 4px solid #3bc3b7;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
         }
 
-        .solution-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .solution-item h4 {
-            color: #3bc3b7;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .solution-item p {
-            color: #64748b;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        /* Mission/Vision Cards */
-        .values-grid {
+        .approach-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: 1fr;
+            gap: 50px;
             margin-top: 50px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .value-card {
-            background: white;
+        .approach-principle {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
             border-radius: 16px;
-            padding: 40px;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s ease;
+            padding: 45px;
+            border: 2px solid #e2e8f0;
             position: relative;
             overflow: hidden;
         }
 
-        .value-card::before {
+        .approach-principle::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #3bc3b7 0%, #2da89e 100%);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(180deg, #3bc3b7 0%, #2da89e 100%);
         }
 
-        .value-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .value-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(59, 195, 183, 0.15);
-        }
-
-        .value-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .value-card h3 {
+        .principle-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: #3bc3b7;
+            color: white;
+            border-radius: 50%;
             font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .approach-principle h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
             color: #112837;
-            font-weight: 700;
+            font-weight: 800;
         }
 
-        .value-card p {
-            color: #64748b;
-            line-height: 1.8;
+        .approach-principle p {
             font-size: 1.05rem;
+            line-height: 1.8;
+            color: #475569;
+            margin-bottom: 20px;
         }
 
-        /* Stats Section */
-        .stats-section {
+        .approach-principle ul {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .approach-principle ul li {
+            padding: 10px 0;
+            padding-left: 35px;
+            position: relative;
+            color: #475569;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .approach-principle ul li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #3bc3b7;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        /* Founder Section */
+        .founder-section {
+            padding: 90px 20px;
             background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
             color: white;
-            padding: 80px 20px;
             position: relative;
             overflow: hidden;
         }
 
-        .stats-section::before {
+        .founder-section::before {
             content: '';
             position: absolute;
             top: 0;
@@ -375,144 +433,363 @@
             right: 0;
             bottom: 0;
             background: 
-                radial-gradient(circle at 30% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 70% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 20% 50%, rgba(59, 195, 183, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 195, 183, 0.08) 0%, transparent 50%);
             pointer-events: none;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
+        .founder-content {
             position: relative;
             z-index: 1;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: #3bc3b7;
-            display: block;
-            line-height: 1;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        /* Founder Section */
-        .founder-section {
             max-width: 1000px;
-            margin: 50px auto 0;
+            margin: 0 auto;
+        }
+
+        .founder-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .founder-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .founder-grid {
             display: grid;
-            grid-template-columns: 320px 1fr;
-            gap: 50px;
+            grid-template-columns: 300px 1fr;
+            gap: 60px;
             align-items: start;
         }
 
         .founder-image {
             position: relative;
-            padding: 10px;
-            border-radius: 20px;
-            background: linear-gradient(135deg, #3bc3b7, #2da89e);
         }
 
-        .founder-image img {
+        .founder-photo {
             width: 100%;
-            aspect-ratio: 1;
-            object-fit: cover;
+            height: 350px;
+            background: linear-gradient(135deg, #2da89e 0%, #3bc3b7 100%);
             border-radius: 16px;
-            display: block;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            border: 4px solid rgba(255, 255, 255, 0.1);
         }
 
-        .founder-content h3 {
-            font-size: 1.8rem;
+        .founder-bio {
+            padding-top: 20px;
+        }
+
+        .founder-name {
+            font-size: 2.2rem;
+            font-weight: 800;
             margin-bottom: 8px;
-            color: #112837;
-            font-weight: 700;
+            color: white;
         }
 
         .founder-title {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: #3bc3b7;
             font-weight: 600;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
-        .founder-content p {
-            font-size: 1.1rem;
+        .founder-bio p {
+            font-size: 1.05rem;
             line-height: 1.9;
-            color: #4a5568;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            opacity: 0.95;
         }
 
-        .founder-content p strong {
-            color: #112837;
-            font-weight: 600;
+        .founder-philosophy {
+            background: rgba(59, 195, 183, 0.15);
+            border-left: 4px solid #3bc3b7;
+            padding: 25px 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 1.15rem;
+            line-height: 1.7;
         }
 
-        /* Approach Section */
-        .approach-grid {
+        .founder-background {
+            margin-top: 35px;
+        }
+
+        .founder-background h4 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #3bc3b7;
+            font-weight: 700;
+        }
+
+        .founder-background ul {
+            list-style: none;
+        }
+
+        .founder-background ul li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .founder-background ul li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3bc3b7;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: 90px 20px;
+            background: #f8fafc;
+        }
+
+        .values-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
         }
 
-        .approach-card {
+        .value-card {
             background: white;
             border-radius: 16px;
-            padding: 35px;
-            border: 1px solid #e2e8f0;
-            border-left: 5px solid #3bc3b7;
+            padding: 40px;
+            border: 2px solid #e2e8f0;
             transition: all 0.3s ease;
         }
 
-        .approach-card:hover {
+        .value-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(59, 195, 183, 0.15);
+            box-shadow: 0 12px 35px rgba(59, 195, 183, 0.15);
+            border-color: #3bc3b7;
         }
 
-        .approach-number {
-            display: inline-block;
-            background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
-            color: white;
-            width: 45px;
-            height: 45px;
-            border-radius: 12px;
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #112837;
+            font-weight: 800;
+        }
+
+        .value-card p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #475569;
+        }
+
+        /* Who We Serve Section */
+        .serve-section {
+            padding: 90px 20px;
+            background: white;
+        }
+
+        .serve-intro {
             text-align: center;
-            line-height: 45px;
-            font-weight: 700;
-            margin-bottom: 20px;
             font-size: 1.3rem;
-            box-shadow: 0 4px 12px rgba(59, 195, 183, 0.3);
+            color: #112837;
+            font-weight: 700;
+            margin-bottom: 50px;
         }
 
-        .approach-card h3 {
+        .serve-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .serve-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 16px;
+            padding: 45px;
+            border: 2px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .serve-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #3bc3b7 0%, #2da89e 100%);
+        }
+
+        .serve-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .serve-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #112837;
+            font-weight: 800;
+        }
+
+        .serve-card ul {
+            list-style: none;
+        }
+
+        .serve-card ul li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #475569;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .serve-card ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #3bc3b7;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .serve-callout {
+            background: linear-gradient(135deg, #f0fdfc 0%, #ccfbf1 100%);
+            border: 2px solid #3bc3b7;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .serve-callout h4 {
             font-size: 1.4rem;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             color: #112837;
             font-weight: 700;
         }
 
-        .approach-card p {
-            color: #64748b;
-            line-height: 1.7;
+        .serve-callout p {
+            font-size: 1.1rem;
+            color: #0f766e;
+            line-height: 1.8;
+        }
+
+        /* Location Section */
+        .location-section {
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .location-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .location-details {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .location-details strong {
+            color: #3bc3b7;
+            font-weight: 700;
+        }
+
+        /* Guarantee Section */
+        .guarantee-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f0fdfc 0%, #ccfbf1 100%);
+        }
+
+        .guarantee-box {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border: 3px solid #3bc3b7;
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .guarantee-badge {
+            display: inline-block;
+            background: #3bc3b7;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .guarantee-box h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #112837;
+            font-weight: 800;
+        }
+
+        .guarantee-list {
+            text-align: left;
+            max-width: 650px;
+            margin: 30px auto;
+            list-style: none;
+        }
+
+        .guarantee-list li {
+            padding: 15px 0;
+            padding-left: 40px;
+            position: relative;
+            color: #115e59;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .guarantee-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #3bc3b7;
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+
+        .guarantee-note {
+            margin-top: 30px;
             font-size: 1.05rem;
+            color: #0f766e;
+            font-weight: 600;
+            line-height: 1.7;
         }
 
         /* CTA Section */
         .cta-section {
             background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
             color: white;
+            padding: 90px 20px;
             text-align: center;
-            padding: 80px 20px;
             position: relative;
             overflow: hidden;
         }
@@ -536,61 +813,66 @@
         }
 
         .cta-content h2 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
+            font-size: 3.2rem;
+            margin-bottom: 22px;
+            font-weight: 800;
+            line-height: 1.15;
         }
 
         .cta-content p {
-            font-size: 1.3rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
+            font-size: 1.35rem;
+            max-width: 780px;
+            margin: 0 auto 35px;
             opacity: 0.95;
+            line-height: 1.7;
         }
 
         .btn {
             display: inline-block;
-            padding: 18px 40px;
+            padding: 20px 48px;
             border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
+        }
+
+        .btn-primary {
             background: #3bc3b7;
             color: white;
             box-shadow: 0 4px 14px rgba(59, 195, 183, 0.4);
         }
 
-        .btn:hover {
+        .btn-primary:hover {
             background: #2da89e;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(59, 195, 183, 0.5);
         }
 
         .cta-note {
-            margin-top: 20px;
+            margin-top: 25px;
             font-size: 0.95rem;
-            opacity: 0.8;
+            opacity: 0.82;
         }
 
         /* Footer */
         .footer {
             background: #112837;
             color: white;
-            padding: 60px 20px 30px;
+            padding: 70px 20px 35px;
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            gap: 45px;
+            margin-bottom: 45px;
         }
 
         .footer h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-size: 1.6rem;
+            margin-bottom: 18px;
+            font-weight: 700;
         }
 
         .logo-systems {
@@ -600,19 +882,20 @@
         .footer-tagline {
             color: #3bc3b7;
             font-size: 0.95rem;
-            margin-bottom: 10px;
-            font-weight: 500;
+            margin-bottom: 12px;
+            font-weight: 600;
         }
 
         .footer-col p {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.82);
             line-height: 1.8;
             font-size: 0.95rem;
         }
 
         .footer h4 {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
+            margin-bottom: 18px;
+            font-size: 1.15rem;
+            font-weight: 600;
         }
 
         .footer ul {
@@ -620,11 +903,11 @@
         }
 
         .footer ul li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .footer ul li a {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.82);
             text-decoration: none;
             transition: color 0.3s;
             font-size: 0.95rem;
@@ -635,18 +918,18 @@
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 35px;
             text-align: center;
         }
 
         .footer-bottom p {
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.65);
             font-size: 0.9rem;
         }
 
         /* Mobile Responsiveness */
-        @media (max-width: 768px) {
+        @media (max-width: 968px) {
             .mobile-menu-btn {
                 display: flex;
             }
@@ -672,42 +955,36 @@
                 font-size: 2.2rem;
             }
 
-            .hero-subtitle {
+            .hero p {
                 font-size: 1.1rem;
             }
 
-            .section-title {
+            .section-header h2 {
                 font-size: 2rem;
             }
 
-            .section-subtitle {
-                font-size: 1.05rem;
+            .mission-content h2 {
+                font-size: 2rem;
             }
 
-            .founder-section {
+            .mission-quote {
+                font-size: 1.15rem;
+            }
+
+            .mission-expanded {
+                font-size: 1rem;
+            }
+
+            .founder-grid {
                 grid-template-columns: 1fr;
-                gap: 30px;
-                text-align: center;
+                gap: 40px;
             }
 
-            .founder-image {
-                max-width: 300px;
-                margin: 0 auto;
+            .founder-photo {
+                height: 300px;
             }
 
-            .cta-content h2 {
-                font-size: 2rem;
-            }
-
-            .cta-content p {
-                font-size: 1.1rem;
-            }
-
-            .stat-number {
-                font-size: 2.5rem;
-            }
-
-            .approach-grid {
+            .serve-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -715,9 +992,20 @@
                 grid-template-columns: 1fr;
             }
 
-            .problem-grid,
-            .solution-grid {
-                grid-template-columns: 1fr;
+            .guarantee-box {
+                padding: 35px 25px;
+            }
+
+            .guarantee-box h2 {
+                font-size: 1.9rem;
+            }
+
+            .cta-content h2 {
+                font-size: 2.2rem;
+            }
+
+            .cta-content p {
+                font-size: 1.15rem;
             }
         }
     </style>
@@ -728,7 +1016,7 @@
         <div class="container">
             <div class="nav-wrapper">
                 <a href="index.html" class="logo">
-                    <img src="assets/images/aheri-logo.png" alt="AHERI SYSTEMS - Revenue Growth Systems">
+                    <img src="assets/images/aheri-logo.png" alt="AHERI SYSTEMS">
                 </a>
                 <button class="mobile-menu-btn" aria-label="Toggle menu">
                     <span></span>
@@ -737,13 +1025,11 @@
                 </button>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="case-studies.html">Case Studies</a></li>
-                    <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
-                    <li><a href="https://ritandubi.com/resources" target="_blank">Resources & Tools</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn-primary" target="_blank">Book Free Audit</a></li>
+                    <li><a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn-primary" target="_blank">Book Free Audit</a></li>
                 </ul>
             </div>
         </div>
@@ -751,221 +1037,327 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1>We Stop Revenue <span class="gradient-text">Leakage</span></h1>
-            <p class="hero-subtitle">
-                Most businesses don't have a marketing problem. They have a revenue execution problem. Leads come in, but follow-up is slow, deals stall, and customers disappear after the first sale.
-            </p>
-            <p class="hero-emphasis">Aheri Systems fixes what happens after the lead arrives.</p>
-        </div>
-    </section>
-
-    <!-- The Problem We Solve -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">The Revenue <span class="gradient-text">Problem</span></h2>
-                <p class="section-subtitle">You're paying for leads, but losing money after they arrive</p>
-            </div>
-            
-            <div class="problem-grid">
-                <div class="problem-item">
-                    <h4>Leads Fall Through the Cracks</h4>
-                    <p>Scattered across WhatsApp, email, website forms, and ads with no central tracking. Response times measured in hours instead of minutes.</p>
-                </div>
-                <div class="problem-item">
-                    <h4>Deals Stall Without Visibility</h4>
-                    <p>Sales reps forget follow-ups. Quotes take hours to send. No alerts when deals go cold. No real pipeline forecasting.</p>
-                </div>
-                <div class="problem-item">
-                    <h4>Customers Buy Once and Disappear</h4>
-                    <p>No structured retention, reactivation, or upsell process. Customer complaints get lost. Referrals happen by accident, not by design.</p>
-                </div>
-            </div>
-
-            <div class="story-content" style="margin-top: 60px;">
+        <div class="hero-content">
+            <div class="container">
+                <h1>
+                    We Build Revenue Systems<br>
+                    <span class="gradient-text">That Work in Africa</span>
+                </h1>
                 <p>
-                    We've seen it hundreds of times: businesses invest thousands in marketing and ads, generate quality leads, but then lose 30-50% of potential revenue because <strong>what happens after the lead comes in is broken.</strong>
-                </p>
-                <p>
-                    The problem isn't the people. It's the lack of systems. Everything is manual, disconnected, and chaotic. There's no enforcement, no automation, no real-time visibility into where revenue is leaking.
+                    Founded by systems architects who understand what it takes to stop revenue leakage in emerging markets
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Our Solution -->
-    <section class="section section-alt">
+    <!-- Mission Section -->
+    <section class="mission-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our <span class="gradient-text">Solution</span></h2>
-                <p class="section-subtitle">Managed revenue growth systems that run 24/7</p>
-            </div>
-
-            <div class="highlight-box">
-                <h3>We don't run ads. We don't do content.</h3>
-                <p>
-                    We own the systems, automation, and discipline that ensure every lead is captured and followed up, every deal is tracked and pushed forward, and every customer is retained, re-engaged, and monetized.
+            <div class="mission-content">
+                <div class="mission-badge">Our Mission</div>
+                <h2>Eliminate Revenue Leakage Across Africa</h2>
+                <p class="mission-quote">
+                    "To eliminate revenue leakage for real estate and healthcare businesses across Africa by building systems that capture every opportunity, close every deal, and create predictable growth."
                 </p>
-            </div>
-
-            <div class="solution-grid">
-                <div class="solution-item">
-                    <h4>✓ Capture Every Lead</h4>
-                    <p>Multi-channel lead capture with instant AI response. No lead falls through the cracks—24/7 automated follow-up across email, SMS, and WhatsApp.</p>
-                </div>
-                <div class="solution-item">
-                    <h4>✓ Accelerate Every Deal</h4>
-                    <p>Full CRM enforcement with automated reminders, quote generation, and deal stagnation alerts. Pipeline visibility and revenue forecasting in real-time.</p>
-                </div>
-                <div class="solution-item">
-                    <h4>✓ Retain Every Customer</h4>
-                    <p>Automated retention campaigns, 24/7 AI support, customer health scoring, and systematic upsell triggers. Turn one-time buyers into repeat customers.</p>
+                <div class="mission-expanded">
+                    <p>
+                        Most businesses in Africa don't fail because of bad products or lack of customers. They fail because they can't systematically convert opportunities into revenue.
+                    </p>
+                    <p>
+                        Leads get lost. Follow-ups don't happen. Deals stall. Customers disappear after the first transaction.
+                    </p>
+                    <p>
+                        <strong>We fix that.</strong>
+                    </p>
+                    <p>
+                        We build done-for-you Revenue Command Systems that capture every lead, enforce consistent follow-up, and create repeatable growth—specifically for real estate agencies and private clinics.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Story -->
-    <section class="section">
+    <!-- Why We Exist Section -->
+    <section class="why-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our <span class="gradient-text">Story</span></h2>
-                <p class="section-subtitle">Built from real business pain, designed for real revenue growth</p>
+                <h2>The Problem We Were <span class="gradient-text">Built to Solve</span></h2>
             </div>
-            <div class="story-content">
-                <p>
-                    Aheri Systems was founded on a simple observation: <strong>businesses aren't failing because of bad products or lack of marketing. They're failing because they can't execute on revenue after the lead arrives.</strong>
+            <div class="why-content">
+                <p class="why-intro">
+                    We started Aheri Systems after seeing the same pattern repeat across Africa:
                 </p>
-                <p>
-                    We watched companies spend thousands generating leads, only to lose them because response times were too slow. We saw sales teams with messy pipelines and zero visibility into what was actually happening. We witnessed customer complaints disappearing into WhatsApp black holes while businesses wondered why retention was so low.
-                </p>
-                <p>
-                    The gap was clear: businesses needed someone to own revenue execution end-to-end—not just sell them tools or build systems and disappear, but actually manage, monitor, and optimize those systems continuously.
-                </p>
-                <p>
-                    So we built the Revenue Command System™: a managed, tiered approach to fixing revenue leakage at every stage—lead capture, deal acceleration, and customer retention. We combine CRM automation, AI integration, and ongoing optimization to turn revenue into a predictable, scalable process.
-                </p>
-                <p>
-                    Today, we help businesses globally stop losing revenue and start building predictable growth through intelligent, managed automation systems.
-                </p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Mission & Vision -->
-    <section class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">What We <span class="gradient-text">Stand For</span></h2>
-            </div>
-            <div class="values-grid">
-                <div class="value-card">
-                    <span class="value-icon">🎯</span>
-                    <h3>Our Mission</h3>
-                    <p>To stop revenue leakage and create predictable growth for businesses worldwide. We build and manage the systems that ensure every lead, deal, and customer opportunity is captured, tracked, and monetized—automatically.</p>
+                <div class="industry-problem">
+                    <h3>In Real Estate:</h3>
+                    <p>
+                        Talented agents losing commissions—not because they couldn't close deals, but because leads were scattered across WhatsApp, forgotten follow-ups killed momentum, and pipeline chaos made it impossible to scale.
+                    </p>
                 </div>
-                <div class="value-card">
-                    <span class="value-icon">🚀</span>
-                    <h3>Our Vision</h3>
-                    <p>A world where businesses no longer lose revenue due to poor execution. Where every company has access to enterprise-level revenue operations systems—regardless of size, industry, or location.</p>
+
+                <div class="industry-problem">
+                    <h3>In Healthcare:</h3>
+                    <p>
+                        Professional clinics struggling to grow—not because they provided poor care, but because inquiries went unanswered after hours, appointment no-shows destroyed revenue predictability, and manual admin consumed 70% of staff time.
+                    </p>
                 </div>
-                <div class="value-card">
-                    <span class="value-icon">⚡</span>
-                    <h3>How We're Different</h3>
-                    <p>We're not a vendor. We're your Revenue Operations Partner. We don't just build systems and walk away—we own them, monitor them, enforce them, and optimize them monthly based on real data and results.</p>
+
+                <div class="callout">
+                    <p>
+                        The businesses weren't failing. <strong>The systems were.</strong>
+                    </p>
+                    <p style="margin-top: 15px; font-size: 1.25rem;">
+                        So we built the systems.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
+    <!-- Our Approach Section -->
+    <section class="approach-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" style="color: white;">Impact <span class="gradient-text">Delivered</span></h2>
-                <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.9);">Real results from managed revenue systems</p>
+                <h2>How We're <span class="gradient-text">Different</span></h2>
             </div>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">Minutes</span>
-                    <span class="stat-label">Response Time (Not Hours)</span>
+
+            <div class="approach-grid">
+                <div class="approach-principle">
+                    <div class="principle-number">1</div>
+                    <h3>Industry-Specific Systems</h3>
+                    <p>
+                        We don't build generic CRMs. We build systems specifically for real estate and healthcare because we understand the unique revenue cycles, pain points, and operational challenges of these industries.
+                    </p>
+                    <p>
+                        A real estate agency needs instant lead response, deal pipeline tracking, and commission protection.
+                    </p>
+                    <p>
+                        A private clinic needs automated booking, appointment reminders, and patient retention.
+                    </p>
+                    <p>
+                        <strong>Generic tools fail because they don't understand these nuances. We do.</strong>
+                    </p>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Lead Capture Rate</span>
+
+                <div class="approach-principle">
+                    <div class="principle-number">2</div>
+                    <h3>Managed Service Partnership</h3>
+                    <p>
+                        We're not a software vendor. We don't sell you tools and disappear.
+                    </p>
+                    <p>
+                        We build your system, train your team, monitor performance continuously, and optimize monthly based on real data.
+                    </p>
+                    <p>
+                        <strong>You get a partner who's invested in your success—not a one-time setup.</strong>
+                    </p>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">AI Automation</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">Real-Time</span>
-                    <span class="stat-label">Pipeline Visibility</span>
+
+                <div class="approach-principle">
+                    <div class="principle-number">3</div>
+                    <h3>Built for Africa</h3>
+                    <p>
+                        Our systems work with the tools you already use (WhatsApp, M-Pesa, local channels) and account for African market dynamics.
+                    </p>
+                    <p>We understand:</p>
+                    <ul>
+                        <li>Mobile-first behavior</li>
+                        <li>Local payment systems</li>
+                        <li>Communication preferences</li>
+                        <li>Market-specific challenges</li>
+                    </ul>
+                    <p style="margin-top: 20px;">
+                        <strong>We're not importing Western systems. We're building solutions that work here.</strong>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Founder Section -->
-    <section class="section">
+    <section class="founder-section">
+        <div class="founder-content">
+            <div class="container">
+                <div class="founder-header">
+                    <h2>Meet the <span class="gradient-text">Founder</span></h2>
+                </div>
+
+                <div class="founder-grid">
+                    <div class="founder-image">
+                        <div class="founder-photo">
+                            [Professional photo of Rita Ndubi will be placed here]
+                        </div>
+                    </div>
+
+                    <div class="founder-bio">
+                        <h3 class="founder-name">Rita Ndubi</h3>
+                        <p class="founder-title">Founder & Chief Systems Architect</p>
+
+                        <p>
+                            Rita Ndubi founded Aheri Systems after years of witnessing talented professionals lose revenue to disorganized operations.
+                        </p>
+
+                        <p>
+                            As a systems strategist and automation specialist, she saw a clear pattern: businesses across Africa had demand but lacked the systems to convert that demand into consistent revenue.
+                        </p>
+
+                        <p>
+                            Real estate agencies were drowning in WhatsApp chaos. Private clinics were losing patients to poor follow-up. Manual processes were killing growth.
+                        </p>
+
+                        <p>
+                            <strong>The solution wasn't more marketing. It was better systems.</strong>
+                        </p>
+
+                        <p>
+                            Today, Rita leads Aheri Systems' mission to build Revenue Command Systems that work specifically for African businesses—combining automation, AI, and industry-specific workflows to stop revenue leakage and create predictable growth.
+                        </p>
+
+                        <div class="founder-philosophy">
+                            "You don't need more leads. You need to stop losing the ones you have."
+                        </div>
+
+                        <div class="founder-background">
+                            <h4>Background</h4>
+                            <ul>
+                                <li>Systems & automation specialist</li>
+                                <li>Deep experience in real estate and healthcare operations</li>
+                                <li>Expert in CRM implementation and revenue operations</li>
+                                <li>Focused exclusively on African and emerging markets</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Meet the <span class="gradient-text">Founder</span></h2>
-                <p class="section-subtitle">Building systems that eliminate revenue leakage</p>
+                <h2>What We <span class="gradient-text">Stand For</span></h2>
             </div>
-            <div class="founder-section">
-                <div class="founder-image">
-                    <img src="assets/images/rita-ndubi.jpg" alt="Rita Ndubi – Founder, Aheri Systems">
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Clarity Over Complexity</h3>
+                    <p>
+                        Systems should simplify your business, not complicate it. We build solutions that make sense and work immediately—no bloat, no confusion.
+                    </p>
                 </div>
-                <div class="founder-content">
-                    <h3>Rita Ndubi</h3>
-                    <p class="founder-title">Founder & Chief Revenue Systems Architect</p>
+
+                <div class="value-card">
+                    <h3>Results Over Hype</h3>
                     <p>
-                        Rita Ndubi is a revenue operations specialist and CRM automation expert with a singular mission: help businesses stop losing money after the lead comes in.
+                        We don't make promises we can't keep. We guarantee visibility and organization within 90 days or we work for free.
                     </p>
+                </div>
+
+                <div class="value-card">
+                    <h3>Partnership Over Transactions</h3>
                     <p>
-                        After witnessing countless businesses struggle with disconnected tools, manual follow-up processes, and zero visibility into their revenue pipeline, Rita founded Aheri Systems to bring enterprise-level revenue operations to growing businesses worldwide.
+                        We're not selling software. We're building long-term partnerships with businesses committed to systematic growth.
                     </p>
+                </div>
+
+                <div class="value-card">
+                    <h3>Africa-First Thinking</h3>
                     <p>
-                        <strong>Her approach is simple:</strong> Fix the three critical points where revenue leaks—lead capture, deal acceleration, and customer retention. Build automated systems that enforce discipline and accountability. Monitor and optimize continuously based on real data.
+                        We build for African markets first, then global. Our systems account for local dynamics, tools, and business practices.
                     </p>
+                </div>
+
+                <div class="value-card">
+                    <h3>Systems Thinking</h3>
                     <p>
-                        Through the Revenue Command System™, Rita and the Aheri team have helped businesses across industries reclaim lost revenue, shorten sales cycles, and build predictable growth engines that run 24/7.
+                        Problems aren't fixed with quick hacks. They're fixed with systematic solutions that work consistently, scale cleanly, and compound over time.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Approach -->
-    <section class="section section-alt">
+    <!-- Who We Serve Section -->
+    <section class="serve-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">How We <span class="gradient-text">Work</span></h2>
-                <p class="section-subtitle">A proven process for stopping revenue leakage</p>
+                <h2>Who We <span class="gradient-text">Serve</span></h2>
             </div>
-            <div class="approach-grid">
-                <div class="approach-card">
-                    <span class="approach-number">1</span>
-                    <h3>Revenue Leakage Audit</h3>
-                    <p>We map your current lead-to-cash flow and identify exactly where money is leaking. Free initial audit shows you what's broken and what it's costing you.</p>
+
+            <p class="serve-intro">We work exclusively with two industries:</p>
+
+            <div class="serve-grid">
+                <div class="serve-card">
+                    <span class="serve-icon">🏢</span>
+                    <h3>Real Estate</h3>
+                    <ul>
+                        <li>Agencies (5-50 agents)</li>
+                        <li>Independent brokers</li>
+                        <li>Property developers</li>
+                        <li>Property management firms</li>
+                        <li>Across Kenya, East Africa, and emerging markets</li>
+                    </ul>
                 </div>
-                <div class="approach-card">
-                    <span class="approach-number">2</span>
-                    <h3>System Design</h3>
-                    <p>We design the exact workflows, automation, and enforcement mechanisms your business needs—tailored to your industry, team structure, and revenue goals.</p>
+
+                <div class="serve-card">
+                    <span class="serve-icon">⚕️</span>
+                    <h3>Private Clinics</h3>
+                    <ul>
+                        <li>Medical practices</li>
+                        <li>Aesthetic/cosmetic clinics</li>
+                        <li>Wellness centers</li>
+                        <li>Multi-provider practices</li>
+                        <li>Across Kenya, East Africa, and emerging markets</li>
+                    </ul>
                 </div>
-                <div class="approach-card">
-                    <span class="approach-number">3</span>
-                    <h3>Build & Activate</h3>
-                    <p>Systems are implemented, integrated with your existing tools, tested thoroughly, and activated. Your team is trained and ready to execute with full support.</p>
-                </div>
-                <div class="approach-card">
-                    <span class="approach-number">4</span>
-                    <h3>Ongoing Management</h3>
-                    <p>We continuously monitor performance, send weekly/monthly reports, and optimize your systems based on real data. This is managed service, not one-time setup.</p>
-                </div>
+            </div>
+
+            <div class="serve-callout">
+                <h4>Why just two industries?</h4>
+                <p>
+                    Because going deep beats going wide. We'd rather be the best at solving real estate and healthcare revenue leakage than be mediocre at solving everything.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section">
+        <div class="container">
+            <div class="location-content">
+                <h2>Where We're Based</h2>
+                <p class="location-details">
+                    <strong>Headquarters:</strong> Nairobi, Kenya<br>
+                    <strong>Service Area:</strong> Africa + Global Emerging Markets
+                </p>
+                <p style="margin-top: 20px; opacity: 0.9; font-size: 1.1rem;">
+                    We're proudly African-based and Africa-focused—but our systems work globally.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-box">
+                <div class="guarantee-badge">Our Guarantee</div>
+                <h2>The 90-Day Revenue Visibility Guarantee</h2>
+                <p style="font-size: 1.15rem; color: #0f766e; margin-bottom: 20px;">
+                    Within 90 days of system activation, you'll have:
+                </p>
+                <ul class="guarantee-list">
+                    <li>100% visibility into every inquiry and customer</li>
+                    <li>Automated follow-up running 24/7</li>
+                    <li>Complete pipeline or appointment tracking</li>
+                    <li>Weekly performance reports in your inbox</li>
+                    <li>Measurable improvement in conversions</li>
+                </ul>
+                <p class="guarantee-note">
+                    If we don't deliver this level of visibility and organization, we work for free until we do.<br>
+                    <strong>Not because we're worried—but because we've done this before and know it works.</strong>
+                </p>
             </div>
         </div>
     </section>
@@ -974,10 +1366,15 @@
     <section class="cta-section">
         <div class="cta-content">
             <div class="container">
-                <h2>Ready to Stop Losing Revenue?</h2>
-                <p>Get a free Revenue Leakage Audit and discover exactly where leads, deals, and customers are slipping through the cracks.</p>
-                <a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" class="btn" target="_blank">Book Your Free Revenue Audit</a>
-                <p class="cta-note">Free 45-minute audit • Identify your biggest leaks • No pressure, just insights</p>
+                <h2>Ready to Stop Revenue Leakage?</h2>
+                <p>
+                    Whether you're a real estate agency losing commissions to disorganization or a private clinic struggling with appointment no-shows, we can help.
+                </p>
+                <p style="font-size: 1.2rem; margin-top: 15px;">
+                    Book a Free Revenue Audit and see exactly where your revenue is leaking—and which system stops it.
+                </p>
+                <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary" target="_blank">Book Your Free Revenue Audit</a>
+                <p class="cta-note">45-minute audit • Zero commitment • Honest analysis</p>
             </div>
         </div>
     </section>
@@ -988,40 +1385,38 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>AHERI <span class="logo-systems">SYSTEMS</span></h3>
-                    <p class="footer-tagline">Revenue Growth Systems That Work 24/7</p>
-                    <p>We build, monitor, and optimize the systems that turn leads into revenue—consistently. Serving businesses globally.</p>
+                    <p class="footer-tagline">Revenue Growth Systems for Africa</p>
+                    <p>We build, monitor, and optimize revenue systems for real estate agencies and private clinics across Kenya, Africa, and emerging markets.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Services</h4>
+                    <h4>Industries</h4>
                     <ul>
-                        <li><a href="services.html">Revenue Capture System™</a></li>
-                        <li><a href="services.html">Revenue Acceleration System™</a></li>
-                        <li><a href="services.html">Revenue Optimization System™</a></li>
-                        <li><a href="services.html">CRM Automation</a></li>
-                        <li><a href="services.html">AI Integration</a></li>
+                        <li><a href="real-estate-systems.html">Real Estate Agencies</a></li>
+                        <li><a href="clinic-systems.html">Private Clinics</a></li>
+                        <li><a href="services.html">All Services</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
                         <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
-                        <li><a href="https://ritandubi.com/resources" target="_blank">Resources & Tools</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Get In Touch</h4>
-                    <ul class="contact-info">
+                    <ul>
                         <li><a href="mailto:rita@aherisystems.com">rita@aherisystems.com</a></li>
                         <li><a href="tel:+254716850772">+254 716 850 772</a></li>
-                        <li><a href="https://bookings.ritandubi.com/#/discovery-introduction-meeting" target="_blank">Book a Free Revenue Audit</a></li>
+                        <li>Nairobi, Kenya</li>
+                        <li><a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" target="_blank">Book Free Audit</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Aheri Systems. All rights reserved. | Revenue Operations Partner for Growing Businesses Worldwide</p>
+                <p>&copy; 2026 Aheri Systems. All rights reserved. | Built for Africa, Ready for the World</p>
             </div>
         </div>
     </footer>
@@ -1031,16 +1426,33 @@
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navMenu = document.querySelector('.nav-menu');
 
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+        if (mobileMenuBtn && navMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.nav-wrapper')) {
-                navMenu.classList.remove('active');
-            }
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.nav-wrapper')) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    navMenu.classList.remove('active');
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
     </script>
+
 </body>
 </html>
