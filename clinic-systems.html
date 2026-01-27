@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Private Clinic Revenue System | Stop Patient No-Shows | Aheri Systems Kenya</title>
+    <meta name="description" content="Revenue Command System for private medical, aesthetic, and wellness clinics. Automated booking, patient retention, and appointment reminders.">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "serviceType": "Private Clinic Revenue Command System",
+      "provider": {
+        "@type": "Organization",
+        "name": "Aheri Systems",
+        "url": "https://aherisystems.com"
+      }
+    }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #112837;
+            background: white;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(17, 40, 55, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #112837;
+            border-radius: 3px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #112837;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #3bc3b7;
+        }
+
+        .nav-menu .btn-primary {
+            background: #3bc3b7;
+            color: white;
+            padding: 0.7rem 1.8rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .nav-menu .btn-primary:hover {
+            background: #2da89e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 195, 183, 0.3);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
+            color: white;
+            padding: 120px 20px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(59, 195, 183, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 195, 183, 0.12) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            background: rgba(59, 195, 183, 0.15);
+            color: #3bc3b7;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 28px;
+            border: 1px solid rgba(59, 195, 183, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 28px;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1.05;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3bc3b7 0%, #5fd4c7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.45rem;
+            max-width: 920px;
+            margin: 0 auto 45px;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary {
+            background: #3bc3b7;
+            color: white;
+            box-shadow: 0 4px 14px rgba(59, 195, 183, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: #2da89e;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(59, 195, 183, 0.5);
+        }
+
+        .btn-large {
+            padding: 20px 48px;
+            font-size: 1.15rem;
+        }
+
+        /* Stats Section */
+        .stats-bar {
+            background: white;
+            padding: 40px 20px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+            margin-top: -30px;
+            position: relative;
+            z-index: 2;
+            border-radius: 16px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #3bc3b7;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #64748b;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 90px 20px;
+        }
+
+        .section-alt {
+            background: #f8fafc;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 18px;
+            font-weight: 800;
+            color: #112837;
+            line-height: 1.2;
+        }
+
+        .section-header p {
+            font-size: 1.25rem;
+            color: #64748b;
+            max-width: 820px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Problem Section */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .problem-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            border: 2px solid #fee2e2;
+            border-left: 5px solid #ef4444;
+            transition: all 0.3s ease;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 35px rgba(239, 68, 68, 0.12);
+        }
+
+        .problem-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .problem-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #991b1b;
+            font-weight: 700;
+        }
+
+        .problem-card p {
+            color: #64748b;
+            line-height: 1.75;
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        .cost-callout {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 3px solid #ef4444;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            margin: 50px auto;
+            max-width: 800px;
+        }
+
+        .cost-callout p {
+            font-size: 1.25rem;
+            color: #7f1d1d;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        /* Solution Section */
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .solution-box {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            border: 2px solid #e2e8f0;
+            border-left: 5px solid #3bc3b7;
+            transition: all 0.3s ease;
+        }
+
+        .solution-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(59, 195, 183, 0.15);
+            border-color: #3bc3b7;
+        }
+
+        .solution-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(59, 195, 183, 0.4);
+        }
+
+        .solution-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #112837;
+            font-weight: 700;
+        }
+
+        .solution-tag {
+            display: inline-block;
+            background: rgba(59, 195, 183, 0.1);
+            color: #2da89e;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .solution-box p {
+            color: #64748b;
+            line-height: 1.75;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .solution-box ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .solution-box ul li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        .solution-box ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #3bc3b7;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .solution-result {
+            margin-top: 20px;
+            padding: 15px 20px;
+            background: rgba(59, 195, 183, 0.08);
+            border-radius: 8px;
+            font-weight: 600;
+            color: #2da89e;
+            font-size: 0.95rem;
+        }
+
+        /* Outcomes Section */
+        .outcomes-section {
+            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
+            color: white;
+            padding: 90px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .outcomes-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(59, 195, 183, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 195, 183, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .outcomes-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .outcome-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 35px;
+            transition: all 0.3s ease;
+        }
+
+        .outcome-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-5px);
+        }
+
+        .outcome-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .impact-stat {
+            background: rgba(255, 255, 255, 0.12);
+            border: 2px solid #3bc3b7;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .impact-stat p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .impact-stat strong {
+            color: #3bc3b7;
+        }
+
+        /* Tiers Section */
+        .tiers-section {
+            padding: 90px 20px;
+            background: white;
+        }
+
+        .tiers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .tier-card {
+            background: white;
+            border-radius: 20px;
+            padding: 45px;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tier-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #3bc3b7 0%, #2da89e 100%);
+        }
+
+        .tier-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(59, 195, 183, 0.2);
+            border-color: #3bc3b7;
+        }
+
+        .tier-badge {
+            display: inline-block;
+            background: #3bc3b7;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .tier-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            color: #112837;
+            font-weight: 800;
+        }
+
+        .tier-tagline {
+            color: #64748b;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .tier-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #112837;
+            margin: 20px 0 8px;
+        }
+
+        .tier-price-note {
+            font-size: 0.85rem;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .tier-features {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .tier-features li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        .tier-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #3bc3b7;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .tier-cta {
+            margin-top: 30px;
+        }
+
+        .btn-block {
+            width: 100%;
+            text-align: center;
+            display: block;
+        }
+
+        /* Guarantee Section */
+        .guarantee-section {
+            background: #f8fafc;
+            padding: 90px 20px;
+        }
+
+        .guarantee-box {
+            max-width: 900px;
+            margin: 40px auto 0;
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border: 3px solid #3bc3b7;
+        }
+
+        .guarantee-box h3 {
+            font-size: 1.8rem;
+            color: #112837;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .guarantee-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .guarantee-list li {
+            padding: 12px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.1rem;
+            color: #4a5568;
+        }
+
+        .guarantee-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #3bc3b7;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .guarantee-promise {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 2px solid #e2e8f0;
+            font-size: 1.05rem;
+            color: #64748b;
+            font-style: italic;
+        }
+
+        /* Compliance Section */
+        .compliance-section {
+            background: rgba(59, 195, 183, 0.05);
+            padding: 50px 20px;
+        }
+
+        .compliance-box {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .compliance-box h4 {
+            font-size: 1.4rem;
+            color: #112837;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .compliance-box p {
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* Social Proof Section */
+        .social-proof {
+            padding: 90px 20px;
+            background: white;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .trust-card {
+            background: #f8fafc;
+            padding: 35px;
+            border-radius: 16px;
+            border-left: 4px solid #3bc3b7;
+            transition: all 0.3s ease;
+        }
+
+        .trust-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(59, 195, 183, 0.15);
+        }
+
+        .trust-card h4 {
+            color: #112837;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .trust-card p {
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 90px 20px;
+            background: #f8fafc;
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 25px;
+            margin-top: 50px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 35px;
+            border-radius: 16px;
+            border-left: 4px solid #3bc3b7;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 8px 25px rgba(59, 195, 183, 0.12);
+        }
+
+        .faq-item h4 {
+            color: #112837;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .faq-item p {
+            color: #64748b;
+            line-height: 1.75;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
+            color: white;
+            padding: 90px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content h2 {
+            font-size: 3.2rem;
+            margin-bottom: 22px;
+            font-weight: 800;
+            line-height: 1.15;
+        }
+
+        .cta-content p {
+            font-size: 1.35rem;
+            max-width: 780px;
+            margin: 0 auto 35px;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .cta-note {
+            margin-top: 25px;
+            font-size: 0.95rem;
+            opacity: 0.82;
+        }
+
+        /* Footer */
+        .footer {
+            background: #112837;
+            color: white;
+            padding: 70px 20px 35px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 45px;
+            margin-bottom: 45px;
+        }
+
+        .footer h3 {
+            font-size: 1.6rem;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+        .logo-systems {
+            color: #3bc3b7;
+        }
+
+        .footer-tagline {
+            color: #3bc3b7;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footer h4 {
+            margin-bottom: 18px;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer ul li a {
+            color: rgba(255, 255, 255, 0.82);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .footer ul li a:hover {
+            color: #3bc3b7;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 35px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 968px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 10px rgba(17, 40, 55, 0.1);
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.15rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .problem-grid,
+            .solution-grid,
+            .outcomes-grid,
+            .tiers-grid,
+            .trust-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-content h2 {
+                font-size: 2.2rem;
+            }
+
+            .guarantee-box {
+                padding: 35px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/aheri-logo.png" alt="AHERI SYSTEMS">
+                </a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn-primary">Book Free Audit</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-eyebrow">⚕️ Built for Private Clinics</div>
+                <h1>
+                    Stop Losing Patients to Missed Appointments<br>
+                    <span class="gradient-text">and Poor Follow-Up</span>
+                </h1>
+                <p class="hero-subtitle">
+                    The Private Clinics Revenue Command System turns scattered inquiries into booked appointments and repeat patients—automatically.
+                </p>
+                <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary btn-large">Book Free Revenue Audit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">60 sec</span>
+                    <span class="stat-label">Response Time 24/7</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Inquiry Capture Rate</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">Appointment Attendance</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50%</span>
+                    <span class="stat-label">Admin Time Saved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Problem Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Private Clinic <span class="gradient-text">Revenue Leakage Crisis</span></h2>
+                <p>Every lost patient is thousands in lifetime value walking away</p>
+            </div>
+
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <span class="problem-icon">📱</span>
+                    <h3>Inquiries Lost After Hours</h3>
+                    <p>"A patient calls at 7 PM or messages on WhatsApp over the weekend. By Monday morning, they've already booked with a clinic that responded immediately."</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-icon">⏰</span>
+                    <h3>Appointment No-Shows Killing Revenue</h3>
+                    <p>"30-40% no-show rate because reminders are manual or forgotten. Empty appointment slots = lost revenue you can't recover."</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-icon">📞</span>
+                    <h3>Manual Booking Chaos</h3>
+                    <p>"Reception juggling phones, WhatsApp, walk-ins—double bookings, missed calls, frustrated patients. Your team is drowning in admin."</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-icon">👻</span>
+                    <h3>Zero Patient Follow-Up</h3>
+                    <p>"Patient comes once, you never hear from them again. No post-visit follow-up, no wellness reminders, no loyalty system. One-time patients instead of lifetime patients."</p>
+                </div>
+
+                <div class="problem-card">
+                    <span class="problem-icon">📉</span>
+                    <h3>No Visibility into Patient Flow</h3>
+                    <p>"How many inquiries came in last week? How many booked? How many returned? You're running blind."</p>
+                </div>
+            </div>
+
+            <div class="cost-callout">
+                <p>
+                    Every lost patient is <strong>KES 5,000-50,000 in lifetime value</strong> walking away.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How the Private Clinics <span class="gradient-text">Revenue Command System Works</span></h2>
+                <p>Four automated steps that stop patient leakage and build lasting patient relationships</p>
+            </div>
+
+            <div class="solution-grid">
+                <div class="solution-box">
+                    <div class="solution-number">1</div>
+                    <h3>Capture Every Patient Inquiry</h3>
+                    <span class="solution-tag">Revenue Capture</span>
+                    <ul>
+                        <li>All inquiries (website, WhatsApp, phone, social) flow into one system</li>
+                        <li>AI responds within 60 seconds, 24/7—even at midnight</li>
+                        <li>Patients can book appointments instantly online</li>
+                        <li>No inquiry ever gets missed again</li>
+                    </ul>
+                    <div class="solution-result">Result: Every patient inquiry captured and responded to immediately</div>
+                </div>
+
+                <div class="solution-box">
+                    <div class="solution-number">2</div>
+                    <h3>Automated Booking & Reminders</h3>
+                    <span class="solution-tag">Revenue Acceleration</span>
+                    <ul>
+                        <li>Patients book online anytime (no phone tag)</li>
+                        <li>48 hours before: SMS/WhatsApp confirmation</li>
+                        <li>24 hours before: Final reminder</li>
+                        <li>2 hours before: "We're ready for you"</li>
+                        <li>Staff calendar synced in real-time (no double-bookings)</li>
+                    </ul>
+                    <div class="solution-result">Result: 95%+ appointment attendance</div>
+                </div>
+
+                <div class="solution-box">
+                    <div class="solution-number">3</div>
+                    <h3>Patient Journey Tracking</h3>
+                    <span class="solution-tag">Pipeline Visibility</span>
+                    <ul>
+                        <li>See every patient: Inquiry → Booked → Attended → Follow-Up Due</li>
+                        <li>Know which patients need follow-up appointments</li>
+                        <li>Track treatment completion rates</li>
+                        <li>Monitor patient satisfaction</li>
+                    </ul>
+                    <div class="solution-result">Result: Complete visibility into patient flow</div>
+                </div>
+
+                <div class="solution-box">
+                    <div class="solution-number">4</div>
+                    <h3>Patient Retention & Loyalty</h3>
+                    <span class="solution-tag">Revenue Optimization</span>
+                    <ul>
+                        <li>Post-visit follow-up automated 24 hours after visit</li>
+                        <li>Wellness reminders: Annual checkups, follow-up treatments</li>
+                        <li>Referral requests sent at the perfect time</li>
+                        <li>Turn one-time patients into repeat patients and referral sources</li>
+                    </ul>
+                    <div class="solution-result">Result: Patients return automatically and refer others</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes Section -->
+    <section class="outcomes-section">
+        <div class="outcomes-content">
+            <div class="container">
+                <div class="section-header">
+                    <h2 style="color: white;">What Changes When You <span class="gradient-text">Stop Patient Leakage</span></h2>
+                    <p style="color: rgba(255,255,255,0.9);">Real outcomes clinics see within 90 days</p>
+                </div>
+
+                <div class="outcomes-grid">
+                    <div class="outcome-card">
+                        <h3>Respond to every inquiry within 60 seconds</h3>
+                        <p>(even while you're with patients)</p>
+                    </div>
+
+                    <div class="outcome-card">
+                        <h3>95% appointment attendance</h3>
+                        <p>(up from 60-70%)</p>
+                    </div>
+
+                    <div class="outcome-card">
+                        <h3>50% reduction in admin time</h3>
+                        <p>(staff focus on patient care, not scheduling)</p>
+                    </div>
+
+                    <div class="outcome-card">
+                        <h3>Patients return for follow-ups automatically</h3>
+                    </div>
+
+                    <div class="outcome-card">
+                        <h3>30% of new patients come from referrals</h3>
+                    </div>
+
+                    <div class="outcome-card">
+                        <h3>Complete visibility into patient flow</h3>
+                    </div>
+                </div>
+
+                <div class="impact-stat">
+                    <p>
+                        <strong>Clinics using this system see 40-60% increase in monthly appointments within 6 months</strong>—not from more marketing, but from better patient management.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tiers Section -->
+    <section class="tiers-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Three Tiers of <span class="gradient-text">Patient Revenue Management</span></h2>
+                <p>Start where you need help most. Scale as you grow.</p>
+            </div>
+
+            <div class="tiers-grid">
+                <!-- Tier 1 -->
+                <div class="tier-card">
+                    <div class="tier-badge">TIER 1</div>
+                    <h3>Patient Capture System</h3>
+                    <p class="tier-tagline">Stop losing patient inquiries. Capture every opportunity 24/7.</p>
+                    <div class="tier-price">Starting from KES 35,000/month</div>
+                    <p class="tier-price-note">Best for solo practitioners & small clinics</p>
+                    <ul class="tier-features">
+                        <li>Multi-channel patient inquiry capture (website, WhatsApp, phone)</li>
+                        <li>24/7 AI patient response (60-second reply time)</li>
+                        <li>Online appointment booking</li>
+                        <li>Patient intake forms</li>
+                        <li>HIPAA-compliant booking system</li>
+                        <li>Automated appointment reminders (SMS/WhatsApp)</li>
+                        <li>Basic patient CRM</li>
+                        <li>Weekly patient capture report</li>
+                    </ul>
+                    <div class="tier-cta">
+                        <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary btn-block">Book Free Audit</a>
+                    </div>
+                </div>
+
+                <!-- Tier 2 -->
+                <div class="tier-card">
+                    <div class="tier-badge">TIER 2</div>
+                    <h3>Patient Flow System</h3>
+                    <p class="tier-tagline">Maximize appointment attendance and patient satisfaction.</p>
+                    <div class="tier-price">Starting from KES 60,000/month</div>
+                    <p class="tier-price-note">Best for growing clinics with multiple providers</p>
+                    <ul class="tier-features">
+                        <li><strong>Everything in Patient Capture System, PLUS:</strong></li>
+                        <li>WhatsApp patient support</li>
+                        <li>Multi-level appointment reminders (48hr, 24hr, 2hr)</li>
+                        <li>Post-visit surveys and feedback collection</li>
+                        <li>Treatment plan reminders</li>
+                        <li>Patient health scoring</li>
+                        <li>Follow-up appointment automation</li>
+                        <li>Patient journey tracking dashboard</li>
+                        <li>Monthly optimization review</li>
+                    </ul>
+                    <div class="tier-cta">
+                        <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary btn-block">Book Free Audit</a>
+                    </div>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="tier-card">
+                    <div class="tier-badge">TIER 3</div>
+                    <h3>Complete Clinic Growth System</h3>
+                    <p class="tier-tagline">Full patient acquisition, retention, and lifetime value maximization.</p>
+                    <div class="tier-price">Starting from KES 100,000/month</div>
+                    <p class="tier-price-note">Best for established clinics ready to scale</p>
+                    <ul class="tier-features">
+                        <li><strong>Everything in Patient Flow System, PLUS:</strong></li>
+                        <li>Full patient acquisition (Google/Facebook health ads)</li>
+                        <li>Patient lifetime value tracking</li>
+                        <li>Referral program automation</li>
+                        <li>Multi-provider calendar management</li>
+                        <li>Wellness campaign automation</li>
+                        <li>Patient reactivation sequences</li>
+                        <li>Advanced analytics & reporting</li>
+                        <li>Quarterly growth strategy sessions</li>
+                        <li>Full Revenue Command Center</li>
+                    </ul>
+                    <div class="tier-cta">
+                        <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary btn-block">Book Free Audit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The 90-Day <span class="gradient-text">Patient Flow Guarantee</span></h2>
+            </div>
+
+            <div class="guarantee-box">
+                <h3>Within 90 days of system activation, you'll have:</h3>
+                <ul class="guarantee-list">
+                    <li>95%+ appointment attendance</li>
+                    <li>Zero missed patient inquiries</li>
+                    <li>Automated follow-up for every patient</li>
+                    <li>Complete visibility into patient flow</li>
+                </ul>
+                <p class="guarantee-promise">If we don't deliver this, we work for free until we do.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance Section -->
+    <section class="compliance-section">
+        <div class="container">
+            <div class="compliance-box">
+                <h4>HIPAA-Compliant & Secure</h4>
+                <p>All patient data is encrypted and stored securely. Our systems meet international healthcare data protection standards. Your patients' privacy and confidentiality are our top priority.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trusted by Private Clinics <span class="gradient-text">Across Kenya and Africa</span></h2>
+            </div>
+
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <h4>Built for African Healthcare Markets</h4>
+                    <p>Designed specifically for the unique challenges and opportunities of private medical practices in Africa</p>
+                </div>
+                <div class="trust-card">
+                    <h4>Systems Expertise Meets Healthcare</h4>
+                    <p>Created by systems experts who deeply understand medical practice operations and patient care workflows</p>
+                </div>
+                <div class="trust-card">
+                    <h4>From Solo to Multi-Provider</h4>
+                    <p>Scalable solutions for solo practitioners, group practices, and multi-provider clinics of all sizes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything You <span class="gradient-text">Need to Know</span></h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Is patient data secure?</h4>
+                    <p>Yes. All systems are HIPAA-compliant with encrypted data storage and secure access controls. We treat patient data with the highest level of security and confidentiality, meeting international healthcare data protection standards.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>What if patients prefer calling over online booking?</h4>
+                    <p>They can still call. But we add the online booking option for patients who prefer convenience—which increases bookings by 30-40%. Many patients appreciate the flexibility to book appointments at 11 PM on their phone instead of waiting for office hours.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Will this work with my current practice management software?</h4>
+                    <p>Yes. We integrate with existing systems or provide a complete solution if needed. Our team handles all technical integration so your current workflows remain intact while gaining powerful automation.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>What if my staff isn't tech-savvy?</h4>
+                    <p>We train your entire team. Most staff love it because it makes their jobs easier—less admin, happier patients, fewer no-shows. The system is designed to be intuitive, and we provide ongoing support.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>How long until I see results?</h4>
+                    <p>Most clinics see improved appointment attendance within 2-3 weeks. Full system maturity and maximum patient retention results typically appear within 90 days.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <div class="container">
+                <h2>Ready to Stop Losing Patients?</h2>
+                <p>
+                    Book a Free Revenue Audit and See Exactly Where Patients Are Slipping Through
+                </p>
+                <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary btn-large">Book Free Audit</a>
+                <p class="cta-note">No sales pitch. Just a clear diagnosis of where patients are being lost and which system fixes it.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AHERI <span class="logo-systems">SYSTEMS</span></h3>
+                    <p class="footer-tagline">Revenue Growth Systems for Africa</p>
+                    <p>We build, monitor, and optimize revenue systems for real estate agencies and private clinics across Kenya, Africa, and emerging markets.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Industries</h4>
+                    <ul>
+                        <li><a href="real-estate-systems.html">Real Estate Agencies</a></li>
+                        <li><a href="clinic-systems.html">Private Clinics</a></li>
+                        <li><a href="services.html">All Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="https://ritandubi.com/blog">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <ul>
+                        <li><a href="mailto:rita@aherisystems.com">rita@aherisystems.com</a></li>
+                        <li><a href="tel:+254716850772">+254 716 850 772</a></li>
+                        <li>Nairobi, Kenya</li>
+                        <li><a href="https://calendar.app.google/pm9QhCkfKvTPau3D9">Book Free Audit</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aheri Systems. All rights reserved. | Built for Africa, Ready for the World</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (mobileMenuBtn && navMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.nav-wrapper')) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
