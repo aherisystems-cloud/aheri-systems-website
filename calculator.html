@@ -1057,7 +1057,7 @@
                 <div class="bucket">
                     <div class="bucket-header">
                         <div class="bucket-number">1</div>
-                        <h2>How Much in Commissions Are You Losing to Slow Response?</h2>
+                        <h2>How Many Commissions Are You Losing to Slow Response?</h2>
                     </div>
 
                     <div class="input-group">
@@ -1885,22 +1885,24 @@
             // Generate report data
             const reportData = generateReportData();
             
-            // Send email via Web3Forms (free email service that doesn't require backend)
+            // Send email via FormSubmit (no API key required)
             const formData = new FormData();
+            formData.append('name', clientName);
+            formData.append('email', clientEmail);
             formData.append('subject', `Revenue Leakage Calculator Report - ${clientName}`);
-            formData.append('from_name', 'Aheri Systems Calculator');
-            formData.append('to', 'rita@aherisystems.com');
-            formData.append('cc', clientEmail);
             formData.append('message', reportData);
+            formData.append('_cc', clientEmail); // CC the client
+            formData.append('_template', 'box'); // Use FormSubmit's clean template
+            formData.append('_captcha', 'false'); // Disable captcha for better UX
 
-           fetch('https://formsubmit.co/rita@aherisystems.com', {
+            fetch('https://formsubmit.co/ajax/rita@aherisystems.com', {
                 method: 'POST',
                 body: formData
             })
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    console.log('Report sent successfully');
+                    console.log('Report sent successfully to rita@aherisystems.com');
                 } else {
                     console.error('Failed to send report:', data);
                 }
@@ -1986,16 +1988,15 @@
         });
     </script>
 
-    <!-- Alternative: Simple mailto fallback -->
+    <!-- Email System Active Notice -->
     <script>
-        // Simple email collection note
+        // Email collection confirmation
         console.log('%c📧 Calculator Report System Active', 'color: #3bc3b7; font-size: 14px; font-weight: bold;');
-        console.log('Reports will be sent to rita@aherisystems.com when users complete their calculations.');
-        console.log('%c⚠️ IMPORTANT: You need to set up Web3Forms or similar service', 'color: #f59e0b; font-size: 12px;');
-        console.log('1. Sign up at https://web3forms.com (free)');
-        console.log('2. Get your access key');
-        console.log('3. Replace YOUR_WEB3FORMS_ACCESS_KEY in the code above');
-        console.log('Alternative: Use FormSubmit, EmailJS, or build a custom backend endpoint');
+        console.log('✅ FormSubmit configured - reports will be sent to rita@aherisystems.com');
+        console.log('%c⚠️ IMPORTANT: First Submission Setup', 'color: #f59e0b; font-size: 12px; font-weight: bold;');
+        console.log('The FIRST time someone submits the calculator, FormSubmit will send a confirmation email to rita@aherisystems.com');
+        console.log('Click the confirmation link in that email to activate the form.');
+        console.log('After that, all future calculator submissions will work automatically!');
     </script>
 </body>
 </html>
