@@ -1,316 +1,2001 @@
-# REVENUE CALCULATOR UPDATES
-## Complete Integration Guide with Exact Code Replacements
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <title>Revenue Leakage Calculator | Aheri Systems</title>
+    <meta name="description" content="Calculate exactly how much revenue your business is losing every month. Free interactive calculator for real estate and healthcare businesses.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
----
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #112837;
+            background: #f8fafc;
+            -webkit-font-smoothing: antialiased;
+        }
 
-## UPDATE 1: Add Email Field to Client Info Section
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-### FIND THIS in loadRealEstateCalculator() (around line 440):
-```html
-<div class="client-info">
-    <h3>Client Information</h3>
-    <div class="info-grid">
-        <div class="info-field">
-            <label>Agent/Agency Name</label>
-            <input type="text" id="clientName" placeholder="Enter your name/agency">
+        /* Password Screen */
+        .password-screen {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
+            padding: 20px;
+        }
+
+        .password-box {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .password-box h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #112837;
+            font-weight: 800;
+        }
+
+        .password-box p {
+            color: #64748b;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        .password-input {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            font-family: inherit;
+        }
+
+        .password-input:focus {
+            outline: none;
+            border-color: #3bc3b7;
+        }
+
+        .password-button {
+            width: 100%;
+            padding: 16px;
+            background: #3bc3b7;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .password-button:hover {
+            background: #2da89e;
+            transform: translateY(-2px);
+        }
+
+        .password-error {
+            color: #ef4444;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            display: none;
+        }
+
+        /* Industry Selection Screen */
+        .industry-screen {
+            display: none;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
+            padding: 60px 20px;
+        }
+
+        .industry-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+        }
+
+        .industry-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 900;
+            line-height: 1.2;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3bc3b7 0%, #5fd4c7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .industry-content p {
+            font-size: 1.3rem;
+            margin-bottom: 60px;
+            opacity: 0.95;
+        }
+
+        .industry-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .industry-button {
+            background: white;
+            border: 3px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 50px 40px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .industry-button:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(59, 195, 183, 0.3);
+            border-color: #3bc3b7;
+        }
+
+        .industry-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .industry-button h2 {
+            font-size: 1.8rem;
+            color: #112837;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .industry-button p {
+            color: #64748b;
+            font-size: 1rem;
+            opacity: 1;
+        }
+
+        /* Calculator Screen */
+        .calculator-screen {
+            display: none;
+            padding: 40px 20px 80px;
+            background: #f8fafc;
+        }
+
+        .calc-header {
+            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .calc-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .calc-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .client-info {
+            background: white;
+            padding: 35px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .client-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            color: #112837;
+            font-weight: 700;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .info-field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-field label {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .info-field input {
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .info-field input:focus {
+            outline: none;
+            border-color: #3bc3b7;
+        }
+
+        /* Bucket Sections */
+        .bucket {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid #3bc3b7;
+        }
+
+        .bucket-header {
+            margin-bottom: 35px;
+        }
+
+        .bucket-number {
+            display: inline-block;
+            background: #3bc3b7;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .bucket h2 {
+            font-size: 1.8rem;
+            color: #112837;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .bucket-intro {
+            color: #64748b;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .input-group {
+            margin-bottom: 35px;
+        }
+
+        .input-label {
+            font-size: 1.1rem;
+            color: #112837;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: block;
+        }
+
+        .helper-text {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .number-input {
+            width: 100%;
+            max-width: 300px;
+            padding: 14px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-family: inherit;
+        }
+
+        .number-input:focus {
+            outline: none;
+            border-color: #3bc3b7;
+        }
+
+        .slider-container {
+            margin-top: 15px;
+        }
+
+        .slider {
+            width: 100%;
+            max-width: 500px;
+            height: 8px;
+            border-radius: 5px;
+            background: #e2e8f0;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #3bc3b7;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(59, 195, 183, 0.4);
+        }
+
+        .slider::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #3bc3b7;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 8px rgba(59, 195, 183, 0.4);
+        }
+
+        .slider-value {
+            display: inline-block;
+            background: #3bc3b7;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 12px;
+        }
+
+        .auto-calc {
+            background: #f0f9ff;
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .auto-calc h4 {
+            color: #1e40af;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .auto-calc-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .auto-calc-item span:first-child {
+            color: #475569;
+        }
+
+        .auto-calc-item span:last-child {
+            color: #1e40af;
+            font-weight: 700;
+        }
+
+        .bucket-result {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 3px solid #ef4444;
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .bucket-result h3 {
+            color: #991b1b;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .bucket-result .amount {
+            font-size: 2.5rem;
+            color: #dc2626;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .bucket-result .annual {
+            font-size: 1.2rem;
+            color: #991b1b;
+            font-weight: 600;
+        }
+
+        /* Total Summary */
+        .total-summary {
+            background: linear-gradient(135deg, #991b1b 0%, #dc2626 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            margin: 50px 0;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(220, 38, 38, 0.3);
+        }
+
+        .total-summary h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 900;
+        }
+
+        .total-amount {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 25px;
+            display: block;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .breakdown-amounts {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+        }
+
+        .breakdown-item {
+            text-align: center;
+        }
+
+        .breakdown-item .label {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .breakdown-item .value {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .emotional-copy {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 35px;
+            text-align: left;
+        }
+
+        .emotional-copy p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .emotional-copy ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .emotional-copy li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .emotional-copy li:before {
+            content: "💸";
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        /* Tier Recommendations */
+        .tier-section {
+            margin: 60px 0;
+        }
+
+        .tier-section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #112837;
+            font-weight: 800;
+        }
+
+        .tiers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .tier-card {
+            background: white;
+            border: 3px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .tier-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(59, 195, 183, 0.2);
+            border-color: #3bc3b7;
+        }
+
+        .tier-card.recommended {
+            border-color: #f59e0b;
+            border-width: 4px;
+        }
+
+        .tier-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f59e0b;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tier-name {
+            font-size: 1.5rem;
+            color: #112837;
+            margin-bottom: 10px;
+            font-weight: 800;
+            margin-top: 10px;
+        }
+
+        .tier-investment {
+            color: #64748b;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .tier-fixes {
+            background: #f0fdfc;
+            border: 2px solid #3bc3b7;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 25px;
+            color: #0f766e;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .tier-roi {
+            margin: 25px 0;
+        }
+
+        .tier-roi-label {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 10px;
+        }
+
+        .tier-roi-amount {
+            font-size: 1.8rem;
+            color: #059669;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .tier-roi-multiple {
+            font-size: 1.3rem;
+            color: #3bc3b7;
+            font-weight: 700;
+        }
+
+        .tier-best-for {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .tier-cta {
+            width: 100%;
+            padding: 16px;
+            background: #3bc3b7;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .tier-cta:hover {
+            background: #2da89e;
+            transform: translateY(-2px);
+        }
+
+        .tier-card.recommended .tier-cta {
+            background: #f59e0b;
+        }
+
+        .tier-card.recommended .tier-cta:hover {
+            background: #d97706;
+        }
+
+        /* Reality Check */
+        .reality-check {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            margin: 60px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .reality-check h2 {
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: #112837;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .option {
+            border-radius: 16px;
+            padding: 35px;
+        }
+
+        .option-1 {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 3px solid #ef4444;
+        }
+
+        .option-2 {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border: 3px solid #059669;
+        }
+
+        .option h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .option-1 h3 {
+            color: #991b1b;
+        }
+
+        .option-2 h3 {
+            color: #065f46;
+        }
+
+        .option ul {
+            list-style: none;
+        }
+
+        .option ul li {
+            padding: 10px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .option-1 ul li {
+            color: #7f1d1d;
+        }
+
+        .option-2 ul li {
+            color: #064e3b;
+        }
+
+        .option-1 ul li:before {
+            content: "❌";
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        .option-2 ul li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        .gap-cost {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
+            border-radius: 16px;
+            color: white;
+        }
+
+        .gap-cost p {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .gap-cost .amount {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #3bc3b7;
+            display: block;
+            margin: 10px 0;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
+            padding: 60px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            margin: 60px 0;
+            box-shadow: 0 10px 40px rgba(59, 195, 183, 0.3);
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            opacity: 0.95;
+        }
+
+        .final-cta-button {
+            display: inline-block;
+            padding: 22px 50px;
+            background: white;
+            color: #3bc3b7;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            transition: all 0.3s;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .final-cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .final-cta .note {
+            margin-top: 25px;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Print Button */
+        .print-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #112837;
+            color: white;
+            padding: 16px 30px;
+            border-radius: 30px;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(17, 40, 55, 0.3);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .print-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(17, 40, 55, 0.4);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .industry-content h1 {
+                font-size: 2rem;
+            }
+
+            .industry-content p {
+                font-size: 1.1rem;
+            }
+
+            .industry-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .calc-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .bucket {
+                padding: 25px;
+            }
+
+            .bucket h2 {
+                font-size: 1.4rem;
+            }
+
+            .total-amount {
+                font-size: 2.5rem;
+            }
+
+            .breakdown-amounts {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .tiers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .total-summary {
+                padding: 30px 20px;
+            }
+
+            .reality-check {
+                padding: 30px 20px;
+            }
+
+            .final-cta {
+                padding: 40px 25px;
+            }
+
+            .print-button {
+                bottom: 20px;
+                right: 20px;
+                padding: 14px 24px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media print {
+            .print-button,
+            .final-cta {
+                display: none;
+            }
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Password Screen -->
+    <div class="password-screen" id="passwordScreen">
+        <div class="password-box">
+            <h1>🔒 Revenue Leakage Calculator</h1>
+            <p>This calculator is for invited clients only. Please enter your access code.</p>
+            <input 
+                type="password" 
+                class="password-input" 
+                id="passwordInput" 
+                placeholder="Enter access code"
+                autocomplete="off">
+            <button class="password-button" onclick="checkPassword()">Access Calculator</button>
+            <p class="password-error" id="passwordError">Incorrect access code. Please try again.</p>
         </div>
-```
+    </div>
 
-### REPLACE WITH:
-```html
-<div class="client-info">
-    <h3>Client Information</h3>
-    <div class="info-grid">
-        <div class="info-field">
-            <label>Email Address *</label>
-            <input type="email" id="clientEmail" placeholder="your@email.com" required>
+    <!-- Industry Selection Screen -->
+    <div class="industry-screen" id="industryScreen">
+        <div class="industry-content">
+            <h1>How Much Revenue Are You<br><span class="gradient-text">Losing Every Month?</span></h1>
+            <p>Find out in 3 minutes with our Revenue Leakage Calculator</p>
+            
+            <div class="industry-buttons">
+                <div class="industry-button" onclick="selectIndustry('real-estate')">
+                    <span class="industry-icon">🏢</span>
+                    <h2>I'm in Real Estate</h2>
+                    <p>Calculate commission leakage from lost leads and stalled deals</p>
+                </div>
+                
+                <div class="industry-button" onclick="selectIndustry('clinic')">
+                    <span class="industry-icon">⚕️</span>
+                    <h2>I'm in Private Healthcare</h2>
+                    <p>Calculate patient revenue leakage from no-shows and missed inquiries</p>
+                </div>
+            </div>
         </div>
-        <div class="info-field">
-            <label>Agent/Agency Name *</label>
-            <input type="text" id="clientName" placeholder="Enter your name/agency" required>
+    </div>
+
+    <!-- Calculator Screen (will be populated based on industry) -->
+    <div class="calculator-screen" id="calculatorScreen">
+        <div class="container" id="calculatorContent">
+            <!-- Content will be dynamically loaded based on industry selection -->
         </div>
-```
+        
+        <button class="print-button" onclick="window.print()">📄 Print Report</button>
+    </div>
 
-### FIND THIS in loadClinicCalculator() (around line 1090):
-```html
-<div class="client-info">
-    <h3>Client Information</h3>
-    <div class="info-grid">
-        <div class="info-field">
-            <label>Clinic Name</label>
-            <input type="text" id="clientName" placeholder="Enter clinic name">
-        </div>
-```
-
-### REPLACE WITH:
-```html
-<div class="client-info">
-    <h3>Client Information</h3>
-    <div class="info-grid">
-        <div class="info-field">
-            <label>Email Address *</label>
-            <input type="email" id="clientEmail" placeholder="your@email.com" required>
-        </div>
-        <div class="info-field">
-            <label>Clinic Name *</label>
-            <input type="text" id="clientName" placeholder="Enter clinic name" required>
-        </div>
-```
-
----
-
-## UPDATE 2: Fix Tier 1 Pricing - Real Estate
-
-### FIND THIS in loadRealEstateCalculator() (around line 810):
-```html
-<!-- Tier 1 -->
-<div class="tier-card">
-    <div class="tier-name">Starter System</div>
-    <div class="tier-investment">KES 7,500/month<br>(KES 90,000/year)</div>
-    <div class="tier-fixes">Fixes Bucket 1 & 2 leakage</div>
-```
-
-### REPLACE WITH:
-```html
-<!-- Tier 1 -->
-<div class="tier-card">
-    <div class="tier-name">Starter System</div>
-    <div class="tier-investment">KES 15,000/month<br>(KES 180,000/year)</div>
-    <div class="tier-fixes">Fixes Bucket 1 leakage</div>
-```
-
----
-
-## UPDATE 3: Fix Tier 1 Pricing - Clinic
-
-### FIND THIS in loadClinicCalculator() (around line 1630):
-```html
-<!-- Tier 1 -->
-<div class="tier-card">
-    <div class="tier-name">Solo Practitioner System</div>
-    <div class="tier-investment">KES 7,500/month<br>(KES 90,000/year)</div>
-    <div class="tier-fixes">Fixes Bucket 1 & 2 leakage</div>
-```
-
-### REPLACE WITH:
-```html
-<!-- Tier 1 -->
-<div class="tier-card">
-    <div class="tier-name">Starter System</div>
-    <div class="tier-investment">KES 15,000/month<br>(KES 180,000/year)</div>
-    <div class="tier-fixes">Fixes Bucket 1 leakage</div>
-```
-
----
-
-## UPDATE 4: Fix Tier 1 ROI Calculation - Real Estate
-
-### FIND THIS in calculateRealEstate() function (around line 1080):
-```javascript
-// Tier ROI Calculations
-const buckets12Annual = bucket1Annual + bucket2Annual;
-
-// Tier 1: 20% of Buckets 1+2
-const tier1Recovery = buckets12Annual * 0.20;
-const tier1Investment = 90000;
-```
-
-### REPLACE WITH:
-```javascript
-// Tier ROI Calculations
-const buckets12Annual = bucket1Annual + bucket2Annual;
-
-// Tier 1: 20% of Bucket 1 ONLY
-const tier1Recovery = bucket1Annual * 0.20;
-const tier1Investment = 180000;
-```
-
----
-
-## UPDATE 5: Fix Tier 1 ROI Calculation - Clinic
-
-### FIND THIS in calculateClinic() function (around line 1860):
-```javascript
-// Tier ROI Calculations
-const buckets12Annual = bucket1Annual + bucket2Annual;
-
-// Tier 1: 20% of Buckets 1+2
-const tier1Recovery = buckets12Annual * 0.20;
-const tier1Investment = 90000;
-```
-
-### REPLACE WITH:
-```javascript
-// Tier ROI Calculations
-const buckets12Annual = bucket1Annual + bucket2Annual;
-
-// Tier 1: 20% of Bucket 1 ONLY
-const tier1Recovery = bucket1Annual * 0.20;
-const tier1Investment = 180000;
-```
-
----
-
-## UPDATE 6: Add Email Button After Total Summary - Real Estate
-
-### FIND THIS in loadRealEstateCalculator() (around line 800):
-```html
-</div>
-
-<!-- TIER RECOMMENDATIONS -->
-<div class="tier-section">
-```
-
-### INSERT BETWEEN THEM:
-```html
-</div>
-
-<!-- Email Report Button -->
-<div style="text-align: center; margin: 40px 0;">
-    <button onclick="emailReport()" class="btn btn-primary btn-large" style="background: #f59e0b; cursor: pointer; border: none;">
-        📧 Email Me This Report
-    </button>
-    <p style="color: #64748b; margin-top: 15px; font-size: 0.95rem;">
-        We'll send a copy to you and our team (rita@aherisystems.com) will follow up within 24 hours
-    </p>
-</div>
-
-<!-- TIER RECOMMENDATIONS -->
-<div class="tier-section">
-```
-
----
-
-## UPDATE 7: Add Email Button After Total Summary - Clinic
-
-### FIND THIS in loadClinicCalculator() (around line 1620):
-```html
-</div>
-
-<!-- TIER RECOMMENDATIONS -->
-<div class="tier-section">
-```
-
-### INSERT BETWEEN THEM:
-```html
-</div>
-
-<!-- Email Report Button -->
-<div style="text-align: center; margin: 40px 0;">
-    <button onclick="emailReport()" class="btn btn-primary btn-large" style="background: #f59e0b; cursor: pointer; border: none;">
-        📧 Email Me This Report
-    </button>
-    <p style="color: #64748b; margin-top: 15px; font-size: 0.95rem;">
-        We'll send a copy to you and our team (rita@aherisystems.com) will follow up within 24 hours
-    </p>
-</div>
-
-<!-- TIER RECOMMENDATIONS -->
-<div class="tier-section">
-```
-
----
-
-## UPDATE 8: Add Email Functionality Script
-
-### FIND THIS (near the end of file, before </body>):
-```html
-    </script>
-</body>
-</html>
-```
-
-### INSERT BEFORE </body>:
-```html
-    </script>
-
-    <!-- Email Report Functionality -->
     <script>
-    async function emailReport() {
-        const email = document.getElementById('clientEmail')?.value;
-        const name = document.getElementById('clientName')?.value;
-        
-        if (!email || !name) {
-            alert('⚠️ Please fill in your email and name first');
-            return;
-        }
-        
-        // Validate email
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('⚠️ Please enter a valid email address');
-            return;
-        }
-        
-        // Show loading
-        const btn = event.target;
-        const originalText = btn.textContent;
-        btn.textContent = '⏳ Sending...';
-        btn.disabled = true;
-        
-        try {
-            // Collect all calculator data
-            const industry = selectedIndustry === 'real-estate' ? 'Real Estate' : 'Private Clinic';
-            const prefix = selectedIndustry === 'real-estate' ? 're' : 'cl';
+        // Password protection
+        function checkPassword() {
+            const password = document.getElementById('passwordInput').value;
+            const correctPassword = 'AheriRevenue2026';
             
-            const reportData = {
-                email: email,
-                name: name,
-                industry: industry,
-                date: document.getElementById('auditDate').value,
-                total_annual_leakage: document.getElementById(prefix + '_totalAnnual')?.textContent || 'N/A',
-                total_monthly: document.getElementById(prefix + '_totalMonthly')?.textContent || 'N/A',
-                bucket1_annual: document.getElementById(prefix + '_bucket1Annual')?.textContent || 'N/A',
-                bucket2_annual: document.getElementById(prefix + '_bucket2Annual')?.textContent || 'N/A',
-                bucket3_annual: document.getElementById(prefix + '_bucket3Annual')?.textContent || 'N/A',
-                _subject: `Revenue Calculator Report - ${name} (${industry})`,
-                _template: 'table',
-                _cc: 'rita@aherisystems.com'
-            };
-            
-            // Add industry-specific data
-            if (selectedIndustry === 'real-estate') {
-                reportData.inquiries_per_month = document.getElementById('re_inquiries')?.value || 'N/A';
-                reportData.avg_commission = document.getElementById('re_avgCommission')?.value || 'N/A';
-                reportData.num_agents = document.getElementById('numAgents')?.value || 'N/A';
+            if (password === correctPassword) {
+                document.getElementById('passwordScreen').style.display = 'none';
+                document.getElementById('industryScreen').style.display = 'block';
+                document.getElementById('passwordError').style.display = 'none';
             } else {
-                reportData.inquiries_per_month = document.getElementById('cl_inquiries')?.value || 'N/A';
-                reportData.avg_revenue_per_visit = document.getElementById('cl_avgRevenue')?.value || 'N/A';
-                reportData.num_providers = document.getElementById('numProviders')?.value || 'N/A';
+                document.getElementById('passwordError').style.display = 'block';
             }
+        }
+
+        // Allow Enter key for password
+        document.getElementById('passwordInput')?.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+
+        // Industry selection
+        let selectedIndustry = '';
+
+        function selectIndustry(industry) {
+            selectedIndustry = industry;
+            document.getElementById('industryScreen').style.display = 'none';
+            document.getElementById('calculatorScreen').style.display = 'block';
             
-            // Send to FormSubmit
+            if (industry === 'real-estate') {
+                loadRealEstateCalculator();
+            } else {
+                loadClinicCalculator();
+            }
+        }
+
+        // Format currency
+        function formatCurrency(amount) {
+            if (amount >= 1000000) {
+                return 'KES ' + (amount / 1000000).toFixed(1) + 'M';
+            } else if (amount >= 1000) {
+                return 'KES ' + (amount / 1000).toFixed(0) + 'K';
+            } else {
+                return 'KES ' + amount.toLocaleString();
+            }
+        }
+
+        function formatCurrencyFull(amount) {
+            return 'KES ' + amount.toLocaleString('en-KE', {maximumFractionDigits: 0});
+        }
+
+        // REAL ESTATE CALCULATOR
+        function loadRealEstateCalculator() {
+            const today = new Date().toISOString().split('T')[0];
+            
+            const html = `
+                <div class="calc-header">
+                    <h1>Real Estate Revenue Leakage Calculator</h1>
+                    <p>See exactly how much commission you're losing every month</p>
+                </div>
+
+                <div class="client-info">
+                    <h3>Client Information</h3>
+                    <div class="info-grid">
+                        <div class="info-field">
+                            <label>Agent/Agency Name *</label>
+                            <input type="text" id="clientName" placeholder="Enter your name/agency" required>
+                        </div>
+                        <div class="info-field">
+                            <label>Email Address *</label>
+                            <input type="email" id="clientEmail" placeholder="your@email.com" required>
+                        </div>
+                        <div class="info-field">
+                            <label>Number of Agents</label>
+                            <input type="number" id="numAgents" value="1" min="1">
+                        </div>
+                        <div class="info-field">
+                            <label>Audit Date</label>
+                            <input type="date" id="auditDate" value="${today}" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BUCKET 1: LEAD CAPTURE -->
+                <div class="bucket">
+                    <div class="bucket-header">
+                        <div class="bucket-number">1</div>
+                        <h2>How Many Commissions Are You Losing to Slow Response?</h2>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">How many property inquiries do you get per month?</label>
+                        <input type="number" class="number-input" id="re_inquiries" value="40" min="0" oninput="calculateRealEstate()">
+                        <p class="helper-text">Total inquiries from all sources (website, WhatsApp, calls, social)</p>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">What percentage of inquiries do you actually capture and respond to?</label>
+                        <div class="slider-container">
+                            <input type="range" class="slider" id="re_captureRate" min="0" max="100" value="60" oninput="calculateRealEstate()">
+                            <div class="slider-value"><span id="re_captureRate_val">60</span>%</div>
+                        </div>
+                        <p class="helper-text">Be honest—how many inquiries fall through the cracks?</p>
+                        
+                        <div class="auto-calc">
+                            <h4>💡 Quick Analysis:</h4>
+                            <div class="auto-calc-item">
+                                <span>Missed inquiries per month:</span>
+                                <span id="re_missedInquiries">—</span>
+                            </div>
+                            <div class="auto-calc-item">
+                                <span>With 95% capture (our system):</span>
+                                <span id="re_withSystem">—</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">What's your current inquiry-to-viewing conversion rate?</label>
+                        <div class="slider-container">
+                            <input type="range" class="slider" id="re_viewingRate" min="0" max="30" value="10" oninput="calculateRealEstate()">
+                            <div class="slider-value"><span id="re_viewingRate_val">10</span>%</div>
+                        </div>
+                        <p class="helper-text">Of those who inquire, how many actually schedule a viewing?</p>
+                        
+                        <div class="auto-calc">
+                            <h4>💡 Potential Impact:</h4>
+                            <div class="auto-calc-item">
+                                <span>Potential extra viewings per month:</span>
+                                <span id="re_extraViewings">—</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">What's your average commission per closed deal?</label>
+                        <input type="number" class="number-input" id="re_avgCommission" value="120000" min="0" oninput="calculateRealEstate()">
+                        <p class="helper-text">Average commission you earn per transaction</p>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">What's your viewing-to-deal close rate?</label>
+                        <div class="slider-container">
+                            <input type="range" class="slider" id="re_closeRate" min="0" max="50" value="30" oninput="calculateRealEstate()">
+                            <div class="slider-value"><span id="re_closeRate_val">30</span>%</div>
+                        </div>
+                        <p class="helper-text">Of viewings done, how many result in offers/deals?</p>
+                    </div>
+
+                    <div class="bucket-result">
+                        <h3>Bucket 1: Lead Capture Leakage</h3>
+                        <span class="amount" id="re_bucket1Monthly">KES 0</span>
+                        <p class="annual">Annual Leakage: <strong id="re_bucket1Annual">KES 0</strong></p>
+                    </div>
+                </div>
+
+                <!-- BUCKET 2: DEAL ACCELERATION -->
+                <div class="bucket">
+                    <div class="bucket-header">
+                        <div class="bucket-number">2</div>
+                        <h2>How Much Are You Losing to Stalled Deals?</h2>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">How many qualified prospects enter your pipeline per month?</label>
+                        <input type="number" class="number-input" id="re_pipeline" value="24" min="0" oninput="calculateRealEstate()">
+                        <p class="helper-text">People who've viewed properties and are genuinely interested</p>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">What percentage of these actually close?</label>
+                        <div class="slider-container">
+                            <input type="range" class="slider" id="re_pipelineClose" min="0" max="40" value="10" oninput="calculateRealEstate()">
+                            <div class="slider-value"><span id="re_pipelineClose_val">10</span>%</div>
+                        </div>
+                        <p class="helper-text">Your current close rate from qualified prospect to deal</p>
+                        
+                        <div class="auto-calc">
+                            <h4>💡 Pipeline Analysis:</h4>
+                            <div class="auto-calc-item">
+                                <span>Current deals closing:</span>
+                                <span id="re_currentDeals">—</span>
+                            </div>
+                            <div class="auto-calc-item">
+                                <span>With 20% close rate (good pipeline mgmt):</span>
+                                <span id="re_betterDeals">—</span>
+                            </div>
+                            <div class="auto-calc-item">
+                                <span>Extra deals you're missing:</span>
+                                <span id="re_missedDeals">—</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bucket-result">
+                        <h3>Bucket 2: Pipeline Management Leakage</h3>
+                        <span class="amount" id="re_bucket2Monthly">KES 0</span>
+                        <p class="annual">Annual Leakage: <strong id="re_bucket2Annual">KES 0</strong></p>
+                    </div>
+                </div>
+
+                <!-- BUCKET 3: CLIENT RETENTION -->
+                <div class="bucket">
+                    <div class="bucket-header">
+                        <div class="bucket-number">3</div>
+                        <h2>How Much Future Business Are You Leaving on the Table?</h2>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">How many deals did you close in the last 12 months?</label>
+                        <input type="number" class="number-input" id="re_pastDeals" value="30" min="0" oninput="calculateRealEstate()">
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">What percentage of past clients have you sold to again or gotten referrals from?</label>
+                        <div class="slider-container">
+                            <input type="range" class="slider" id="re_retention" min="0" max="50" value="10" oninput="calculateRealEstate()">
+                            <div class="slider-value"><span id="re_retention_val">10</span>%</div>
+                        </div>
+                        <p class="helper-text">Be honest—do you even stay in touch?</p>
+                        
+                        <div class="auto-calc">
+                            <h4>💡 Retention Analysis:</h4>
+                            <div class="auto-calc-item">
+                                <span>Current repeat/referral deals per year:</span>
+                                <span id="re_currentRepeat">—</span>
+                            </div>
+                            <div class="auto-calc-item">
+                                <span>With 30% repeat/referral rate (best practice):</span>
+                                <span id="re_betterRepeat">—</span>
+                            </div>
+                            <div class="auto-calc-item">
+                                <span>Extra deals you're missing:</span>
+                                <span id="re_missedRepeat">—</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bucket-result">
+                        <h3>Bucket 3: Client Retention Leakage</h3>
+                        <span class="amount" id="re_bucket3Annual">KES 0</span>
+                        <p class="annual">(This is annual—retention compounds over time)</p>
+                    </div>
+                </div>
+
+                <!-- TOTAL SUMMARY -->
+                <div class="total-summary">
+                    <h2>🚨 YOUR TOTAL REVENUE LEAKAGE</h2>
+                    <span class="total-amount" id="re_totalAnnual">KES 0</span>
+                    
+                    <div class="breakdown-amounts">
+                        <div class="breakdown-item">
+                            <div class="label">Per Week</div>
+                            <div class="value" id="re_totalWeekly">KES 0</div>
+                        </div>
+                        <div class="breakdown-item">
+                            <div class="label">Per Day</div>
+                            <div class="value" id="re_totalDaily">KES 0</div>
+                        </div>
+                    </div>
+
+                    <div class="emotional-copy">
+                        <p><strong>You're working hard, generating leads, showing properties—but your revenue is bleeding out through:</strong></p>
+                        <ul>
+                            <li>Slow follow-up (Bucket 1: <span id="re_emo_bucket1">KES 0</span>)</li>
+                            <li>Disorganized pipeline (Bucket 2: <span id="re_emo_bucket2">KES 0</span>)</li>
+                            <li>Zero client retention (Bucket 3: <span id="re_emo_bucket3">KES 0</span>)</li>
+                        </ul>
+                        <p style="margin-top: 20px; font-size: 1.2rem; font-weight: 700;">The worst part? This is preventable.</p>
+                    </div>
+                </div>
+
+                <!-- TIER RECOMMENDATIONS -->
+                <div class="tier-section">
+                    <h2>Here's How to <span class="gradient-text">Stop the Bleeding</span></h2>
+                    
+                    <div class="tiers-grid">
+                        <!-- Tier 1 -->
+                        <div class="tier-card">
+                            <div class="tier-name">Starter System</div>
+                            <div class="tier-investment">KES 15,000/month<br>(KES 180,000/year)</div>
+                            <div class="tier-fixes">Fixes Bucket 1 leakage</div>
+                            <div class="tier-roi">
+                                <div class="tier-roi-label">If we recover just 20% of Bucket 1 leakage:</div>
+                                <div class="tier-roi-amount" id="re_tier1_recovery">KES 0</div>
+                                <div class="tier-roi-multiple" id="re_tier1_roi">0x ROI</div>
+                            </div>
+                            <div class="tier-best-for">Best for: Solo agents or small teams (1-5 agents)</div>
+                            <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="tier-cta" target="_blank">Start with Starter System</a>
+                        </div>
+
+                        <!-- Tier 2 -->
+                        <div class="tier-card recommended">
+                            <div class="tier-badge">RECOMMENDED</div>
+                            <div class="tier-name">Agency Growth System</div>
+                            <div class="tier-investment">KES 35,000/month<br>(KES 420,000/year)</div>
+                            <div class="tier-fixes">Fixes ALL leakage buckets</div>
+                            <div class="tier-roi">
+                                <div class="tier-roi-label">If we recover just 30% of your total leakage:</div>
+                                <div class="tier-roi-amount" id="re_tier2_recovery">KES 0</div>
+                                <div class="tier-roi-multiple" id="re_tier2_roi">0x ROI</div>
+                            </div>
+                            <div class="tier-best-for">Best for: Growing agencies (5-20 agents)</div>
+                            <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="tier-cta" target="_blank">Get Recommended System</a>
+                        </div>
+
+                        <!-- Tier 3 -->
+                        <div class="tier-card">
+                            <div class="tier-name">Enterprise System</div>
+                            <div class="tier-investment">From KES 75,000/month<br>(KES 900,000/year)</div>
+                            <div class="tier-fixes">Fixes all leakage + adds lead generation</div>
+                            <div class="tier-roi">
+                                <div class="tier-roi-label">If we recover 40% + add 20% more deals via lead gen:</div>
+                                <div class="tier-roi-amount" id="re_tier3_recovery">KES 0</div>
+                                <div class="tier-roi-multiple" id="re_tier3_roi">0x ROI</div>
+                            </div>
+                            <div class="tier-best-for">Best for: Established agencies (20+ agents)</div>
+                            <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="tier-cta" target="_blank">Go Enterprise</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REALITY CHECK -->
+                <div class="reality-check">
+                    <h2>The Reality Check</h2>
+                    <div class="options-grid">
+                        <div class="option option-1">
+                            <h3>Option 1: Keep Doing What You're Doing</h3>
+                            <ul>
+                                <li>Keep losing <span id="re_opt1_daily">KES 0</span> per day</li>
+                                <li>Keep watching competitors close deals faster</li>
+                                <li>Keep starting from zero with every new lead</li>
+                            </ul>
+                        </div>
+                        <div class="option option-2">
+                            <h3>Option 2: Stop the Leakage</h3>
+                            <ul>
+                                <li>Capture 95% of inquiries instead of <span id="re_opt2_current">60</span>%</li>
+                                <li>Close 20% of qualified prospects instead of <span id="re_opt2_close">10</span>%</li>
+                                <li>Get 30% of business from repeat/referral instead of <span id="re_opt2_retention">10</span>%</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="gap-cost">
+                        <p>The gap costs you</p>
+                        <span class="amount" id="re_gap_cost">KES 0</span>
+                        <p>per year</p>
+                    </div>
+                </div>
+
+                <!-- FINAL CTA -->
+                <div class="final-cta">
+                    <h2>Ready to Stop Losing Commissions?</h2>
+                    <p>Book a Free Revenue Audit and see your exact leakage points</p>
+                    <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="final-cta-button" target="_blank">📅 Book Free Revenue Audit</a>
+                    <p class="note">No commitment. No sales pitch. Just honest analysis of where your commissions are leaking.</p>
+                </div>
+            `;
+            
+            document.getElementById('calculatorContent').innerHTML = html;
+            calculateRealEstate();
+        }
+
+        // Real Estate Calculations
+        function calculateRealEstate() {
+            // Get all inputs
+            const inquiries = parseFloat(document.getElementById('re_inquiries')?.value) || 0;
+            const captureRate = parseFloat(document.getElementById('re_captureRate')?.value) || 0;
+            const viewingRate = parseFloat(document.getElementById('re_viewingRate')?.value) || 0;
+            const avgCommission = parseFloat(document.getElementById('re_avgCommission')?.value) || 0;
+            const closeRate = parseFloat(document.getElementById('re_closeRate')?.value) || 0;
+            const pipeline = parseFloat(document.getElementById('re_pipeline')?.value) || 0;
+            const pipelineClose = parseFloat(document.getElementById('re_pipelineClose')?.value) || 0;
+            const pastDeals = parseFloat(document.getElementById('re_pastDeals')?.value) || 0;
+            const retention = parseFloat(document.getElementById('re_retention')?.value) || 0;
+
+            // Update slider values
+            document.getElementById('re_captureRate_val').textContent = captureRate;
+            document.getElementById('re_viewingRate_val').textContent = viewingRate;
+            document.getElementById('re_closeRate_val').textContent = closeRate;
+            document.getElementById('re_pipelineClose_val').textContent = pipelineClose;
+            document.getElementById('re_retention_val').textContent = retention;
+
+            // BUCKET 1 CALCULATIONS
+            const capturedInquiries = inquiries * (captureRate / 100);
+            const missedInquiries = inquiries - capturedInquiries;
+            const withSystemCapture = inquiries * 0.95;
+            const extraInquiriesWithSystem = withSystemCapture - capturedInquiries;
+            
+            const extraViewings = extraInquiriesWithSystem * (viewingRate / 100);
+            const extraDealsFromViewings = extraViewings * (closeRate / 100);
+            
+            const bucket1Monthly = extraDealsFromViewings * avgCommission;
+            const bucket1Annual = bucket1Monthly * 12;
+
+            // Update Bucket 1 auto-calc
+            document.getElementById('re_missedInquiries').textContent = Math.round(missedInquiries) + ' inquiries';
+            document.getElementById('re_withSystem').textContent = '+' + Math.round(extraInquiriesWithSystem) + ' more inquiries';
+            document.getElementById('re_extraViewings').textContent = Math.round(extraViewings) + ' viewings';
+
+            // BUCKET 2 CALCULATIONS
+            const currentDeals = pipeline * (pipelineClose / 100);
+            const betterDeals = pipeline * 0.20; // 20% industry standard
+            const missedDeals = betterDeals - currentDeals;
+            
+            const bucket2Monthly = missedDeals * avgCommission;
+            const bucket2Annual = bucket2Monthly * 12;
+
+            // Update Bucket 2 auto-calc
+            document.getElementById('re_currentDeals').textContent = currentDeals.toFixed(1) + ' deals/month';
+            document.getElementById('re_betterDeals').textContent = betterDeals.toFixed(1) + ' deals/month';
+            document.getElementById('re_missedDeals').textContent = missedDeals.toFixed(1) + ' deals/month';
+
+            // BUCKET 3 CALCULATIONS
+            const currentRepeat = pastDeals * (retention / 100);
+            const betterRepeat = pastDeals * 0.30; // 30% best practice
+            const missedRepeat = betterRepeat - currentRepeat;
+            
+            const bucket3Annual = missedRepeat * avgCommission;
+
+            // Update Bucket 3 auto-calc
+            document.getElementById('re_currentRepeat').textContent = currentRepeat.toFixed(1) + ' deals';
+            document.getElementById('re_betterRepeat').textContent = betterRepeat.toFixed(1) + ' deals';
+            document.getElementById('re_missedRepeat').textContent = missedRepeat.toFixed(1) + ' deals/year';
+
+            // TOTALS
+            const totalAnnual = bucket1Annual + bucket2Annual + bucket3Annual;
+            const totalMonthly = totalAnnual / 12;
+            const totalWeekly = totalAnnual / 52;
+            const totalDaily = totalAnnual / 365;
+
+            // Update Bucket Results
+            document.getElementById('re_bucket1Monthly').textContent = formatCurrency(bucket1Monthly);
+            document.getElementById('re_bucket1Annual').textContent = formatCurrency(bucket1Annual);
+            document.getElementById('re_bucket2Monthly').textContent = formatCurrency(bucket2Monthly);
+            document.getElementById('re_bucket2Annual').textContent = formatCurrency(bucket2Annual);
+            document.getElementById('re_bucket3Annual').textContent = formatCurrency(bucket3Annual);
+
+            // Update Total Summary
+            document.getElementById('re_totalAnnual').textContent = formatCurrency(totalAnnual);
+            document.getElementById('re_totalWeekly').textContent = formatCurrency(totalWeekly);
+            document.getElementById('re_totalDaily').textContent = formatCurrency(totalDaily);
+            
+            document.getElementById('re_emo_bucket1').textContent = formatCurrency(bucket1Annual);
+            document.getElementById('re_emo_bucket2').textContent = formatCurrency(bucket2Annual);
+            document.getElementById('re_emo_bucket3').textContent = formatCurrency(bucket3Annual);
+
+            // Tier ROI Calculations
+            
+            // Tier 1: 20% of Bucket 1 only
+            const tier1Recovery = bucket1Annual * 0.20;
+            const tier1Investment = 180000;
+            const tier1ROI = (tier1Recovery / tier1Investment).toFixed(1);
+            
+            // Tier 2: 30% of total
+            const tier2Recovery = totalAnnual * 0.30;
+            const tier2Investment = 420000;
+            const tier2ROI = (tier2Recovery / tier2Investment).toFixed(1);
+            
+            // Tier 3: 40% + 20% new business
+            const tier3Recovery = (totalAnnual * 0.40) + (totalAnnual * 0.20);
+            const tier3Investment = 900000;
+            const tier3ROI = (tier3Recovery / tier3Investment).toFixed(1);
+
+            document.getElementById('re_tier1_recovery').textContent = formatCurrency(tier1Recovery);
+            document.getElementById('re_tier1_roi').textContent = tier1ROI + 'x ROI';
+            document.getElementById('re_tier2_recovery').textContent = formatCurrency(tier2Recovery);
+            document.getElementById('re_tier2_roi').textContent = tier2ROI + 'x ROI';
+            document.getElementById('re_tier3_recovery').textContent = formatCurrency(tier3Recovery);
+            document.getElementById('re_tier3_roi').textContent = tier3ROI + 'x ROI';
+
+            // Reality Check
+            document.getElementById('re_opt1_daily').textContent = formatCurrency(totalDaily);
+            document.getElementById('re_opt2_current').textContent = captureRate;
+            document.getElementById('re_opt2_close').textContent = pipelineClose;
+            document.getElementById('re_opt2_retention').textContent = retention;
+            document.getElementById('re_gap_cost').textContent = formatCurrency(totalAnnual);
+        }
+
+        // CLINIC CALCULATOR
+        function loadClinicCalculator() {
+            const today = new Date().toISOString().split('T')[0];
+            
+            const html = `
+                <div class="calc-header">
+                    <h1>Private Clinic Revenue Leakage Calculator</h1>
+                    <p>See exactly how much patient revenue you're losing every month</p>
+                </div>
+
+                <div class="client-info">
+                    <h3>Client Information</h3>
+                    <div class="info-grid">
+                        <div class="info-field">
+                            <label>Clinic Name *</label>
+                            <input type="text" id="clientName" placeholder="Enter clinic name" required>
+                        </div>
+                        <div class="info-field">
+                            <label>Email Address *</label>
+                            <input type="email" id="clientEmail" placeholder="your@email.com" required>
+                        </div>
+                        <div class="info-field">
+                            <label>Number of Providers</label>
+                            <input type="number" id="numProviders" value="1" min="1">
+                        </div>
+                        <div class="info-field">
+                            <label>Audit Date</label>
+                            <input type="date" id="auditDate" value="${today}" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BUCKET 1: PATIENT INQUIRY -->
+                <div class="bucket">
+                    <div class="bucket-header">
+                        <div class="bucket-number">1</div>
+                        <h2>How Many Patients Are You Losing to Slow Response?</h2>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">How many patient inquiries do you get per month?</label>
+                        <input type="number" class="number-input" id="cl_inquiries" value="60" min="0" oninput="calculateClinic()">
+                        <p class="helper-text">Total inquiries from all sources (phone, WhatsApp, website, social)</p>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">What percentage of inquiries actually book appointments?</label>
+                        <div class="slider-container">
+                            <input type="range" class="slider" id="cl_bookingRate" min="0" max="100" value="50" oninput="calculateClinic()">
+                            <div class="slider-value"><span id="cl_bookingRate_val">50</span>%</div>
+                        </div>
+                        <p class="helper-text">Be honest—how many inquiries never convert to bookings?</p>
+                        
+                        <div class="auto-calc">
+                            <h4>💡 Quick Analysis:</h4>
+                            <div class="auto-calc-item">
+                                <span>Missed bookings per month:</span>
+                                <span id="cl_missedBookings">—</span>
+                            </div>
+                            <div class="auto-calc-item">
+                                <span>With 85% booking rate (our system):</span>
+                                <span id="cl_withSystem">—</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">What's your average revenue per patient visit?</label>
+                        <input type="number" class="number-input" id="cl_avgRevenue" value="5000" min="0" oninput="calculateClinic()">
+                        <p class="helper-text">Average amount a patient pays per visit</p>
+                    </div>
+
+                    <div class="bucket-result">
+                        <h3>Bucket 1: Patient Inquiry Leakage</h3>
+                        <span class="amount" id="cl_bucket1Monthly">KES 0</span>
+                        <p class="annual">Annual Leakage: <strong id="cl_bucket1Annual">KES 0</strong></p>
+                    </div>
+                </div>
+
+                <!-- BUCKET 2: APPOINTMENT NO-SHOWS -->
+                <div class="bucket">
+                    <div class="bucket-header">
+                        <div class="bucket-number">2</div>
+                        <h2>How Much Revenue Are No-Shows Costing You?</h2>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">How many appointments do you book per month?</label>
+                        <input type="number" class="number-input" id="cl_appointments" value="80" min="0" oninput="calculateClinic()">
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">What's your current no-show rate?</label>
+                        <div class="slider-container">
+                            <input type="range" class="slider" id="cl_noShowRate" min="0" max="50" value="30" oninput="calculateClinic()">
+                            <div class="slider-value"><span id="cl_noShowRate_val">30</span>%</div>
+                        </div>
+                        <p class="helper-text">Percentage of booked appointments where patient doesn't show up</p>
+                        
+                        <div class="auto-calc">
+                            <h4>💡 No-Show Analysis:</h4>
+                            <div class="auto-calc-item">
+                                <span>Current no-shows per month:</span>
+                                <span id="cl_currentNoShows">—</span>
+                            </div>
+                            <div class="auto-calc-item">
+                                <span>With 5% no-show rate (automated reminders):</span>
+                                <span id="cl_betterAttendance">—</span>
+                            </div>
+                            <div class="auto-calc-item">
+                                <span>Appointments you'll recover:</span>
+                                <span id="cl_recoveredAppts">—</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bucket-result">
+                        <h3>Bucket 2: Appointment No-Show Leakage</h3>
+                        <span class="amount" id="cl_bucket2Monthly">KES 0</span>
+                        <p class="annual">Annual Leakage: <strong id="cl_bucket2Annual">KES 0</strong></p>
+                    </div>
+                </div>
+
+                <!-- BUCKET 3: PATIENT RETENTION -->
+                <div class="bucket">
+                    <div class="bucket-header">
+                        <div class="bucket-number">3</div>
+                        <h2>How Much Future Revenue Are You Leaving on the Table?</h2>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">How many unique patients did you see in the last 12 months?</label>
+                        <input type="number" class="number-input" id="cl_uniquePatients" value="500" min="0" oninput="calculateClinic()">
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">What percentage of patients return for follow-ups or additional services?</label>
+                        <div class="slider-container">
+                            <input type="range" class="slider" id="cl_returnRate" min="0" max="60" value="20" oninput="calculateClinic()">
+                            <div class="slider-value"><span id="cl_returnRate_val">20</span>%</div>
+                        </div>
+                        <p class="helper-text">Do you have a system to bring patients back?</p>
+                        
+                        <div class="auto-calc">
+                            <h4>💡 Retention Analysis:</h4>
+                            <div class="auto-calc-item">
+                                <span>Current return visits per year:</span>
+                                <span id="cl_currentReturn">—</span>
+                            </div>
+                            <div class="auto-calc-item">
+                                <span>With 50% return rate (automated follow-up):</span>
+                                <span id="cl_betterReturn">—</span>
+                            </div>
+                            <div class="auto-calc-item">
+                                <span>Extra visits you're missing:</span>
+                                <span id="cl_missedVisits">—</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">What percentage of new patients come from referrals?</label>
+                        <div class="slider-container">
+                            <input type="range" class="slider" id="cl_referralRate" min="0" max="50" value="10" oninput="calculateClinic()">
+                            <div class="slider-value"><span id="cl_referralRate_val">10</span>%</div>
+                        </div>
+                        
+                        <div class="auto-calc">
+                            <h4>💡 Referral Potential:</h4>
+                            <div class="auto-calc-item">
+                                <span>With 30% referral rate (automated system):</span>
+                                <span id="cl_extraReferrals">—</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bucket-result">
+                        <h3>Bucket 3: Patient Retention Leakage</h3>
+                        <span class="amount" id="cl_bucket3Annual">KES 0</span>
+                        <p class="annual">(This is annual—retention compounds over time)</p>
+                    </div>
+                </div>
+
+                <!-- TOTAL SUMMARY -->
+                <div class="total-summary">
+                    <h2>🚨 YOUR TOTAL PATIENT REVENUE LEAKAGE</h2>
+                    <span class="total-amount" id="cl_totalAnnual">KES 0</span>
+                    
+                    <div class="breakdown-amounts">
+                        <div class="breakdown-item">
+                            <div class="label">Per Week</div>
+                            <div class="value" id="cl_totalWeekly">KES 0</div>
+                        </div>
+                        <div class="breakdown-item">
+                            <div class="label">Per Day</div>
+                            <div class="value" id="cl_totalDaily">KES 0</div>
+                        </div>
+                    </div>
+
+                    <div class="emotional-copy">
+                        <p><strong>You're providing excellent care, but your revenue is bleeding out through:</strong></p>
+                        <ul>
+                            <li>Missed inquiries & slow response (Bucket 1: <span id="cl_emo_bucket1">KES 0</span>)</li>
+                            <li>Appointment no-shows (Bucket 2: <span id="cl_emo_bucket2">KES 0</span>)</li>
+                            <li>Patients who never return (Bucket 3: <span id="cl_emo_bucket3">KES 0</span>)</li>
+                        </ul>
+                        <p style="margin-top: 20px; font-size: 1.2rem; font-weight: 700;">The worst part? You're losing patients not because of poor care—but because of poor systems.</p>
+                    </div>
+                </div>
+
+                <!-- TIER RECOMMENDATIONS -->
+                <div class="tier-section">
+                    <h2>Here's How to <span class="gradient-text">Stop Patient Leakage</span></h2>
+                    
+                    <div class="tiers-grid">
+                        <!-- Tier 1 -->
+                        <div class="tier-card">
+                            <div class="tier-name">Starter System</div>
+                            <div class="tier-investment">KES 15,000/month<br>(KES 180,000/year)</div>
+                            <div class="tier-fixes">Fixes Bucket 1 leakage</div>
+                            <div class="tier-roi">
+                                <div class="tier-roi-label">If we recover just 20% of Bucket 1 leakage:</div>
+                                <div class="tier-roi-amount" id="cl_tier1_recovery">KES 0</div>
+                                <div class="tier-roi-multiple" id="cl_tier1_roi">0x ROI</div>
+                            </div>
+                            <div class="tier-best-for">Best for: Solo practitioners or small clinics (1-3 providers)</div>
+                            <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="tier-cta" target="_blank">Start with Starter System</a>
+                        </div>
+
+                        <!-- Tier 2 -->
+                        <div class="tier-card recommended">
+                            <div class="tier-badge">RECOMMENDED</div>
+                            <div class="tier-name">Growing Clinic System</div>
+                            <div class="tier-investment">KES 35,000/month<br>(KES 420,000/year)</div>
+                            <div class="tier-fixes">Fixes ALL patient leakage</div>
+                            <div class="tier-roi">
+                                <div class="tier-roi-label">If we recover just 30% of your total leakage:</div>
+                                <div class="tier-roi-amount" id="cl_tier2_recovery">KES 0</div>
+                                <div class="tier-roi-multiple" id="cl_tier2_roi">0x ROI</div>
+                            </div>
+                            <div class="tier-best-for">Best for: Growing clinics (3-10 providers)</div>
+                            <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="tier-cta" target="_blank">Get Recommended System</a>
+                        </div>
+
+                        <!-- Tier 3 -->
+                        <div class="tier-card">
+                            <div class="tier-name">Multi-Provider Enterprise</div>
+                            <div class="tier-investment">From KES 75,000/month<br>(KES 900,000/year)</div>
+                            <div class="tier-fixes">Fixes all leakage + adds patient acquisition</div>
+                            <div class="tier-roi">
+                                <div class="tier-roi-label">If we recover 40% + add 20% more patients via marketing:</div>
+                                <div class="tier-roi-amount" id="cl_tier3_recovery">KES 0</div>
+                                <div class="tier-roi-multiple" id="cl_tier3_roi">0x ROI</div>
+                            </div>
+                            <div class="tier-best-for">Best for: Multi-location clinics or large practices</div>
+                            <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="tier-cta" target="_blank">Go Enterprise</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REALITY CHECK -->
+                <div class="reality-check">
+                    <h2>The Reality Check</h2>
+                    <div class="options-grid">
+                        <div class="option option-1">
+                            <h3>Option 1: Keep Doing What You're Doing</h3>
+                            <ul>
+                                <li>Keep losing <span id="cl_opt1_daily">KES 0</span> per day to no-shows and missed inquiries</li>
+                                <li>Keep relying on manual reminders that don't work</li>
+                                <li>Keep losing patients after their first visit</li>
+                            </ul>
+                        </div>
+                        <div class="option option-2">
+                            <h3>Option 2: Stop the Patient Leakage</h3>
+                            <ul>
+                                <li>Respond to 95% of inquiries instantly (even at 2 AM)</li>
+                                <li>Achieve 95% appointment attendance (vs <span id="cl_opt2_attendance">70</span>% now)</li>
+                                <li>Get 50% of patients to return + 30% of new patients from referrals</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="gap-cost">
+                        <p>The gap costs you</p>
+                        <span class="amount" id="cl_gap_cost">KES 0</span>
+                        <p>per year</p>
+                    </div>
+                </div>
+
+                <!-- FINAL CTA -->
+                <div class="final-cta">
+                    <h2>Ready to Stop Losing Patients?</h2>
+                    <p>Book a Free Revenue Audit and see your exact patient leakage points</p>
+                    <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="final-cta-button" target="_blank">📅 Book Free Revenue Audit</a>
+                    <p class="note">No commitment. No sales pitch. Just honest analysis of where patients are slipping through.</p>
+                </div>
+            `;
+            
+            document.getElementById('calculatorContent').innerHTML = html;
+            calculateClinic();
+        }
+
+        // Clinic Calculations
+        function calculateClinic() {
+            // Get all inputs
+            const inquiries = parseFloat(document.getElementById('cl_inquiries')?.value) || 0;
+            const bookingRate = parseFloat(document.getElementById('cl_bookingRate')?.value) || 0;
+            const avgRevenue = parseFloat(document.getElementById('cl_avgRevenue')?.value) || 0;
+            const appointments = parseFloat(document.getElementById('cl_appointments')?.value) || 0;
+            const noShowRate = parseFloat(document.getElementById('cl_noShowRate')?.value) || 0;
+            const uniquePatients = parseFloat(document.getElementById('cl_uniquePatients')?.value) || 0;
+            const returnRate = parseFloat(document.getElementById('cl_returnRate')?.value) || 0;
+            const referralRate = parseFloat(document.getElementById('cl_referralRate')?.value) || 0;
+
+            // Update slider values
+            document.getElementById('cl_bookingRate_val').textContent = bookingRate;
+            document.getElementById('cl_noShowRate_val').textContent = noShowRate;
+            document.getElementById('cl_returnRate_val').textContent = returnRate;
+            document.getElementById('cl_referralRate_val').textContent = referralRate;
+
+            // BUCKET 1 CALCULATIONS
+            const currentBookings = inquiries * (bookingRate / 100);
+            const missedBookings = inquiries - currentBookings;
+            const withSystemBookings = inquiries * 0.85;
+            const extraBookings = withSystemBookings - currentBookings;
+            
+            const bucket1Monthly = extraBookings * avgRevenue;
+            const bucket1Annual = bucket1Monthly * 12;
+
+            // Update Bucket 1 auto-calc
+            document.getElementById('cl_missedBookings').textContent = Math.round(missedBookings) + ' bookings';
+            document.getElementById('cl_withSystem').textContent = '+' + Math.round(extraBookings) + ' more bookings';
+
+            // BUCKET 2 CALCULATIONS
+            const currentNoShows = appointments * (noShowRate / 100);
+            const withSystemNoShows = appointments * 0.05; // 95% attendance
+            const recoveredAppts = currentNoShows - withSystemNoShows;
+            
+            const bucket2Monthly = recoveredAppts * avgRevenue;
+            const bucket2Annual = bucket2Monthly * 12;
+
+            // Update Bucket 2 auto-calc
+            document.getElementById('cl_currentNoShows').textContent = Math.round(currentNoShows) + ' patients';
+            document.getElementById('cl_betterAttendance').textContent = Math.round(withSystemNoShows) + ' no-shows (95% attend)';
+            document.getElementById('cl_recoveredAppts').textContent = Math.round(recoveredAppts) + ' appointments';
+
+            // BUCKET 3 CALCULATIONS
+            const currentReturn = uniquePatients * (returnRate / 100);
+            const betterReturn = uniquePatients * 0.50; // 50% return rate
+            const missedVisits = betterReturn - currentReturn;
+            
+            // Referral calculation
+            const currentReferrals = uniquePatients * (referralRate / 100);
+            const betterReferrals = uniquePatients * 0.30; // 30% referral rate
+            const extraReferrals = betterReferrals - currentReferrals;
+            
+            const bucket3Annual = (missedVisits * avgRevenue) + (extraReferrals * avgRevenue);
+
+            // Update Bucket 3 auto-calc
+            document.getElementById('cl_currentReturn').textContent = Math.round(currentReturn) + ' visits';
+            document.getElementById('cl_betterReturn').textContent = Math.round(betterReturn) + ' visits';
+            document.getElementById('cl_missedVisits').textContent = Math.round(missedVisits) + ' visits/year';
+            document.getElementById('cl_extraReferrals').textContent = '+' + Math.round(extraReferrals) + ' patients/year';
+
+            // TOTALS
+            const totalAnnual = bucket1Annual + bucket2Annual + bucket3Annual;
+            const totalMonthly = totalAnnual / 12;
+            const totalWeekly = totalAnnual / 52;
+            const totalDaily = totalAnnual / 365;
+
+            // Update Bucket Results
+            document.getElementById('cl_bucket1Monthly').textContent = formatCurrency(bucket1Monthly);
+            document.getElementById('cl_bucket1Annual').textContent = formatCurrency(bucket1Annual);
+            document.getElementById('cl_bucket2Monthly').textContent = formatCurrency(bucket2Monthly);
+            document.getElementById('cl_bucket2Annual').textContent = formatCurrency(bucket2Annual);
+            document.getElementById('cl_bucket3Annual').textContent = formatCurrency(bucket3Annual);
+
+            // Update Total Summary
+            document.getElementById('cl_totalAnnual').textContent = formatCurrency(totalAnnual);
+            document.getElementById('cl_totalWeekly').textContent = formatCurrency(totalWeekly);
+            document.getElementById('cl_totalDaily').textContent = formatCurrency(totalDaily);
+            
+            document.getElementById('cl_emo_bucket1').textContent = formatCurrency(bucket1Annual);
+            document.getElementById('cl_emo_bucket2').textContent = formatCurrency(bucket2Annual);
+            document.getElementById('cl_emo_bucket3').textContent = formatCurrency(bucket3Annual);
+
+            // Tier ROI Calculations
+            
+            // Tier 1: 20% of Bucket 1 only
+            const tier1Recovery = bucket1Annual * 0.20;
+            const tier1Investment = 180000;
+            const tier1ROI = (tier1Recovery / tier1Investment).toFixed(1);
+            
+            // Tier 2: 30% of total
+            const tier2Recovery = totalAnnual * 0.30;
+            const tier2Investment = 420000;
+            const tier2ROI = (tier2Recovery / tier2Investment).toFixed(1);
+            
+            // Tier 3: 40% + 20% new business
+            const tier3Recovery = (totalAnnual * 0.40) + (totalAnnual * 0.20);
+            const tier3Investment = 900000;
+            const tier3ROI = (tier3Recovery / tier3Investment).toFixed(1);
+
+            document.getElementById('cl_tier1_recovery').textContent = formatCurrency(tier1Recovery);
+            document.getElementById('cl_tier1_roi').textContent = tier1ROI + 'x ROI';
+            document.getElementById('cl_tier2_recovery').textContent = formatCurrency(tier2Recovery);
+            document.getElementById('cl_tier2_roi').textContent = tier2ROI + 'x ROI';
+            document.getElementById('cl_tier3_recovery').textContent = formatCurrency(tier3Recovery);
+            document.getElementById('cl_tier3_roi').textContent = tier3ROI + 'x ROI';
+
+            // Reality Check
+            const currentAttendance = 100 - noShowRate;
+            document.getElementById('cl_opt1_daily').textContent = formatCurrency(totalDaily);
+            document.getElementById('cl_opt2_attendance').textContent = currentAttendance;
+            document.getElementById('cl_gap_cost').textContent = formatCurrency(totalAnnual);
+        }
+
+        // Email submission functionality
+        function sendCalculatorReport() {
+            const clientName = document.getElementById('clientName')?.value;
+            const clientEmail = document.getElementById('clientEmail')?.value;
+            
+            if (!clientName || !clientEmail) {
+                alert('Please fill in your name and email address before generating the report.');
+                return;
+            }
+
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(clientEmail)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            // Generate report data
+            const reportData = generateReportData();
+            
+            // Send email via Web3Forms (free email service that doesn't require backend)
             const formData = new FormData();
-            for (const key in reportData) {
-                formData.append(key, reportData[key]);
-            }
-            
-            const response = await fetch('https://formsubmit.co/ajax/rita@aherisystems.com', {
+            formData.append('subject', `Revenue Leakage Calculator Report - ${clientName}`);
+            formData.append('from_name', 'Aheri Systems Calculator');
+            formData.append('to', 'rita@aherisystems.com');
+            formData.append('cc', clientEmail);
+            formData.append('message', reportData);
+
+           fetch('https://formsubmit.co/rita@aherisystems.com', {
                 method: 'POST',
-                headers: {
-                    'Accept': 'application/json'
-                },
                 body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    console.log('Report sent successfully');
+                } else {
+                    console.error('Failed to send report:', data);
+                }
+            })
+            .catch(error => {
+                console.error('Error sending report:', error);
             });
-            
-            const result = await response.json();
-            
-            if (response.ok && result.success) {
-                btn.textContent = '✅ Report Sent!';
-                btn.style.background = '#059669';
-                alert('✅ Report sent successfully! \n\nCheck your email (and spam folder). \nOur team will follow up within 24 hours.');
-            } else {
-                throw new Error('Failed to send');
-            }
-        } catch (error) {
-            console.error('Email error:', error);
-            alert('❌ There was an error sending your report. \n\nPlease try: \n1. Use the Print button to save a PDF \n2. Or email us directly at rita@aherisystems.com');
-            btn.textContent = originalText;
-            btn.disabled = false;
-            btn.style.background = '#f59e0b';
         }
-    }
+
+        function generateReportData() {
+            const clientName = document.getElementById('clientName')?.value || 'Not provided';
+            const clientEmail = document.getElementById('clientEmail')?.value || 'Not provided';
+            const auditDate = document.getElementById('auditDate')?.value || '';
+            
+            let reportHTML = `
+                <h2>Revenue Leakage Calculator Report</h2>
+                <p><strong>Client:</strong> ${clientName}</p>
+                <p><strong>Email:</strong> ${clientEmail}</p>
+                <p><strong>Date:</strong> ${auditDate}</p>
+                <p><strong>Industry:</strong> ${selectedIndustry === 'real-estate' ? 'Real Estate' : 'Private Healthcare'}</p>
+                <hr>
+            `;
+
+            if (selectedIndustry === 'real-estate') {
+                const totalAnnual = document.getElementById('re_totalAnnual')?.textContent || 'N/A';
+                const bucket1 = document.getElementById('re_bucket1Annual')?.textContent || 'N/A';
+                const bucket2 = document.getElementById('re_bucket2Annual')?.textContent || 'N/A';
+                const bucket3 = document.getElementById('re_bucket3Annual')?.textContent || 'N/A';
+                
+                reportHTML += `
+                    <h3>Total Annual Revenue Leakage: ${totalAnnual}</h3>
+                    <ul>
+                        <li>Bucket 1 (Lead Capture): ${bucket1}</li>
+                        <li>Bucket 2 (Pipeline Management): ${bucket2}</li>
+                        <li>Bucket 3 (Client Retention): ${bucket3}</li>
+                    </ul>
+                `;
+            } else {
+                const totalAnnual = document.getElementById('cl_totalAnnual')?.textContent || 'N/A';
+                const bucket1 = document.getElementById('cl_bucket1Annual')?.textContent || 'N/A';
+                const bucket2 = document.getElementById('cl_bucket2Annual')?.textContent || 'N/A';
+                const bucket3 = document.getElementById('cl_bucket3Annual')?.textContent || 'N/A';
+                
+                reportHTML += `
+                    <h3>Total Annual Patient Revenue Leakage: ${totalAnnual}</h3>
+                    <ul>
+                        <li>Bucket 1 (Patient Inquiry): ${bucket1}</li>
+                        <li>Bucket 2 (Appointment No-Shows): ${bucket2}</li>
+                        <li>Bucket 3 (Patient Retention): ${bucket3}</li>
+                    </ul>
+                `;
+            }
+
+            reportHTML += `
+                <hr>
+                <p><strong>Next Step:</strong> Book a free Revenue Audit at https://calendar.app.google/pm9QhCkfKvTPau3D9</p>
+            `;
+
+            return reportHTML;
+        }
+
+        // Auto-send report when calculations are updated (debounced)
+        let reportTimeout;
+        function scheduleReportSend() {
+            clearTimeout(reportTimeout);
+            reportTimeout = setTimeout(() => {
+                const clientEmail = document.getElementById('clientEmail')?.value;
+                if (clientEmail && clientEmail.includes('@')) {
+                    sendCalculatorReport();
+                }
+            }, 5000); // Send 5 seconds after user stops making changes
+        }
+
+        // Add event listeners to trigger report sending
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add listeners after calculator loads
+            setTimeout(() => {
+                const inputs = document.querySelectorAll('input[type="number"], input[type="range"]');
+                inputs.forEach(input => {
+                    input.addEventListener('change', scheduleReportSend);
+                });
+            }, 1000);
+        });
     </script>
 
+    <!-- Alternative: Simple mailto fallback -->
+    <script>
+        // Simple email collection note
+        console.log('%c📧 Calculator Report System Active', 'color: #3bc3b7; font-size: 14px; font-weight: bold;');
+        console.log('Reports will be sent to rita@aherisystems.com when users complete their calculations.');
+        console.log('%c⚠️ IMPORTANT: You need to set up Web3Forms or similar service', 'color: #f59e0b; font-size: 12px;');
+        console.log('1. Sign up at https://web3forms.com (free)');
+        console.log('2. Get your access key');
+        console.log('3. Replace YOUR_WEB3FORMS_ACCESS_KEY in the code above');
+        console.log('Alternative: Use FormSubmit, EmailJS, or build a custom backend endpoint');
+    </script>
 </body>
 </html>
