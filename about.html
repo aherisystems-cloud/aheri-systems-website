@@ -11,45 +11,8 @@
     <link rel="manifest" href="/site.webmanifest">
     
     <!-- SEO Meta Tags -->
-    <title>About Aheri Systems | Revenue Systems for Real Estate & Clinics | Kenya</title>
-    <meta name="description" content="Aheri Systems builds Revenue Command Systems for real estate and healthcare businesses across Africa. Stop revenue leakage, create predictable growth. Founded by systems architect Rita Ndubi.">
-    <meta name="keywords" content="Aheri Systems about, Rita Ndubi, revenue systems Africa, real estate CRM Kenya, clinic management system, systems automation Africa">
-    <meta name="author" content="Aheri Systems">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="About Aheri Systems | Revenue Systems Partner for Africa">
-    <meta property="og:description" content="Founded by systems architect Rita Ndubi. We build Revenue Command Systems for real estate and healthcare businesses across Africa.">
-    <meta property="og:url" content="https://aherisystems.com/about">
-    <meta property="og:site_name" content="Aheri Systems">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://aherisystems.com/about">
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Aheri Systems",
-      "url": "https://aherisystems.com",
-      "logo": "https://aherisystems.com/assets/images/aheri-logo.png",
-      "description": "Revenue Command Systems for real estate agencies and private clinics in Kenya and Africa",
-      "founder": {
-        "@type": "Person",
-        "name": "Rita Ndubi",
-        "jobTitle": "Founder & Chief Systems Architect",
-        "description": "Systems strategist and automation specialist focused on stopping revenue leakage for African businesses"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Nairobi",
-        "addressCountry": "KE"
-      },
-      "areaServed": ["Kenya", "East Africa", "Africa"],
-      "knowsAbout": ["Revenue Systems", "Real Estate CRM", "Healthcare Management Systems", "Sales Automation", "Patient Retention"]
-    }
-    </script>
+    <title>About Aheri Systems | SME Revenue Systems Expert | Kenya</title>
+    <meta name="description" content="Founded by systems strategist Rita Ndubi. Platform-agnostic revenue systems for growing SMEs across Africa. Expert in Zoho, GoHighLevel, HubSpot.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,7 +32,6 @@
             color: #112837;
             background: white;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
         .container {
@@ -114,7 +76,6 @@
             height: 3px;
             background: #112837;
             border-radius: 3px;
-            transition: 0.3s;
         }
 
         .nav-menu {
@@ -151,7 +112,7 @@
             box-shadow: 0 4px 12px rgba(59, 195, 183, 0.3);
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
             background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
             color: white;
@@ -260,7 +221,7 @@
             font-weight: 700;
         }
 
-        /* Why We Exist Section */
+        /* Why Section */
         .why-section {
             padding: 90px 20px;
             background: #f8fafc;
@@ -288,10 +249,11 @@
             font-size: 1.15rem;
             line-height: 1.9;
             color: #475569;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
+            text-align: center;
         }
 
-        .industry-problem {
+        .problem-box {
             background: white;
             border-radius: 16px;
             padding: 40px;
@@ -300,18 +262,40 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
-        .industry-problem h3 {
+        .problem-box h3 {
             font-size: 1.6rem;
             margin-bottom: 20px;
             color: #112837;
             font-weight: 700;
         }
 
-        .industry-problem p {
+        .problem-box p {
             font-size: 1.05rem;
             line-height: 1.8;
             color: #475569;
             margin-bottom: 15px;
+        }
+
+        .problem-box ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .problem-box ul li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #64748b;
+            font-size: 1rem;
+        }
+
+        .problem-box ul li:before {
+            content: "×";
+            position: absolute;
+            left: 0;
+            color: #ef4444;
+            font-weight: bold;
+            font-size: 1.5rem;
         }
 
         .callout {
@@ -463,10 +447,6 @@
             align-items: start;
         }
 
-        .founder-image {
-            position: relative;
-        }
-
         .founder-photo {
             width: 100%;
             height: 350px;
@@ -475,7 +455,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1rem;
             color: white;
             text-align: center;
             padding: 20px;
@@ -491,7 +470,6 @@
             font-size: 2.2rem;
             font-weight: 800;
             margin-bottom: 8px;
-            color: white;
         }
 
         .founder-title {
@@ -592,7 +570,7 @@
             color: #475569;
         }
 
-        /* Who We Serve Section */
+        /* Who We Serve */
         .serve-section {
             padding: 90px 20px;
             background: white;
@@ -608,63 +586,43 @@
 
         .serve-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
             margin-bottom: 60px;
         }
 
         .serve-card {
             background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
             border-radius: 16px;
-            padding: 45px;
+            padding: 35px;
             border: 2px solid #e2e8f0;
-            position: relative;
-            overflow: hidden;
+            text-align: center;
+            transition: all 0.3s ease;
         }
 
-        .serve-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, #3bc3b7 0%, #2da89e 100%);
+        .serve-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(59, 195, 183, 0.15);
+            border-color: #3bc3b7;
         }
 
         .serve-icon {
             font-size: 3rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             display: block;
         }
 
         .serve-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
             color: #112837;
-            font-weight: 800;
+            font-weight: 700;
         }
 
-        .serve-card ul {
-            list-style: none;
-        }
-
-        .serve-card ul li {
-            padding: 8px 0;
-            padding-left: 28px;
-            position: relative;
-            color: #475569;
-            font-size: 1rem;
+        .serve-card p {
+            color: #64748b;
+            font-size: 0.95rem;
             line-height: 1.6;
-        }
-
-        .serve-card ul li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #3bc3b7;
-            font-weight: bold;
-            font-size: 1.2rem;
         }
 
         .serve-callout {
@@ -674,7 +632,7 @@
             padding: 40px;
             text-align: center;
             max-width: 900px;
-            margin: 0 auto;
+            margin: 50px auto 0;
         }
 
         .serve-callout h4 {
@@ -690,98 +648,88 @@
             line-height: 1.8;
         }
 
-        /* Location Section */
-        .location-section {
-            padding: 70px 20px;
-            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
-            color: white;
-            text-align: center;
+        /* Testimonial Section */
+        .testimonial-section {
+            padding: 90px 20px;
+            background: #f8fafc;
         }
 
-        .location-content h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-
-        .location-details {
-            font-size: 1.2rem;
-            line-height: 1.8;
-        }
-
-        .location-details strong {
-            color: #3bc3b7;
-            font-weight: 700;
-        }
-
-        /* Guarantee Section */
-        .guarantee-section {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #f0fdfc 0%, #ccfbf1 100%);
-        }
-
-        .guarantee-box {
+        .testimonial-box {
             max-width: 900px;
             margin: 0 auto;
-            background: white;
-            border: 3px solid #3bc3b7;
+            background: linear-gradient(135deg, #f0fdfc 0%, #ccfbf1 100%);
             border-radius: 20px;
             padding: 50px;
+            border: 3px solid #3bc3b7;
+            position: relative;
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            font-size: 4rem;
+            color: #3bc3b7;
+            opacity: 0.3;
+        }
+
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #0f766e;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .author-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #3bc3b7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .author-info h4 {
+            font-size: 1.2rem;
+            color: #112837;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            font-size: 0.95rem;
+            color: #0f766e;
+        }
+
+        .testimonial-note {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
             text-align: center;
         }
 
-        .guarantee-badge {
-            display: inline-block;
-            background: #3bc3b7;
-            color: white;
-            padding: 12px 28px;
-            border-radius: 30px;
-            font-size: 0.95rem;
-            font-weight: 700;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .guarantee-box h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #112837;
-            font-weight: 800;
-        }
-
-        .guarantee-list {
-            text-align: left;
-            max-width: 650px;
-            margin: 30px auto;
-            list-style: none;
-        }
-
-        .guarantee-list li {
-            padding: 15px 0;
-            padding-left: 40px;
-            position: relative;
-            color: #115e59;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            font-weight: 500;
-        }
-
-        .guarantee-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #3bc3b7;
-            font-weight: bold;
-            font-size: 1.8rem;
-        }
-
-        .guarantee-note {
-            margin-top: 30px;
-            font-size: 1.05rem;
+        .testimonial-note p {
+            font-size: 1rem;
             color: #0f766e;
             font-weight: 600;
-            line-height: 1.7;
+            margin: 0;
         }
 
         /* CTA Section */
@@ -928,7 +876,7 @@
             font-size: 0.9rem;
         }
 
-        /* Mobile Responsiveness */
+        /* Mobile */
         @media (max-width: 968px) {
             .mobile-menu-btn {
                 display: flex;
@@ -963,25 +911,9 @@
                 font-size: 2rem;
             }
 
-            .mission-content h2 {
-                font-size: 2rem;
-            }
-
-            .mission-quote {
-                font-size: 1.15rem;
-            }
-
-            .mission-expanded {
-                font-size: 1rem;
-            }
-
             .founder-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
-            }
-
-            .founder-photo {
-                height: 300px;
             }
 
             .serve-grid {
@@ -992,20 +924,8 @@
                 grid-template-columns: 1fr;
             }
 
-            .guarantee-box {
-                padding: 35px 25px;
-            }
-
-            .guarantee-box h2 {
-                font-size: 1.9rem;
-            }
-
             .cta-content h2 {
                 font-size: 2.2rem;
-            }
-
-            .cta-content p {
-                font-size: 1.15rem;
             }
         }
     </style>
@@ -1025,7 +945,6 @@
                 </button>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
                     <li><a href="how-it-works.html">How It Works</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -1035,16 +954,16 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
             <div class="container">
                 <h1>
-                    We Build Revenue Systems<br>
-                    <span class="gradient-text">That Work in Africa</span>
+                    We Build Revenue Systems for<br>
+                    <span class="gradient-text">Growing SMEs Across Africa & Beyond</span>
                 </h1>
                 <p>
-                    Founded by systems architects who understand what it takes to stop revenue leakage in emerging markets
+                    Founded by systems architects who understand what it takes to stop revenue leakage in emerging markets—across industries
                 </p>
             </div>
         </div>
@@ -1055,29 +974,32 @@
         <div class="container">
             <div class="mission-content">
                 <div class="mission-badge">Our Mission</div>
-                <h2>Eliminate Revenue Leakage Across Africa</h2>
+                <h2>Eliminate Revenue Leakage Across Africa & Beyond</h2>
                 <p class="mission-quote">
-                    "To eliminate revenue leakage for real estate and healthcare businesses across Africa by building systems that capture every opportunity, close every deal, and create predictable growth."
+                    "To eliminate revenue leakage for growing SMEs across Africa by building systems that capture every opportunity, close every deal, and create predictable growth."
                 </p>
                 <div class="mission-expanded">
                     <p>
-                        Most businesses in Africa don't fail because of bad products or lack of customers. They fail because they can't systematically convert opportunities into revenue.
+                        Most businesses in Africa don't fail because of bad products or lack of customers.
                     </p>
                     <p>
-                        Leads get lost. Follow-ups don't happen. Deals stall. Customers disappear after the first transaction.
+                        They fail because they can't systematically convert opportunities into revenue.
+                    </p>
+                    <p>
+                        Leads get lost. Follow-ups don't happen. Deals stall. Customers disappear.
                     </p>
                     <p>
                         <strong>We fix that.</strong>
                     </p>
                     <p>
-                        We build done-for-you Revenue Command Systems that capture every lead, enforce consistent follow-up, and create repeatable growth—specifically for real estate agencies and private clinics.
+                        We build Revenue Command Systems that work for any growing SME—real estate agencies, healthcare practices, e-commerce stores, professional services, and beyond.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why We Exist Section -->
+    <!-- Why We Exist -->
     <section class="why-section">
         <div class="container">
             <div class="section-header">
@@ -1085,21 +1007,21 @@
             </div>
             <div class="why-content">
                 <p class="why-intro">
-                    We started Aheri Systems after seeing the same pattern repeat across Africa:
+                    We started Aheri Systems after seeing the same pattern across growing SMEs in Africa and beyond:
                 </p>
 
-                <div class="industry-problem">
-                    <h3>In Real Estate:</h3>
+                <div class="problem-box">
+                    <h3>Talented Business Owners Losing Revenue</h3>
                     <p>
-                        Talented agents losing commissions—not because they couldn't close deals, but because leads were scattered across WhatsApp, forgotten follow-ups killed momentum, and pipeline chaos made it impossible to scale.
+                        <strong>Not because they couldn't deliver value, but because:</strong>
                     </p>
-                </div>
-
-                <div class="industry-problem">
-                    <h3>In Healthcare:</h3>
-                    <p>
-                        Professional clinics struggling to grow—not because they provided poor care, but because inquiries went unanswered after hours, appointment no-shows destroyed revenue predictability, and manual admin consumed 70% of staff time.
-                    </p>
+                    <ul>
+                        <li>Leads scattered across WhatsApp, forgotten follow-ups killed momentum</li>
+                        <li>Manual chaos made it impossible to scale</li>
+                        <li>Inquiries went unanswered after hours</li>
+                        <li>No-shows destroyed revenue predictability</li>
+                        <li>Team coordination consumed 70% of productive time</li>
+                    </ul>
                 </div>
 
                 <div class="callout">
@@ -1114,7 +1036,7 @@
         </div>
     </section>
 
-    <!-- Our Approach Section -->
+    <!-- Our Approach -->
     <section class="approach-section">
         <div class="container">
             <div class="section-header">
@@ -1124,15 +1046,15 @@
             <div class="approach-grid">
                 <div class="approach-principle">
                     <div class="principle-number">1</div>
-                    <h3>Industry-Specific Systems</h3>
+                    <h3>SME-Focused Systems Built for African Markets</h3>
                     <p>
-                        We don't build generic CRMs. We build systems specifically for real estate and healthcare because we understand the unique revenue cycles, pain points, and operational challenges of these industries.
+                        We don't build generic enterprise CRMs. We build systems specifically for growing SMEs because we understand the unique revenue cycles, resource constraints, and operational challenges of scaling in emerging markets.
                     </p>
                     <p>
-                        A real estate agency needs instant lead response, deal pipeline tracking, and commission protection.
-                    </p>
-                    <p>
-                        A private clinic needs automated booking, appointment reminders, and patient retention.
+                        A real estate agency needs instant lead response and commission tracking.<br>
+                        A healthcare practice needs automated booking and patient retention.<br>
+                        An e-commerce store needs customer lifecycle automation.<br>
+                        A professional services firm needs project tracking and time billing.
                     </p>
                     <p>
                         <strong>Generic tools fail because they don't understand these nuances. We do.</strong>
@@ -1155,18 +1077,20 @@
 
                 <div class="approach-principle">
                     <div class="principle-number">3</div>
-                    <h3>Built for Africa and Beyond</h3>
+                    <h3>Platform-Agnostic & Africa-First</h3>
                     <p>
-                        Our systems are customized to work with the tools you already use (WhatsApp, M-Pesa, local channels) and account for African market dynamics.
+                        We meet you where you are—whether that's Zoho, GoHighLevel, HubSpot, our own platform, or tools you already use.
                     </p>
                     <p>We understand:</p>
                     <ul>
                         <li>Mobile-first behavior</li>
-                        <li>Communication preferences</li>
+                        <li>WhatsApp-centric communication</li>
+                        <li>M-Pesa and local payment integration</li>
                         <li>Market-specific challenges</li>
+                        <li>Budget constraints of growing SMEs</li>
                     </ul>
                     <p style="margin-top: 20px;">
-                        <strong>We're not just building systems. We're building solutions that work for our clients.</strong>
+                        <strong>We're not just building systems. We're building solutions that work for African businesses and beyond.</strong>
                     </p>
                 </div>
             </div>
@@ -1184,10 +1108,10 @@
                 <div class="founder-grid">
                     <div class="founder-image">
                         <div class="founder-photo">
-<img src="assets/images/rita-ndubi.jpg" 
-     alt="Rita Ndubi - Systems Strategist and Automation Specialist" 
-     width="300"
-     style="margin-top: 30px;">
+                            <img src="assets/images/rita-ndubi.jpg" 
+                                 alt="Rita Ndubi - Systems Strategist" 
+                                 width="300"
+                                 style="margin-top: 30px;">
                         </div>
                     </div>
 
@@ -1196,7 +1120,7 @@
                         <p class="founder-title">Founder & Chief Systems Architect</p>
 
                         <p>
-                            Rita Ndubi founded Aheri Systems after years of witnessing talented professionals lose revenue to disorganized operations.
+                            Rita Ndubi founded Aheri Systems after years of witnessing talented business owners lose revenue to disorganized operations.
                         </p>
 
                         <p>
@@ -1204,7 +1128,7 @@
                         </p>
 
                         <p>
-                            Real estate agencies were drowning in WhatsApp chaos. Private clinics were losing patients to poor follow-up. Manual processes were killing growth.
+                            Real estate agencies were drowning in WhatsApp chaos. Healthcare practices were losing patients to poor follow-up. E-commerce stores couldn't retain customers. Professional services couldn't scale beyond founder capacity.
                         </p>
 
                         <p>
@@ -1212,20 +1136,20 @@
                         </p>
 
                         <p>
-                            Today, Rita leads Aheri Systems' mission to build Revenue Command Systems that work specifically for African businesses—combining automation, AI, and industry-specific workflows to stop revenue leakage and create predictable growth.
+                            Today, Rita leads Aheri Systems' mission to build Revenue Command Systems for growing SMEs across Africa—combining automation, AI, and industry-specific workflows to stop revenue leakage and create predictable growth.
                         </p>
 
                         <div class="founder-philosophy">
-                            "You don't need more leads. You need to stop losing the ones you have."
+                            "You don't need more leads. You need to stop losing the ones you have—no matter what industry you're in."
                         </div>
 
                         <div class="founder-background">
                             <h4>Background</h4>
                             <ul>
-                                <li>Systems & automation specialist</li>
-                                <li>Deep experience in real estate and healthcare operations</li>
-                                <li>Expert in CRM implementation and revenue operations</li>
-                                <li>Focused exclusively on African and emerging markets</li>
+                                <li>Deep expertise in Zoho, GoHighLevel, HubSpot, and business automation platforms</li>
+                                <li>Systems strategist for SMEs across 8+ industries</li>
+                                <li>Platform-agnostic approach—recommends what works best for each business</li>
+                                <li>Focused on emerging markets and African business dynamics</li>
                             </ul>
                         </div>
                     </div>
@@ -1264,6 +1188,13 @@
                 </div>
 
                 <div class="value-card">
+                    <h3>Platform Agnostic</h3>
+                    <p>
+                        We're not locked into one vendor. We recommend and build on Zoho, GoHighLevel, HubSpot, ActiveCampaign, Odoo, or our own platform—whatever works best for YOUR needs, budget, and team.
+                    </p>
+                </div>
+
+                <div class="value-card">
                     <h3>Africa-First Thinking</h3>
                     <p>
                         We build for African markets first, then global. Our systems account for local dynamics, tools, and business practices.
@@ -1280,86 +1211,97 @@
         </div>
     </section>
 
-    <!-- Who We Serve Section -->
+    <!-- Who We Serve -->
     <section class="serve-section">
         <div class="container">
             <div class="section-header">
                 <h2>Who We <span class="gradient-text">Serve</span></h2>
             </div>
 
-            <p class="serve-intro">We work exclusively with two industries:</p>
+            <p class="serve-intro">We work with growing SMEs across multiple industries:</p>
 
             <div class="serve-grid">
                 <div class="serve-card">
                     <span class="serve-icon">🏢</span>
                     <h3>Real Estate</h3>
-                    <ul>
-                        <li>Agencies (5-50 agents)</li>
-                        <li>Independent brokers</li>
-                        <li>Property developers</li>
-                        <li>Property management firms</li>
-                        <li>Across Kenya, East Africa, and emerging markets</li>
-                    </ul>
+                    <p>Agencies, brokers, property developers</p>
                 </div>
 
                 <div class="serve-card">
                     <span class="serve-icon">⚕️</span>
-                    <h3>Private Clinics</h3>
-                    <ul>
-                        <li>Medical practices</li>
-                        <li>Aesthetic/cosmetic clinics</li>
-                        <li>Wellness centers</li>
-                        <li>Multi-provider practices</li>
-                        <li>Across Kenya, East Africa, and emerging markets</li>
-                    </ul>
+                    <h3>Healthcare</h3>
+                    <p>Practices, clinics, wellness centers</p>
+                </div>
+
+                <div class="serve-card">
+                    <span class="serve-icon">🛒</span>
+                    <h3>E-commerce</h3>
+                    <p>Online stores, multi-channel retail</p>
+                </div>
+
+                <div class="serve-card">
+                    <span class="serve-icon">🎓</span>
+                    <h3>Education</h3>
+                    <p>Schools, training centers, tutoring</p>
+                </div>
+
+                <div class="serve-card">
+                    <span class="serve-icon">🔧</span>
+                    <h3>Home Services</h3>
+                    <p>Plumbing, HVAC, cleaning, repair</p>
+                </div>
+
+                <div class="serve-card">
+                    <span class="serve-icon">🚗</span>
+                    <h3>Automotive</h3>
+                    <p>Dealerships, service centers, detailing</p>
+                </div>
+
+                <div class="serve-card">
+                    <span class="serve-icon">💼</span>
+                    <h3>Professional Services</h3>
+                    <p>Consulting, law, accounting, marketing</p>
+                </div>
+
+                <div class="serve-card">
+                    <span class="serve-icon">🛡️</span>
+                    <h3>Insurance</h3>
+                    <p>Agencies, brokers, independent agents</p>
                 </div>
             </div>
 
             <div class="serve-callout">
-                <h4>Why just two industries?</h4>
+                <h4>What They Have in Common</h4>
                 <p>
-                    Because going deep beats going wide. We'd rather be the best at solving real estate and healthcare revenue leakage than be mediocre at solving everything.
+                    Growing beyond founder capacity • Losing revenue to disorganization • Ready to systematize operations • Want predictable, scalable growth
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Location Section -->
-    <section class="location-section">
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
         <div class="container">
-            <div class="location-content">
-                <h2>Where We're Based</h2>
-                <p class="location-details">
-                    <strong>Headquarters:</strong> Nairobi, Kenya<br>
-                    <strong>Service Area:</strong> Africa + Global Emerging Markets
-                </p>
-                <p style="margin-top: 20px; opacity: 0.9; font-size: 1.1rem;">
-                    We're proudly African-based and Africa-focused—but our systems work globally.
-                </p>
+            <div class="section-header">
+                <h2>Client <span class="gradient-text">Success Story</span></h2>
             </div>
-        </div>
-    </section>
-
-    <!-- Guarantee Section -->
-    <section class="guarantee-section">
-        <div class="container">
-            <div class="guarantee-box">
-                <div class="guarantee-badge">Our Guarantee</div>
-                <h2>The 90-Day Revenue Visibility Guarantee</h2>
-                <p style="font-size: 1.15rem; color: #0f766e; margin-bottom: 20px;">
-                    Within 90 days of system activation, you'll have:
-                </p>
-                <ul class="guarantee-list">
-                    <li>100% visibility into every inquiry and customer</li>
-                    <li>Automated follow-up running 24/7</li>
-                    <li>Complete pipeline or appointment tracking</li>
-                    <li>Weekly performance reports in your inbox</li>
-                    <li>Measurable improvement in conversions</li>
-                </ul>
-                <p class="guarantee-note">
-                    If we don't deliver this level of visibility and organization, we work for free until we do.<br>
-                    <strong>Not because we're worried—but because we've done this before and know it works.</strong>
-                </p>
+            <div class="testimonial-box">
+                <div class="quote-icon">"</div>
+                <div class="testimonial-content">
+                    <p class="testimonial-text">
+                        "Rita has been instrumental in helping me organize my business operations through Zoho CRM. She clearly explained how the different Zoho apps work together and guided me on how to structure them in a way that makes practical sense for my business. Through her support, I am now able to capture leads, track conversations, automate communication, and monitor payments within one organized system. She is patient, knowledgeable, and always available to answer questions, which makes the learning process smooth and empowering. I highly recommend Rita to any business owner looking to streamline operations and use Zoho effectively."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-image">EM</div>
+                        <div class="author-info">
+                            <h4>Eva Matindi</h4>
+                            <p>Founder & CEO, Mapenzi Connect</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-note">
+                        <p>Rita's deep Zoho expertise means we can build powerful systems cost-effectively for growing SMEs</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1370,10 +1312,7 @@
             <div class="container">
                 <h2>Ready to Stop Revenue Leakage?</h2>
                 <p>
-                    Whether you're a real estate agency losing commissions to disorganization or a private clinic struggling with appointment no-shows, we can help.
-                </p>
-                <p style="font-size: 1.2rem; margin-top: 15px;">
-                    Book a Free Revenue Audit and see exactly where your revenue is leaking—and which system stops it.
+                    Book a Free Revenue Audit and see exactly where your money is slipping through the cracks—and which systems plug the leaks.
                 </p>
                 <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary" target="_blank">Book Your Free Revenue Audit</a>
                 <p class="cta-note">45-minute audit • Zero commitment • Honest analysis</p>
@@ -1387,15 +1326,17 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>AHERI <span class="logo-systems">SYSTEMS</span></h3>
-                    <p class="footer-tagline">Revenue Growth Systems for Africa</p>
-                    <p>We build, monitor, and optimize revenue systems for real estate agencies and private clinics across Kenya, Africa, and emerging markets.</p>
+                    <p class="footer-tagline">Revenue Growth Systems for Africa & Beyond</p>
+                    <p>We build, monitor, and optimize intelligent automation systems for growing SMEs across Kenya, Africa, and Beyond.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Industries</h4>
                     <ul>
-                        <li><a href="real-estate-systems.html">Real Estate Agencies</a></li>
-                        <li><a href="clinic-systems.html">Private Clinics</a></li>
-                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="index.html#industries">Real Estate</a></li>
+                        <li><a href="index.html#industries">Healthcare</a></li>
+                        <li><a href="index.html#industries">E-commerce</a></li>
+                        <li><a href="index.html#industries">Professional Services</a></li>
+                        <li><a href="index.html#industries">View All Industries</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -1439,21 +1380,6 @@
                 }
             });
         }
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    navMenu.classList.remove('active');
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
     </script>
 
 </body>
