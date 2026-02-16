@@ -11,60 +11,8 @@
     <link rel="manifest" href="/site.webmanifest">
     
     <!-- SEO Meta Tags -->
-    <title>Revenue Systems for Real Estate & Clinics | From KES 7,500/month | Aheri Systems Kenya</title>
-    <meta name="description" content="Revenue Command Systems for real estate agencies and private clinics in Kenya. Stop losing commissions and patients. Tiered solutions from solo agents/practitioners to enterprise. Starting KES 7,500/month.">
-    <meta name="keywords" content="real estate CRM Kenya pricing, clinic management system cost, revenue system for agencies, patient booking automation, real estate pipeline management, clinic appointment system Kenya">
-    <meta name="author" content="Aheri Systems">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Revenue Systems for Real Estate & Clinics | Aheri Systems">
-    <meta property="og:description" content="Stop losing revenue. Tiered systems for real estate and healthcare. From KES 7,500/month.">
-    <meta property="og:url" content="https://aherisystems.com/services">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://aherisystems.com/services">
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Revenue Command System",
-      "provider": {
-        "@type": "Organization",
-        "name": "Aheri Systems",
-        "url": "https://aherisystems.com"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Kenya"
-      },
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "Starter System - Real Estate & Clinics",
-          "price": "7500",
-          "priceCurrency": "KES",
-          "description": "Simple CRM, pipeline visibility, smart website for solo agents and practitioners"
-        },
-        {
-          "@type": "Offer",
-          "name": "Growth System - Real Estate & Clinics",
-          "price": "35000",
-          "priceCurrency": "KES",
-          "description": "Complete automation, 24/7 AI response, full pipeline management"
-        },
-        {
-          "@type": "Offer",
-          "name": "Enterprise System - Real Estate & Clinics",
-          "price": "75000",
-          "priceCurrency": "KES",
-          "description": "Full system plus lead generation, advanced analytics, dedicated support"
-        }
-      ]
-    }
-    </script>
+    <title>Revenue Systems for Every Growing Business | Aheri Systems Kenya</title>
+    <meta name="description" content="Revenue automation systems for SMEs across industries. Stop losing revenue to chaos. Custom solutions built on proven platforms.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -128,7 +76,6 @@
             height: 3px;
             background: #112837;
             border-radius: 3px;
-            transition: 0.3s;
         }
 
         .nav-menu {
@@ -242,123 +189,170 @@
             margin: 0 auto;
         }
 
-        .industry-cards {
+        .industries-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
             margin-top: 50px;
         }
 
         .industry-card {
             background: white;
-            border-radius: 20px;
-            padding: 50px;
-            border: 3px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 35px;
+            border: 2px solid #e2e8f0;
             transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .industry-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: linear-gradient(90deg, #3bc3b7 0%, #2da89e 100%);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
         }
 
         .industry-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(59, 195, 183, 0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(59, 195, 183, 0.15);
             border-color: #3bc3b7;
         }
 
-        .industry-card:hover::before {
-            transform: scaleX(1);
-        }
-
         .industry-icon {
-            font-size: 4rem;
-            margin-bottom: 25px;
+            font-size: 3rem;
+            margin-bottom: 15px;
             display: block;
         }
 
         .industry-card h3 {
-            font-size: 2.2rem;
+            font-size: 1.4rem;
             margin-bottom: 15px;
             color: #112837;
-            font-weight: 800;
+            font-weight: 700;
         }
 
-        .industry-tagline {
-            font-size: 1.2rem;
-            color: #3bc3b7;
-            font-weight: 600;
-            margin-bottom: 30px;
-            line-height: 1.4;
-        }
-
-        .industry-preview {
+        .industry-benefits {
             list-style: none;
-            margin-bottom: 35px;
+            margin-top: 15px;
         }
 
-        .industry-preview li {
-            padding: 12px 0;
-            padding-left: 35px;
+        .industry-benefits li {
+            padding: 8px 0;
+            padding-left: 25px;
             position: relative;
-            color: #4a5568;
-            font-size: 1.05rem;
+            color: #64748b;
+            font-size: 0.95rem;
             line-height: 1.6;
         }
 
-        .industry-preview li:before {
+        .industry-benefits li:before {
             content: "✓";
             position: absolute;
             left: 0;
             color: #3bc3b7;
             font-weight: bold;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 16px 36px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            font-size: 1.05rem;
-            text-align: center;
+        /* Systems Overview */
+        .systems-overview {
+            padding: 90px 20px;
+            background: white;
         }
 
-        .btn-primary {
+        .systems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .system-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 16px;
+            padding: 40px;
+            border: 2px solid #e2e8f0;
+            border-top: 4px solid #3bc3b7;
+        }
+
+        .system-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
             background: #3bc3b7;
             color: white;
-            box-shadow: 0 4px 14px rgba(59, 195, 183, 0.3);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
         }
 
-        .btn-primary:hover {
-            background: #2da89e;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(59, 195, 183, 0.4);
+        .system-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: #112837;
+            font-weight: 700;
         }
 
-        .btn-block {
-            width: 100%;
-            display: block;
+        .system-card p {
+            color: #64748b;
+            margin-bottom: 20px;
+            line-height: 1.7;
         }
 
-        /* Tier Comparison Table */
-        .tier-comparison {
-            padding: 80px 20px;
-            background: white;
+        .system-features {
+            list-style: none;
+        }
+
+        .system-features li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        .system-features li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #3bc3b7;
+            font-weight: bold;
+        }
+
+        /* Systems Comparison */
+        .comparison-section {
+            padding: 90px 20px;
+            background: #f8fafc;
+        }
+
+        .comparison-intro {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 50px;
+        }
+
+        .comparison-intro h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            color: #112837;
+        }
+
+        .comparison-intro p {
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+
+        .pricing-note {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 20px 30px;
+            border-radius: 12px;
+            margin: 30px auto;
+            max-width: 800px;
+        }
+
+        .pricing-note p {
+            color: #78350f;
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0;
         }
 
         .comparison-table-wrapper {
@@ -371,6 +365,9 @@
             border-collapse: separate;
             border-spacing: 0;
             min-width: 900px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
         }
 
         .comparison-table thead th {
@@ -380,35 +377,19 @@
             text-align: center;
             font-size: 1.1rem;
             font-weight: 700;
-            border: none;
         }
 
         .comparison-table thead th:first-child {
             text-align: left;
-            border-top-left-radius: 12px;
-        }
-
-        .comparison-table thead th:last-child {
-            border-top-right-radius: 12px;
         }
 
         .comparison-table tbody tr {
             border-bottom: 1px solid #e2e8f0;
         }
 
-        .comparison-table tbody tr:last-child td:first-child {
-            border-bottom-left-radius: 12px;
-        }
-
-        .comparison-table tbody tr:last-child td:last-child {
-            border-bottom-right-radius: 12px;
-        }
-
         .comparison-table tbody td {
             padding: 20px;
             text-align: center;
-            border-left: 1px solid #e2e8f0;
-            background: white;
         }
 
         .comparison-table tbody td:first-child {
@@ -416,7 +397,6 @@
             font-weight: 600;
             color: #112837;
             background: #f8fafc;
-            border-left: none;
         }
 
         .feature-check {
@@ -430,138 +410,112 @@
             font-size: 1.5rem;
         }
 
-        .tier-badge {
-            display: inline-block;
-            background: #3bc3b7;
-            color: white;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
-
-        .tier-price {
-            font-size: 1.8rem;
+        .tier-name {
+            font-size: 1.3rem;
             font-weight: 800;
-            color: #112837;
-            display: block;
-            margin-top: 8px;
-        }
-
-        .tier-note {
-            font-size: 0.85rem;
-            color: #64748b;
-            font-style: italic;
-            margin-top: 8px;
-        }
-
-        /* Pricing Disclaimer */
-        .pricing-disclaimer {
-            background: #fffbeb;
-            border-left: 4px solid #f59e0b;
-            padding: 25px;
-            border-radius: 12px;
-            margin: 50px auto;
-            max-width: 900px;
-        }
-
-        .pricing-disclaimer h4 {
-            color: #92400e;
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .pricing-disclaimer p {
-            color: #78350f;
-            font-size: 0.98rem;
-            line-height: 1.7;
-        }
-
-        /* Guarantee Section */
-        .guarantee-section {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #f0fdfc 0%, #ccfbf1 100%);
-        }
-
-        .guarantee-box {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            border: 3px solid #3bc3b7;
-            border-radius: 20px;
-            padding: 50px;
-            text-align: center;
-        }
-
-        .guarantee-badge {
-            display: inline-block;
-            background: #3bc3b7;
-            color: white;
-            padding: 12px 28px;
-            border-radius: 30px;
-            font-size: 0.95rem;
-            font-weight: 700;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .guarantee-box h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #112837;
-            font-weight: 800;
-        }
-
-        .guarantee-list {
-            text-align: left;
-            max-width: 650px;
-            margin: 30px auto;
-            list-style: none;
-        }
-
-        .guarantee-list li {
-            padding: 15px 0;
-            padding-left: 40px;
-            position: relative;
-            color: #115e59;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            font-weight: 500;
-        }
-
-        .guarantee-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
             color: #3bc3b7;
-            font-weight: bold;
-            font-size: 1.8rem;
+            margin-bottom: 10px;
         }
 
-        .guarantee-note {
-            margin-top: 30px;
-            font-size: 1.05rem;
-            color: #0f766e;
-            font-weight: 600;
+        .tier-subtitle {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 400;
+        }
+
+        /* Platform Section */
+        .platform-section {
+            padding: 90px 20px;
+            background: white;
+        }
+
+        .platform-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .platform-intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .platform-intro h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            color: #112837;
+        }
+
+        .platform-intro p {
+            font-size: 1.2rem;
+            color: #64748b;
             line-height: 1.7;
+            margin-bottom: 15px;
         }
 
-        /* CTA Section */
-        .cta-section {
+        .platform-highlight {
+            background: linear-gradient(135deg, #f0fdfc 0%, #ccfbf1 100%);
+            border: 3px solid #3bc3b7;
+            border-radius: 16px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .platform-highlight h3 {
+            font-size: 1.8rem;
+            color: #0f766e;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .platform-highlight p {
+            font-size: 1.1rem;
+            color: #115e59;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .platform-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .platform-logo {
+            background: white;
+            padding: 20px 35px;
+            border-radius: 12px;
+            border: 2px solid #e2e8f0;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #112837;
+            transition: all 0.3s ease;
+        }
+
+        .platform-logo:hover {
+            border-color: #3bc3b7;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(59, 195, 183, 0.15);
+        }
+
+        .platform-logo.primary {
+            background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
+            color: white;
+            border-color: #3bc3b7;
+        }
+
+        /* Custom Solution Section */
+        .custom-section {
+            padding: 90px 20px;
             background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
             color: white;
-            padding: 90px 20px;
-            text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .cta-section::before {
+        .custom-section::before {
             content: '';
             position: absolute;
             top: 0;
@@ -569,40 +523,88 @@
             right: 0;
             bottom: 0;
             background: 
-                radial-gradient(circle at 30% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 70% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 20% 50%, rgba(59, 195, 183, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 195, 183, 0.08) 0%, transparent 50%);
             pointer-events: none;
         }
 
-        .cta-content {
+        .custom-content {
             position: relative;
             z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .cta-content h2 {
-            font-size: 3.2rem;
-            margin-bottom: 22px;
+        .custom-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
             font-weight: 800;
-            line-height: 1.15;
         }
 
-        .cta-content p {
-            font-size: 1.35rem;
-            max-width: 780px;
-            margin: 0 auto 35px;
+        .custom-content p {
+            font-size: 1.3rem;
             opacity: 0.95;
             line-height: 1.7;
+            margin-bottom: 20px;
         }
 
-        .btn-large {
+        .custom-reasons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+            text-align: left;
+        }
+
+        .reason-box {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .reason-box h4 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #3bc3b7;
+            font-weight: 700;
+        }
+
+        .reason-box p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .btn {
+            display: inline-block;
             padding: 20px 48px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
             font-size: 1.15rem;
         }
 
-        .cta-note {
-            margin-top: 25px;
+        .btn-primary {
+            background: #3bc3b7;
+            color: white;
+            box-shadow: 0 4px 14px rgba(59, 195, 183, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: #2da89e;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(59, 195, 183, 0.5);
+        }
+
+        .btn-note {
+            display: block;
+            margin-top: 20px;
             font-size: 0.95rem;
-            opacity: 0.82;
+            opacity: 0.85;
         }
 
         /* Footer */
@@ -678,7 +680,7 @@
             font-size: 0.9rem;
         }
 
-        /* Mobile Responsiveness */
+        /* Mobile */
         @media (max-width: 968px) {
             .mobile-menu-btn {
                 display: flex;
@@ -713,29 +715,16 @@
                 font-size: 2rem;
             }
 
-            .industry-cards {
+            .industries-grid {
                 grid-template-columns: 1fr;
             }
 
-            .comparison-table {
-                font-size: 0.85rem;
+            .systems-grid {
+                grid-template-columns: 1fr;
             }
 
-            .comparison-table thead th,
-            .comparison-table tbody td {
-                padding: 12px 8px;
-            }
-
-            .guarantee-box {
-                padding: 35px 25px;
-            }
-
-            .guarantee-box h2 {
-                font-size: 1.9rem;
-            }
-
-            .cta-content h2 {
-                font-size: 2.2rem;
+            .custom-reasons {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -755,7 +744,6 @@
                 </button>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
                     <li><a href="how-it-works.html">How It Works</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -770,11 +758,10 @@
         <div class="hero-content">
             <div class="container">
                 <h1>
-                    Revenue Systems Built for <span class="gradient-text">Real Estate & Private Clinics</span>
+                    Revenue Systems for <span class="gradient-text">Every Growing Business</span>
                 </h1>
                 <p>
-Stop losing deals and patients to poor follow-up. We build scalable automation systems that grow with you — from solo practice to multi-location.
-From KES 7,500/month                
+                    Stop losing revenue to chaos. We build intelligent automation systems tailored to your industry, your team, and your goals.
                 </p>
             </div>
         </div>
@@ -784,48 +771,156 @@ From KES 7,500/month
     <section class="industry-selector">
         <div class="container">
             <div class="section-header">
-                <h2>Choose Your <span class="gradient-text">Industry</span></h2>
-                <p>We build deep, industry-specific systems—not generic tools</p>
+                <h2>Built For <span class="gradient-text">Your Industry</span></h2>
+                <p>Deep expertise across growing SMEs—we understand your specific revenue challenges</p>
             </div>
-
-            <div class="industry-cards">
-                <!-- Real Estate Card -->
+            <div class="industries-grid">
                 <div class="industry-card">
                     <span class="industry-icon">🏢</span>
                     <h3>Real Estate</h3>
-                    <p class="industry-tagline">Stop losing commissions to slow follow-up and disorganized pipelines</p>
-                    <ul class="industry-preview">
+                    <ul class="industry-benefits">
                         <li>Instant lead capture from all channels</li>
-                        <li>Automated follow-up that never forgets</li>
-                        <li>Complete deal pipeline visibility</li>
-                        <li>Past client reactivation for repeat business</li>
+                        <li>Deal pipeline visibility</li>
+                        <li>Automated property updates</li>
+                        <li>Client relationship tracking</li>
                     </ul>
-                    <a href="real-estate-systems.html" class="btn btn-primary btn-block">See Real Estate Systems →</a>
                 </div>
-
-                <!-- Private Clinics Card -->
                 <div class="industry-card">
                     <span class="industry-icon">⚕️</span>
-                    <h3>Private Clinics</h3>
-                    <p class="industry-tagline">Stop losing patients to no-shows and forgotten follow-ups</p>
-                    <ul class="industry-preview">
-                        <li>24/7 automated patient booking</li>
-                        <li>Smart appointment reminders (95% attendance)</li>
-                        <li>Automated patient follow-up & wellness checks</li>
-                        <li>Patient retention & referral systems</li>
+                    <h3>Healthcare</h3>
+                    <ul class="industry-benefits">
+                        <li>24/7 patient booking</li>
+                        <li>Appointment reminders (95% attendance)</li>
+                        <li>Patient follow-up automation</li>
+                        <li>Billing integration</li>
                     </ul>
-                    <a href="clinic-systems.html" class="btn btn-primary btn-block">See Clinic Systems →</a>
+                </div>
+                <div class="industry-card">
+                    <span class="industry-icon">🛒</span>
+                    <h3>E-commerce</h3>
+                    <ul class="industry-benefits">
+                        <li>Customer lifecycle automation</li>
+                        <li>Order & inventory tracking</li>
+                        <li>Abandoned cart recovery</li>
+                        <li>Review & referral systems</li>
+                    </ul>
+                </div>
+                <div class="industry-card">
+                    <span class="industry-icon">🎓</span>
+                    <h3>Education</h3>
+                    <ul class="industry-benefits">
+                        <li>Student enrollment automation</li>
+                        <li>Parent communication system</li>
+                        <li>Progress tracking & reporting</li>
+                        <li>Fee collection automation</li>
+                    </ul>
+                </div>
+                <div class="industry-card">
+                    <span class="industry-icon">🔧</span>
+                    <h3>Home Services</h3>
+                    <ul class="industry-benefits">
+                        <li>Job scheduling & dispatch</li>
+                        <li>Technician management</li>
+                        <li>Customer follow-up</li>
+                        <li>Invoice automation</li>
+                    </ul>
+                </div>
+                <div class="industry-card">
+                    <span class="industry-icon">🚗</span>
+                    <h3>Automotive</h3>
+                    <ul class="industry-benefits">
+                        <li>Service history tracking</li>
+                        <li>Customer vehicle records</li>
+                        <li>Parts & warranty management</li>
+                        <li>Service reminders</li>
+                    </ul>
+                </div>
+                <div class="industry-card">
+                    <span class="industry-icon">💼</span>
+                    <h3>Professional Services</h3>
+                    <ul class="industry-benefits">
+                        <li>Client project tracking</li>
+                        <li>Time & billing automation</li>
+                        <li>Document management</li>
+                        <li>Proposal generation</li>
+                    </ul>
+                </div>
+                <div class="industry-card">
+                    <span class="industry-icon">🛡️</span>
+                    <h3>Insurance</h3>
+                    <ul class="industry-benefits">
+                        <li>Policy management</li>
+                        <li>Claims tracking</li>
+                        <li>Renewal automation</li>
+                        <li>Client communication</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Tier Comparison Table -->
-    <section class="tier-comparison">
+    <!-- Systems Overview -->
+    <section class="systems-overview">
         <div class="container">
             <div class="section-header">
-                <h2>Three Tiers, One Goal: <span class="gradient-text">Stop Revenue Leakage</span></h2>
-                <p>Choose the level of automation and support that fits your business size</p>
+                <h2>The 4 Core <span class="gradient-text">Systems</span></h2>
+                <p>Every business needs these four systems to stop revenue leakage</p>
+            </div>
+            <div class="systems-grid">
+                <div class="system-card">
+                    <div class="system-number">1</div>
+                    <h3>Customer Acquisition</h3>
+                    <p>Stop the marketing/sales leak. Capture every lead, respond instantly, never miss an opportunity.</p>
+                    <ul class="system-features">
+                        <li>Intelligent lead capture (all channels)</li>
+                        <li>24/7 smart AI response</li>
+                        <li>Marketing that learns & optimizes</li>
+                    </ul>
+                </div>
+                <div class="system-card">
+                    <div class="system-number">2</div>
+                    <h3>Customer Conversion</h3>
+                    <p>Stop the conversion leak. Turn leads into paying customers—fast and consistently.</p>
+                    <ul class="system-features">
+                        <li>Complete pipeline visibility</li>
+                        <li>Smart automation (quotes, follow-ups)</li>
+                        <li>Intelligent qualification & forecasting</li>
+                    </ul>
+                </div>
+                <div class="system-card">
+                    <div class="system-number">3</div>
+                    <h3>Customer Retention</h3>
+                    <p>Stop the operations leak. Turn one-time buyers into lifelong customers who refer others.</p>
+                    <ul class="system-features">
+                        <li>Always-on support (AI + human)</li>
+                        <li>Systematic retention campaigns</li>
+                        <li>Referral engine automation</li>
+                    </ul>
+                </div>
+                <div class="system-card">
+                    <div class="system-number">4</div>
+                    <h3>Operations</h3>
+                    <p>Stop the chaos. Run your business smoothly so you can actually deliver what you promised.</p>
+                    <ul class="system-features">
+                        <li>Effortless onboarding</li>
+                        <li>Team coordination & workflows</li>
+                        <li>Financial automation & visibility</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Systems Comparison -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="comparison-intro">
+                <h2>Systems <span class="gradient-text">Comparison</span></h2>
+                <p>Choose to start with one system OR build the complete solution</p>
+                
+                <div class="pricing-note">
+                    <p>💡 Every business is different. Final solution and investment are determined during your free revenue audit based on your team size, industry, and specific needs.</p>
+                </div>
             </div>
 
             <div class="comparison-table-wrapper">
@@ -834,191 +929,172 @@ From KES 7,500/month
                         <tr>
                             <th>What You Get</th>
                             <th>
-                                <div class="tier-badge">STARTER</div>
-                                <div>Solo Agent/<br>Solo Practitioner</div>
-                                <div class="tier-price">From KES 7,500/mo</div>
-                                <div class="tier-note">*Price varies by setup</div>
+                                <div class="tier-name">Essential</div>
+                                <div class="tier-subtitle">Start with ONE system</div>
                             </th>
                             <th>
-                                <div class="tier-badge" style="background: #f59e0b;">GROWTH</div>
-                                <div>Growing Agency/<br>Growing Clinic</div>
-                                <div class="tier-price">From KES 35,000/mo</div>
-                                <div class="tier-note">*Recommended for most</div>
+                                <div class="tier-name">Professional</div>
+                                <div class="tier-subtitle">Most businesses choose this</div>
                             </th>
                             <th>
-                                <div class="tier-badge" style="background: #8b5cf6;">ENTERPRISE</div>
-                                <div>Established/<br>Multi-Location</div>
-                                <div class="tier-price">From KES 75,000/mo</div>
-                                <div class="tier-note">*Includes lead generation</div>
+                                <div class="tier-name">Enterprise</div>
+                                <div class="tier-subtitle">Complete + Lead Generation</div>
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Smart Website</strong><br>(Lead capture, mobile-optimized)</td>
+                            <td>Number of Systems</td>
+                            <td>1 System (your choice)</td>
+                            <td>All 4 Systems</td>
+                            <td>All 4 Systems</td>
+                        </tr>
+                        <tr>
+                            <td>Lead Capture & Response</td>
                             <td><span class="feature-check">✓</span></td>
                             <td><span class="feature-check">✓</span></td>
                             <td><span class="feature-check">✓</span></td>
                         </tr>
                         <tr>
-    <td><strong>World-Class CRM</strong></td>
-    <td>
-        <span class="feature-check">✓</span><br>
-        <small style="color: #64748b; font-size: 0.85rem;">Basic Setup<br>(Single user, essential features)</small>
-    </td>
-    <td>
-        <span class="feature-check">✓</span><br>
-        <small style="color: #64748b; font-size: 0.85rem;">Professional Setup<br>(Multi-user, full automation)</small>
-    </td>
-    <td>
-        <span class="feature-check">✓</span><br>
-        <small style="color: #64748b; font-size: 0.85rem;">Enterprise Setup<br>(Unlimited users, custom integrations)</small>
-    </td>
-</tr>
-                        <tr>
-                            <td><strong>Pipeline/Appointment Visibility</strong><br>(See every lead/patient)</td>
+                            <td>Pipeline/Customer Tracking</td>
                             <td><span class="feature-check">✓</span></td>
                             <td><span class="feature-check">✓</span></td>
                             <td><span class="feature-check">✓</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Automated Reminders</strong><br>(Never forget follow-ups)</td>
+                            <td>24/7 AI Automation</td>
+                            <td><span class="feature-minus">—</span></td>
+                            <td><span class="feature-check">✓</span></td>
+                            <td><span class="feature-check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Automated Follow-Up Sequences</td>
+                            <td><span class="feature-minus">—</span></td>
+                            <td><span class="feature-check">✓</span></td>
+                            <td><span class="feature-check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Team Performance Tracking</td>
+                            <td><span class="feature-minus">—</span></td>
+                            <td><span class="feature-check">✓</span></td>
+                            <td><span class="feature-check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Weekly Reports</td>
                             <td><span class="feature-check">✓</span></td>
                             <td><span class="feature-check">✓</span></td>
                             <td><span class="feature-check">✓</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Weekly Reports</strong></td>
-                            <td><span class="feature-check">✓</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                        </tr>
-                        <tr style="background: #f8fafc;">
-                            <td><strong>Multi-Channel Lead Capture</strong><br>(WhatsApp, social, ads, all in one place)</td>
+                            <td>Monthly Strategy Session</td>
                             <td><span class="feature-minus">—</span></td>
                             <td><span class="feature-check">✓</span></td>
                             <td><span class="feature-check">✓</span></td>
                         </tr>
-                        <tr style="background: #f8fafc;">
-                            <td><strong>24/7 AI Response</strong><br>(Instant response even after hours)</td>
-                            <td><span class="feature-minus">—</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                        </tr>
-                        <tr style="background: #f8fafc;">
-                            <td><strong>Automated Follow-Up Sequences</strong><br>(Email, SMS, WhatsApp drip campaigns)</td>
-                            <td><span class="feature-minus">—</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                        </tr>
-                        <tr style="background: #f8fafc;">
-                            <td><strong>Deal/Patient Tracking & Alerts</strong><br>(Know when things stall)</td>
-                            <td><span class="feature-minus">—</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                        </tr>
-                        <tr style="background: #f8fafc;">
-                            <td><strong>Team Performance Tracking</strong></td>
-                            <td><span class="feature-minus">—</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                        </tr>
-                        <tr style="background: #f8fafc;">
-                            <td><strong>Monthly Strategy Session</strong></td>
-                            <td><span class="feature-minus">—</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                        </tr>
-                        <tr style="background: #fffbeb;">
-                            <td><strong>Full Lead Generation</strong><br>(Google/Facebook ads, landing pages)</td>
-                            <td><span class="feature-minus">—</span></td>
-                            <td><span class="feature-minus">—</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                        </tr>
-                        <tr style="background: #fffbeb;">
-                            <td><strong>Advanced Analytics & Forecasting</strong><br>(ROI dashboards, revenue projections)</td>
-                            <td><span class="feature-minus">—</span></td>
-                            <td><span class="feature-minus">—</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                        </tr>
-                        <tr style="background: #fffbeb;">
-                            <td><strong>Customer Retention Automation</strong><br>(Win-back campaigns, referral programs)</td>
-                            <td><span class="feature-minus">—</span></td>
-                            <td><span class="feature-minus">—</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                        </tr>
-                        <tr style="background: #fffbeb;">
-                            <td><strong>Multi-Location Management</strong></td>
-                            <td><span class="feature-minus">—</span></td>
-                            <td><span class="feature-minus">—</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                        </tr>
-                        <tr style="background: #fffbeb;">
-                            <td><strong>Dedicated Account Manager</strong></td>
-                            <td><span class="feature-minus">—</span></td>
-                            <td><span class="feature-minus">—</span></td>
-                            <td><span class="feature-check">✓</span></td>
-                        </tr>
-                        <tr style="background: #fffbeb;">
-                            <td><strong>Quarterly Business Reviews</strong></td>
+                        <tr>
+                            <td>Full Lead Generation (Ads + Landing Pages)</td>
                             <td><span class="feature-minus">—</span></td>
                             <td><span class="feature-minus">—</span></td>
                             <td><span class="feature-check">✓</span></td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary" target="_blank" style="font-size: 0.9rem; padding: 12px 20px;">Get Started</a></td>
-                            <td><a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary" target="_blank" style="font-size: 0.9rem; padding: 12px 20px; background: #f59e0b;">Get Started</a></td>
-                            <td><a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary" target="_blank" style="font-size: 0.9rem; padding: 12px 20px; background: #8b5cf6;">Get Started</a></td>
+                            <td>Advanced Analytics & Forecasting</td>
+                            <td><span class="feature-minus">—</span></td>
+                            <td><span class="feature-minus">—</span></td>
+                            <td><span class="feature-check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Dedicated Account Manager</td>
+                            <td><span class="feature-minus">—</span></td>
+                            <td><span class="feature-minus">—</span></td>
+                            <td><span class="feature-check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Multi-Location Management</td>
+                            <td><span class="feature-minus">—</span></td>
+                            <td><span class="feature-minus">—</span></td>
+                            <td><span class="feature-check">✓</span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-
-            <div class="pricing-disclaimer">
-                <h4>💡 About Pricing</h4>
-                <p>
-                    <strong>Prices shown are starting points.</strong> Final investment depends on your team size, number of locations, existing tools, and system complexity. 
-                    Book a Free Revenue Audit to get your exact pricing and custom system recommendation. No surprises, just transparency.
-                </p>
-            </div>
         </div>
     </section>
 
-    <!-- Guarantee Section -->
-    <section class="guarantee-section">
+    <!-- Platform Section -->
+    <section class="platform-section">
         <div class="container">
-            <div class="guarantee-box">
-                <div class="guarantee-badge">Our Guarantee</div>
-                <h2>The 90-Day Revenue Visibility Guarantee</h2>
-                <p style="font-size: 1.15rem; color: #0f766e; margin-bottom: 20px;">
-                    Within 90 days of system activation, you'll have:
-                </p>
-                <ul class="guarantee-list">
-                    <li>100% visibility into every inquiry and customer</li>
-                    <li>Automated follow-up running 24/7</li>
-                    <li>Complete pipeline or appointment tracking</li>
-                    <li>Weekly performance reports in your inbox</li>
-                    <li>Measurable improvement in conversions</li>
-                </ul>
-                <p class="guarantee-note">
-                    If we don't deliver this level of visibility and organization, we work for free until we do.<br>
-                    <strong>Not because we're worried—but because we've done this before and know it works.</strong>
-                </p>
+            <div class="platform-content">
+                <div class="platform-intro">
+                    <h2>Built on <span class="gradient-text">Proven Platforms</span></h2>
+                    <p>We meet you where you are—whether that's our platform or the industry's best tools.</p>
+                    <p><strong>No vendor lock-in. No forced migrations.</strong></p>
+                </div>
+
+                <div class="platform-highlight">
+                    <h3>Platform-Agnostic Approach</h3>
+                    <p>
+                        Unlike vendors locked into one ecosystem, we choose the best tool for YOUR specific needs.
+                    </p>
+                    <p>
+                        Already using HubSpot? We'll optimize that.<br>
+                        Need Zoho for budget? We'll build there.<br>
+                        Want our platform? We'll deploy that.
+                    </p>
+                    <p style="margin-top: 20px; font-weight: 700; font-size: 1.15rem;">
+                        We use what works best for YOUR business—not what's easiest for us.
+                    </p>
+                </div>
+
+                <div class="platform-logos">
+                    <div class="platform-logo primary">Our Platform</div>
+                    <div class="platform-logo">Zoho</div>
+                    <div class="platform-logo">GoHighLevel</div>
+                    <div class="platform-logo">HubSpot</div>
+                    <div class="platform-logo">ActiveCampaign</div>
+                    <div class="platform-logo">Odoo</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-content">
+    <!-- Custom Solution Section -->
+    <section class="custom-section">
+        <div class="custom-content">
             <div class="container">
-                <h2>Not Sure Which Tier Fits?</h2>
+                <h2>Discovery Call Determines Your <span class="gradient-text">Custom Solution</span></h2>
                 <p>
-                    Book a Free Revenue Audit. We'll show you exactly where you're losing revenue and recommend the right tier for your business size and goals.
+                    Every business is different. We don't believe in one-size-fits-all pricing or packages.
                 </p>
-                <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary btn-large" target="_blank">Book Your Free Revenue Audit</a>
-                <p class="cta-note">45-minute audit • See your exact leakage points • Get custom recommendation • No pressure</p>
+                <p>
+                    Your investment depends on your team size, industry complexity, existing tools, and specific goals.
+                </p>
+
+                <div class="custom-reasons">
+                    <div class="reason-box">
+                        <h4>Team Size Matters</h4>
+                        <p>Solo operator vs 20-person team = different needs, different systems, different investment.</p>
+                    </div>
+                    <div class="reason-box">
+                        <h4>Industry Complexity</h4>
+                        <p>Real estate deals vs healthcare appointments = different workflows, different automation depth.</p>
+                    </div>
+                    <div class="reason-box">
+                        <h4>Existing Tools</h4>
+                        <p>Starting fresh vs integrating with 5 existing systems = different scope, different timeline.</p>
+                    </div>
+                    <div class="reason-box">
+                        <h4>Growth Stage</h4>
+                        <p>Just launched vs established business = different priorities, different build order.</p>
+                    </div>
+                </div>
+
+                <p style="font-size: 1.4rem; margin-top: 40px; font-weight: 700;">
+                    Book a free revenue audit. We'll diagnose your situation and recommend the right solution.
+                </p>
+
+                <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary" target="_blank">Book Your Free Revenue Audit</a>
+                <span class="btn-note">45 minutes • Zero commitment • Custom recommendation</span>
             </div>
         </div>
     </section>
@@ -1029,15 +1105,17 @@ From KES 7,500/month
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>AHERI <span class="logo-systems">SYSTEMS</span></h3>
-                    <p class="footer-tagline">Revenue Growth Systems for Africa</p>
-                    <p>We build, monitor, and optimize revenue systems for real estate agencies and private clinics across Kenya, Africa, and emerging markets.</p>
+                    <p class="footer-tagline">Revenue Growth Systems for Africa & Beyond</p>
+                    <p>We build, monitor, and optimize intelligent automation systems for growing SMEs across Kenya, Africa, and Beyond.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Industries</h4>
                     <ul>
-                        <li><a href="real-estate-systems.html">Real Estate Agencies</a></li>
-                        <li><a href="clinic-systems.html">Private Clinics</a></li>
-                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="#industries">Real Estate</a></li>
+                        <li><a href="#industries">Healthcare</a></li>
+                        <li><a href="#industries">E-commerce</a></li>
+                        <li><a href="#industries">Professional Services</a></li>
+                        <li><a href="#industries">View All Industries</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -1082,6 +1160,5 @@ From KES 7,500/month
             });
         }
     </script>
-
 </body>
 </html>
