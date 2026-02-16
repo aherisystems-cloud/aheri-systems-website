@@ -26,6 +26,12 @@
         .password-button:hover { background: #2da89e; transform: translateY(-2px); }
         .password-error { color: #ef4444; font-size: 0.9rem; margin-top: 10px; display: none; }
 
+        /* Currency Toggle */
+        .currency-toggle { display: flex; gap: 10px; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .currency-btn { padding: 10px 24px; border: 2px solid rgba(255, 255, 255, 0.3); background: rgba(255, 255, 255, 0.1); color: white; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.3s; }
+        .currency-btn.active { background: #3bc3b7; border-color: #3bc3b7; }
+        .currency-btn:hover { background: rgba(59, 195, 183, 0.3); }
+
         /* Calculator */
         .calculator-screen { display: none; padding: 40px 20px 80px; }
         .calc-header { background: linear-gradient(135deg, #112837 0%, #1a3a52 100%); color: white; padding: 50px 40px; border-radius: 20px; margin-bottom: 40px; text-align: center; }
@@ -66,6 +72,13 @@
         .pain-item { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 1.05rem; }
         .pain-item span:first-child { color: #7f1d1d; font-weight: 500; }
         .pain-item span:last-child { color: #dc2626; font-weight: 800; }
+
+        /* Time Savings Box */
+        .time-savings { background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 25px; margin-top: 25px; }
+        .time-savings h4 { color: #1e40af; font-size: 1.1rem; margin-bottom: 15px; font-weight: 800; }
+        .time-item { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 1.05rem; }
+        .time-item span:first-child { color: #1e3a8a; font-weight: 500; }
+        .time-item span:last-child { color: #1d4ed8; font-weight: 800; }
 
         .leak-result { background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%); color: white; border-radius: 16px; padding: 35px; margin-top: 35px; text-align: center; }
         .leak-result h3 { font-size: 1.4rem; margin-bottom: 15px; font-weight: 700; opacity: 0.95; }
@@ -145,6 +158,11 @@
             <div class="calc-header">
                 <h1>How Much Revenue Are You<br><span class="gradient-text">Losing Every Month?</span></h1>
                 <p>Calculate your revenue leakage in 3 minutes</p>
+                
+                <div class="currency-toggle">
+                    <button class="currency-btn active" onclick="setCurrency('KES')" id="kesBtn">KES</button>
+                    <button class="currency-btn" onclick="setCurrency('USD')" id="usdBtn">USD</button>
+                </div>
             </div>
 
             <div class="client-info">
@@ -174,7 +192,7 @@
                     </div>
                     <div class="info-field">
                         <label>Team Size</label>
-                        <input type="number" id="teamSize" value="1" min="1">
+                        <input type="number" id="teamSize" value="5" min="1" oninput="calculate()">
                     </div>
                 </div>
             </div>
@@ -287,7 +305,7 @@
                 <div class="leak-header">
                     <div class="leak-number">3</div>
                     <h2>The Operations Leak</h2>
-                    <p class="leak-subtitle">How much future revenue are you leaving on the table by not retaining customers?</p>
+                    <p class="leak-subtitle">How much future revenue AND time are you losing to manual chaos and poor retention?</p>
                 </div>
 
                 <div class="input-group">
@@ -304,7 +322,7 @@
                     <p class="helper-text">Be brutally honest—do you even have a system to stay in touch?</p>
                     
                     <div class="pain-calc">
-                        <h4>💔 The Pain:</h4>
+                        <h4>💔 The Revenue Pain:</h4>
                         <div class="pain-item">
                             <span>Current repeat/referral customers:</span>
                             <span id="currentRepeat">—</span>
@@ -320,10 +338,35 @@
                     </div>
                 </div>
 
+                <div class="input-group">
+                    <label class="input-label">How many hours per week does your team spend on manual admin?</label>
+                    <div class="slider-container">
+                        <input type="range" class="slider" id="manualHours" min="0" max="80" value="30" oninput="calculate()">
+                        <div class="slider-value"><span id="manualHours_val">30</span> hrs/week</div>
+                    </div>
+                    <p class="helper-text">Data entry, follow-up tracking, scheduling, reporting, manual coordination—all the "busy work"</p>
+                    
+                    <div class="time-savings">
+                        <h4>⏰ The Time Pain:</h4>
+                        <div class="time-item">
+                            <span>Time wasted on manual work per year:</span>
+                            <span id="wastedHours">—</span>
+                        </div>
+                        <div class="time-item">
+                            <span>With automation (70% reduction):</span>
+                            <span id="savedHours">—</span>
+                        </div>
+                        <div class="time-item">
+                            <span>Cost of wasted time (@ <span class="currency-symbol">KES</span> 500/hr):</span>
+                            <span id="timeCost">—</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="leak-result">
-                    <h3>LEAK #3: Operations/Retention Leakage</h3>
+                    <h3>LEAK #3: Operations Leakage</h3>
                     <span class="amount" id="leak3Annual">KES 0</span>
-                    <p class="annual">(Annual—retention compounds over time)</p>
+                    <p class="annual">Revenue Loss (Annual) + Time Cost = Total Operations Leak</p>
                 </div>
             </div>
 
@@ -352,7 +395,8 @@
                     <ul>
                         <li><strong>Leak #1 (Marketing/Sales):</strong> <span id="emo_leak1">KES 0</span>/year from missed inquiries</li>
                         <li><strong>Leak #2 (Conversion):</strong> <span id="emo_leak2">KES 0</span>/year from stalled deals</li>
-                        <li><strong>Leak #3 (Operations):</strong> <span id="emo_leak3">KES 0</span>/year from lost customers</li>
+                        <li><strong>Leak #3 (Operations - Revenue):</strong> <span id="emo_leak3_revenue">KES 0</span>/year from lost customers</li>
+                        <li><strong>Leak #3 (Operations - Time):</strong> <span id="emo_leak3_time">KES 0</span>/year from manual chaos (<span id="emo_hours">0</span> hours wasted)</li>
                     </ul>
                     <p style="margin-top: 25px; font-size: 1.25rem; font-weight: 800;">This is money you're ALREADY EARNING—you're just not keeping it.</p>
                 </div>
@@ -388,7 +432,7 @@
 
                     <div class="system-card">
                         <h3>System 3: Customer Retention</h3>
-                        <p><strong>Fixes Leak #3</strong></p>
+                        <p><strong>Fixes Leak #3 (Revenue)</strong></p>
                         <ul>
                             <li>Systematic retention campaigns</li>
                             <li>Automated referral engine</li>
@@ -399,13 +443,13 @@
 
                     <div class="system-card">
                         <h3>System 4: Operations Command</h3>
-                        <p><strong>Eliminates Chaos</strong></p>
+                        <p><strong>Fixes Leak #3 (Time + Chaos)</strong></p>
                         <ul>
-                            <li>Team coordination & workflows</li>
-                            <li>Weekly performance reports</li>
-                            <li>Continuous optimization</li>
+                            <li>70% reduction in manual work</li>
+                            <li>Automated workflows & coordination</li>
+                            <li>Real-time performance tracking</li>
                         </ul>
-                        <p style="margin-top: 15px; font-weight: 700; color: #0f766e;">Enables: Everything above to actually work</p>
+                        <p style="margin-top: 15px; font-weight: 700; color: #0f766e;">Saves: <span id="sys4_timesaved">0</span> hours/year (<span id="sys4_costsaved">KES 0</span>)</p>
                     </div>
                 </div>
 
@@ -429,6 +473,22 @@
     </div>
 
     <script>
+        let currentCurrency = 'KES';
+        const exchangeRate = 130; // 1 USD = 130 KES (approximate)
+
+        function setCurrency(currency) {
+            currentCurrency = currency;
+            document.getElementById('kesBtn').classList.toggle('active', currency === 'KES');
+            document.getElementById('usdBtn').classList.toggle('active', currency === 'USD');
+            
+            // Update all currency symbols
+            document.querySelectorAll('.currency-symbol').forEach(el => {
+                el.textContent = currency;
+            });
+            
+            calculate();
+        }
+
         function checkPassword() {
             const password = document.getElementById('passwordInput').value;
             if (password === 'AheriRevenue2026') {
@@ -445,9 +505,17 @@
         });
 
         function formatCurrency(amount) {
-            if (amount >= 1000000) return 'KES ' + (amount / 1000000).toFixed(1) + 'M';
-            else if (amount >= 1000) return 'KES ' + (amount / 1000).toFixed(0) + 'K';
-            else return 'KES ' + amount.toLocaleString();
+            // Convert to selected currency
+            const convertedAmount = currentCurrency === 'USD' ? amount / exchangeRate : amount;
+            const symbol = currentCurrency;
+            
+            if (convertedAmount >= 1000000) {
+                return symbol + ' ' + (convertedAmount / 1000000).toFixed(1) + 'M';
+            } else if (convertedAmount >= 1000) {
+                return symbol + ' ' + (convertedAmount / 1000).toFixed(0) + 'K';
+            } else {
+                return symbol + ' ' + convertedAmount.toLocaleString('en-US', {maximumFractionDigits: 0});
+            }
         }
 
         function calculate() {
@@ -460,12 +528,15 @@
             const closeRate = parseFloat(document.getElementById('closeRate')?.value) || 0;
             const pastCustomers = parseFloat(document.getElementById('pastCustomers')?.value) || 0;
             const retentionRate = parseFloat(document.getElementById('retentionRate')?.value) || 0;
+            const teamSize = parseFloat(document.getElementById('teamSize')?.value) || 1;
+            const manualHours = parseFloat(document.getElementById('manualHours')?.value) || 0;
 
             // Update sliders
             document.getElementById('captureRate_val').textContent = captureRate;
             document.getElementById('conversionRate_val').textContent = conversionRate;
             document.getElementById('closeRate_val').textContent = closeRate;
             document.getElementById('retentionRate_val').textContent = retentionRate;
+            document.getElementById('manualHours_val').textContent = manualHours;
 
             // LEAK 1 CALCULATION
             const captured = inquiries * (captureRate / 100);
@@ -494,15 +565,29 @@
             document.getElementById('leak2Monthly').textContent = formatCurrency(leak2Monthly);
             document.getElementById('leak2Annual').textContent = formatCurrency(leak2Annual);
 
-            // LEAK 3 CALCULATION
+            // LEAK 3 CALCULATION (Revenue)
             const currentRepeat = pastCustomers * (retentionRate / 100);
             const betterRepeat = pastCustomers * 0.40;
             const lostRepeat = betterRepeat - currentRepeat;
-            const leak3Annual = lostRepeat * avgValue;
+            const leak3RevenueAnnual = lostRepeat * avgValue;
 
             document.getElementById('currentRepeat').textContent = Math.round(currentRepeat) + ' customers';
             document.getElementById('betterRepeat').textContent = Math.round(betterRepeat) + ' customers';
             document.getElementById('lostRepeat').textContent = Math.round(lostRepeat) + ' customers/year';
+
+            // LEAK 3 CALCULATION (Time)
+            const annualManualHours = manualHours * 52; // hours per year
+            const savedHoursWithAutomation = annualManualHours * 0.70; // 70% reduction
+            const hourlyRate = currentCurrency === 'KES' ? 500 : 500 / exchangeRate; // KES 500/hr or USD equivalent
+            const timeCostAnnual = annualManualHours * hourlyRate;
+            const timeSavingsAnnual = savedHoursWithAutomation * hourlyRate;
+
+            document.getElementById('wastedHours').textContent = Math.round(annualManualHours).toLocaleString() + ' hours';
+            document.getElementById('savedHours').textContent = Math.round(savedHoursWithAutomation).toLocaleString() + ' hours saved';
+            document.getElementById('timeCost').textContent = formatCurrency(timeCostAnnual);
+
+            // TOTAL LEAK 3 (Revenue + Time)
+            const leak3Annual = leak3RevenueAnnual + timeCostAnnual;
             document.getElementById('leak3Annual').textContent = formatCurrency(leak3Annual);
 
             // TOTALS
@@ -518,17 +603,21 @@
             
             document.getElementById('emo_leak1').textContent = formatCurrency(leak1Annual);
             document.getElementById('emo_leak2').textContent = formatCurrency(leak2Annual);
-            document.getElementById('emo_leak3').textContent = formatCurrency(leak3Annual);
+            document.getElementById('emo_leak3_revenue').textContent = formatCurrency(leak3RevenueAnnual);
+            document.getElementById('emo_leak3_time').textContent = formatCurrency(timeCostAnnual);
+            document.getElementById('emo_hours').textContent = Math.round(annualManualHours).toLocaleString();
 
             // SYSTEM RECOVERY
             const sys1_recovery = leak1Annual * 0.30;
             const sys2_recovery = leak2Annual * 0.30;
-            const sys3_recovery = leak3Annual * 0.30;
+            const sys3_recovery = leak3RevenueAnnual * 0.30; // Only revenue part
             const conservative = totalAnnual * 0.30;
 
             document.getElementById('sys1_recovery').textContent = formatCurrency(sys1_recovery);
             document.getElementById('sys2_recovery').textContent = formatCurrency(sys2_recovery);
             document.getElementById('sys3_recovery').textContent = formatCurrency(sys3_recovery);
+            document.getElementById('sys4_timesaved').textContent = Math.round(savedHoursWithAutomation).toLocaleString();
+            document.getElementById('sys4_costsaved').textContent = formatCurrency(timeSavingsAnnual);
             document.getElementById('conservative_recovery').textContent = formatCurrency(conservative);
             document.getElementById('monthly_recovery').textContent = formatCurrency(conservative / 12);
         }
