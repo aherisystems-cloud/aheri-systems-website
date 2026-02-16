@@ -3,910 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>How It Works | Revenue Command System Process | Aheri Systems</title>
-    <meta name="description" content="See how Aheri Systems builds revenue command systems for real estate and clinics in 90 days. Proven 4-phase process with guaranteed results.">
-    <meta name="keywords" content="revenue system process, CRM implementation, business automation Kenya, revenue growth process, system implementation">
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HowTo",
-      "name": "Revenue Command System Implementation Process",
-      "description": "4-phase process for building revenue command systems",
-      "step": [
-        {
-          "@type": "HowToStep",
-          "name": "Revenue Leakage Audit",
-          "text": "Map your current lead-to-customer flow and identify exactly where revenue is leaking"
-        },
-        {
-          "@type": "HowToStep",
-          "name": "System Design",
-          "text": "Design exact workflows, automation, and enforcement mechanisms customized for your business"
-        },
-        {
-          "@type": "HowToStep",
-          "name": "Build & Activation",
-          "text": "Build your Revenue Command System, integrate with existing tools, and train your team"
-        },
-        {
-          "@type": "HowToStep",
-          "name": "Ongoing Optimization",
-          "text": "Monitor continuously, send weekly reports, and optimize monthly based on real data"
-        }
-      ]
-    }
-    </script>
-    
-    <!-- Google Fonts -->
+    <title>How It Works | Revenue Systems Process | Aheri Systems</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #112837;
-            background: white;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Navigation */
-        .navbar {
-            background: white;
-            box-shadow: 0 2px 10px rgba(17, 40, 55, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo img {
-            width: 120px;
-            height: auto;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            flex-direction: column;
-            gap: 4px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 5px;
-        }
-
-        .mobile-menu-btn span {
-            width: 25px;
-            height: 3px;
-            background: #112837;
-            border-radius: 3px;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: #112837;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-
-        .nav-menu a:hover {
-            color: #3bc3b7;
-        }
-
-        .nav-menu .btn-primary {
-            background: #3bc3b7;
-            color: white;
-            padding: 0.7rem 1.8rem;
-            border-radius: 8px;
-            transition: all 0.3s;
-            font-weight: 600;
-        }
-
-        .nav-menu .btn-primary:hover {
-            background: #2da89e;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(59, 195, 183, 0.3);
-        }
-
-        /* Hero */
-        .hero {
-            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
-            color: white;
-            padding: 120px 20px 100px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(59, 195, 183, 0.12) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(59, 195, 183, 0.12) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 28px;
-            font-weight: 900;
-            letter-spacing: -0.03em;
-            line-height: 1.05;
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #3bc3b7 0%, #5fd4c7 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-subtitle {
-            font-size: 1.45rem;
-            max-width: 820px;
-            margin: 0 auto;
-            opacity: 0.95;
-            line-height: 1.7;
-        }
-
-        /* Section Styles */
-        .section {
-            padding: 90px 20px;
-        }
-
-        .section-alt {
-            background: #f8fafc;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 2.8rem;
-            margin-bottom: 18px;
-            font-weight: 800;
-            color: #112837;
-            line-height: 1.2;
-        }
-
-        .section-header p {
-            font-size: 1.25rem;
-            color: #64748b;
-            max-width: 820px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        /* Phase Cards */
-        .phases-container {
-            display: grid;
-            gap: 50px;
-            margin-top: 60px;
-        }
-
-        .phase-card {
-            background: white;
-            border-radius: 20px;
-            padding: 50px;
-            border: 2px solid #e2e8f0;
-            border-left: 6px solid #3bc3b7;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            transition: all 0.3s ease;
-        }
-
-        .phase-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(59, 195, 183, 0.15);
-        }
-
-        .phase-header {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .phase-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
-            color: white;
-            border-radius: 50%;
-            font-size: 2.2rem;
-            font-weight: 900;
-            box-shadow: 0 6px 20px rgba(59, 195, 183, 0.4);
-            flex-shrink: 0;
-        }
-
-        .phase-title-group h3 {
-            font-size: 2rem;
-            color: #112837;
-            margin-bottom: 8px;
-            font-weight: 800;
-        }
-
-        .phase-timeline {
-            display: inline-block;
-            background: rgba(59, 195, 183, 0.1);
-            color: #2da89e;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 700;
-        }
-
-        .phase-content {
-            margin-bottom: 30px;
-        }
-
-        .phase-content h4 {
-            font-size: 1.3rem;
-            color: #112837;
-            margin-bottom: 15px;
-            margin-top: 25px;
-            font-weight: 700;
-        }
-
-        .phase-content p {
-            font-size: 1.15rem;
-            color: #64748b;
-            line-height: 1.75;
-            margin-bottom: 20px;
-        }
-
-        .phase-content ul {
-            list-style: none;
-            margin: 20px 0;
-        }
-
-        .phase-content ul li {
-            padding: 10px 0 10px 35px;
-            position: relative;
-            color: #4a5568;
-            font-size: 1.05rem;
-        }
-
-        .phase-content ul li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #3bc3b7;
-            font-weight: bold;
-            font-size: 1.3rem;
-        }
-
-        .industry-split {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin: 25px 0;
-        }
-
-        .industry-box {
-            background: #f8fafc;
-            padding: 25px;
-            border-radius: 12px;
-            border-top: 3px solid #3bc3b7;
-        }
-
-        .industry-box h5 {
-            font-size: 1.1rem;
-            color: #112837;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .industry-box ul {
-            list-style: none;
-        }
-
-        .industry-box ul li {
-            padding: 6px 0 6px 25px;
-            position: relative;
-            font-size: 0.95rem;
-            color: #4a5568;
-        }
-
-        .industry-box ul li:before {
-            content: "•";
-            position: absolute;
-            left: 8px;
-            color: #3bc3b7;
-            font-size: 1.2rem;
-        }
-
-        .deliverable-box {
-            background: linear-gradient(135deg, rgba(59, 195, 183, 0.1) 0%, rgba(59, 195, 183, 0.05) 100%);
-            border: 2px solid #3bc3b7;
-            border-radius: 12px;
-            padding: 25px;
-            margin-top: 25px;
-        }
-
-        .deliverable-box h4 {
-            color: #2da89e;
-            font-size: 1.2rem;
-            margin: 0 0 10px 0;
-            font-weight: 700;
-        }
-
-        .deliverable-box p {
-            color: #112837;
-            font-size: 1.05rem;
-            margin: 0;
-            font-weight: 500;
-        }
-
-        .phase-cta {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 16px 36px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            font-size: 1.05rem;
-        }
-
-        .btn-primary {
-            background: #3bc3b7;
-            color: white;
-            box-shadow: 0 4px 14px rgba(59, 195, 183, 0.4);
-        }
-
-        .btn-primary:hover {
-            background: #2da89e;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(59, 195, 183, 0.5);
-        }
-
-        /* Results Section */
-        .results-section {
-            background: white;
-            padding: 90px 20px;
-        }
-
-        .disclaimer {
-            background: #fffbeb;
-            border-left: 4px solid #f59e0b;
-            padding: 20px 30px;
-            border-radius: 8px;
-            margin-bottom: 50px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .disclaimer p {
-            color: #78350f;
-            font-size: 0.95rem;
-            font-style: italic;
-            margin: 0;
-        }
-
-        .results-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            margin-top: 50px;
-        }
-
-        .result-column h3 {
-            font-size: 2rem;
-            color: #112837;
-            margin-bottom: 30px;
-            font-weight: 800;
-            text-align: center;
-        }
-
-        .comparison-box {
-            margin-bottom: 40px;
-        }
-
-        .comparison-label {
-            display: inline-block;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .before-label {
-            background: #fee2e2;
-            color: #991b1b;
-        }
-
-        .after-label {
-            background: #d1fae5;
-            color: #065f46;
-        }
-
-        .metrics-list {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            border: 2px solid #e2e8f0;
-        }
-
-        .metric-item {
-            padding: 15px 0;
-            border-bottom: 1px solid #e2e8f0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .metric-item:last-child {
-            border-bottom: none;
-        }
-
-        .metric-label {
-            font-size: 0.95rem;
-            color: #64748b;
-            font-weight: 500;
-        }
-
-        .metric-value {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #112837;
-        }
-
-        .metric-value.before {
-            color: #dc2626;
-        }
-
-        .metric-value.after {
-            color: #059669;
-        }
-
-        .impact-box {
-            background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 16px;
-            text-align: center;
-            margin-top: 30px;
-            box-shadow: 0 6px 20px rgba(59, 195, 183, 0.3);
-        }
-
-        .impact-box p {
-            font-size: 1.2rem;
-            line-height: 1.7;
-            margin: 0;
-            font-weight: 600;
-        }
-
-        /* Guarantee Section */
-        .guarantee-section {
-            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
-            color: white;
-            padding: 90px 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .guarantee-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(59, 195, 183, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(59, 195, 183, 0.08) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .guarantee-content {
-            position: relative;
-            z-index: 1;
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .guarantee-content h2 {
-            font-size: 2.8rem;
-            margin-bottom: 25px;
-            font-weight: 800;
-        }
-
-        .guarantee-content p {
-            font-size: 1.25rem;
-            margin-bottom: 35px;
-            opacity: 0.95;
-        }
-
-        .guarantee-list {
-            list-style: none;
-            margin: 40px 0;
-            text-align: left;
-        }
-
-        .guarantee-list li {
-            padding: 15px 0 15px 45px;
-            position: relative;
-            font-size: 1.15rem;
-        }
-
-        .guarantee-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #3bc3b7;
-            font-weight: bold;
-            font-size: 1.8rem;
-        }
-
-        .guarantee-promise {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 2px solid #3bc3b7;
-            border-radius: 16px;
-            padding: 30px;
-            margin-top: 40px;
-        }
-
-        .guarantee-promise p {
-            font-size: 1.2rem;
-            margin: 0;
-            font-style: italic;
-        }
-
-        /* Why It Works Section */
-        .why-section {
-            padding: 90px 20px;
-            background: #f8fafc;
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-            margin-top: 50px;
-        }
-
-        .why-card {
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
-            border-top: 4px solid #3bc3b7;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            transition: all 0.3s ease;
-        }
-
-        .why-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 35px rgba(59, 195, 183, 0.15);
-        }
-
-        .why-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: rgba(59, 195, 183, 0.1);
-            color: #2da89e;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
-
-        .why-card h3 {
-            font-size: 1.5rem;
-            color: #112837;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .why-card p {
-            font-size: 1.05rem;
-            color: #64748b;
-            line-height: 1.75;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #112837 0%, #1a3a52 100%);
-            color: white;
-            padding: 90px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 30% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 70% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .cta-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-content h2 {
-            font-size: 3.2rem;
-            margin-bottom: 22px;
-            font-weight: 800;
-            line-height: 1.15;
-        }
-
-        .cta-content p {
-            font-size: 1.35rem;
-            max-width: 780px;
-            margin: 0 auto 35px;
-            opacity: 0.95;
-            line-height: 1.7;
-        }
-
-        .btn-large {
-            padding: 20px 48px;
-            font-size: 1.15rem;
-        }
-
-        .trust-elements {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            max-width: 900px;
-            margin: 40px auto 0;
-        }
-
-        .trust-item {
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(10px);
-            border-radius: 8px;
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-
-        /* Footer */
-        .footer {
-            background: #112837;
-            color: white;
-            padding: 70px 20px 35px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 45px;
-            margin-bottom: 45px;
-        }
-
-        .footer h3 {
-            font-size: 1.6rem;
-            margin-bottom: 18px;
-            font-weight: 700;
-        }
-
-        .logo-systems {
-            color: #3bc3b7;
-        }
-
-        .footer-tagline {
-            color: #3bc3b7;
-            font-size: 0.95rem;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .footer-col p {
-            color: rgba(255, 255, 255, 0.82);
-            line-height: 1.8;
-            font-size: 0.95rem;
-        }
-
-        .footer h4 {
-            margin-bottom: 18px;
-            font-size: 1.15rem;
-            font-weight: 600;
-        }
-
-        .footer ul {
-            list-style: none;
-        }
-
-        .footer ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer ul li a {
-            color: rgba(255, 255, 255, 0.82);
-            text-decoration: none;
-            transition: color 0.3s;
-            font-size: 0.95rem;
-        }
-
-        .footer ul li a:hover {
-            color: #3bc3b7;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.12);
-            padding-top: 35px;
-            text-align: center;
-        }
-
-        .footer-bottom p {
-            color: rgba(255, 255, 255, 0.65);
-            font-size: 0.9rem;
-        }
-
-        /* Mobile Responsiveness */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #112837; background: white; -webkit-font-smoothing: antialiased; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .navbar { background: white; box-shadow: 0 2px 10px rgba(17, 40, 55, 0.08); position: sticky; top: 0; z-index: 1000; }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+        .logo img { width: 120px; height: auto; }
+        .mobile-menu-btn { display: none; flex-direction: column; gap: 4px; background: none; border: none; cursor: pointer; padding: 5px; }
+        .mobile-menu-btn span { width: 25px; height: 3px; background: #112837; border-radius: 3px; }
+        .nav-menu { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-menu a { text-decoration: none; color: #112837; font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+        .nav-menu a:hover { color: #3bc3b7; }
+        .nav-menu .btn-primary { background: #3bc3b7; color: white; padding: 0.7rem 1.8rem; border-radius: 8px; transition: all 0.3s; font-weight: 600; }
+        .nav-menu .btn-primary:hover { background: #2da89e; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(59, 195, 183, 0.3); }
+        .hero { background: linear-gradient(135deg, #112837 0%, #1a3a52 100%); color: white; padding: 120px 20px 100px; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 50%, rgba(59, 195, 183, 0.12) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(59, 195, 183, 0.12) 0%, transparent 50%); pointer-events: none; }
+        .hero-content { position: relative; z-index: 1; text-align: center; }
+        .hero-title { font-size: 4rem; margin-bottom: 28px; font-weight: 900; letter-spacing: -0.03em; line-height: 1.05; }
+        .gradient-text { background: linear-gradient(135deg, #3bc3b7 0%, #5fd4c7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-subtitle { font-size: 1.45rem; max-width: 820px; margin: 0 auto; opacity: 0.95; line-height: 1.7; }
+        .section { padding: 90px 20px; }
+        .section-alt { background: #f8fafc; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 2.8rem; margin-bottom: 18px; font-weight: 800; color: #112837; line-height: 1.2; }
+        .section-header p { font-size: 1.25rem; color: #64748b; max-width: 820px; margin: 0 auto; line-height: 1.6; }
+        .phases-container { display: grid; gap: 50px; margin-top: 60px; }
+        .phase-card { background: white; border-radius: 20px; padding: 50px; border: 2px solid #e2e8f0; border-left: 6px solid #3bc3b7; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s ease; }
+        .phase-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(59, 195, 183, 0.15); }
+        .phase-header { display: flex; align-items: center; gap: 20px; margin-bottom: 30px; }
+        .phase-number { display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; background: linear-gradient(135deg, #3bc3b7 0%, #2da89e 100%); color: white; border-radius: 50%; font-size: 2.2rem; font-weight: 900; box-shadow: 0 6px 20px rgba(59, 195, 183, 0.4); flex-shrink: 0; }
+        .phase-title-group h3 { font-size: 2rem; color: #112837; margin-bottom: 8px; font-weight: 800; }
+        .phase-timeline { display: inline-block; background: rgba(59, 195, 183, 0.1); color: #2da89e; padding: 6px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: 700; }
+        .phase-content { margin-bottom: 30px; }
+        .phase-content h4 { font-size: 1.3rem; color: #112837; margin-bottom: 15px; margin-top: 25px; font-weight: 700; }
+        .phase-content p { font-size: 1.15rem; color: #64748b; line-height: 1.75; margin-bottom: 20px; }
+        .phase-content ul { list-style: none; margin: 20px 0; }
+        .phase-content ul li { padding: 10px 0 10px 35px; position: relative; color: #4a5568; font-size: 1.05rem; }
+        .phase-content ul li:before { content: "→"; position: absolute; left: 0; color: #3bc3b7; font-weight: bold; font-size: 1.3rem; }
+        .deliverable-box { background: linear-gradient(135deg, rgba(59, 195, 183, 0.1) 0%, rgba(59, 195, 183, 0.05) 100%); border: 2px solid #3bc3b7; border-radius: 12px; padding: 25px; margin-top: 25px; }
+        .deliverable-box h4 { color: #2da89e; font-size: 1.2rem; margin: 0 0 10px 0; font-weight: 700; }
+        .deliverable-box p { color: #112837; font-size: 1.05rem; margin: 0; font-weight: 500; }
+        .platform-highlight { background: white; padding: 30px; border-radius: 12px; border-left: 4px solid #3bc3b7; margin: 25px 0; }
+        .platform-highlight h4 { font-size: 1.2rem; margin-bottom: 15px; color: #3bc3b7; font-weight: 700; }
+        .platform-highlight ul { list-style: none; }
+        .platform-highlight ul li { padding: 8px 0 8px 25px; position: relative; font-size: 1rem; color: #475569; }
+        .platform-highlight ul li:before { content: "•"; position: absolute; left: 8px; color: #3bc3b7; font-size: 1.2rem; }
+        .results-section { background: white; padding: 90px 20px; }
+        .disclaimer { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 20px 30px; border-radius: 8px; margin-bottom: 50px; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .disclaimer p { color: #78350f; font-size: 0.95rem; font-style: italic; margin: 0; }
+        .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 35px; margin-top: 40px; }
+        .result-card { background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 35px; border-radius: 16px; border-top: 4px solid #3bc3b7; }
+        .result-card h3 { font-size: 1.6rem; color: #112837; margin-bottom: 20px; font-weight: 800; }
+        .result-card ul { list-style: none; }
+        .result-card ul li { padding: 10px 0; padding-left: 30px; position: relative; color: #475569; font-size: 1rem; }
+        .result-card ul li:before { content: "✓"; position: absolute; left: 0; color: #3bc3b7; font-weight: bold; font-size: 1.4rem; }
+        .cta-section { background: linear-gradient(135deg, #112837 0%, #1a3a52 100%); color: white; padding: 90px 20px; text-align: center; position: relative; overflow: hidden; }
+        .cta-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 30% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%), radial-gradient(circle at 70% 50%, rgba(59, 195, 183, 0.1) 0%, transparent 50%); pointer-events: none; }
+        .cta-content { position: relative; z-index: 1; }
+        .cta-content h2 { font-size: 3.2rem; margin-bottom: 22px; font-weight: 800; line-height: 1.15; }
+        .cta-content p { font-size: 1.35rem; max-width: 780px; margin: 0 auto 35px; opacity: 0.95; line-height: 1.7; }
+        .btn { display: inline-block; padding: 20px 48px; border-radius: 12px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; font-size: 1.15rem; }
+        .btn-primary { background: #3bc3b7; color: white; box-shadow: 0 4px 14px rgba(59, 195, 183, 0.4); }
+        .btn-primary:hover { background: #2da89e; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(59, 195, 183, 0.5); }
+        .cta-note { margin-top: 25px; font-size: 0.95rem; opacity: 0.82; }
+        .footer { background: #112837; color: white; padding: 70px 20px 35px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 45px; margin-bottom: 45px; }
+        .footer h3 { font-size: 1.6rem; margin-bottom: 18px; font-weight: 700; }
+        .logo-systems { color: #3bc3b7; }
+        .footer-tagline { color: #3bc3b7; font-size: 0.95rem; margin-bottom: 12px; font-weight: 600; }
+        .footer-col p { color: rgba(255, 255, 255, 0.82); line-height: 1.8; font-size: 0.95rem; }
+        .footer h4 { margin-bottom: 18px; font-size: 1.15rem; font-weight: 600; }
+        .footer ul { list-style: none; }
+        .footer ul li { margin-bottom: 12px; }
+        .footer ul li a { color: rgba(255, 255, 255, 0.82); text-decoration: none; transition: color 0.3s; font-size: 0.95rem; }
+        .footer ul li a:hover { color: #3bc3b7; }
+        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.12); padding-top: 35px; text-align: center; }
+        .footer-bottom p { color: rgba(255, 255, 255, 0.65); font-size: 0.9rem; }
         @media (max-width: 968px) {
-            .mobile-menu-btn {
-                display: flex;
-            }
-
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 4px 10px rgba(17, 40, 55, 0.1);
-                gap: 1rem;
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .hero h1 {
-                font-size: 2.4rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.15rem;
-            }
-
-            .section-header h2 {
-                font-size: 2rem;
-            }
-
-            .phase-card {
-                padding: 30px 25px;
-            }
-
-            .phase-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .industry-split {
-                grid-template-columns: 1fr;
-            }
-
-            .results-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-content h2 {
-                font-size: 2.2rem;
-            }
-
-            .trust-elements {
-                grid-template-columns: 1fr;
-            }
+            .mobile-menu-btn { display: flex; }
+            .nav-menu { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; box-shadow: 0 4px 10px rgba(17, 40, 55, 0.1); gap: 1rem; }
+            .nav-menu.active { display: flex; }
+            .hero { padding: 80px 20px 70px; }
+            .hero-title { font-size: 2.4rem; }
+            .hero-subtitle { font-size: 1.15rem; }
+            .section-header h2 { font-size: 2rem; }
+            .phase-card { padding: 30px 25px; }
+            .phase-header { flex-direction: column; align-items: flex-start; }
+            .results-grid { grid-template-columns: 1fr; }
+            .cta-content h2 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="index.html" class="logo">
-                    <img src="assets/images/aheri-logo.png" alt="AHERI SYSTEMS">
-                </a>
-                <button class="mobile-menu-btn" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <a href="index.html" class="logo"><img src="assets/images/aheri-logo.png" alt="AHERI SYSTEMS"></a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="how-it-works.html">How It Works</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn-primary">Book Free Audit</a></li>
+                    <li><a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn-primary" target="_blank">Book Free Audit</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
             <div class="container">
-                <h1>
-                    From Revenue Leakage to<br>
-                    <span class="gradient-text">Predictable Growth in 90 Days</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Our proven 4-phase system for building revenue command in your business
-                </p>
+                <h1 class="hero-title">From Revenue Leakage to<br><span class="gradient-text">Predictable Growth in 90 Days</span></h1>
+                <p class="hero-subtitle">Our proven 4-phase system for building revenue command in any SME</p>
             </div>
         </div>
     </section>
 
-    <!-- Phases Section -->
     <section class="section section-alt">
         <div class="container">
             <div class="section-header">
@@ -915,7 +134,6 @@
             </div>
 
             <div class="phases-container">
-                <!-- Phase 1 -->
                 <div class="phase-card">
                     <div class="phase-header">
                         <div class="phase-number">1</div>
@@ -924,48 +142,29 @@
                             <span class="phase-timeline">Week 0 - Free</span>
                         </div>
                     </div>
-
                     <div class="phase-content">
                         <h4>What Happens:</h4>
-                        <p>"We map your current lead-to-customer flow and identify exactly where revenue is leaking."</p>
-
-                        <div class="industry-split">
-                            <div class="industry-box">
-                                <h5>For Real Estate:</h5>
-                                <ul>
-                                    <li>How many inquiries do you get per month?</li>
-                                    <li>What's your current response time?</li>
-                                    <li>How many leads get followed up? How many don't?</li>
-                                    <li>What's your inquiry-to-viewing conversion rate?</li>
-                                    <li>What's your viewing-to-offer rate?</li>
-                                    <li>Where are deals stalling?</li>
-                                </ul>
-                            </div>
-
-                            <div class="industry-box">
-                                <h5>For Private Clinics:</h5>
-                                <ul>
-                                    <li>How many patient inquiries per month?</li>
-                                    <li>What's your appointment booking rate?</li>
-                                    <li>What's your no-show rate?</li>
-                                    <li>How many patients return for follow-ups?</li>
-                                    <li>Where are patients falling off?</li>
-                                </ul>
-                            </div>
-                        </div>
-
+                        <p>We map your current lead-to-customer flow and identify exactly where revenue is leaking.</p>
+                        <h4>Questions We Ask (Any Industry):</h4>
+                        <ul>
+                            <li>How many inquiries do you get per month?</li>
+                            <li>What's your current response time?</li>
+                            <li>How many leads get followed up? How many don't?</li>
+                            <li>What's your inquiry-to-sale conversion rate?</li>
+                            <li>Where are deals/opportunities stalling?</li>
+                            <li>How many customers return for repeat business?</li>
+                            <li>What percentage of team time is admin vs revenue-generating?</li>
+                        </ul>
                         <div class="deliverable-box">
                             <h4>Deliverable:</h4>
                             <p>Free Revenue Leakage Report showing exactly where you're losing money and how much it's costing you.</p>
                         </div>
                     </div>
-
-                    <div class="phase-cta">
-                        <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary">Book Your Free Audit</a>
+                    <div class="phase-cta" style="text-align: center;">
+                        <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary" target="_blank">Book Your Free Audit</a>
                     </div>
                 </div>
 
-                <!-- Phase 2 -->
                 <div class="phase-card">
                     <div class="phase-header">
                         <div class="phase-number">2</div>
@@ -974,34 +173,37 @@
                             <span class="phase-timeline">Week 1-2</span>
                         </div>
                     </div>
-
                     <div class="phase-content">
                         <h4>What Happens:</h4>
-                        <p>"We design the exact workflows, automation, and enforcement mechanisms your business needs—customized for your team size, structure, and goals."</p>
+                        <p>We design the exact workflows, automation, and enforcement mechanisms your business needs—AND we recommend the best platform for your situation.</p>
+                        
+                        <div class="platform-highlight">
+                            <h4>Platform Selection Discussion:</h4>
+                            <ul>
+                                <li>Already using a CRM? We'll assess if we should optimize it or migrate</li>
+                                <li>Budget-conscious? We'll recommend cost-effective options (Zoho, GoHighLevel)</li>
+                                <li>Need enterprise features? We'll consider HubSpot or Salesforce</li>
+                                <li>Want our platform? We'll deploy that</li>
+                                <li>Starting fresh? We'll recommend based on your industry and team size</li>
+                            </ul>
+                        </div>
 
                         <h4>What We Map Out:</h4>
                         <ul>
-                            <li>Lead/patient capture points (all channels)</li>
-                            <li>Response automation (immediate AI response + agent/staff handoff)</li>
-                            <li>Follow-up sequences (automated drip campaigns)</li>
-                            <li>Pipeline/appointment management (visual tracking)</li>
-                            <li>Team assignments and accountability</li>
-                            <li>Reporting and dashboards</li>
+                            <li>Lead/customer capture points (all channels)</li>
+                            <li>Response automation (AI + team handoff)</li>
+                            <li>Follow-up sequences</li>
+                            <li>Pipeline/tracking management</li>
+                            <li>Team assignments & accountability</li>
+                            <li>Reporting & dashboards</li>
                         </ul>
-
                         <div class="deliverable-box">
                             <h4>Deliverable:</h4>
-                            <p>Complete System Blueprint—you see exactly what's being built before we build it.</p>
-                        </div>
-
-                        <div class="deliverable-box" style="margin-top: 15px; border-color: #3bc3b7; background: rgba(59, 195, 183, 0.05);">
-                            <h4>Timeline:</h4>
-                            <p>2 weeks from audit to blueprint approval</p>
+                            <p>Complete System Blueprint + Platform Recommendation—you see exactly what's being built before we build it.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Phase 3 -->
                 <div class="phase-card">
                     <div class="phase-header">
                         <div class="phase-number">3</div>
@@ -1010,43 +212,34 @@
                             <span class="phase-timeline">Week 3-6</span>
                         </div>
                     </div>
-
                     <div class="phase-content">
                         <h4>What Happens:</h4>
-                        <p>"We build your Revenue Command System, integrate it with your existing tools (WhatsApp, social media, etc.), test it thoroughly, and train your entire team."</p>
-
-                        <h4>What Gets Built:</h4>
-
-                        <div class="industry-split">
-                            <div class="industry-box">
-                                <h5>For Real Estate:</h5>
-                                <ul>
-                                    <li>Centralized lead capture (website forms, WhatsApp, Facebook, calls)</li>
-                                    <li>AI lead response system (instant 24/7 response)</li>
-                                    <li>CRM with visual deal pipeline</li>
-                                    <li>Automated follow-up sequences</li>
-                                    <li>Agent dashboards</li>
-                                    <li>Commission tracking</li>
-                                    <li>Weekly reporting</li>
-                                </ul>
-                            </div>
-
-                            <div class="industry-box">
-                                <h5>For Private Clinics:</h5>
-                                <ul>
-                                    <li>Online booking system (patients book 24/7)</li>
-                                    <li>Patient CRM with appointment tracking</li>
-                                    <li>Automated appointment reminders (SMS/WhatsApp)</li>
-                                    <li>Post-visit follow-up sequences</li>
-                                    <li>Patient health scoring</li>
-                                    <li>Staff dashboards</li>
-                                    <li>Weekly patient flow reports</li>
-                                </ul>
-                            </div>
+                        <p>We build your Revenue Command System on the platform that best fits your needs, integrate with existing tools, test thoroughly, and train your team.</p>
+                        
+                        <div class="platform-highlight">
+                            <h4>Built On World-Class Platforms:</h4>
+                            <ul>
+                                <li>Our proprietary platform</li>
+                                <li>Zoho (budget-friendly, powerful for SMEs)</li>
+                                <li>GoHighLevel (all-in-one marketing + CRM)</li>
+                                <li>HubSpot (enterprise-grade)</li>
+                                <li>ActiveCampaign (marketing automation)</li>
+                                <li>Odoo (ERP + CRM)</li>
+                            </ul>
                         </div>
 
+                        <h4>What Gets Built (Customized to Your Industry):</h4>
+                        <ul>
+                            <li>Centralized lead/customer capture</li>
+                            <li>AI response system (instant 24/7)</li>
+                            <li>CRM with visual tracking</li>
+                            <li>Automated follow-up sequences</li>
+                            <li>Team dashboards & performance tracking</li>
+                            <li>Weekly reporting</li>
+                        </ul>
+
                         <h4>Training:</h4>
-                        <p>"Your entire team gets hands-on training. We don't leave until everyone knows how to use the system."</p>
+                        <p>Your entire team gets hands-on training. We don't leave until everyone knows how to use the system.</p>
 
                         <div class="deliverable-box">
                             <h4>Timeline:</h4>
@@ -1055,7 +248,6 @@
                     </div>
                 </div>
 
-                <!-- Phase 4 -->
                 <div class="phase-card">
                     <div class="phase-header">
                         <div class="phase-number">4</div>
@@ -1064,26 +256,15 @@
                             <span class="phase-timeline">Week 7+</span>
                         </div>
                     </div>
-
                     <div class="phase-content">
                         <h4>What Happens:</h4>
-                        <p>"We don't build and disappear. We monitor your system continuously, send weekly reports, and optimize monthly based on real data."</p>
-
+                        <p>We don't build and disappear. We monitor your system continuously, send weekly reports, and optimize monthly based on real data.</p>
                         <h4>What You Get:</h4>
-
                         <ul>
-                            <li><strong>Weekly Revenue Reports</strong> (every Monday morning)
-                                <br><span style="font-size: 0.95rem; color: #64748b;">Real Estate: Leads captured, response times, pipeline movement, deals closing</span>
-                                <br><span style="font-size: 0.95rem; color: #64748b;">Clinics: Inquiries, bookings, attendance rate, follow-up completion</span>
-                            </li>
-                            <li><strong>Monthly Strategy Sessions</strong> (Tier 2 & 3)
-                                <br><span style="font-size: 0.95rem; color: #64748b;">Review performance metrics, identify bottlenecks, optimize workflows, plan improvements</span>
-                            </li>
-                            <li><strong>Quarterly Business Reviews</strong> (Tier 3)
-                                <br><span style="font-size: 0.95rem; color: #64748b;">Deep dive into ROI, growth planning, system enhancements</span>
-                            </li>
+                            <li><strong>Weekly Revenue Reports</strong> (every Monday morning): Leads captured, response times, pipeline movement, conversion metrics</li>
+                            <li><strong>Monthly Strategy Sessions:</strong> Review performance metrics, identify bottlenecks, optimize workflows, plan improvements</li>
+                            <li><strong>Continuous Improvement:</strong> We add 2-3 new automations monthly to keep smoothing operations</li>
                         </ul>
-
                         <div class="deliverable-box">
                             <h4>Timeline:</h4>
                             <p>Ongoing—this is a partnership, not a one-time project</p>
@@ -1094,250 +275,82 @@
         </div>
     </section>
 
-    <!-- Results Section -->
     <section class="results-section">
         <div class="container">
             <div class="section-header">
-                <h2>What to Expect: <span class="gradient-text">Typical Outcomes by Industry</span></h2>
+                <h2>What to Expect: <span class="gradient-text">Typical 90-Day Outcomes</span></h2>
             </div>
-
             <div class="disclaimer">
-                <p><strong>Note:</strong> These are typical results we see across our systems. Individual results vary based on team size, market conditions, and execution.</p>
+                <p><strong>Note:</strong> Individual results vary based on team size, market conditions, and execution.</p>
             </div>
-
-            <!-- Real Estate Results -->
-            <div style="margin-bottom: 80px;">
-                <h3 style="font-size: 2.2rem; text-align: center; margin-bottom: 40px; font-weight: 800; color: #112837;">
-                    Real Estate Agency Outcomes <span style="color: #64748b; font-size: 1.3rem; font-weight: 600;">(90-Day Results)</span>
-                </h3>
-
-                <div class="results-grid">
-                    <div class="result-column">
-                        <div class="comparison-label before-label">BEFORE</div>
-                        <div class="metrics-list">
-                            <div class="metric-item">
-                                <span class="metric-label">Response Time</span>
-                                <span class="metric-value before">2-4 hours</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Lead Capture Rate</span>
-                                <span class="metric-value before">60-70%</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Follow-Up Consistency</span>
-                                <span class="metric-value before">30-40%</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Inquiry-to-Viewing</span>
-                                <span class="metric-value before">10-15%</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Viewing-to-Offer</span>
-                                <span class="metric-value before">20-30%</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Pipeline Visibility</span>
-                                <span class="metric-value before">"What pipeline?"</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="result-column">
-                        <div class="comparison-label after-label">AFTER (With Revenue Command System)</div>
-                        <div class="metrics-list">
-                            <div class="metric-item">
-                                <span class="metric-label">Response Time</span>
-                                <span class="metric-value after">&lt;60 seconds</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Lead Capture Rate</span>
-                                <span class="metric-value after">95-100%</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Follow-Up Consistency</span>
-                                <span class="metric-value after">95%+</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Inquiry-to-Viewing</span>
-                                <span class="metric-value after">25-35%</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Viewing-to-Offer</span>
-                                <span class="metric-value after">35-45%</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Pipeline Visibility</span>
-                                <span class="metric-value after">Complete real-time clarity</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>Real Estate</h3>
+                    <ul>
+                        <li>Response time: 2-4 hours → &lt;60 seconds</li>
+                        <li>Lead capture: 60-70% → 95-100%</li>
+                        <li>Follow-up: 30-40% → 95%+</li>
+                        <li>Inquiry-to-viewing: 10-15% → 25-35%</li>
+                    </ul>
                 </div>
-
-                <div class="impact-box">
-                    <p>40-60% increase in closed deals within 6 months—not from more leads, but from better management of existing leads.</p>
+                <div class="result-card">
+                    <h3>Healthcare</h3>
+                    <ul>
+                        <li>After-hours response: Never → Instant 24/7</li>
+                        <li>Booking rate: 40-50% → 80-90%</li>
+                        <li>Attendance: 60-70% → 90-95%</li>
+                        <li>Repeat patients: 20-30% → 50-60%</li>
+                    </ul>
                 </div>
-            </div>
-
-            <!-- Clinic Results -->
-            <div>
-                <h3 style="font-size: 2.2rem; text-align: center; margin-bottom: 40px; font-weight: 800; color: #112837;">
-                    Private Clinic Outcomes <span style="color: #64748b; font-size: 1.3rem; font-weight: 600;">(90-Day Results)</span>
-                </h3>
-
-                <div class="results-grid">
-                    <div class="result-column">
-                        <div class="comparison-label before-label">BEFORE</div>
-                        <div class="metrics-list">
-                            <div class="metric-item">
-                                <span class="metric-label">After-Hours Response</span>
-                                <span class="metric-value before">Never</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Booking Rate</span>
-                                <span class="metric-value before">40-50%</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Appointment Attendance</span>
-                                <span class="metric-value before">60-70%</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Patient Follow-Up</span>
-                                <span class="metric-value before">Rare/manual</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Repeat Patient Rate</span>
-                                <span class="metric-value before">20-30%</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Staff Admin Time</span>
-                                <span class="metric-value before">60-70%</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="result-column">
-                        <div class="comparison-label after-label">AFTER (With Revenue Command System)</div>
-                        <div class="metrics-list">
-                            <div class="metric-item">
-                                <span class="metric-label">After-Hours Response</span>
-                                <span class="metric-value after">Instant (24/7 AI)</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Booking Rate</span>
-                                <span class="metric-value after">80-90%</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Appointment Attendance</span>
-                                <span class="metric-value after">90-95%</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Patient Follow-Up</span>
-                                <span class="metric-value after">100% automated</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Repeat Patient Rate</span>
-                                <span class="metric-value after">50-60%</span>
-                            </div>
-                            <div class="metric-item">
-                                <span class="metric-label">Staff Admin Time</span>
-                                <span class="metric-value after">20-30%</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="result-card">
+                    <h3>E-commerce</h3>
+                    <ul>
+                        <li>Cart recovery: 0% → 25-35%</li>
+                        <li>Email open rates: 15-20% → 35-45%</li>
+                        <li>Customer LTV: +40%</li>
+                        <li>Repeat purchase: 15% → 35%</li>
+                    </ul>
                 </div>
-
-                <div class="impact-box">
-                    <p>50-70% increase in monthly appointments within 6 months—from better patient management, not more marketing.</p>
+                <div class="result-card">
+                    <h3>Professional Services</h3>
+                    <ul>
+                        <li>Proposal time: 3 hours → 30 minutes</li>
+                        <li>Communication gaps: Eliminated</li>
+                        <li>Time tracking: 60% → 95% accuracy</li>
+                        <li>Invoice collection: 45 days → 21 days</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Guarantee Section -->
-    <section class="guarantee-section">
-        <div class="guarantee-content">
-            <div class="container">
-                <h2>The 90-Day <span class="gradient-text">Revenue Visibility Guarantee</span></h2>
-                <p>By Day 90, you will have:</p>
-
-                <ul class="guarantee-list">
-                    <li>100% visibility into every lead/patient</li>
-                    <li>Automated response and follow-up running 24/7</li>
-                    <li>Clear pipeline/appointment tracking</li>
-                    <li>Weekly performance reports</li>
-                    <li>Measurable improvement in conversions</li>
-                </ul>
-
-                <div class="guarantee-promise">
-                    <p>If we don't deliver this level of organization and visibility, we work for free until we do.</p>
-                    <p style="margin-top: 15px;"><strong>Why?</strong> Because we've done this before and know it works.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why It Works Section -->
-    <section class="why-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Our Systems Work <span class="gradient-text">When Others Fail</span></h2>
-            </div>
-
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-number">1</div>
-                    <h3>Industry-Specific Design</h3>
-                    <p>We don't build generic CRMs. We build systems specifically for real estate and healthcare—because we understand your exact pain points.</p>
-                </div>
-
-                <div class="why-card">
-                    <div class="why-number">2</div>
-                    <h3>Managed Service, Not Just Software</h3>
-                    <p>We don't sell you tools and disappear. We build, monitor, and continuously optimize your system. You get ongoing partnership, not a one-time setup.</p>
-                </div>
-
-                <div class="why-card">
-                    <div class="why-number">3</div>
-                    <h3>Built for Africa</h3>
-                    <p>Our systems work with the tools you already use (WhatsApp, M-Pesa, local channels) and account for African market dynamics.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
             <div class="container">
                 <h2>See Where Your Revenue is Leaking</h2>
                 <p>Book a Free Revenue Audit—No Commitment, Just Clarity</p>
-                <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary btn-large">Book Free Audit</a>
-                
-                <div class="trust-elements">
-                    <div class="trust-item">45-minute diagnostic session</div>
-                    <div class="trust-item">See your exact leakage points</div>
-                    <div class="trust-item">Get custom system recommendation</div>
-                    <div class="trust-item">No sales pressure—just honest analysis</div>
-                </div>
+                <a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" class="btn btn-primary" target="_blank">Book Free Audit</a>
+                <p class="cta-note">45-minute diagnostic session • Custom system recommendation • Zero pressure</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>AHERI <span class="logo-systems">SYSTEMS</span></h3>
-                    <p class="footer-tagline">Revenue Growth Systems for Africa</p>
-                    <p>We build, monitor, and optimize revenue systems for real estate agencies and private clinics across Kenya, Africa, and emerging markets.</p>
+                    <p class="footer-tagline">Revenue Growth Systems for Africa & Beyond</p>
+                    <p>We build, monitor, and optimize intelligent automation systems for growing SMEs across Kenya, Africa, and Beyond.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Industries</h4>
                     <ul>
-                        <li><a href="real-estate-systems.html">Real Estate Agencies</a></li>
-                        <li><a href="clinic-systems.html">Private Clinics</a></li>
-                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="index.html#industries">Real Estate</a></li>
+                        <li><a href="index.html#industries">Healthcare</a></li>
+                        <li><a href="index.html#industries">E-commerce</a></li>
+                        <li><a href="index.html#industries">Professional Services</a></li>
+                        <li><a href="index.html#industries">View All</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -1345,7 +358,7 @@
                     <ul>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="how-it-works.html">How It Works</a></li>
-                        <li><a href="https://ritandubi.com/blog">Blog</a></li>
+                        <li><a href="https://ritandubi.com/blog" target="_blank">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -1355,7 +368,7 @@
                         <li><a href="mailto:rita@aherisystems.com">rita@aherisystems.com</a></li>
                         <li><a href="tel:+254716850772">+254 716 850 772</a></li>
                         <li>Nairobi, Kenya</li>
-                        <li><a href="https://calendar.app.google/pm9QhCkfKvTPau3D9">Book Free Audit</a></li>
+                        <li><a href="https://calendar.app.google/pm9QhCkfKvTPau3D9" target="_blank">Book Free Audit</a></li>
                     </ul>
                 </div>
             </div>
@@ -1366,22 +379,12 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navMenu = document.querySelector('.nav-menu');
-
         if (mobileMenuBtn && navMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-            });
-
-            document.addEventListener('click', (e) => {
-                if (!e.target.closest('.nav-wrapper')) {
-                    navMenu.classList.remove('active');
-                }
-            });
+            mobileMenuBtn.addEventListener('click', () => navMenu.classList.toggle('active'));
+            document.addEventListener('click', (e) => { if (!e.target.closest('.nav-wrapper')) navMenu.classList.remove('active'); });
         }
     </script>
-
 </body>
 </html>
